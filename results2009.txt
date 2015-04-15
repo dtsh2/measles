@@ -1,0 +1,1668 @@
+                                   Area Population MMR1 MMR2 MMR1 % MMR2 %
+1                                Awanui          8    8    7 100.00  87.50
+2      Karikari Peninsula-Maungataniwha         56   53   50  94.64  89.29
+3                    Taipa Bay-Mangonui         27   27   24 100.00  88.89
+4                              Herekino         27   27   24 100.00  88.89
+5                               Ahipara         15   15   14 100.00  93.33
+6                            North Cape         12   11   11  91.67  91.67
+7                               Houhora         12   12   11 100.00  91.67
+8                   Motutangi-Kareponia         30   29   27  96.67  90.00
+9                          Kaitaia West         92   92   79 100.00  85.87
+10                         Kaitaia East         57   54   45  94.74  78.95
+11                                 Kaeo         14   14   14 100.00 100.00
+12                  Mangapa-Matauri Bay         30   29   25  96.67  83.33
+13                             Kohukohu          8    8    7 100.00  87.50
+14                               Rawene          7    7    7 100.00 100.00
+15                  Omapere and Opononi          7    7    6 100.00  85.71
+16                       Hokianga North         33   31   23  93.94  69.70
+17                       Hokianga South         35   32   30  91.43  85.71
+18                             Kerikeri        106   94   89  88.68  83.96
+19                              Russell          9    8    7  88.89  77.78
+20                               Paihia         23   21   20  91.30  86.96
+21                         Haruru Falls         16   16   14 100.00  87.50
+22                            Opua East         NA   NA   NA     NA     NA
+23                             Kawakawa         38   34   28  89.47  73.68
+24                              Moerewa         32   32   32 100.00 100.00
+25                            Opua West          3    3    3 100.00 100.00
+26                       Bay of Islands         NA   NA   NA     NA     NA
+27                               Kapiro         25   23   20  92.00  80.00
+28                             Waitangi         15   15   13 100.00  86.67
+29                       Pokere-Waihaha         25   24   22  96.00  88.00
+30                              Okaihau         12   11   11  91.67  91.67
+31                             Ohaeawai         15   14   12  93.33  80.00
+32                 Waihou Valley-Hupara         47   46   41  97.87  87.23
+33                       Ngapuhi-Kaikou         42   42   38 100.00  90.48
+34                              Kaikohe        108  104   94  96.30  87.04
+35                    Opouteke-Tanekaha         67   67   60 100.00  89.55
+36                Marsden Point-Ruakaka         60   58   54  96.67  90.00
+37                             Ngunguru         18   18   17 100.00  94.44
+38                   Wharekohe-Oakleigh         59   59   50 100.00  84.75
+39                         Maungatapere         23   23   20 100.00  86.96
+40                 Waiotira-Springfield         30   29   25  96.67  83.33
+41                   Whangaruru Harbour         NA   NA   NA     NA     NA
+42                    Punaruku-Kiripaka         48   45   42  93.75  87.50
+43                            Bream Bay         10    9    8  90.00  80.00
+44                                Waipu         14   13   13  92.86  92.86
+45                      Pataua-Whareora         14   12   12  85.71  85.71
+46                            Parua Bay         30   30   29 100.00  96.67
+47                           Bream Head         15   15   13 100.00  86.67
+48                         Springs Flat         21   20   18  95.24  85.71
+49                      Three Mile Bush         15   15   15 100.00 100.00
+50                              Te Hihi         13   13   13 100.00 100.00
+51                          Abbey Caves          8    8    7 100.00  87.50
+52                      Otaika-Portland          9    9    9 100.00 100.00
+53                            Kamo West         50   48   43  96.00  86.00
+54                            Kamo East         84   80   70  95.24  83.33
+55                       Tikipunga West         63   62   58  98.41  92.06
+56                       Tikipunga East         62   61   56  98.39  90.32
+57                          Whau Valley         33   32   32  96.97  96.97
+58                            Otangarei         57   55   52  96.49  91.23
+59                        Western Hills          2    2    2 100.00 100.00
+60                           Kensington         18   18   16 100.00  88.89
+61                             Mairtown         36   36   34 100.00  94.44
+62                               Regent         18   17   17  94.44  94.44
+63                             Woodhill         26   25   21  96.15  80.77
+64                             Vinetown         30   27   24  90.00  80.00
+65                    Whangarei Central          9    7    6  77.78  66.67
+66                            Riverside          9    9    8 100.00  88.89
+67                             Horahora         22   20   17  90.91  77.27
+68                                Maunu         20   19   17  95.00  85.00
+69                        Raumanga East         55   52   46  94.55  83.64
+70                          Morningside         36   36   31 100.00  86.11
+71                             Parahaki         11   11   10 100.00  90.91
+72                        Raumanga West         69   69   61 100.00  88.41
+73                     Port-Limeburners          1    1    1 100.00 100.00
+74                        Sherwood Rise         68   66   61  97.06  89.71
+75                              Onerahi         43   39   37  90.70  86.05
+76                            Hikurangi         34   32   28  94.12  82.35
+77                            Te Kopuru         11   11   11 100.00 100.00
+78                      Kaipara Coastal         25   25   25 100.00 100.00
+79                             Maungaru         20   19   16  95.00  80.00
+80                           Dargaville         78   75   68  96.15  87.18
+81                         Maungaturoto         15   14   14  93.33  93.33
+82                               Ruawai          5    5    4 100.00  80.00
+83                              Kaiwaka         16   16   16 100.00 100.00
+84                        Rehia-Oneriri         71   66   58  92.96  81.69
+85                            Mangawhai         16   16   12 100.00  75.00
+86                      Mangawhai Heads         13   11    9  84.62  69.23
+87                            Wellsford         44   40   34  90.91  77.27
+88                                Leigh          9    9    6 100.00  66.67
+89                            Warkworth         63   62   58  98.41  92.06
+90                             Waimauku         NA   NA   NA     NA     NA
+91                               Huapai         NA   NA   NA     NA     NA
+92                      Riverhead Urban         NA   NA   NA     NA     NA
+93                           Kumeu East         NA   NA   NA     NA     NA
+94                           Kumeu West         NA   NA   NA     NA     NA
+95                      Waipareira West          5    5    4 100.00  80.00
+96                              Waiwera         NA   NA   NA     NA     NA
+97                      Hatfields Beach         15   13   12  86.67  80.00
+98                                Orewa         76   75   65  98.68  85.53
+99                   Silverdale Central         NA   NA   NA     NA     NA
+100                      Red Beach West         NA   NA   NA     NA     NA
+101                      Red Beach East         NA   NA   NA     NA     NA
+102                               Manly         70   66   59  94.29  84.29
+103                            Army Bay         42   40   26  95.24  61.90
+104                              Vipond         37   35   31  94.59  83.78
+105                   Stanmore Bay West         75   73   65  97.33  86.67
+106                   Stanmore Bay East         34   34   33 100.00  97.06
+107                          Wade Heads         34   32   28  94.12  82.35
+108                        Gulf Harbour         34   29   22  85.29  64.71
+109                 Gulf Harbour Marina         NA   NA   NA     NA     NA
+110                         Weiti River         NA   NA   NA     NA     NA
+111                          Stillwater         NA   NA   NA     NA     NA
+112                    Silverdale South         NA   NA   NA     NA     NA
+113                    Silverdale North         NA   NA   NA     NA     NA
+114                          Orewa West         NA   NA   NA     NA     NA
+115                  Dairy Flat-Redvale         26   25   26  96.15 100.00
+116                     Paremoremo West          3    3    2 100.00  66.67
+117                        Tauhoa-Puhoi         36   36   32 100.00  88.89
+118                           Tahekeroa         26   24   22  92.31  84.62
+119                        Matheson Bay         NA   NA   NA     NA     NA
+120                               Kawau         NA   NA   NA     NA     NA
+121                        Snells Beach         45   41   37  91.11  82.22
+122                          Algies Bay         NA   NA   NA     NA     NA
+123                           Mahurangi         NA   NA   NA     NA     NA
+124                          South Head         11   10    7  90.91  63.64
+125                       Parakai Rural         NA   NA   NA     NA     NA
+126                       Parakai Urban         NA   NA   NA     NA     NA
+127                   Kaukapakapa Rural         NA   NA   NA     NA     NA
+128                         Kaukapakapa         NA   NA   NA     NA     NA
+129                   Helensville South         NA   NA   NA     NA     NA
+130                              Rewiti         15   13   13  86.67  86.67
+131                           Riverhead         31   30   29  96.77  93.55
+132                       Muriwai Beach         NA   NA   NA     NA     NA
+133                      Muriwai Valley         NA   NA   NA     NA     NA
+134                      Waitakere West         NA   NA   NA     NA     NA
+135                         Point Wells         NA   NA   NA     NA     NA
+136                               Omaha         NA   NA   NA     NA     NA
+137                            Matakana         NA   NA   NA     NA     NA
+138                         Cape Rodney         NA   NA   NA     NA     NA
+139                   Cape Rodney South         NA   NA   NA     NA     NA
+140                         Helensville         68   67   59  98.53  86.76
+141                             Awaruku         38   36   36  94.74  94.74
+142                           Glamorgan         54   54   49 100.00  90.74
+143                              Torbay         70   69   67  98.57  95.71
+144                              Waiake         49   48   47  97.96  95.92
+145                          Browns Bay         65   60   51  92.31  78.46
+146                             Oaktree         64   59   53  92.19  82.81
+147                        Rothesay Bay         64   64   56 100.00  87.50
+148                         Murrays Bay         49   43   39  87.76  79.59
+149                        Mairangi Bay         71   67   60  94.37  84.51
+150                       Campbells Bay         21   21   21 100.00 100.00
+151                          Castor Bay         32   30   29  93.75  90.62
+152                          Crown Hill         43   42   38  97.67  88.37
+153                         Lake Pupuke         68   65   55  95.59  80.88
+154                            Westlake         69   68   60  98.55  86.96
+155                    Takapuna Central         32   30   28  93.75  87.50
+156                             Hauraki         83   80   75  96.39  90.36
+157                           Seacliffe         49   49   47 100.00  95.92
+158                           Bayswater         48   47   43  97.92  89.58
+159                           Kaipatiki         74   69   64  93.24  86.49
+160                         Windy Ridge         57   54   51  94.74  89.47
+161                   Glenfield Central         71   65   62  91.55  87.32
+162                     Glenfield North        101   95   85  94.06  84.16
+163                             Glendhu         77   75   72  97.40  93.51
+164                           Witheford         48   42   35  87.50  72.92
+165                         Target Road        117  109   97  93.16  82.91
+166                        Forrest Hill         72   65   61  90.28  84.72
+167                           Sunnynook         98   93   80  94.90  81.63
+168                        Monarch Park         80   77   72  96.25  90.00
+169                           Sunnybrae         43   41   39  95.35  90.70
+170                              Albany         78   73   70  93.59  89.74
+171                            Fairview         34   33   26  97.06  76.47
+172                          Northcross         60   57   50  95.00  83.33
+173                    Unsworth Heights         85   81   70  95.29  82.35
+174                            Pinehill         56   54   45  96.43  80.36
+175                        Windsor Park         21   20   17  95.24  80.95
+176                  North Harbour West         82   77   66  93.90  80.49
+177                  North Harbour East         31   28   26  90.32  83.87
+178                            Long Bay          9    9    9 100.00 100.00
+179                     Paremoremo East         30   29   25  96.67  83.33
+180                          Greenhithe        141  136  120  96.45  85.11
+181                         Narrow Neck         45   43   41  95.56  91.11
+182                         Mt Victoria         79   73   70  92.41  88.61
+183                         Stanley Bay         30   29   27  96.67  90.00
+184                          Ocean View         71   64   59  90.14  83.10
+185                         Tuff Crater         73   68   61  93.15  83.56
+186                     Northcote South         80   73   69  91.25  86.25
+187                    Beachhaven North        101   99   83  98.02  82.18
+188                    Beachhaven South         78   72   65  92.31  83.33
+189                      Birkdale North         53   49   39  92.45  73.58
+190                      Birkdale South         79   76   67  96.20  84.81
+191                          Kauri Park         72   66   61  91.67  84.72
+192                             Chelsea         47   44   41  93.62  87.23
+193                     Birkenhead East         58   53   51  91.38  87.93
+194                     Henderson North         84   76   67  90.48  79.76
+195                     Henderson South        159  156  133  98.11  83.65
+196                             Tangutu         79   73   66  92.41  83.54
+197                            Woodglen         90   83   72  92.22  80.00
+198                      Glen Eden East        129  125  106  96.90  82.17
+199                      New Lynn North         70   66   53  94.29  75.71
+200                      New Lynn South         50   46   43  92.00  86.00
+201                            Lynnmall         31   27   22  87.10  70.97
+202                           Fruitvale         85   80   68  94.12  80.00
+203                            Rewarewa         85   80   74  94.12  87.06
+204                      Glendene North         82   79   69  96.34  84.15
+205                      Glendene South         62   56   49  90.32  79.03
+206                     Kelston Central         95   88   72  92.63  75.79
+207                           Sunnyvale         73   69   64  94.52  87.67
+208                          Kaurilands         66   64   58  96.97  87.88
+209                           Crum Park         62   61   54  98.39  87.10
+210                     Titirangi South         62   57   57  91.94  91.94
+211                           Green Bay         55   54   50  98.18  90.91
+212                              Matipo         65   63   61  96.92  93.85
+213                        Durham Green         91   89   84  97.80  92.31
+214                    Te Atatu Central        109  103   92  94.50  84.40
+215                            Edmonton         56   54   49  96.43  87.50
+216                            Wakeling         69   66   55  95.65  79.71
+217                              Mcleod        114  108   90  94.74  78.95
+218                              Konini         53   51   48  96.23  90.57
+219                               Waima         40   40   38 100.00  95.00
+220                           Laingholm         38   36   35  94.74  92.11
+221                          Armour Bay          8    7    6  87.50  75.00
+222                              Otimai         30   29   28  96.67  93.33
+223                     Parrs Park West         NA   NA   NA     NA     NA
+224                          Parrs Park         NA   NA   NA     NA     NA
+225                         Oratia West         NA   NA   NA     NA     NA
+226                              Oratia         NA   NA   NA     NA     NA
+227                      Henderson West         27   26   22  96.30  81.48
+228                        Palm Heights         52   49   39  94.23  75.00
+229                        McLaren Park         57   54   50  94.74  87.72
+230                             Opanuku         24   23   19  95.83  79.17
+231                             Swanson         NA   NA   NA     NA     NA
+232                       Swanson South         NA   NA   NA     NA     NA
+233                              Urlich         61   57   50  93.44  81.97
+234                       Starling Park         71   69   55  97.18  77.46
+235                        Ranui Domain        111  106   97  95.50  87.39
+236                         Ranui South         62   61   58  98.39  93.55
+237                       Sturges North        124  119  111  95.97  89.52
+238                            Kingdale         78   75   66  96.15  84.62
+239                            Fairdene         88   83   69  94.32  78.41
+240                      Whenuapai West         34   31   29  91.18  85.29
+241                              Herald         14   14   12 100.00  85.71
+242                    Hobsonville East         NA   NA   NA     NA     NA
+243                   Hobsonville South         NA   NA   NA     NA     NA
+244                            Westgate         20   20   17 100.00  85.00
+245                     Royal Road West         46   45   37  97.83  80.43
+246                        West Harbour        107  104   93  97.20  86.92
+247                        Lucken Point         72   70   65  97.22  90.28
+248                       Royal Heights        116  109   94  93.97  81.03
+249                         Massey West         10   10   10 100.00 100.00
+250                       Birdwood West         NA   NA   NA     NA     NA
+251                       Birdwood East         NA   NA   NA     NA     NA
+252                       Waimumu North        155  151  131  97.42  84.52
+253                       Waimumu South         74   70   61  94.59  82.43
+254                             Taupaki         12   10    8  83.33  66.67
+255                           Waitakere         31   31   26 100.00  83.87
+256                            Karekare         36   30   29  83.33  80.56
+257                        Freemans Bay         40   37   30  92.50  75.00
+258                Auckland Harbourside         46   40   30  86.96  65.22
+259               Auckland Central West         77   56   47  72.73  61.04
+260               Auckland Central East        162  135  122  83.33  75.31
+261                              Newton         12   10    7  83.33  58.33
+262                        Grafton West         15   12    8  80.00  53.33
+263                        Grafton East          8    8    7 100.00  87.50
+264                            Roberton         77   68   63  88.31  81.82
+265                            Glenavon        125  117  102  93.60  81.60
+266                         New Windsor        110  104   95  94.55  86.36
+267                      Avondale South        120  114   99  95.00  82.50
+268                      Blockhouse Bay         80   76   68  95.00  85.00
+269                            Rosebank         79   73   63  92.41  79.75
+270                       Avondale West         87   78   69  89.66  79.31
+271                           Waterview         59   56   53  94.92  89.83
+272                Point Chevalier West         61   60   57  98.36  93.44
+273                Point Chevalier East        107  105  103  98.13  96.26
+274               Point Chevalier South         25   25   24 100.00  96.00
+275                            Westmere         86   84   79  97.67  91.86
+276                           Herne Bay         46   41   41  89.13  89.13
+277                            St Marys         30   27   24  90.00  80.00
+278                       Ponsonby West         55   55   51 100.00  92.73
+279                       Ponsonby East         45   44   42  97.78  93.33
+280                      Grey Lynn West         60   57   54  95.00  90.00
+281                      Grey Lynn East         45   43   38  95.56  84.44
+282                     Surrey Crescent         49   49   45 100.00  91.84
+283                      St Lukes North          7    7    7 100.00 100.00
+284                           Arch Hill         14   13   12  92.86  85.71
+285                        Eden Terrace         12   12    8 100.00  66.67
+286                         Epsom North         36   34   32  94.44  88.89
+287                       Epsom Central         37   35   32  94.59  86.49
+288                         Epsom South         30   26   26  86.67  86.67
+289                        Parnell East         21   19   17  90.48  80.95
+290                        Parnell West         49   36   34  73.47  69.39
+291                           Mt Hobson         13   13   13 100.00 100.00
+292                       Remuera South         53   51   48  96.23  90.57
+293                        Abbotts Park         76   73   71  96.05  93.42
+294                        Remuera West         23   20   20  86.96  86.96
+295                          Waitaramoa         32   31   30  96.88  93.75
+296                        Orakei South         46   44   42  95.65  91.30
+297                              Waiata         40   38   36  95.00  90.00
+298                    Meadowbank North        124  117  109  94.35  87.90
+299                    Meadowbank South         66   63   56  95.45  84.85
+300                        Orakei North         82   76   67  92.68  81.71
+301                         Mission Bay         63   58   52  92.06  82.54
+302                     Kohimarama West         55   52   46  94.55  83.64
+303                     Kohimarama East         71   68   65  95.77  91.55
+304                          St Heliers         82   75   66  91.46  80.49
+305                           Glendowie         65   64   59  98.46  90.77
+306                    Glen Innes North         73   71   67  97.26  91.78
+307                     Glen Innes West        127  118  103  92.91  81.10
+308                     Glen Innes East         55   54   46  98.18  83.64
+309                       Point England        130  125  103  96.15  79.23
+310                            St Johns         NA   NA   NA     NA     NA
+311                         Stonefields         NA   NA   NA     NA     NA
+312                           Newmarket         17   16   15  94.12  88.24
+313                           Kingsland         49   46   41  93.88  83.67
+314                            St Lukes         58   53   43  91.38  74.14
+315                   Sandringham North         60   58   52  96.67  86.67
+316                    Sandringham West         99   93   79  93.94  79.80
+317                    Sandringham East         58   54   47  93.10  81.03
+318                   Mt Albert Central        126  118  109  93.65  86.51
+319                         Springleigh         52   52   47 100.00  90.38
+320                       Owairaka West         60   56   49  93.33  81.67
+321                       Owairaka East         50   47   45  94.00  90.00
+322                       Mt Eden North         29   25   25  86.21  86.21
+323                          Sherbourne         36   35   34  97.22  94.44
+324                            Balmoral         93   88   80  94.62  86.02
+325                        Mt Eden East         27   23   23  85.19  85.19
+326                          Maungawhau         52   50   43  96.15  82.69
+327                       Mt Eden South         84   79   77  94.05  91.67
+328                         Three Kings         97   87   80  89.69  82.47
+329                           Royal Oak         71   64   61  90.14  85.92
+330                   Hillsborough West         90   85   79  94.44  87.78
+331                   Hillsborough East         48   45   36  93.75  75.00
+332                            Walmsley         87   84   78  96.55  89.66
+333                              Wesley         49   48   44  97.96  89.80
+334                             Akarana        155  144  127  92.90  81.94
+335                      Lynfield North         73   71   67  97.26  91.78
+336                      Lynfield South         57   57   54 100.00  94.74
+337                      Waikowhai West         45   42   38  93.33  84.44
+338                      Waikowhai East         84   81   74  96.43  88.10
+339                          Mt St John         36   34   31  94.44  86.11
+340               One Tree Hill Central         30   29   23  96.67  76.67
+341                  One Tree Hill East        113  108   98  95.58  86.73
+342                             Penrose         14   13   13  92.86  92.86
+343                 Onehunga North West         66   65   59  98.48  89.39
+344                 Onehunga North East         66   63   60  95.45  90.91
+345                 Onehunga South West         49   49   43 100.00  87.76
+346                 Onehunga South East         92   89   86  96.74  93.48
+347                              Oranga         73   70   61  95.89  83.56
+348                           Te Papapa         62   56   49  90.32  79.03
+349                     Ellerslie North         98   91   87  92.86  88.78
+350                     Ellerslie South         37   36   29  97.30  78.38
+351                Mt Wellington Domain         NA   NA   NA     NA     NA
+352                  Mt Wellington West         NA   NA   NA     NA     NA
+353                 Mt Wellington North         NA   NA   NA     NA     NA
+354                            Ferndale         71   66   57  92.96  80.28
+355                              Hamlin        111  105   94  94.59  84.68
+356                 Mt Wellington South        169  155  142  91.72  84.02
+357                              Tamaki        123  116   98  94.31  79.67
+358                       Panmure Basin         33   29   20  87.88  60.61
+359                      Waiheke Island        109  100   92  91.74  84.40
+360                 Bays-Waiheke Island         NA   NA   NA     NA     NA
+361                Tidal-Waiheke Island         NA   NA   NA     NA     NA
+362   Islands-Motutapu Rangitoto Rakino         NA   NA   NA     NA     NA
+363                Great Barrier Island          7    7    5 100.00  71.43
+364                   Paerata-Cape Hill         16   16   16 100.00 100.00
+365                  Eden Road-Hill Top          7    7    7 100.00 100.00
+366                             Redoubt          1    1    1 100.00 100.00
+367                          Opuawhanga         NA   NA   NA     NA     NA
+368                            Buckland         NA   NA   NA     NA     NA
+369                      Buckland South         NA   NA   NA     NA     NA
+370                           Patumahoe         32   31   29  96.88  90.62
+371                            Kingseat         79   76   66  96.20  83.54
+372                              Pokeno         25   23   19  92.00  76.00
+373                               Hunua         68   63   57  92.65  83.82
+374                            Paparata         NA   NA   NA     NA     NA
+375                        Mangatawhiri         NA   NA   NA     NA     NA
+376                              Kaiaua         NA   NA   NA     NA     NA
+377                              Awhitu         31   28   25  90.32  80.65
+378                           Glenbrook         29   29   24 100.00  82.76
+379                               Otaua         33   33   28 100.00  84.85
+380                              Bombay         17   17   17 100.00 100.00
+381                             Hingaia         33   32   29  96.97  87.88
+382                   Whangapouri Creek         16   15   15  93.75  93.75
+383                             Bremner          3    3    3 100.00 100.00
+384                               Drury         40   39   33  97.50  82.50
+385                            Runciman          5    5    4 100.00  80.00
+386                         Mellons Bay         27   26   22  96.30  81.48
+387                          Cockle Bay         46   40   38  86.96  82.61
+388                         Howick West         37   33   26  89.19  70.27
+389                      Howick Central        122  111   95  90.98  77.87
+390                       Otahuhu North         71   64   54  90.14  76.06
+391                            Fairburn         84   80   71  95.24  84.52
+392                        Otahuhu East         43   42   34  97.67  79.07
+393                        Otahuhu West        107  102   89  95.33  83.18
+394                          Middlemore         NA   NA   NA     NA     NA
+395                     Papatoetoe West        131  120  103  91.60  78.63
+396                    Papatoetoe North        106   96   88  90.57  83.02
+397                  Papatoetoe Central         70   66   55  94.29  78.57
+398                            Dingwall         65   63   58  96.92  89.23
+399                     Papatoetoe East        149  141  124  94.63  83.22
+400                       Puhinui North         65   60   57  92.31  87.69
+401       Bucklands and Eastern Beaches         51   45   42  88.24  82.35
+402                          Bleakhouse         13   13   13 100.00 100.00
+403               Bucklands Beach South         10   10    8 100.00  80.00
+404                Half Moon Bay Marina         NA   NA   NA     NA     NA
+405               Pigeon Mountain North         48   45   40  93.75  83.33
+406                             Murvale         51   46   41  90.20  80.39
+407               Pigeon Mountain South         19   18   17  94.74  89.47
+408                       Highland Park         49   45   40  91.84  81.63
+409                        Elsmore Park         56   51   47  91.07  83.93
+410                       Half Moon Bay         50   45   45  90.00  90.00
+411                     Pakuranga North         40   39   34  97.50  85.00
+412                          Sunnyhills         36   36   31 100.00  86.11
+413                   Pakuranga Central         64   61   51  95.31  79.69
+414                           Edgewater         72   68   56  94.44  77.78
+415                      Pakuranga East        109  102   87  93.58  79.82
+416                        Howick South         62   61   54  98.39  87.10
+417                          Meadowland         51   51   41 100.00  80.39
+418                            Golfland         24   23   21  95.83  87.50
+419                           Millhouse         55   52   40  94.55  72.73
+420                            Burswood         25   22   20  88.00  80.00
+421                           Dannemora         57   51   47  89.47  82.46
+422                            Kilkenny         28   25   25  89.29  89.29
+423                           Highbrook         NA   NA   NA     NA     NA
+424                          Greenmount         NA   NA   NA     NA     NA
+425                          Point View         NA   NA   NA     NA     NA
+426                     Baverstock Oaks         NA   NA   NA     NA     NA
+427                     Mission Heights         NA   NA   NA     NA     NA
+428                         Shelly Park         30   26   20  86.67  66.67
+429                             Turanga         18   16   16  88.89  88.89
+430                 Beachlands-Maraetai        115  110   92  95.65  80.00
+431                          Otara West         94   87   73  92.55  77.66
+432                           Wymondley         NA   NA   NA     NA     NA
+433                              Grange         NA   NA   NA     NA     NA
+434                         Otara North         29   28   25  96.55  86.21
+435                          Otara East        166  152  123  91.57  74.10
+436                         Otara South         97   85   71  87.63  73.20
+437                            Ferguson        118  106   88  89.83  74.58
+438                            Rongomai        156  141  118  90.38  75.64
+439                        Donegal Park        137  123  107  89.78  78.10
+440                            Ormiston         86   82   70  95.35  81.40
+441                         Clover Park        122  113   93  92.62  76.23
+442                       Redoubt North        128  119   92  92.97  71.88
+443                             Ardmore         16   16   15 100.00  93.75
+444                      Totara Heights         94   92   79  97.87  84.04
+445                       Randwick Park         82   77   62  93.90  75.61
+446                            Hyperion         59   54   48  91.53  81.36
+447                        Redoubt East         NA   NA   NA     NA     NA
+448                           Mill Road         NA   NA   NA     NA     NA
+449                       Redoubt South        116  110   94  94.83  81.03
+450                      Takanini North         61   58   47  95.08  77.05
+451                      Takanini South         59   56   51  94.92  86.44
+452                       Takanini West        108  102   96  94.44  88.89
+453                              Ambury         49   48   44  97.96  89.80
+454                      Mangere Bridge        141  133  116  94.33  82.27
+455                     Mangere Central         89   83   63  93.26  70.79
+456                              Mascot        116  105   84  90.52  72.41
+457                            Arahanga         51   48   40  94.12  78.43
+458                            Viscount        121  110   91  90.91  75.21
+459                       Mangere South        258  241  204  93.41  79.07
+460                        Mangere East        161  149  136  92.55  84.47
+461                              Aorere        114  110   92  96.49  80.70
+462                             Kohuora        163  147  137  90.18  84.05
+463                     Mangere Station          9    8    3  88.89  33.33
+464                         Favona West         61   58   56  95.08  91.80
+465                        Favona North         53   51   45  96.23  84.91
+466                        Favona South         83   76   68  91.57  81.93
+467                       Harania North         99   93   79  93.94  79.80
+468                        Harania West        127  114   90  89.76  70.87
+469                        Harania East        140  131  108  93.57  77.14
+470                                Wiri        129  122  107  94.57  82.95
+471                       Puhinui South         NA   NA   NA     NA     NA
+472                     Manukau Central         NA   NA   NA     NA     NA
+473                             Burbank         88   78   66  88.64  75.00
+474                          Homai West         62   59   47  95.16  75.81
+475                           Rowandale         87   84   64  96.55  73.56
+476                          Homai East        173  164  135  94.80  78.03
+477                       Weymouth West        105   98   79  93.33  75.24
+478                       Weymouth East        137  126   94  91.97  68.61
+479                       Clendon North         91   89   73  97.80  80.22
+480                       Clendon South        173  162  131  93.64  75.72
+481                            Hillpark         94   90   73  95.74  77.66
+482                       Manurewa East         67   62   58  92.54  86.57
+483                    Manurewa Central         88   85   72  96.59  81.82
+484                            Beaumont         56   50   40  89.29  71.43
+485                             Leabank        182  163  131  89.56  71.98
+486                         Wattle Farm        149  137  109  91.95  73.15
+487                            Clevedon         32   29   26  90.62  81.25
+488                      Kawakawa-Orere          9    9    8 100.00  88.89
+489                    Papakura Central         32   27   25  84.38  78.12
+490                      Papakura North         27   26   23  96.30  85.19
+491                      Papakura South         27   27   21 100.00  77.78
+492                             Opaheke         53   50   43  94.34  81.13
+493                            Rosehill         53   52   45  98.11  84.91
+494                          Pahurehure         20   19   17  95.00  85.00
+495                       Papakura East        320  306  270  95.62  84.38
+496                         Massey Park         29   27   25  93.10  86.21
+497                 Papakura North East         79   75   69  94.94  87.34
+498                            Red Hill         38   36   30  94.74  78.95
+499                      Pukekohe North        265  251  221  94.72  83.40
+500                       Pukekohe West         99   93   91  93.94  91.92
+501                      Bledisloe Park         46   45   41  97.83  89.13
+502                         Waiuku West         NA   NA   NA     NA     NA
+503                         Waiuku East         NA   NA   NA     NA     NA
+504                        South Waiuku         NA   NA   NA     NA     NA
+505                           Pukeoware         NA   NA   NA     NA     NA
+506                              Tuakau        108  103   84  95.37  77.78
+507                            Rotowaro         NA   NA   NA     NA     NA
+508                              Raglan         60   55   47  91.67  78.33
+509               Waikato Western Hills         62   60   53  96.77  85.48
+510                              Te Uku         13   12   10  92.31  76.92
+511                             Te Pahu         12   12   11 100.00  91.67
+512                            Onewhero         48   44   39  91.67  81.25
+513                             Te Akau         10   10    9 100.00  90.00
+514                         Te Kauwhata         45   44   41  97.78  91.11
+515                             Matangi         32   31   29  96.88  90.62
+516                           Sylvester         41   41   39 100.00  95.12
+517                           Flagstaff         71   68   60  95.77  84.51
+518                       Horsham Downs        109  107   91  98.17  83.49
+519                            Rototuna         51   47   42  92.16  82.35
+520                          Huntington        152  142  132  93.42  86.84
+521                           Whitikahu         41   41   36 100.00  87.80
+522                   Taupiri Community         11   11   10 100.00  90.91
+523                           Gordonton         16   14   14  87.50  87.50
+524                              Kainui         39   38   34  97.44  87.18
+525                            Newstead         NA   NA   NA     NA     NA
+526                              Eureka         NA   NA   NA     NA     NA
+527                   Tamahere-Tauwhare         83   82   74  98.80  89.16
+528                             Hautapu         NA   NA   NA     NA     NA
+529                              Swayne         NA   NA   NA     NA     NA
+530                            Waerenga         24   22   20  91.67  83.33
+531                           Maramarua         14   14   12 100.00  85.71
+532                            Meremere         11   10    6  90.91  54.55
+533                         Huntly West         64   62   49  96.88  76.56
+534                         Huntly East         96   90   79  93.75  82.29
+535                     Cambridge North         47   47   39 100.00  82.98
+536                      Cambridge West         35   34   29  97.14  82.86
+537                   Cambridge Central         25   24   20  96.00  80.00
+538                     Leamington West         52   51   45  98.08  86.54
+539                     Leamington East         49   48   42  97.96  85.71
+540                              Ohaupo          9    9    9 100.00 100.00
+541                            Kihikihi         28   26   23  92.86  82.14
+542                            Peacocke          7    7    7 100.00 100.00
+543                         Temple View         22   19   13  86.36  59.09
+544                           Te Kowhai         32   32   30 100.00  93.75
+545                          Whatawhata         37   37   33 100.00  89.19
+546                        Ngahinapouri         27   27   26 100.00  96.30
+547                        Lake Cameron         15   15   14 100.00  93.33
+548                             Horotiu         NA   NA   NA     NA     NA
+549                       Te Rapa North         NA   NA   NA     NA     NA
+550                             Te Rore          9    9    7 100.00  77.78
+551                            Pirongia         26   26   22 100.00  84.62
+552                              Pokuru         10   10    9 100.00  90.00
+553                        Lake Ngaroto          9    9    9 100.00 100.00
+554                             Tokanui          7    7    5 100.00  71.43
+555                            Pukerimu          8    8    8 100.00 100.00
+556                             Kaipaki          7    7    7 100.00 100.00
+557                          Rotoorangi         28   26   21  92.86  75.00
+558                             Te Rahu         15   15   13 100.00  86.67
+559                       Kihikihi Flat         12   11   10  91.67  83.33
+560                          Allen Road          3    3    3 100.00 100.00
+561                           Rotongata          9    9    6 100.00  66.67
+562                         Ngaruawahia        130  122  103  93.85  79.23
+563                              Bryant         95   90   77  94.74  81.05
+564                              Pukete         26   25   22  96.15  84.62
+565                         Pukete West         46   44   40  95.65  86.96
+566                             Te Rapa          1    1    0 100.00   0.00
+567                             Burbush          1    1    1 100.00 100.00
+568                           Rotokauri          2    2    2 100.00 100.00
+569                              Nawton         86   81   61  94.19  70.93
+570                            Crawshaw         61   60   48  98.36  78.69
+571                           Grandview         73   71   64  97.26  87.67
+572                              Brymer         44   42   37  95.45  84.09
+573                      Dinsdale North         66   66   59 100.00  89.39
+574                      Dinsdale South         85   84   76  98.82  89.41
+575                         Beerescourt         53   52   47  98.11  88.68
+576                              Maeroa         70   67   58  95.71  82.86
+577                   Frankton Junction         19   18   18  94.74  94.74
+578                           Swarbrick         81   79   63  97.53  77.78
+579                       Hamilton Lake         73   69   64  94.52  87.67
+580                            Melville         97   89   81  91.75  83.51
+581                            Glenview        102  101   92  99.02  90.20
+582                           Queenwood         46   45   38  97.83  82.61
+583                           Chedworth         77   77   61 100.00  79.22
+584                             Porritt         41   35   27  85.37  65.85
+585                              Insoll         64   63   47  98.44  73.44
+586                      Fairview Downs         64   64   57 100.00  89.06
+587                           Chartwell         34   31   30  91.18  88.24
+588                    Hamilton Central        133  122  100  91.73  75.19
+589                             Clarkin         78   74   61  94.87  78.21
+590                         Claudelands         32   29   25  90.62  78.12
+591                            Enderley         86   85   73  98.84  84.88
+592                          Peachgrove         37   36   27  97.30  72.97
+593                       Hamilton East         59   53   44  89.83  74.58
+594                              Naylor         62   60   49  96.77  79.03
+595                               Bader         88   84   71  95.45  80.68
+596                          University         42   38   32  90.48  76.19
+597                          Silverdale         42   42   39 100.00  92.86
+598                      Hillcrest West         47   47   40 100.00  85.11
+599                            Riverlea         46   44   39  95.65  84.78
+600                     Te Awamutu West         21   20   20  95.24  95.24
+601                  Te Awamutu Central         44   44   37 100.00  84.09
+602                     Te Awamutu East         34   34   31 100.00  91.18
+603                    Te Awamutu South         71   67   63  94.37  88.73
+604                    Kawhia Community          6    6    4 100.00  66.67
+605                          Otorohanga         42   41   36  97.62  85.71
+606               Otorohanga Rural West         29   28   25  96.55  86.21
+607                             Te Kawa          5    5    5 100.00 100.00
+608               Otorohanga Rural East         62   62   61 100.00  98.39
+609                              Piopio         13   12   12  92.31  92.31
+610                             Taharoa          4    4    3 100.00  75.00
+611                            Mahoenui         13   12   12  92.31  92.31
+612                            Marokopa         20   19   16  95.00  80.00
+613                        Waipa Valley         13   12   12  92.31  92.31
+614                               Tiroa          1    1    1 100.00 100.00
+615                            Mokauiti         18   17   15  94.44  83.33
+616                            Te Kuiti        102   95   79  93.14  77.45
+617                               Omori          2    2    0 100.00   0.00
+618                             Owhango          4    4    4 100.00 100.00
+619                               Ohura          5    5    3 100.00  60.00
+620                             Ngapuke         20   20   18 100.00  90.00
+621                             Kuratau          2    2    2 100.00 100.00
+622                             Raurimu          8    7    8  87.50 100.00
+623                       National Park          2    2    0 100.00   0.00
+624                      Otangiwai-Heao          9    9    7 100.00  77.78
+625                         Tarrangower         20   19   17  95.00  85.00
+626                  Taumarunui Central         63   58   49  92.06  77.78
+627              Sunshine-Hospital Hill          4    4    3 100.00  75.00
+628                             Manunui         13   12    9  92.31  69.23
+629                           Whitianga         65   65   60 100.00  92.31
+630                          Coromandel         23   23   18 100.00  78.26
+631                          Te Rerenga         30   28   23  93.33  76.67
+632                          Whangamata         33   30   26  90.91  78.79
+633                              Tairua         11   10    8  90.91  72.73
+634                         Moanataiari         31   30   24  96.77  77.42
+635                             Parawai         38   38   36 100.00  94.74
+636                       Pauanui Beach          6    4    3  66.67  50.00
+637                              Hikuai         31   31   23 100.00  74.19
+638                Te Puru-Thornton Bay          8    8    8 100.00 100.00
+639                              Ngatea         22   22   19 100.00  86.36
+640                      Hauraki Plains         29   25   24  86.21  82.76
+641                               Turua         17   16   12  94.12  70.59
+642                            Kerepehi          9    9    6 100.00  66.67
+643                         Waihi Beach         20   19   14  95.00  70.00
+644                           Ohinemuri         31   30   29  96.77  93.55
+645                              Paeroa         59   57   47  96.61  79.66
+646                               Waihi         69   68   53  98.55  76.81
+647                             Tahuroa         47   46   45  97.87  95.74
+648                              Waitoa          8    8    6 100.00  75.00
+649                          Springdale         28   28   26 100.00  92.86
+650                       Waihou-Walton         62   61   55  98.39  88.71
+651                            Te Aroha         52   51   46  98.08  88.46
+652                   Morrinsville West         44   42   40  95.45  90.91
+653                   Morrinsville East         91   89   81  97.80  89.01
+654                             Waharoa         10   10    6 100.00  60.00
+655                               Tirau         15   15   15 100.00 100.00
+656                         Mangakaretu          3    3    3 100.00 100.00
+657                            Kinleith          3    3    3 100.00 100.00
+658                              Okauia         32   30   25  93.75  78.12
+659                              Te Poi         13   13   13 100.00 100.00
+660                              Tapapa         13   13   12 100.00  92.31
+661                            Karapiro         32   30   31  93.75  96.88
+662                             Hinuera         11   10    8  90.91  72.73
+663                             Arapuni         26   26   25 100.00  96.15
+664                           Lichfield         17   17   14 100.00  82.35
+665                                Wawa         12   11    7  91.67  58.33
+666                            Paraonui         33   32   29  96.97  87.88
+667                            Parkdale          7    7    5 100.00  71.43
+668                            Matarawa         33   32   24  96.97  72.73
+669                        Stanley Park         62   57   41  91.94  66.13
+670                     Tokoroa Central         19   16   15  84.21  78.95
+671                               Aotea         92   87   68  94.57  73.91
+672                          Strathmore         42   38   31  90.48  73.81
+673                           Amisfield          4    4    4 100.00 100.00
+674                      Matamata North         40   38   32  95.00  80.00
+675                      Matamata South         79   75   65  94.94  82.28
+676                            Putaruru         74   68   57  91.89  77.03
+677                            Athenree          8    8    6 100.00  75.00
+678                  Katikati Community         61   59   56  96.72  91.80
+679                    Maketu Community         20   18   15  90.00  75.00
+680                            Omokoroa         31   31   28 100.00  90.32
+681                  Papamoa Beach East         54   52   46  96.30  85.19
+682                        Palm Springs         71   69   65  97.18  91.55
+683                           Doncaster         93   92   84  98.92  90.32
+684              Island View-Pios Beach          4    4    4 100.00 100.00
+685                             Te Puna         43   40   35  93.02  81.40
+686                            Matapihi         10   10    9 100.00  90.00
+687     Inlet-Tauranga Harbour Omokoroa         NA   NA   NA     NA     NA
+688              Inlet-Tauranga Harbour         NA   NA   NA     NA     NA
+689                   Waikareao Estuary         NA   NA   NA     NA     NA
+690                     Motuopae Island         NA   NA   NA     NA     NA
+691                              Kairua         10   10    8 100.00  80.00
+692                      Bethlehem East         46   45   36  97.83  78.26
+693                           Bethlehem         41   39   34  95.12  82.93
+694                        Pacific View         36   32   28  88.89  77.78
+695                          Palm Beach         54   51   46  94.44  85.19
+696                             Gravatt         49   47   44  95.92  89.80
+697                     Matakana Island          5    5    5 100.00 100.00
+698        Inlet-Tauranga Harbour North         NA   NA   NA     NA     NA
+699                             Tahawai         11   11    9 100.00  81.82
+700                           Aongatete         35   33   31  94.29  88.57
+701                              Minden         53   52   50  98.11  94.34
+702                              Kaimai         80   80   74 100.00  92.50
+703                     Ohauiti-Ngapeke          6    6    6 100.00 100.00
+704                       Upper Papamoa         25   23   22  92.00  88.00
+705                           Paengaroa         18   18   15 100.00  83.33
+706                            Rangiuru         33   29   28  87.88  84.85
+707                           Pongakawa         47   47   41 100.00  87.23
+708                  Mt Maunganui North         85   77   70  90.59  82.35
+709                               Omanu         83   79   78  95.18  93.98
+710               Tauranga City-Marinas         NA   NA   NA     NA     NA
+711                             Arataki         77   74   65  96.10  84.42
+712                           Te Maunga         51   46   43  90.20  84.31
+713                               Matua         56   56   51 100.00  91.07
+714                            Bellevue         72   70   64  97.22  88.89
+715                     Otumoetai North         46   45   41  97.83  89.13
+716                     Otumoetai South         61   60   54  98.36  88.52
+717                          Brookfield         85   80   69  94.12  81.18
+718                             Te Reti         28   28   28 100.00 100.00
+719                               Judea         43   42   39  97.67  90.70
+720                             Gate Pa         71   68   50  95.77  70.42
+721                            Greerton         77   73   68  94.81  88.31
+722                             Pyes Pa         99   96   86  96.97  86.87
+723                         Yatton Park         62   59   56  95.16  90.32
+724                               Poike         17   16   15  94.12  88.24
+725                             Hairini        102   97   86  95.10  84.31
+726                          Maungatapu         55   54   48  98.18  87.27
+727                   Tauranga Hospital         21   21   17 100.00  80.95
+728                      Tauranga South         53   47   42  88.68  79.25
+729                    Tauranga Central         60   53   46  88.33  76.67
+730                       Sulphur Point         NA   NA   NA     NA     NA
+731                           Kaitemako         21   21   20 100.00  95.24
+732                    Welcome Bay West         86   81   74  94.19  86.05
+733                    Welcome Bay East         68   66   62  97.06  91.18
+734                        Te Puke West         53   50   43  94.34  81.13
+735                        Te Puke East        103  100   84  97.09  81.55
+736                    Ngongotaha North         61   59   52  96.72  85.25
+737                    Ngongotaha South         22   22   19 100.00  86.36
+738                        Poets Corner          9    9    8 100.00  88.89
+739                             Ngapuna          8    8    6 100.00  75.00
+740                        Owhata South          9    9    9 100.00 100.00
+741                             Lynmore         71   69   64  97.18  90.14
+742                         Owhata West         80   77   66  96.25  82.50
+743                         Owhata East         41   40   32  97.56  78.05
+744                            Hamurana         29   28   27  96.55  93.10
+745           Inland Water-Lake Rotorua         NA   NA   NA     NA     NA
+746                            Tikitere         33   33   29 100.00  87.88
+747                    Kaingaroa Forest         11   11   11 100.00 100.00
+748                            Tarawera         25   23   21  92.00  84.00
+749                      Golden Springs         26   25   22  96.15  84.62
+750                             Reporoa         17   14   14  82.35  82.35
+751                             Ngakuru         20   20   16 100.00  80.00
+752                             Arahiwi          4    4    4 100.00 100.00
+753                            Waiwhero         11   10    9  90.91  81.82
+754                              Mamaku         19   19   17 100.00  89.47
+755                      Selwyn Heights         31   28   26  90.32  83.87
+756                     Western Heights         82   78   72  95.12  87.80
+757                       Fairy Springs         42   39   34  92.86  80.95
+758                     Pukehangi North         56   56   50 100.00  89.29
+759                     Pukehangi South         41   38   34  92.68  82.93
+760                         Mangakakahi         54   53   50  98.15  92.59
+761                          Sunnybrook         44   43   41  97.73  93.18
+762                           Fordlands         48   48   43 100.00  89.58
+763                             Utuhina         25   23   22  92.00  88.00
+764                              Pomare         16   16   15 100.00  93.75
+765                           Hillcrest         36   34   33  94.44  91.67
+766                         Springfield         51   47   43  92.16  84.31
+767                        Kawaha Point         25   24   23  96.00  92.00
+768                               Koutu         32   32   26 100.00  81.25
+769                           Ohinemutu          5    5    4 100.00  80.00
+770                              Kuirau         76   72   61  94.74  80.26
+771                            Victoria         22   20   20  90.91  90.91
+772                      Glenholme East         21   20   18  95.24  85.71
+773                      Glenholme West         34   34   29 100.00  85.29
+774                              Fenton         17   16   12  94.12  70.59
+775                               Whaka          2    2    2 100.00 100.00
+776                           Mangakino         19   19   19 100.00 100.00
+777                             Turangi         57   54   46  94.74  80.70
+778                          Acacia Bay         16   16   15 100.00  93.75
+779                  Wairakei-Aratiatia         12   12   11 100.00  91.67
+780                          Maunganamu          4    2    2  50.00  50.00
+781                          Taupo East         NA   NA   NA     NA     NA
+782                           Wharewaka          3    3    3 100.00 100.00
+783                      Rangatira Park          7    6    6  85.71  85.71
+784                           Rangatira          1    1    1 100.00 100.00
+785                            Lakewood         24   23   22  95.83  91.67
+786                            Marotiri         31   31   27 100.00  87.10
+787                             Kinloch          5    4    4  80.00  80.00
+788                               Tatua         NA   NA   NA     NA     NA
+789                             Oruanui         NA   NA   NA     NA     NA
+790                          Rangitaiki          1    1    1 100.00 100.00
+791                          Broadlands         NA   NA   NA     NA     NA
+792                          Waitahanui         NA   NA   NA     NA     NA
+793                           Tongariro         NA   NA   NA     NA     NA
+794                            Motuoapa         NA   NA   NA     NA     NA
+795                             Tokaanu         NA   NA   NA     NA     NA
+796                             Rangipo         NA   NA   NA     NA     NA
+797                             Te More         NA   NA   NA     NA     NA
+798                             Taharua         NA   NA   NA     NA     NA
+799                             Nukuhau         21   21   19 100.00  90.48
+800                       Taupo Central         75   70   64  93.33  85.33
+801                             Tauhara         86   85   76  98.84  88.37
+802                             Hilltop         62   61   55  98.39  88.71
+803                           Waipahihi         28   28   23 100.00  82.14
+804                    Richmond Heights         36   35   31  97.22  86.11
+805                               Ohope         36   34   30  94.44  83.33
+806                              Matata         11   10    9  90.91  81.82
+807                            Taneatua         20   18   15  90.00  75.00
+808                           Edgecumbe         28   28   25 100.00  89.29
+809                             Te Teko         15   15   11 100.00  73.33
+810                     Whakatane North         72   63   55  87.50  76.39
+811                          Coastlands         12   11    7  91.67  58.33
+812                      Whakatane West         63   61   54  96.83  85.71
+813                             Trident         58   54   50  93.10  86.21
+814                   Allandale-Mokorua         63   58   47  92.06  74.60
+815                               Orini         14   14   13 100.00  92.86
+816            Inlet-Ohiwa Harbour West         NA   NA   NA     NA     NA
+817                         Maraetotara          1    1    0 100.00   0.00
+818                            Poroporo         11   10    9  90.91  81.82
+819                             Otakiri         47   46   41  97.87  87.23
+820                              Rotoma         15   15   14 100.00  93.33
+821                   Matahina-Minginui         27   25   23  92.59  85.19
+822                             Waimana         16   16   14 100.00  87.50
+823                             Urewera         33   32   26  96.97  78.79
+824                             Kawerau        152  148  118  97.37  77.63
+825                            Murupara         40   37   38  92.50  95.00
+826                             Opotiki         97   92   77  94.85  79.38
+827                             Te Kaha          2    2    2 100.00 100.00
+828                        Cape Runaway          7    7    6 100.00  85.71
+829                              Oponae          3    3    2 100.00  66.67
+830            Inlet-Ohiwa Harbour East         NA   NA   NA     NA     NA
+831                            Waiotahi         31   31   27 100.00  87.10
+832                           East Cape         38   37   35  97.37  92.11
+833                            Ruatoria         17   17   15 100.00  88.24
+834                        Tokomaru Bay          3    3    3 100.00 100.00
+835                   Tarndale-Rakauroa         31   27   27  87.10  87.10
+836                           Te Karaka         12   11    8  91.67  66.67
+837                            Patutahi          3    3    3 100.00 100.00
+838                            Makaraka         15   15   14 100.00  93.33
+839                          Matokitoki          6    6    6 100.00 100.00
+840                              Wainui         20   19   18  95.00  90.00
+841                           Wharekaka         23   22   22  95.65  95.65
+842                            Tiniroto         26   26   25 100.00  96.15
+843                            Manutuke          4    3    3  75.00  75.00
+844                          Tolaga Bay         16   16   15 100.00  93.75
+845                           Mangapapa         84   83   77  98.81  91.67
+846                           Te Hapara         83   77   70  92.77  84.34
+847                    Gisborne Airport         60   57   54  95.00  90.00
+848                          Whataupoko         51   50   48  98.04  94.12
+849                    Gisborne Central         78   76   74  97.44  94.87
+850                         Kaiti North         28   28   28 100.00 100.00
+851                         Outer Kaiti         75   73   70  97.33  93.33
+852                         Kaiti South         67   65   60  97.01  89.55
+853                             Tamarau         59   57   51  96.61  86.44
+854                           Riverdale         19   19   18 100.00  94.74
+855                                Tuai          2    2    2 100.00 100.00
+856                          Frasertown          2    2    2 100.00 100.00
+857                    Ruakituri-Morere         10   10    9 100.00  90.00
+858                       Maungataniwha          9    9    9 100.00 100.00
+859      Inland Water-Lake Waikaremoana         NA   NA   NA     NA     NA
+860                            Raupunga         15   15   14 100.00  93.33
+861                             Whakaki         14   14   14 100.00 100.00
+862                              Nuhaka          4    4    4 100.00 100.00
+863                               Mahia          4    4    4 100.00 100.00
+864                              Wairoa         85   83   74  97.65  87.06
+865                            Bay View         36   35   32  97.22  88.89
+866                             Poraiti         25   25   24 100.00  96.00
+867                             Meeanee         19   19   18 100.00  94.74
+868                             Awatoto          3    3    3 100.00 100.00
+869                             Twyford         16   16   14 100.00  87.50
+870                              Karamu         15   14   14  93.33  93.33
+871                             Whakatu         12   12   10 100.00  83.33
+872                               Clive         35   33   32  94.29  91.43
+873                            Haumoana         33   33   31 100.00  93.94
+874                           Brookvale          4    4    4 100.00 100.00
+875                            Irongate          6    6    6 100.00 100.00
+876                     Longlands South         11   10    9  90.91  81.82
+877                             Tangoio          7    6    6  85.71  85.71
+878                             Eskdale          4    4    4 100.00 100.00
+879                  Sherenden-Puketapu         43   42   41  97.67  95.35
+880                               Omahu          8    8    6 100.00  75.00
+881                            Waiohiki          2    2    2 100.00 100.00
+882                            Pakowhai          8    8    7 100.00  87.50
+883                         Maraekakaho         18   18   18 100.00 100.00
+884                           Bridge Pa         12   11   10  91.67  83.33
+885                             Poukawa         14   13   12  92.86  85.71
+886                            Pakipaki          9    9    9 100.00 100.00
+887                           Waimarama         10   10    9 100.00  90.00
+888                              Tutira         13   13   13 100.00 100.00
+889                          Puketitiri          7    7    7 100.00 100.00
+890                          Whanawhana          1    1    1 100.00 100.00
+891                           Westshore         12   12    9 100.00  75.00
+892                             Ahuriri         10   10    9 100.00  90.00
+893                     Onekawa Central         20   20   20 100.00 100.00
+894                        Onekawa West          6    5    5  83.33  83.33
+895                       Onekawa South        101  100   94  99.01  93.07
+896                              Marewa         91   91   83 100.00  91.21
+897                            Maraenui         95   91   84  95.79  88.42
+898                       Hospital Hill         30   28   27  93.33  90.00
+899                          Bluff Hill         26   25   22  96.15  84.62
+900                         Nelson Park         50   48   48  96.00  96.00
+901                         Mclean Park         44   43   42  97.73  95.45
+902                       Tamatea North         54   54   48 100.00  88.89
+903                       Tamatea South         46   45   43  97.83  93.48
+904                        Greenmeadows         89   87   80  97.75  89.89
+905                      Taradale North         75   74   69  98.67  92.00
+906                      Taradale South         71   70   66  98.59  92.96
+907                             Pirimai         55   53   49  96.36  89.09
+908                              Mahora         61   61   61 100.00 100.00
+909                         St Leonards         60   60   54 100.00  90.00
+910                             Frimley         38   37   36  97.37  94.74
+911                             Raureka         86   83   75  96.51  87.21
+912                             Mayfair         91   87   82  95.60  90.11
+913                            Parkvale         51   49   47  96.08  92.16
+914                    Hastings Central         64   59   54  92.19  84.38
+915                               Akina         98   97   87  98.98  88.78
+916                            Woolwich         NA   NA   NA     NA     NA
+917                           Camberley         45   45   39 100.00  86.67
+918                    Kingsley-Chatham         86   80   73  93.02  84.88
+919                             Lochain         82   80   78  97.56  95.12
+920                       Flaxmere East        116  112   92  96.55  79.31
+921                       Anderson Park         33   33   31 100.00  93.94
+922                                Iona         30   30   30 100.00 100.00
+923                      Havelock Hills          9    8    7  88.89  77.78
+924                             Te Mata         27   26   23  96.30  85.19
+925              Havelock North Central         84   83   78  98.81  92.86
+926                       Te Mata Hills          5    4    5  80.00 100.00
+927                             Takapau          9    9    9 100.00 100.00
+928                             Waipawa         30   30   27 100.00  90.00
+929                            Tikokino         40   39   39  97.50  97.50
+930                               Otane         13   13   12 100.00  92.31
+931                          Waipukurau         94   91   83  96.81  88.30
+932                          Porangahau          8    8    8 100.00 100.00
+933                Elsthorpe-Flemington         42   42   40 100.00  95.24
+934              Norsewood-Herbertville         53   53   53 100.00 100.00
+935                            Owahanga          4    4    4 100.00 100.00
+936                                Mara         NA   NA   NA     NA     NA
+937                     Dannevirke West         24   22   21  91.67  87.50
+938                     Dannevirke East         60   58   57  96.67  95.00
+939                            Papatawa         12   12   12 100.00 100.00
+940                           Woodville         18   18   18 100.00 100.00
+941                              Urenui          5    5    5 100.00 100.00
+942                          Okoki-Okau         41   39   36  95.12  87.80
+943                              Oakura         26   22   21  84.62  80.77
+944                          Bell Block        115  111  106  96.52  92.17
+945                             Paraite          3    3    2 100.00  66.67
+946                           Glen Avon         15   15   14 100.00  93.33
+947                              Bowden          8    8    8 100.00 100.00
+948                          Mangaoraka         11   11   11 100.00 100.00
+949                          Carrington         11   11   10 100.00  90.91
+950                      Highlands Park         39   38   39  97.44 100.00
+951                           Fernleigh         13   13   10 100.00  76.92
+952                             Barrett         22   22   22 100.00 100.00
+953                               Omata          7    7    4 100.00  57.14
+954                           Lepperton         44   43   42  97.73  95.45
+955                             Kaitake         48   45   41  93.75  85.42
+956                               Okato         23   23   23 100.00 100.00
+957                        Waitara West         68   65   58  95.59  85.29
+958                        Waitara East         54   53   51  98.15  94.44
+959                             Moturoa         46   45   41  97.83  89.13
+960                            Lynmouth         40   39   37  97.50  92.50
+961                           Spotswood         39   39   37 100.00  94.87
+962                             Marfell         39   37   36  94.87  92.31
+963                       Upper Westown         19   18   18  94.74  94.74
+964                             Westown         46   44   41  95.65  89.13
+965                New Plymouth Central         55   52   51  94.55  92.73
+966                             Kawaroa         29   28   26  96.55  89.66
+967                         Mount Bryan          8    5    5  62.50  62.50
+968                       Marsland Hill         23   23   18 100.00  78.26
+969                             Fitzroy         60   58   57  96.67  95.00
+970                            Welbourn         24   23   22  95.83  91.67
+971                          Merrilands         49   47   46  95.92  93.88
+972                          Frankleigh         71   68   65  95.77  91.55
+973                         Struan Park         75   70   63  93.33  84.00
+974                      Egmont Village          7    7    6 100.00  85.71
+975                             Kaimata         42   42   41 100.00  97.62
+976                           Inglewood         73   72   64  98.63  87.67
+977                            Midhirst          5    5    5 100.00 100.00
+978                        Whangamomona          1    1    1 100.00 100.00
+979                             Douglas         12   12   12 100.00 100.00
+980                                Toko         24   23   23  95.83  95.83
+981                            Pembroke         19   19   18 100.00  94.74
+982                      Stratford West         66   65   63  98.48  95.45
+983                      Stratford East         28   26   24  92.86  85.71
+984                             Opunake         32   31   31  96.88  96.88
+985                              Rahotu          6    6    6 100.00 100.00
+986                               Kahui         34   33   32  97.06  94.12
+987                             Kaponga         16   16   16 100.00 100.00
+988                    Mangatoki-Moeroa         23   22   20  95.65  86.96
+989                              Eltham         35   34   29  97.14  82.86
+990                              Kapuni         17   16   16  94.12  94.12
+991                              Manaia         22   22   20 100.00  90.91
+992                            Normanby         19   18   16  94.74  84.21
+993                        Hawera North         40   39   39  97.50  97.50
+994                        Hawera South        115  110  104  95.65  90.43
+995                         Ohawe Beach          6    6    4 100.00  66.67
+996                             Tawhiti          5    5    4 100.00  80.00
+997                         Waingongoro          5    5    4 100.00  80.00
+998                         Hawera West          6    6    6 100.00 100.00
+999                             Ohangai         11   11   11 100.00 100.00
+1000                            Okaiawa         12   11    8  91.67  66.67
+1001                          Waitotara          2    2    2 100.00 100.00
+1002                         Whenuakura         11   11   11 100.00 100.00
+1003                           Makakaho         13   13   12 100.00  92.31
+1004                              Patea         22   22   20 100.00  90.91
+1005                           Waverley         13   13   12 100.00  92.31
+1006                           Tangiwai         20   20   19 100.00  95.00
+1007                            Ohakune         20   20   19 100.00  95.00
+1008                            Raetihi         26   26   24 100.00  92.31
+1009                           Otamatea         11   11    8 100.00  72.73
+1010                           Blueskin         24   23   23  95.83  95.83
+1011                            Maxwell         23   23   23 100.00 100.00
+1012                  Castlecliff North         37   33   28  89.19  75.68
+1013                  Castlecliff South         28   26   23  92.86  82.14
+1014                            Mosston         24   23   23  95.83  95.83
+1015                          Balgownie          3    3    3 100.00 100.00
+1016                            Tawhero         34   31   31  91.18  91.18
+1017                     Gonville South         58   57   55  98.28  94.83
+1018                      Gonville East         24   24   22 100.00  91.67
+1019                      Gonville West         36   36   33 100.00  91.67
+1020                    Springvale West         24   24   21 100.00  87.50
+1021                    Springvale East         15   15   14 100.00  93.33
+1022                Wanganui Collegiate         15   15   14 100.00  93.33
+1023                         Laird Park         32   31   30  96.88  93.75
+1024                   Wanganui Central         31   29   21  93.55  67.74
+1025                     Spriggens Park          5    5    5 100.00 100.00
+1026                      Cooks Gardens          1    1    1 100.00 100.00
+1027                      St Johns Hill         25   24   22  96.00  88.00
+1028                      Lower Aramoho         41   41   38 100.00  92.68
+1029                      Upper Aramoho         35   35   35 100.00 100.00
+1030                    Williams Domain         40   39   35  97.50  87.50
+1031                       Wembley Park         31   30   29  96.77  93.55
+1032                        Kowhai Park         33   32   29  96.97  87.88
+1033                        Bastia Hill          3    3    2 100.00  66.67
+1034                         Durie Hill         34   32   31  94.12  91.18
+1035                             Putiki          3    2    2  66.67  66.67
+1036               Marybank-Gordon Park          5    4    4  80.00  80.00
+1037                   Fordell-Kakatahi         24   20   18  83.33  75.00
+1038                            Waiouru         17   16   13  94.12  76.47
+1039                          Mangaweka          1    1    1 100.00 100.00
+1040                        Hunterville         12   11   10  91.67  83.33
+1041                   Ratana Community          2    2    2 100.00 100.00
+1042                              Bulls         41   41   39 100.00  95.12
+1043                           Ngamatea         NA   NA   NA     NA     NA
+1044                          Moawhango          5    5    5 100.00 100.00
+1045                     Pohonui-Porewa         31   30   29  96.77  93.55
+1046                         Lake Alice         39   38   34  97.44  87.18
+1047                           Koitiata          1    1    1 100.00 100.00
+1048                            Taihape         32   32   31 100.00  96.88
+1049                             Marton         86   83   75  96.51  87.21
+1050                            Kiwitea         16   16   15 100.00  93.75
+1051                          Pohangina         16   16   16 100.00 100.00
+1052                           Ashhurst         59   58   55  98.31  93.22
+1053                       Stoney Creek         14   13   13  92.86  92.86
+1054                         Whakarongo         20   19   19  95.00  95.00
+1055                       Oroua Bridge         NA   NA   NA     NA     NA
+1056                              Maewa         10   10    9 100.00  90.00
+1057                           Halcombe          6    6    6 100.00 100.00
+1058                  Tokorangi-Hiwinui         23   23   23 100.00 100.00
+1059                     Feilding North         59   59   55 100.00  93.22
+1060                      Feilding West         62   60   57  96.77  91.94
+1061                   Feilding Central         52   52   49 100.00  94.23
+1062                      Feilding East         45   44   43  97.78  95.56
+1063                             Sanson          3    3    3 100.00 100.00
+1064                           Rongotea          6    6    6 100.00 100.00
+1065                         Tangimoana          5    5    5 100.00 100.00
+1066                    Himatangi Beach          6    6    6 100.00 100.00
+1067                       Foxton Beach         19   19   16 100.00  84.21
+1068                           Rakiraki          4    4    4 100.00 100.00
+1069                             Ohakea          5    5    4 100.00  80.00
+1070                Oroua Downs-Waitohi         38   38   36 100.00  94.74
+1071                             Moutoa         14   14   11 100.00  78.57
+1072                             Foxton         52   51   45  98.08  86.54
+1073                           Kairanga          5    5    5 100.00 100.00
+1074                           Longburn         12   12   11 100.00  91.67
+1075                  Massey University         NA   NA   NA     NA     NA
+1076               Linton Military Camp         21   21   18 100.00  85.71
+1077                           Kauwhata         20   20   19 100.00  95.00
+1078                            Turitea         24   23   21  95.83  87.50
+1079                             Milson         80   79   72  98.75  90.00
+1080                       Kelvin Grove        142  139  129  97.89  90.85
+1081                             Takaro         87   85   76  97.70  87.36
+1082                          Cloverlea         32   30   28  93.75  87.50
+1083          Palmerston North Hospital         41   41   41 100.00 100.00
+1084                           Papaeoia         26   25   22  96.15  84.62
+1085                             Roslyn         89   89   87 100.00  97.75
+1086                        Terrace End         47   46   43  97.87  91.49
+1087                           Highbury         60   57   54  95.00  90.00
+1088                          Westbrook         81   79   71  97.53  87.65
+1089           Palmerston North Central         96   92   88  95.83  91.67
+1090                      Awapuni North         57   57   52 100.00  91.23
+1091                       Awapuni West         15   14   14  93.33  93.33
+1092                      Awapuni South         64   63   59  98.44  92.19
+1093                           West End         62   60   50  96.77  80.65
+1094                     Hokowhitu West         37   35   32  94.59  86.49
+1095                   Hokowhitu Lagoon         16   15   14  93.75  87.50
+1096                     Hokowhitu East         69   66   63  95.65  91.30
+1097                          Aokautere         30   29   29  96.67  96.67
+1098                            Shannon         15   15   14 100.00  93.33
+1099                          Waitarere          4    4    4 100.00 100.00
+1100                     Waikanae Beach         44   43   40  97.73  90.91
+1101                      Waikanae East         26   23   21  88.46  80.77
+1102                          Peka Peka          4    4    4 100.00 100.00
+1103                      Waikanae Park         12   11   11  91.67  91.67
+1104                      Waikanae West         44   44   41 100.00  93.18
+1105                           Tokomaru         10   10   10 100.00 100.00
+1106                              Opiki         10   10   10 100.00 100.00
+1107                            Kaitawa          4    4    4 100.00 100.00
+1108                    Lake Horowhenua          6    6    5 100.00  83.33
+1109                           Waiopehu         14   14   13 100.00  92.86
+1110                           Kohitere          8    8    8 100.00 100.00
+1111                   Mangaore-Manakau         36   35   35  97.22  97.22
+1112                        Otaki Forks         13   13   13 100.00 100.00
+1113                            Te Horo         11   10   10  90.91  90.91
+1114                        Levin North         47   44   41  93.62  87.23
+1115                         Levin West         44   43   41  97.73  93.18
+1116                      Playford Park         61   59   57  96.72  93.44
+1117                        Levin South         39   39   34 100.00  87.18
+1118                         Levin East         61   60   59  98.36  96.72
+1119                              Otaki         96   95   89  98.96  92.71
+1120                         Heretaunga         14   14   14 100.00 100.00
+1121                     Trentham South          6    6    6 100.00 100.00
+1122                          Pinehaven         48   47   45  97.92  93.75
+1123                   Moonshine Valley          2    2    2 100.00 100.00
+1124                Riverstone Terraces         26   25   23  96.15  88.46
+1125                           Glendale        105  104   94  99.05  89.52
+1126                            Parkway         54   50   44  92.59  81.48
+1127                            Fernlea         32   32   30 100.00  93.75
+1128                            Arakura         41   41   35 100.00  85.37
+1129                      Homedale West         43   42   38  97.67  88.37
+1130                      Homedale East         54   53   49  98.15  90.74
+1131                          Pencarrow          3    3    2 100.00  66.67
+1132                        Pauatahanui          6    6    5 100.00  83.33
+1133                          Endeavour         63   62   62  98.41  98.41
+1134                         Resolution          2    2    2 100.00 100.00
+1135                          Adventure         22   22   21 100.00  95.45
+1136                   Paekakariki Hill          1    1    1 100.00 100.00
+1137            Paraparaumu Beach North         53   53   46 100.00  86.79
+1138                          Otaihanga          9    9    9 100.00 100.00
+1139            Paraparaumu Beach South         54   54   50 100.00  92.59
+1140                Paraparaumu Central        136  134  129  98.53  94.85
+1141                      Raumati Beach         77   77   74 100.00  96.10
+1142                      Raumati South         62   62   61 100.00  98.39
+1143                        Paekakariki         35   33   32  94.29  91.43
+1144                      Kapiti Island         NA   NA   NA     NA     NA
+1145                   Maungakotukutuku          7    6    6  85.71  85.71
+1146                           Te Marua         16   16   16 100.00 100.00
+1147                          Akatarawa          8    7    6  87.50  75.00
+1148                       Emerald Hill         38   37   34  97.37  89.47
+1149                          Maoribank         40   38   37  95.00  92.50
+1150                      Clouston Park         36   36   34 100.00  94.44
+1151                        Totara Park         52   52   51 100.00  98.08
+1152                          Ebdentown         32   31   28  96.88  87.50
+1153                 Upper Hutt Central         21   20   19  95.24  90.48
+1154                          Maidstone          3    3    3 100.00 100.00
+1155                       Wallaceville         27   27   25 100.00  92.59
+1156                          Elderslea         50   50   49 100.00  98.00
+1157                        Poets Block         28   27   25  96.43  89.29
+1158                          Brentwood         38   37   35  97.37  92.11
+1159                     Trentham North         46   44   42  95.65  91.30
+1160            Heretaunga-Silverstream         40   37   35  92.50  87.50
+1161                      Cloustonville          4    4    4 100.00 100.00
+1162                           Mangaroa         15   14   13  93.33  86.67
+1163                             Tawhai         56   53   50  94.64  89.29
+1164                            Holborn         44   43   38  97.73  86.36
+1165                            Delaney         57   56   52  98.25  91.23
+1166                             Manuka         29   28   27  96.55  93.10
+1167                        Taita North         60   58   53  96.67  88.33
+1168                        Taita South         58   57   51  98.28  87.93
+1169                        Avalon East         39   37   34  94.87  87.18
+1170                       Naenae North        111  108   98  97.30  88.29
+1171                       Naenae South         68   65   60  95.59  88.24
+1172                        Avalon West         34   32   28  94.12  82.35
+1173                           Boulcott         32   30   30  93.75  93.75
+1174                         Epuni West         46   43   40  93.48  86.96
+1175                         Epuni East         57   55   50  96.49  87.72
+1176                      Waterloo West         12   12   10 100.00  83.33
+1177                      Waterloo East         80   75   69  93.75  86.25
+1178                     Waiwhetu North         20   20   15 100.00  75.00
+1179                     Waiwhetu South         38   37   35  97.37  92.11
+1180                         Gracefield          3    3    2 100.00  66.67
+1181                              Moera         41   40   37  97.56  90.24
+1182                       Woburn North         21   20   19  95.24  90.48
+1183                       Woburn South          2    2    2 100.00 100.00
+1184                       Hutt Central         60   50   43  83.33  71.67
+1185                            Melling         12   12   11 100.00  91.67
+1186                          Alicetown         35   35   35 100.00 100.00
+1187                         Normandale         34   34   32 100.00  94.12
+1188                         Maungaraki         57   56   54  98.25  94.74
+1189                          Tirohanga         18   17   16  94.44  88.89
+1190                            Belmont         48   45   44  93.75  91.67
+1191                             Kelson         67   66   61  98.51  91.04
+1192                Haywards-Manor Park          4    4    4 100.00 100.00
+1193                           Korokoro         14   14   12 100.00  85.71
+1194                     Petone Central         17   17   17 100.00 100.00
+1195                          Esplanade         45   44   39  97.78  86.67
+1196                            Wilford         57   53   50  92.98  87.72
+1197                         Eastbourne         54   53   51  98.15  94.44
+1198                   Titahi Bay North         56   56   54 100.00  96.43
+1199                            Onepoto         38   37   36  97.37  94.74
+1200                   Titahi Bay South         76   74   70  97.37  92.11
+1201                 Elsdon-Takapuwahia         52   52   50 100.00  96.15
+1202                    Porirua Central         30   30   28 100.00  93.33
+1203                       Porirua East         35   32   28  91.43  80.00
+1204                      Ranui Heights         19   19   17 100.00  89.47
+1205                Cannons Creek North         87   85   70  97.70  80.46
+1206                Cannons Creek South         40   39   31  97.50  77.50
+1207                 Cannons Creek East        110  104   94  94.55  85.45
+1208                        Waitangirua        114  109   96  95.61  84.21
+1209                   Papakowhai North         NA   NA   NA     NA     NA
+1210                   Papakowhai South         NA   NA   NA     NA     NA
+1211                         Ascot Park         55   52   47  94.55  85.45
+1212                        Pukerua Bay         32   32   32 100.00 100.00
+1213                         Plimmerton         27   26   23  96.30  85.19
+1214                      Mana-Camborne         42   41   37  97.62  88.10
+1215                  Paremata-Postgate         27   25   24  92.59  88.89
+1216                          Discovery         51   50   48  98.04  94.12
+1217                        Mana Island         NA   NA   NA     NA     NA
+1218                         Tawa South         58   55   51  94.83  87.93
+1219                       Tawa Central         63   59   55  93.65  87.30
+1220                             Linden         53   53   51 100.00  96.23
+1221                         Greenacres         16   16   16 100.00 100.00
+1222             Thorndon-Tinakori Road         25   22   19  88.00  76.00
+1223                            Lambton         52   44   36  84.62  69.23
+1224    Willis Street-Cambridge Terrace         27   19   13  70.37  48.15
+1225            Wellington City-Marinas         NA   NA   NA     NA     NA
+1226            Aro Street-Nairn Street         11   11   10 100.00  90.91
+1227             Mt Cook-Wallace Street         31   28   23  90.32  74.19
+1228                   Mt Victoria West         30   29   28  96.67  93.33
+1229                     Glenside North          4    4    3 100.00  75.00
+1230                 Churton Park North         NA   NA   NA     NA     NA
+1231                 Churton Park South         NA   NA   NA     NA     NA
+1232                      Grenada North          8    7    7  87.50  87.50
+1233                    Grenada Village         28   27   26  96.43  92.86
+1234                      Newlands East         11   11    8 100.00  72.73
+1235                             Takapu          8    8    8 100.00 100.00
+1236                           Horokiwi          2    2    2 100.00 100.00
+1237                 Johnsonville North         47   46   43  97.87  91.49
+1238               Johnsonville Central         75   73   71  97.33  94.67
+1239                     Paparangi West         NA   NA   NA     NA     NA
+1240                  Johnsonville East         NA   NA   NA     NA     NA
+1241                          Paparangi         NA   NA   NA     NA     NA
+1242                          Woodridge         NA   NA   NA     NA     NA
+1243                     Newlands North         NA   NA   NA     NA     NA
+1244                     Newlands South         61   58   55  95.08  90.16
+1245                     Ngauranga East          1    1    1 100.00 100.00
+1246                              Raroa         59   58   56  98.31  94.92
+1247       Khandallah Park-Broadmeadows         27   26   23  96.30  85.19
+1248                          Te Kainga         54   52   44  96.30  81.48
+1249                     Ngauranga West         NA   NA   NA     NA     NA
+1250                    Rangoon Heights         45   43   41  95.56  91.11
+1251                             Awarua         52   52   51 100.00  98.08
+1252                        Ngaio South         78   77   76  98.72  97.44
+1253                      Kaiwharawhara          1    1    1 100.00 100.00
+1254                          Wadestown         48   46   42  95.83  87.50
+1255                      Crofton Downs         NA   NA   NA     NA     NA
+1256                             Wilton         NA   NA   NA     NA     NA
+1257                    Northland North         NA   NA   NA     NA     NA
+1258                       Karori North         37   37   36 100.00  97.30
+1259                        Karori Park         83   83   72 100.00  86.75
+1260                        Karori East         54   52   47  96.30  87.04
+1261                       Karori South         57   56   54  98.25  94.74
+1262                          Northland         34   33   30  97.06  88.24
+1263                            Kelburn         25   22   20  88.00  80.00
+1264                          Taitville          5    3    3  60.00  60.00
+1265                       Mitchelltown          4    4    3 100.00  75.00
+1266                           Brooklyn         59   58   53  98.31  89.83
+1267                     Vogeltown West         NA   NA   NA     NA     NA
+1268                          Vogeltown         NA   NA   NA     NA     NA
+1269                Kingston-Mornington         31   29   29  93.55  93.55
+1270                     Brooklyn South         10    9    9  90.00  90.00
+1271            Happy Valley-Owhiro Bay         26   23   23  88.46  88.46
+1272                    Island Bay West         62   62   59 100.00  95.16
+1273                    Island Bay East         72   70   63  97.22  87.50
+1274     Melrose-Houghton Bay-Southgate         71   67   61  94.37  85.92
+1275                    Berhampore West         45   42   35  93.33  77.78
+1276                       Newtown West         NA   NA   NA     NA     NA
+1277                    Berhampore East         NA   NA   NA     NA     NA
+1278                       Newtown East         63   61   55  96.83  87.30
+1279                           Adelaide          6    5    5  83.33  83.33
+1280                       Oriental Bay          6    5    5  83.33  83.33
+1281                          Roseneath          8    8    8 100.00 100.00
+1282                     Hataitai North         69   68   64  98.55  92.75
+1283                     Kilbirnie East         48   46   41  95.83  85.42
+1284      Kilbirnie West-Hataitai South         36   32   30  88.89  83.33
+1285                   Evans Bay Marina         NA   NA   NA     NA     NA
+1286        Lyall Bay-Airport-Moa Point         40   37   36  92.50  90.00
+1287                Seatoun Tunnel West         NA   NA   NA     NA     NA
+1288                    Strathmore Park         NA   NA   NA     NA     NA
+1289                      Miramar South         65   59   53  90.77  81.54
+1290                      Miramar North         NA   NA   NA     NA     NA
+1291                            Miramar         NA   NA   NA     NA     NA
+1292              Karaka Bay-Worser Bay         15   15   15 100.00 100.00
+1293                            Seatoun         45   41   38  91.11  84.44
+1294                            Maupuia         NA   NA   NA     NA     NA
+1295                       Miramar West         NA   NA   NA     NA     NA
+1296                      Makara-Ohariu          9    7    7  77.78  77.78
+1297                       Mangatainoka         12   11   11  91.67  91.67
+1298                           Pahiatua         50   48   48  96.00  96.00
+1299                          Eketahuna         11   11   10 100.00  90.91
+1300                   Nireaha-Tiraumea         14   14   13 100.00  92.86
+1301                Homebush-Te Ore Ore          6    6    6 100.00 100.00
+1302                    Opaki-Fernridge         15   15   14 100.00  93.33
+1303                         Kopuaranga         16   16   14 100.00  87.50
+1304                           Whareama         10   10   10 100.00 100.00
+1305                  Masterton Central         32   29   29  90.62  90.62
+1306                     Masterton West         53   51   49  96.23  92.45
+1307                     Masterton East         56   55   51  98.21  91.07
+1308                       Solway North         28   26   25  92.86  89.29
+1309                       Solway South         50   50   47 100.00  94.00
+1310                         Ngaumutawa         15   14   14  93.33  93.33
+1311                  Masterton Railway          6    5    5  83.33  83.33
+1312                          Lansdowne         63   61   60  96.83  95.24
+1313                           Waingawa          1    1    1 100.00 100.00
+1314                      Mt Holdsworth         16   16   15 100.00  93.75
+1315                          Te Wharau         21   20   18  95.24  85.71
+1316                          Carterton         65   62   60  95.38  92.31
+1317                         Tuturumuri          2    2    2 100.00 100.00
+1318                           Kahutara         29   28   28  96.55  96.55
+1319        Inland Water-Lake Wairarapa         NA   NA   NA     NA     NA
+1320                           Greytown         27   27   26 100.00  96.30
+1321                        Featherston         36   34   33  94.44  91.67
+1322                      Martinborough         29   26   26  89.66  89.66
+1323                           Havelock         13   13   13 100.00 100.00
+1324                            Renwick         42   41   40  97.62  95.24
+1325                         Woodbourne          4    4    4 100.00 100.00
+1326                              Omaka         27   25   26  92.59  96.30
+1327             Spring Creek-Grovetown         NA   NA   NA     NA     NA
+1328                         Riverlands         NA   NA   NA     NA     NA
+1329                            Waikawa          9    9    8 100.00  88.89
+1330  Marlborough Sounds Coastal Marine         NA   NA   NA     NA     NA
+1331     Marlborough Sounds Terrestrial         24   23   22  95.83  91.67
+1332                       Wairau North         NA   NA   NA     NA     NA
+1333                          Tuamarina         NA   NA   NA     NA     NA
+1334                            Rapaura         NA   NA   NA     NA     NA
+1335                       Wairau South         NA   NA   NA     NA     NA
+1336                          Weld Pass         NA   NA   NA     NA     NA
+1337                           Fairhall         NA   NA   NA     NA     NA
+1338                             Severn         NA   NA   NA     NA     NA
+1339                               Ward         12   12   12 100.00 100.00
+1340                             Seddon          7    7    5 100.00  71.43
+1341                      Lake Tennyson         NA   NA   NA     NA     NA
+1342                             Picton         40   35   32  87.50  80.00
+1343                        Springlands         47   39   39  82.98  82.98
+1344                           Mayfield         39   38   35  97.44  89.74
+1345                   Blenheim Central         86   79   74  91.86  86.05
+1346                            Whitney         58   58   54 100.00  93.10
+1347                        Redwoodtown         82   77   70  93.90  85.37
+1348                          Witherlea         65   64   62  98.46  95.38
+1349                  Kaikoura Township         24   24   22 100.00  91.67
+1350                     Kaikoura Rural         19   19   17 100.00  89.47
+1351                         Golden Bay         47   45   43  95.74  91.49
+1352                             Takaka         20   17   17  85.00  85.00
+1353                           Glenduan          9    9    8 100.00  88.89
+1354                           Ngawhatu         32   31   31  96.88  96.88
+1355                       Aniseed Hill          4    4    4 100.00 100.00
+1356                               Hope         17   15   14  88.24  82.35
+1357                      Saxton Island         NA   NA   NA     NA     NA
+1358                  Waimea Inlet East         NA   NA   NA     NA     NA
+1359                             Saxton         12   11   11  91.67  91.67
+1360                        Best Island          1    1    1 100.00 100.00
+1361                        Bell Island         NA   NA   NA     NA     NA
+1362                             Ranzau          2    2    2 100.00 100.00
+1363                      Richmond Hill          1    1    1 100.00 100.00
+1364                          Whangamoa         13   12   12  92.31  92.31
+1365                        Brightwater         42   41   39  97.62  92.86
+1366                          Wakefield         51   49   47  96.08  92.16
+1367                              Mapua         32   31   29  96.88  90.62
+1368                      Inlet-Motueka         NA   NA   NA     NA     NA
+1369                        Kaiteriteri          7    6    6  85.71  85.71
+1370                      Motueka Outer         34   33   30  97.06  88.24
+1371                      Rabbit Island         NA   NA   NA     NA     NA
+1372                  Waimea Inlet West         NA   NA   NA     NA     NA
+1373                            Wai-Iti         65   62   58  95.38  89.23
+1374                       Golden Downs          7    7    7 100.00 100.00
+1375                       Lake Rotoroa          4    4    4 100.00 100.00
+1376                          Murchison          9    8    8  88.89  88.89
+1377                           Tapawera          6    6    5 100.00  83.33
+1378                             Riwaka          9    9    9 100.00 100.00
+1379                            Clifton         10   10    9 100.00  90.00
+1380                            Atawhai         43   38   36  88.37  83.72
+1381                        Port Nelson         NA   NA   NA     NA     NA
+1382                           The Wood         25   24   23  96.00  92.00
+1383                          Britannia         11   10    9  90.91  81.82
+1384                         Washington         63   61   56  96.83  88.89
+1385                          Trafalgar         35   32   31  91.43  88.57
+1386                             Maitai          4    4    3 100.00  75.00
+1387                              Kirks         16   16   16 100.00 100.00
+1388                             Bronte         22   20   18  90.91  81.82
+1389                             Atmore         14   14   13 100.00  92.86
+1390                          Tahunanui         27   26   25  96.30  92.59
+1391                       Tahuna Hills         20   17   17  85.00  85.00
+1392                            Toi Toi         31   30   28  96.77  90.32
+1393                             Broads         27   27   26 100.00  96.30
+1394                          Grampians         27   27   22 100.00  81.48
+1395                          The Brook         27   27   26 100.00  96.30
+1396                     Nelson Airport         20   20   18 100.00  90.00
+1397                            Nayland         11   11   10 100.00  90.91
+1398                        Enner Glynn         40   40   37 100.00  92.50
+1399                          Maitlands         36   34   32  94.44  88.89
+1400                          Isel Park         64   63   60  98.44  93.75
+1401                           Langbein         53   53   50 100.00  94.34
+1402                      Richmond East         64   62   56  96.88  87.50
+1403                      Richmond West        137  135  127  98.54  92.70
+1404                       Motueka West         55   53   51  96.36  92.73
+1405                       Motueka East         61   58   55  95.08  90.16
+1406                      Moutere Inlet         NA   NA   NA     NA     NA
+1407                     Jackett Island         NA   NA   NA     NA     NA
+1408                            Karamea          6    6    6 100.00 100.00
+1409                    Hector-Ngakawau          1    1    1 100.00 100.00
+1410                            Granity          2    1    1  50.00  50.00
+1411                           Orowaiti          7    7    7 100.00 100.00
+1412                    Little Wanganui          2    2    2 100.00 100.00
+1413                          Mokihinui          1    1    1 100.00 100.00
+1414                  Buller Coalfields          3    3    1 100.00  33.33
+1415                     Westport Rural         14   13   12  92.86  85.71
+1416                         Charleston          4    4    4 100.00 100.00
+1417                 Inangahua Junction          1    1    1 100.00 100.00
+1418                     Westport Urban         77   72   72  93.51  93.51
+1419                            Reefton         16   16   15 100.00  93.75
+1420                   Inangahua Valley         NA   NA   NA     NA     NA
+1421                         Mawheraiti          2    1    2  50.00 100.00
+1422                             Maruia          3    3    3 100.00 100.00
+1423                             Karoro         15   15   13 100.00  86.67
+1424                             Kaiata          2    2    2 100.00 100.00
+1425               South Beach-Camerons         17   17   15 100.00  88.24
+1426                          Blackball          8    8    8 100.00 100.00
+1427                    Point Elizabeth         NA   NA   NA     NA     NA
+1428                             Dobson         13   13   13 100.00 100.00
+1429                          Barrytown          2    2    2 100.00 100.00
+1430                         Coal Creek         NA   NA   NA     NA     NA
+1431                             Atarau          3    3    3 100.00 100.00
+1432                    Greymouth Rural          1    1    1 100.00 100.00
+1433                     Marsden-Hohonu          7    6    5  85.71  71.43
+1434                      Arnold Valley          5    5    5 100.00 100.00
+1435               Nelson Creek-Ngahere          2    2    2 100.00 100.00
+1436                             Ahaura          6    6    6 100.00 100.00
+1437                       Lake Brunner          3    3    3 100.00 100.00
+1438                            Haupiri         12    0    0   0.00   0.00
+1439                    Runanga-Rapahoe         22   19   18  86.36  81.82
+1440                             Cobden         34   33   33  97.06  97.06
+1441                          Blaketown         11   11   11 100.00 100.00
+1442                  Greymouth Central         24   13   13  54.17  54.17
+1443                    Greymouth South         36   36   33 100.00  91.67
+1444                             Kumara          6    6    6 100.00 100.00
+1445                            Kaniere          9    9    9 100.00 100.00
+1446                               Ross          7    7    7 100.00 100.00
+1447                           Harihari          5    4    4  80.00  80.00
+1448                        Franz Josef          2    1    2  50.00 100.00
+1449                        Fox Glacier          2    2    2 100.00 100.00
+1450                          Taramakau          1    1    1 100.00 100.00
+1451                              Otira          1    1    1 100.00 100.00
+1452                     Waimea-Arahura          6    5    6  83.33 100.00
+1453                     Hokitika Rural          5    5    5 100.00 100.00
+1454                    Hokitika Valley          4    4    4 100.00 100.00
+1455                       Totara River         NA   NA   NA     NA     NA
+1456                            Waitaha         NA   NA   NA     NA     NA
+1457                           Whataroa          3    2    3  66.67 100.00
+1458                              Waiho         NA   NA   NA     NA     NA
+1459                         Karangarua         NA   NA   NA     NA     NA
+1460                  Bruce Bay-Paringa         NA   NA   NA     NA     NA
+1461                              Haast          1    1    1 100.00 100.00
+1462                     Hokitika Urban         64   64   63 100.00  98.44
+1463                     Hanmer Springs         15   15   15 100.00 100.00
+1464                          Culverden          8    8    6 100.00  75.00
+1465                              Waiau          3    3    3 100.00 100.00
+1466                              Amuri         24   22   20  91.67  83.33
+1467                          Parnassus         15   13   13  86.67  86.67
+1468                            Cheviot          5    5    4 100.00  80.00
+1469                            Hurunui         41   37   35  90.24  85.37
+1470                           Amberley         27   26   23  96.30  85.19
+1471                         Leithfield         33   32   31  96.97  93.94
+1472                             Sefton          6    6    6 100.00 100.00
+1473                              Okuku         13   13   11 100.00  84.62
+1474                             Loburn         24   20   19  83.33  79.17
+1475                             Ashley         16   15   13  93.75  81.25
+1476                            Camside          1    0    0   0.00   0.00
+1477                Pines-Kairaki Beach          7    6    6  85.71  85.71
+1478                            Waikuku         19   18   16  94.74  84.21
+1479                               Cust          6    6    6 100.00 100.00
+1480                            Mairaki          5    5    5 100.00 100.00
+1481                            Woodend         31   30   30  96.77  96.77
+1482                           Fernside         NA   NA   NA     NA     NA
+1483                            Lehmans         NA   NA   NA     NA     NA
+1484                            Pegasus         NA   NA   NA     NA     NA
+1485                      Woodend Beach         NA   NA   NA     NA     NA
+1486                         Coldstream         NA   NA   NA     NA     NA
+1487                         Ravenswood         NA   NA   NA     NA     NA
+1488                            Tuahiwi         NA   NA   NA     NA     NA
+1489                       Woodend West         NA   NA   NA     NA     NA
+1490                      Rangiora East         38   37   36  97.37  94.74
+1491                         Southbrook         10    7    7  70.00  70.00
+1492                          Kingsbury         18   18   13 100.00  72.22
+1493                     Rangiora North         89   87   84  97.75  94.38
+1494                      Rangiora West         NA   NA   NA     NA     NA
+1495                   Rangiora Central         NA   NA   NA     NA     NA
+1496                      Kaiapoi South         26   24   23  92.31  88.46
+1497                          Mansfield         16   16   14 100.00  87.50
+1498                          Courtenay          7    6    6  85.71  85.71
+1499                       Kaiapoi East         NA   NA   NA     NA     NA
+1500                 Kaiapoi North West         NA   NA   NA     NA     NA
+1501                 Kaiapoi North East         NA   NA   NA     NA     NA
+1502                         Clarkville          7    7    6 100.00  85.71
+1503                       Kaiapoi West         NA   NA   NA     NA     NA
+1504                       Silverstream         NA   NA   NA     NA     NA
+1505                         Mandeville         35   34   32  97.14  91.43
+1506                              Ohoka         14   13   13  92.86  92.86
+1507                       West Eyreton         NA   NA   NA     NA     NA
+1508                           Eyrewell         NA   NA   NA     NA     NA
+1509                       Ashley Gorge         26   23   23  88.46  88.46
+1510                             Oxford         36   35   34  97.22  94.44
+1511                           Darfield         27   27   22 100.00  81.48
+1512                             Kirwee         51   48   46  94.12  90.20
+1513              Burnham Military Camp         22   21   15  95.45  68.18
+1514                            Malvern         41   38   37  92.68  90.24
+1515                     Halswell South         50   50   50 100.00 100.00
+1516                      Oaklands West         16   16   16 100.00 100.00
+1517                      Oaklands East         50   49   47  98.00  94.00
+1518                       Hornby North         62   61   58  98.39  93.55
+1519                       Hornby South         87   85   75  97.70  86.21
+1520                           Sockburn         68   63   59  92.65  86.76
+1521                             Wigram         58   56   52  96.55  89.66
+1522                          Yaldhurst         25   25   22 100.00  88.00
+1523                         Broomfield         43   42   40  97.67  93.02
+1524                            Paparua         NA   NA   NA     NA     NA
+1525                          Templeton         NA   NA   NA     NA     NA
+1526                          Islington         47   44   43  93.62  91.49
+1527                      Halswell West         21   20   17  95.24  80.95
+1528                        Westmorland         21   19   19  90.48  90.48
+1529                         Aidanfield         35   31   24  88.57  68.57
+1530                    Halswell Domain         30   29   27  96.67  90.00
+1531                   Hendersons Basin          6    6    6 100.00 100.00
+1532                         Prebbleton         NA   NA   NA     NA     NA
+1533                   Trents-Ladbrooks         NA   NA   NA     NA     NA
+1534                     Mcleans Island          1    1    1 100.00 100.00
+1535                      Kennedys Bush         NA   NA   NA     NA     NA
+1536                        West Melton         96   95   86  98.96  89.58
+1537                            Taitapu         18   18   18 100.00 100.00
+1538                      Redwood North         61   61   59 100.00  96.72
+1539                      Redwood South         43   41   37  95.35  86.05
+1540                          Styx Mill         45   43   42  95.56  93.33
+1541                          Casebrook         51   51   45 100.00  88.24
+1542                      Belfast South         54   51   45  94.44  83.33
+1543                       Sawyers Arms         33   30   29  90.91  87.88
+1544                   Bishopdale North         81   80   73  98.77  90.12
+1545                           Harewood         48   45   44  93.75  91.67
+1546                         Bishopdale         43   42   40  97.67  93.02
+1547                            Russley         36   34   32  94.44  88.89
+1548                           Burnside         36   35   33  97.22  91.67
+1549                          Wairarapa         22   19   19  86.36  86.36
+1550                        Jellie Park         40   39   36  97.50  90.00
+1551                            Bryndwr         33   31   30  93.94  90.91
+1552                           Holmwood         19   16   15  84.21  78.95
+1553                          Fendalton         25   24   22  96.00  88.00
+1554                         Deans Bush         14   12   12  85.71  85.71
+1555                        Hawthornden         23   22   20  95.65  86.96
+1556                             Merrin         13   13   11 100.00  84.62
+1557                           Westburn         31   31   31 100.00 100.00
+1558                      Avonhead West         44   43   39  97.73  88.64
+1559                           Avonhead         53   49   44  92.45  83.02
+1560                               Ilam         47   42   41  89.36  87.23
+1561                    Upper Riccarton         34   31   27  91.18  79.41
+1562                           Wharenui         26   26   25 100.00  96.15
+1563                          Middleton         19   19   17 100.00  89.47
+1564                            Belfast         68   65   63  95.59  92.65
+1565                     Travis Wetland         62   60   57  96.77  91.94
+1566                     Mairehau North         NA   NA   NA     NA     NA
+1567                          Westhaven         NA   NA   NA     NA     NA
+1568                     Highfield Park         NA   NA   NA     NA     NA
+1569                           Prestons         NA   NA   NA     NA     NA
+1570                          Parklands         87   81   78  93.10  89.66
+1571                     Waimairi Beach         42   41   39  97.62  92.86
+1572                               Styx         30   30   30 100.00 100.00
+1573                          Mona Vale         16   14   13  87.50  81.25
+1574                     Riccarton West         27   26   24  96.30  88.89
+1575                          Riccarton         51   47   38  92.16  74.51
+1576                    Riccarton South          6    5    5  83.33  83.33
+1577                      Cashmere West         37   33   32  89.19  86.49
+1578                      Cashmere East         52   49   42  94.23  80.77
+1579                       Rapaki Track         21   19   19  90.48  90.48
+1580                   Heathcote Valley         29   27   26  93.10  89.66
+1581                   Cathedral Square         21   18   15  85.71  71.43
+1582                        Hagley Park          9    5    3  55.56  33.33
+1583                          Avon Loop         28   23   19  82.14  67.86
+1584                          Northcote         35   34   31  97.14  88.57
+1585                            Papanui         56   55   51  98.21  91.07
+1586                            Aorangi         83   79   72  95.18  86.75
+1587                            Strowan         54   51   50  94.44  92.59
+1588                           Merivale         23   22   20  95.65  86.96
+1589                            Rutland         72   71   70  98.61  97.22
+1590                     St Albans West         26   22   20  84.62  76.92
+1591                     St Albans East         66   63   61  95.45  92.42
+1592                           Mairehau         66   64   62  96.97  93.94
+1593                           Edgeware         54   53   52  98.15  96.30
+1594                       Shirley West         67   65   55  97.01  82.09
+1595                       Shirley East         55   49   44  89.09  80.00
+1596                            Burwood         23   21   17  91.30  73.91
+1597                         Dallington         32   32   25 100.00  78.12
+1598                             Travis         28   25   23  89.29  82.14
+1599                           Avondale         38   37   34  97.37  89.47
+1600                            Wainoni         43   42   41  97.67  95.35
+1601                             Aranui         86   82   74  95.35  86.05
+1602                     Richmond North         38   37   33  97.37  86.84
+1603                     Richmond South         26   25   23  96.15  88.46
+1604                           Avonside         38   37   34  97.37  89.47
+1605                            Linwood         64   61   45  95.31  70.31
+1606                       Phillipstown         50   50   44 100.00  88.00
+1607                      Linwood North         45   43   36  95.56  80.00
+1608                       Linwood East         33   33   30 100.00  90.91
+1609                             Bexley         38   38   36 100.00  94.74
+1610                            Bromley         58   54   51  93.10  87.93
+1611                      Woolston West         52   52   51 100.00  98.08
+1612                          Ferrymead         46   46   42 100.00  91.30
+1613                     Woolston South         27   25   24  92.59  88.89
+1614                             Ensors         62   55   47  88.71  75.81
+1615                              Opawa         57   53   46  92.98  80.70
+1616                         St Martins         57   52   49  91.23  85.96
+1617                            Waltham         11   11   10 100.00  90.91
+1618                           Sydenham         81   77   70  95.06  86.42
+1619                          Addington         47   43   39  91.49  82.98
+1620                   Barrington North         81   81   76 100.00  93.83
+1621                   Barrington South         40   38   36  95.00  90.00
+1622                           Spreydon         60   56   55  93.33  91.67
+1623                           Hoon Hay         49   47   46  95.92  93.88
+1624                     Hoon Hay South         36   35   32  97.22  88.89
+1625                         Hillmorton         85   83   77  97.65  90.59
+1626                         Somerfield         61   59   55  96.72  90.16
+1627                          Beckenham         52   50   48  96.15  92.31
+1628                        North Beach         77   71   62  92.21  80.52
+1629                            Rawhiti         67   63   60  94.03  89.55
+1630                       New Brighton         37   37   35 100.00  94.59
+1631                     South Brighton         46   41   36  89.13  78.26
+1632                        Mt Pleasant         41   40   38  97.56  92.68
+1633             Avon-Heathcote Estuary         NA   NA   NA     NA     NA
+1634                         Moncks Bay         38   31   30  81.58  78.95
+1635                             Sumner         56   55   49  98.21  87.50
+1636                          Lyttelton         48   44   39  91.67  81.25
+1637                    Diamond Harbour         15   15   12 100.00  80.00
+1638                      Governors Bay         10    7    6  70.00  60.00
+1639                       Quail Island         NA   NA   NA     NA     NA
+1640                          Port Levy         NA   NA   NA     NA     NA
+1641                             Akaroa          6    6    5 100.00  83.33
+1642                     Akaroa Harbour          7    7    7 100.00 100.00
+1643       Banks Peninsula Eastern Bays          4    4    3 100.00  75.00
+1644                    Chatham Islands          6    6    6 100.00 100.00
+1645                       Little River          8    6    6  75.00  75.00
+1646  Inland Water-Lake Ellesmere South         NA   NA   NA     NA     NA
+1647                            Lincoln         46   42   41  91.30  89.13
+1648                            Leeston         36   34   33  94.44  91.67
+1649                        Southbridge         15   15   15 100.00 100.00
+1650                          Dunsandel         10   10    9 100.00  90.00
+1651  Inland Water-Lake Ellesmere North         NA   NA   NA     NA     NA
+1652                      Selwyn-Rakaia         50   49   48  98.00  96.00
+1653               Rolleston North West         NA   NA   NA     NA     NA
+1654                  Rolleston Central         NA   NA   NA     NA     NA
+1655               Rolleston North East         NA   NA   NA     NA     NA
+1656               Rolleston South West         NA   NA   NA     NA     NA
+1657                         Springston         NA   NA   NA     NA     NA
+1658               Rolleston South East         NA   NA   NA     NA     NA
+1659                            Methven         33   31   33  93.94 100.00
+1660                     Plains Railway          6    6    6 100.00 100.00
+1661                    Ashburton North         NA   NA   NA     NA     NA
+1662                            Fairton         NA   NA   NA     NA     NA
+1663                     Ashburton East         NA   NA   NA     NA     NA
+1664                          Mt Somers         33   32   31  96.97  93.94
+1665                              Hinds         67   64   61  95.52  91.04
+1666                           Chertsey         32   32   31 100.00  96.88
+ [ reached getOption("max.print") -- omitted 338 rows ]

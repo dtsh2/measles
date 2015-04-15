@@ -1,0 +1,1668 @@
+                                   Area Population MMR1 MMR2 MMR1 % MMR2 %
+1                                Awanui          6    0    0   0.00   0.00
+2      Karikari Peninsula-Maungataniwha         66    0    0   0.00   0.00
+3                    Taipa Bay-Mangonui         21    0    0   0.00   0.00
+4                              Herekino         13    0    0   0.00   0.00
+5                               Ahipara          9    0    0   0.00   0.00
+6                            North Cape          3    0    0   0.00   0.00
+7                               Houhora         12    0    0   0.00   0.00
+8                   Motutangi-Kareponia         26    0    0   0.00   0.00
+9                          Kaitaia West         71    0    0   0.00   0.00
+10                         Kaitaia East         44    0    0   0.00   0.00
+11                                 Kaeo          9    0    0   0.00   0.00
+12                  Mangapa-Matauri Bay         36    0    0   0.00   0.00
+13                             Kohukohu         NA   NA   NA     NA     NA
+14                               Rawene          6    0    0   0.00   0.00
+15                  Omapere and Opononi          7    0    0   0.00   0.00
+16                       Hokianga North         20    0    0   0.00   0.00
+17                       Hokianga South         32    1    1   3.12   3.12
+18                             Kerikeri         76    1    1   1.32   1.32
+19                              Russell          4    0    0   0.00   0.00
+20                               Paihia         20    0    0   0.00   0.00
+21                         Haruru Falls         14    0    0   0.00   0.00
+22                            Opua East          2    0    0   0.00   0.00
+23                             Kawakawa         33    0    0   0.00   0.00
+24                              Moerewa         30    0    0   0.00   0.00
+25                            Opua West          1    0    0   0.00   0.00
+26                       Bay of Islands         NA   NA   NA     NA     NA
+27                               Kapiro         23    1    0   4.35   0.00
+28                             Waitangi          7    0    0   0.00   0.00
+29                       Pokere-Waihaha         28    1    1   3.57   3.57
+30                              Okaihau         12    0    0   0.00   0.00
+31                             Ohaeawai          7    0    0   0.00   0.00
+32                 Waihou Valley-Hupara         28    0    0   0.00   0.00
+33                       Ngapuhi-Kaikou         31    0    0   0.00   0.00
+34                              Kaikohe         90    0    0   0.00   0.00
+35                    Opouteke-Tanekaha         49    0    0   0.00   0.00
+36                Marsden Point-Ruakaka         55    0    0   0.00   0.00
+37                             Ngunguru         12    0    0   0.00   0.00
+38                   Wharekohe-Oakleigh         30    1    0   3.33   0.00
+39                         Maungatapere         12    0    0   0.00   0.00
+40                 Waiotira-Springfield         19    0    0   0.00   0.00
+41                   Whangaruru Harbour         NA   NA   NA     NA     NA
+42                    Punaruku-Kiripaka         45    1    1   2.22   2.22
+43                            Bream Bay          5    0    0   0.00   0.00
+44                                Waipu         16    0    0   0.00   0.00
+45                      Pataua-Whareora          5    0    0   0.00   0.00
+46                            Parua Bay         21    0    0   0.00   0.00
+47                           Bream Head         17    1    1   5.88   5.88
+48                         Springs Flat         13    0    0   0.00   0.00
+49                      Three Mile Bush         10    0    0   0.00   0.00
+50                              Te Hihi         14    0    0   0.00   0.00
+51                          Abbey Caves          5    0    0   0.00   0.00
+52                      Otaika-Portland         16    0    0   0.00   0.00
+53                            Kamo West         30    0    0   0.00   0.00
+54                            Kamo East         75    0    0   0.00   0.00
+55                       Tikipunga West         47    0    0   0.00   0.00
+56                       Tikipunga East         66    1    0   1.52   0.00
+57                          Whau Valley         34    0    0   0.00   0.00
+58                            Otangarei         41    0    0   0.00   0.00
+59                        Western Hills          4    0    0   0.00   0.00
+60                           Kensington         17    0    0   0.00   0.00
+61                             Mairtown         30    0    0   0.00   0.00
+62                               Regent         14    0    0   0.00   0.00
+63                             Woodhill         21    0    0   0.00   0.00
+64                             Vinetown         25    0    0   0.00   0.00
+65                    Whangarei Central          3    1    1  33.33  33.33
+66                            Riverside         10    0    0   0.00   0.00
+67                             Horahora         12    0    0   0.00   0.00
+68                                Maunu         12    0    0   0.00   0.00
+69                        Raumanga East         44    0    0   0.00   0.00
+70                          Morningside         44    0    0   0.00   0.00
+71                             Parahaki         14    0    0   0.00   0.00
+72                        Raumanga West         73    1    1   1.37   1.37
+73                     Port-Limeburners          1    0    0   0.00   0.00
+74                        Sherwood Rise         60    0    0   0.00   0.00
+75                              Onerahi         28    0    0   0.00   0.00
+76                            Hikurangi         33    0    0   0.00   0.00
+77                            Te Kopuru         10    0    0   0.00   0.00
+78                      Kaipara Coastal         33    0    0   0.00   0.00
+79                             Maungaru         31    0    0   0.00   0.00
+80                           Dargaville         53    0    0   0.00   0.00
+81                         Maungaturoto         12    1    1   8.33   8.33
+82                               Ruawai          8    0    0   0.00   0.00
+83                              Kaiwaka          8    0    0   0.00   0.00
+84                        Rehia-Oneriri         50    0    0   0.00   0.00
+85                            Mangawhai         13    0    0   0.00   0.00
+86                      Mangawhai Heads          6    0    0   0.00   0.00
+87                            Wellsford         33    2    2   6.06   6.06
+88                                Leigh          8    0    0   0.00   0.00
+89                            Warkworth         59    4    1   6.78   1.69
+90                             Waimauku         NA   NA   NA     NA     NA
+91                               Huapai         NA   NA   NA     NA     NA
+92                      Riverhead Urban         NA   NA   NA     NA     NA
+93                           Kumeu East         NA   NA   NA     NA     NA
+94                           Kumeu West         NA   NA   NA     NA     NA
+95                      Waipareira West          1    0    0   0.00   0.00
+96                              Waiwera          3    0    0   0.00   0.00
+97                      Hatfields Beach         11    0    0   0.00   0.00
+98                                Orewa         67    0    0   0.00   0.00
+99                   Silverdale Central         NA   NA   NA     NA     NA
+100                      Red Beach West         NA   NA   NA     NA     NA
+101                      Red Beach East         NA   NA   NA     NA     NA
+102                               Manly         44    1    1   2.27   2.27
+103                            Army Bay         43    2    2   4.65   4.65
+104                              Vipond         20    0    0   0.00   0.00
+105                   Stanmore Bay West        105    2    2   1.90   1.90
+106                   Stanmore Bay East         35    0    0   0.00   0.00
+107                          Wade Heads         31    0    0   0.00   0.00
+108                        Gulf Harbour         22    0    0   0.00   0.00
+109                 Gulf Harbour Marina         NA   NA   NA     NA     NA
+110                         Weiti River         NA   NA   NA     NA     NA
+111                          Stillwater         NA   NA   NA     NA     NA
+112                    Silverdale South         NA   NA   NA     NA     NA
+113                    Silverdale North         NA   NA   NA     NA     NA
+114                          Orewa West         NA   NA   NA     NA     NA
+115                  Dairy Flat-Redvale         27    0    0   0.00   0.00
+116                     Paremoremo West         NA   NA   NA     NA     NA
+117                        Tauhoa-Puhoi         33    1    1   3.03   3.03
+118                           Tahekeroa          8    0    0   0.00   0.00
+119                        Matheson Bay         NA   NA   NA     NA     NA
+120                               Kawau         NA   NA   NA     NA     NA
+121                        Snells Beach         33    1    1   3.03   3.03
+122                          Algies Bay         NA   NA   NA     NA     NA
+123                           Mahurangi         NA   NA   NA     NA     NA
+124                          South Head          7    0    0   0.00   0.00
+125                       Parakai Rural         NA   NA   NA     NA     NA
+126                       Parakai Urban         NA   NA   NA     NA     NA
+127                   Kaukapakapa Rural         NA   NA   NA     NA     NA
+128                         Kaukapakapa         NA   NA   NA     NA     NA
+129                   Helensville South         NA   NA   NA     NA     NA
+130                              Rewiti          8    0    0   0.00   0.00
+131                           Riverhead         17    0    0   0.00   0.00
+132                       Muriwai Beach         NA   NA   NA     NA     NA
+133                      Muriwai Valley         NA   NA   NA     NA     NA
+134                      Waitakere West         NA   NA   NA     NA     NA
+135                         Point Wells         NA   NA   NA     NA     NA
+136                               Omaha         NA   NA   NA     NA     NA
+137                            Matakana         NA   NA   NA     NA     NA
+138                         Cape Rodney         NA   NA   NA     NA     NA
+139                   Cape Rodney South         NA   NA   NA     NA     NA
+140                         Helensville         54    2    2   3.70   3.70
+141                             Awaruku         47    0    0   0.00   0.00
+142                           Glamorgan         42    2    1   4.76   2.38
+143                              Torbay         59    0    0   0.00   0.00
+144                              Waiake         60    1    0   1.67   0.00
+145                          Browns Bay         44    0    0   0.00   0.00
+146                             Oaktree         55    2    1   3.64   1.82
+147                        Rothesay Bay         52    0    0   0.00   0.00
+148                         Murrays Bay         50    0    0   0.00   0.00
+149                        Mairangi Bay         49    2    0   4.08   0.00
+150                       Campbells Bay         17    0    0   0.00   0.00
+151                          Castor Bay         17    0    0   0.00   0.00
+152                          Crown Hill         41    0    0   0.00   0.00
+153                         Lake Pupuke         56    0    0   0.00   0.00
+154                            Westlake         58    0    0   0.00   0.00
+155                    Takapuna Central         62    0    0   0.00   0.00
+156                             Hauraki         79    2    2   2.53   2.53
+157                           Seacliffe         58    1    0   1.72   0.00
+158                           Bayswater         37    0    0   0.00   0.00
+159                           Kaipatiki         84    1    1   1.19   1.19
+160                         Windy Ridge         74    0    0   0.00   0.00
+161                   Glenfield Central         72    0    0   0.00   0.00
+162                     Glenfield North        102    0    0   0.00   0.00
+163                             Glendhu         95    0    0   0.00   0.00
+164                           Witheford         49    0    0   0.00   0.00
+165                         Target Road        118    0    0   0.00   0.00
+166                        Forrest Hill         64    0    0   0.00   0.00
+167                           Sunnynook         93    2    0   2.15   0.00
+168                        Monarch Park         75    1    0   1.33   0.00
+169                           Sunnybrae         47    0    0   0.00   0.00
+170                              Albany         83    0    0   0.00   0.00
+171                            Fairview         62    0    0   0.00   0.00
+172                          Northcross         99    0    0   0.00   0.00
+173                    Unsworth Heights         69    0    0   0.00   0.00
+174                            Pinehill         62    1    1   1.61   1.61
+175                        Windsor Park         15    0    0   0.00   0.00
+176                  North Harbour West         81    0    0   0.00   0.00
+177                  North Harbour East         32    0    0   0.00   0.00
+178                            Long Bay         11    0    0   0.00   0.00
+179                     Paremoremo East         24    0    0   0.00   0.00
+180                          Greenhithe         72    0    0   0.00   0.00
+181                         Narrow Neck         42    1    1   2.38   2.38
+182                         Mt Victoria         43    1    0   2.33   0.00
+183                         Stanley Bay         25    0    0   0.00   0.00
+184                          Ocean View         63    1    1   1.59   1.59
+185                         Tuff Crater         57    0    0   0.00   0.00
+186                     Northcote South         81    3    1   3.70   1.23
+187                    Beachhaven North        101    1    1   0.99   0.99
+188                    Beachhaven South         70    1    1   1.43   1.43
+189                      Birkdale North         72    1    1   1.39   1.39
+190                      Birkdale South         58    0    0   0.00   0.00
+191                          Kauri Park         59    0    0   0.00   0.00
+192                             Chelsea         51    0    0   0.00   0.00
+193                     Birkenhead East         59    0    0   0.00   0.00
+194                     Henderson North         70    0    0   0.00   0.00
+195                     Henderson South        120    1    1   0.83   0.83
+196                             Tangutu         84    0    0   0.00   0.00
+197                            Woodglen         76    1    0   1.32   0.00
+198                      Glen Eden East        107    3    3   2.80   2.80
+199                      New Lynn North        102    2    1   1.96   0.98
+200                      New Lynn South         47    1    1   2.13   2.13
+201                            Lynnmall         35    0    0   0.00   0.00
+202                           Fruitvale         70    1    1   1.43   1.43
+203                            Rewarewa         70    1    1   1.43   1.43
+204                      Glendene North         80    0    0   0.00   0.00
+205                      Glendene South         39    0    0   0.00   0.00
+206                     Kelston Central         80    1    1   1.25   1.25
+207                           Sunnyvale         82    0    0   0.00   0.00
+208                          Kaurilands         37    2    1   5.41   2.70
+209                           Crum Park         55    0    0   0.00   0.00
+210                     Titirangi South         62    1    1   1.61   1.61
+211                           Green Bay         53    0    0   0.00   0.00
+212                              Matipo         50    0    0   0.00   0.00
+213                        Durham Green         81    2    2   2.47   2.47
+214                    Te Atatu Central         85    0    1   0.00   1.18
+215                            Edmonton         57    2    2   3.51   3.51
+216                            Wakeling         76    0    0   0.00   0.00
+217                              Mcleod        118    0    0   0.00   0.00
+218                              Konini         64    2    2   3.12   3.12
+219                               Waima         32    0    0   0.00   0.00
+220                           Laingholm         26    0    0   0.00   0.00
+221                          Armour Bay          6    0    0   0.00   0.00
+222                              Otimai         24    1    1   4.17   4.17
+223                     Parrs Park West         NA   NA   NA     NA     NA
+224                          Parrs Park         NA   NA   NA     NA     NA
+225                         Oratia West         NA   NA   NA     NA     NA
+226                              Oratia         NA   NA   NA     NA     NA
+227                      Henderson West         27    1    1   3.70   3.70
+228                        Palm Heights         43    0    0   0.00   0.00
+229                        McLaren Park         47    3    3   6.38   6.38
+230                             Opanuku         31    0    0   0.00   0.00
+231                             Swanson         NA   NA   NA     NA     NA
+232                       Swanson South         NA   NA   NA     NA     NA
+233                              Urlich         26    0    0   0.00   0.00
+234                       Starling Park         57    0    0   0.00   0.00
+235                        Ranui Domain         79    0    0   0.00   0.00
+236                         Ranui South         53    0    0   0.00   0.00
+237                       Sturges North        109    1    1   0.92   0.92
+238                            Kingdale         84    1    1   1.19   1.19
+239                            Fairdene         65    1    1   1.54   1.54
+240                      Whenuapai West         30    0    0   0.00   0.00
+241                              Herald         21    0    0   0.00   0.00
+242                    Hobsonville East         NA   NA   NA     NA     NA
+243                   Hobsonville South         NA   NA   NA     NA     NA
+244                            Westgate         20    1    0   5.00   0.00
+245                     Royal Road West         67    2    1   2.99   1.49
+246                        West Harbour        108    0    0   0.00   0.00
+247                        Lucken Point         70    1    1   1.43   1.43
+248                       Royal Heights        113    2    0   1.77   0.00
+249                         Massey West          3    0    0   0.00   0.00
+250                       Birdwood West         NA   NA   NA     NA     NA
+251                       Birdwood East         NA   NA   NA     NA     NA
+252                       Waimumu North        143    2    1   1.40   0.70
+253                       Waimumu South         83    0    0   0.00   0.00
+254                             Taupaki          6    0    0   0.00   0.00
+255                           Waitakere         25    0    0   0.00   0.00
+256                            Karekare         29    2    1   6.90   3.45
+257                        Freemans Bay         44    1    0   2.27   0.00
+258                Auckland Harbourside         43    0    0   0.00   0.00
+259               Auckland Central West        133    1    1   0.75   0.75
+260               Auckland Central East        159    2    1   1.26   0.63
+261                              Newton         11    0    0   0.00   0.00
+262                        Grafton West         21    0    0   0.00   0.00
+263                        Grafton East          9    0    0   0.00   0.00
+264                            Roberton         85    0    0   0.00   0.00
+265                            Glenavon        114    0    0   0.00   0.00
+266                         New Windsor        142    0    0   0.00   0.00
+267                      Avondale South        124    2    1   1.61   0.81
+268                      Blockhouse Bay         61    2    2   3.28   3.28
+269                            Rosebank         78    1    1   1.28   1.28
+270                       Avondale West         79    1    1   1.27   1.27
+271                           Waterview         63    3    2   4.76   3.17
+272                Point Chevalier West         36    0    0   0.00   0.00
+273                Point Chevalier East         64    0    0   0.00   0.00
+274               Point Chevalier South         20    0    0   0.00   0.00
+275                            Westmere         51    0    0   0.00   0.00
+276                           Herne Bay         19    0    0   0.00   0.00
+277                            St Marys         14    0    0   0.00   0.00
+278                       Ponsonby West         36    0    0   0.00   0.00
+279                       Ponsonby East         38    0    0   0.00   0.00
+280                      Grey Lynn West         25    0    0   0.00   0.00
+281                      Grey Lynn East         41    0    0   0.00   0.00
+282                     Surrey Crescent         36    1    1   2.78   2.78
+283                      St Lukes North          9    0    0   0.00   0.00
+284                           Arch Hill         18    1    0   5.56   0.00
+285                        Eden Terrace         32    0    0   0.00   0.00
+286                         Epsom North         28    1    1   3.57   3.57
+287                       Epsom Central         24    0    0   0.00   0.00
+288                         Epsom South         22    0    0   0.00   0.00
+289                        Parnell East         14    0    0   0.00   0.00
+290                        Parnell West         55    1    0   1.82   0.00
+291                           Mt Hobson          7    0    0   0.00   0.00
+292                       Remuera South         44    0    0   0.00   0.00
+293                        Abbotts Park         55    0    0   0.00   0.00
+294                        Remuera West         25    0    0   0.00   0.00
+295                          Waitaramoa         33    1    1   3.03   3.03
+296                        Orakei South         18    0    0   0.00   0.00
+297                              Waiata         25    0    0   0.00   0.00
+298                    Meadowbank North         99    1    1   1.01   1.01
+299                    Meadowbank South         52    1    1   1.92   1.92
+300                        Orakei North         72    0    0   0.00   0.00
+301                         Mission Bay         60    1    1   1.67   1.67
+302                     Kohimarama West         35    0    0   0.00   0.00
+303                     Kohimarama East         44    0    0   0.00   0.00
+304                          St Heliers         51    0    0   0.00   0.00
+305                           Glendowie         49    1    1   2.04   2.04
+306                    Glen Innes North         51    0    0   0.00   0.00
+307                     Glen Innes West        123    0    0   0.00   0.00
+308                     Glen Innes East         40    1    0   2.50   0.00
+309                       Point England        106    1    1   0.94   0.94
+310                            St Johns         NA   NA   NA     NA     NA
+311                         Stonefields         NA   NA   NA     NA     NA
+312                           Newmarket         24    0    0   0.00   0.00
+313                           Kingsland         52    0    0   0.00   0.00
+314                            St Lukes         70    0    0   0.00   0.00
+315                   Sandringham North         44    0    0   0.00   0.00
+316                    Sandringham West         92    0    0   0.00   0.00
+317                    Sandringham East         45    1    0   2.22   0.00
+318                   Mt Albert Central        109    1    1   0.92   0.92
+319                         Springleigh         54    0    0   0.00   0.00
+320                       Owairaka West         46    0    0   0.00   0.00
+321                       Owairaka East         39    0    0   0.00   0.00
+322                       Mt Eden North         19    0    0   0.00   0.00
+323                          Sherbourne         46    0    0   0.00   0.00
+324                            Balmoral         65    0    0   0.00   0.00
+325                        Mt Eden East         23    1    1   4.35   4.35
+326                          Maungawhau         35    1    1   2.86   2.86
+327                       Mt Eden South         45    0    0   0.00   0.00
+328                         Three Kings         87    1    0   1.15   0.00
+329                           Royal Oak         75    0    0   0.00   0.00
+330                   Hillsborough West        104    0    0   0.00   0.00
+331                   Hillsborough East         62    0    0   0.00   0.00
+332                            Walmsley         74    0    0   0.00   0.00
+333                              Wesley         35    0    0   0.00   0.00
+334                             Akarana        124    0    0   0.00   0.00
+335                      Lynfield North         79    0    0   0.00   0.00
+336                      Lynfield South         48    1    1   2.08   2.08
+337                      Waikowhai West         40    0    0   0.00   0.00
+338                      Waikowhai East         60    0    0   0.00   0.00
+339                          Mt St John         35    0    0   0.00   0.00
+340               One Tree Hill Central         15    0    0   0.00   0.00
+341                  One Tree Hill East         70    0    0   0.00   0.00
+342                             Penrose         15    0    0   0.00   0.00
+343                 Onehunga North West         35    0    0   0.00   0.00
+344                 Onehunga North East         61    0    0   0.00   0.00
+345                 Onehunga South West         54    1    1   1.85   1.85
+346                 Onehunga South East        105    0    0   0.00   0.00
+347                              Oranga         79    1    0   1.27   0.00
+348                           Te Papapa         73    1    0   1.37   0.00
+349                     Ellerslie North        133    1    1   0.75   0.75
+350                     Ellerslie South         35    1    0   2.86   0.00
+351                Mt Wellington Domain         NA   NA   NA     NA     NA
+352                  Mt Wellington West         NA   NA   NA     NA     NA
+353                 Mt Wellington North         NA   NA   NA     NA     NA
+354                            Ferndale         84    0    0   0.00   0.00
+355                              Hamlin         81    0    0   0.00   0.00
+356                 Mt Wellington South        180    1    1   0.56   0.56
+357                              Tamaki         91    0    0   0.00   0.00
+358                       Panmure Basin         36    0    0   0.00   0.00
+359                      Waiheke Island        111    2    2   1.80   1.80
+360                 Bays-Waiheke Island         NA   NA   NA     NA     NA
+361                Tidal-Waiheke Island         NA   NA   NA     NA     NA
+362   Islands-Motutapu Rangitoto Rakino         NA   NA   NA     NA     NA
+363                Great Barrier Island          7    0    0   0.00   0.00
+364                   Paerata-Cape Hill         12    0    0   0.00   0.00
+365                  Eden Road-Hill Top          9    0    0   0.00   0.00
+366                             Redoubt          1    0    0   0.00   0.00
+367                          Opuawhanga          1    0    0   0.00   0.00
+368                            Buckland         NA   NA   NA     NA     NA
+369                      Buckland South         NA   NA   NA     NA     NA
+370                           Patumahoe         23    0    0   0.00   0.00
+371                            Kingseat         52    1    1   1.92   1.92
+372                              Pokeno         23    1    1   4.35   4.35
+373                               Hunua         39    0    0   0.00   0.00
+374                            Paparata         NA   NA   NA     NA     NA
+375                        Mangatawhiri         NA   NA   NA     NA     NA
+376                              Kaiaua         NA   NA   NA     NA     NA
+377                              Awhitu         16    0    0   0.00   0.00
+378                           Glenbrook         19    0    0   0.00   0.00
+379                               Otaua         22    0    0   0.00   0.00
+380                              Bombay         10    0    0   0.00   0.00
+381                             Hingaia         24    0    0   0.00   0.00
+382                   Whangapouri Creek          2    0    0   0.00   0.00
+383                             Bremner          1    0    0   0.00   0.00
+384                               Drury         39    0    0   0.00   0.00
+385                            Runciman          1    0    0   0.00   0.00
+386                         Mellons Bay         23    1    1   4.35   4.35
+387                          Cockle Bay         40    1    1   2.50   2.50
+388                         Howick West         34    0    0   0.00   0.00
+389                      Howick Central        119    1    1   0.84   0.84
+390                       Otahuhu North         80    1    1   1.25   1.25
+391                            Fairburn         75    0    0   0.00   0.00
+392                        Otahuhu East         45    0    0   0.00   0.00
+393                        Otahuhu West        104    0    0   0.00   0.00
+394                          Middlemore         NA   NA   NA     NA     NA
+395                     Papatoetoe West        133    0    0   0.00   0.00
+396                    Papatoetoe North         95    0    0   0.00   0.00
+397                  Papatoetoe Central         70    0    0   0.00   0.00
+398                            Dingwall         53    0    0   0.00   0.00
+399                     Papatoetoe East        119    0    0   0.00   0.00
+400                       Puhinui North         89    0    0   0.00   0.00
+401       Bucklands and Eastern Beaches         40    0    0   0.00   0.00
+402                          Bleakhouse          6    0    0   0.00   0.00
+403               Bucklands Beach South         14    0    0   0.00   0.00
+404                Half Moon Bay Marina         NA   NA   NA     NA     NA
+405               Pigeon Mountain North         28    0    0   0.00   0.00
+406                             Murvale         27    0    0   0.00   0.00
+407               Pigeon Mountain South         12    0    0   0.00   0.00
+408                       Highland Park         51    0    0   0.00   0.00
+409                        Elsmore Park         44    0    0   0.00   0.00
+410                       Half Moon Bay         46    0    0   0.00   0.00
+411                     Pakuranga North         39    0    0   0.00   0.00
+412                          Sunnyhills         37    0    0   0.00   0.00
+413                   Pakuranga Central         55    1    0   1.82   0.00
+414                           Edgewater         73    1    1   1.37   1.37
+415                      Pakuranga East        103    0    0   0.00   0.00
+416                        Howick South         63    1    1   1.59   1.59
+417                          Meadowland         42    0    0   0.00   0.00
+418                            Golfland         27    0    0   0.00   0.00
+419                           Millhouse         50    0    0   0.00   0.00
+420                            Burswood         29    0    0   0.00   0.00
+421                           Dannemora         40    0    0   0.00   0.00
+422                            Kilkenny         21    0    0   0.00   0.00
+423                           Highbrook         NA   NA   NA     NA     NA
+424                          Greenmount         NA   NA   NA     NA     NA
+425                          Point View         NA   NA   NA     NA     NA
+426                     Baverstock Oaks         NA   NA   NA     NA     NA
+427                     Mission Heights         NA   NA   NA     NA     NA
+428                         Shelly Park         17    0    0   0.00   0.00
+429                             Turanga         13    1    1   7.69   7.69
+430                 Beachlands-Maraetai         81    0    0   0.00   0.00
+431                          Otara West         73    0    0   0.00   0.00
+432                           Wymondley         NA   NA   NA     NA     NA
+433                              Grange         NA   NA   NA     NA     NA
+434                         Otara North         42    0    0   0.00   0.00
+435                          Otara East        110    0    0   0.00   0.00
+436                         Otara South         84    0    0   0.00   0.00
+437                            Ferguson        107    0    0   0.00   0.00
+438                            Rongomai        123    0    0   0.00   0.00
+439                        Donegal Park        155    0    0   0.00   0.00
+440                            Ormiston        132    0    0   0.00   0.00
+441                         Clover Park        107    1    0   0.93   0.00
+442                       Redoubt North         70    0    0   0.00   0.00
+443                             Ardmore          7    0    0   0.00   0.00
+444                      Totara Heights         72    0    0   0.00   0.00
+445                       Randwick Park         60    0    0   0.00   0.00
+446                            Hyperion         53    0    0   0.00   0.00
+447                        Redoubt East         NA   NA   NA     NA     NA
+448                           Mill Road         NA   NA   NA     NA     NA
+449                       Redoubt South        110    0    0   0.00   0.00
+450                      Takanini North         45    0    0   0.00   0.00
+451                      Takanini South         62    0    0   0.00   0.00
+452                       Takanini West        144    1    1   0.69   0.69
+453                              Ambury         58    0    0   0.00   0.00
+454                      Mangere Bridge         99    1    1   1.01   1.01
+455                     Mangere Central         69    0    0   0.00   0.00
+456                              Mascot         73    0    0   0.00   0.00
+457                            Arahanga         54    0    0   0.00   0.00
+458                            Viscount         70    0    0   0.00   0.00
+459                       Mangere South        167    0    0   0.00   0.00
+460                        Mangere East        124    0    0   0.00   0.00
+461                              Aorere        105    0    0   0.00   0.00
+462                             Kohuora        116    1    0   0.86   0.00
+463                     Mangere Station          5    0    0   0.00   0.00
+464                         Favona West         63    0    0   0.00   0.00
+465                        Favona North         50    0    0   0.00   0.00
+466                        Favona South         82    0    0   0.00   0.00
+467                       Harania North         84    0    0   0.00   0.00
+468                        Harania West        107    0    0   0.00   0.00
+469                        Harania East        115    0    0   0.00   0.00
+470                                Wiri         92    0    0   0.00   0.00
+471                       Puhinui South         NA   NA   NA     NA     NA
+472                     Manukau Central         NA   NA   NA     NA     NA
+473                             Burbank         75    0    0   0.00   0.00
+474                          Homai West         45    0    0   0.00   0.00
+475                           Rowandale         63    0    0   0.00   0.00
+476                          Homai East        130    0    0   0.00   0.00
+477                       Weymouth West         93    0    0   0.00   0.00
+478                       Weymouth East         97    0    0   0.00   0.00
+479                       Clendon North         92    0    0   0.00   0.00
+480                       Clendon South        117    0    0   0.00   0.00
+481                            Hillpark         98    1    1   1.02   1.02
+482                       Manurewa East         53    0    0   0.00   0.00
+483                    Manurewa Central         77    0    0   0.00   0.00
+484                            Beaumont         41    0    0   0.00   0.00
+485                             Leabank        149    0    0   0.00   0.00
+486                         Wattle Farm        106    0    0   0.00   0.00
+487                            Clevedon         23    0    0   0.00   0.00
+488                      Kawakawa-Orere          7    0    0   0.00   0.00
+489                    Papakura Central         15    0    0   0.00   0.00
+490                      Papakura North         19    0    0   0.00   0.00
+491                      Papakura South         16    0    0   0.00   0.00
+492                             Opaheke         14    1    1   7.14   7.14
+493                            Rosehill         42    0    0   0.00   0.00
+494                          Pahurehure         27    0    0   0.00   0.00
+495                       Papakura East        396    0    0   0.00   0.00
+496                         Massey Park         15    0    0   0.00   0.00
+497                 Papakura North East         45    0    0   0.00   0.00
+498                            Red Hill         35    0    0   0.00   0.00
+499                      Pukekohe North        258    0    0   0.00   0.00
+500                       Pukekohe West         49    0    0   0.00   0.00
+501                      Bledisloe Park         15    0    0   0.00   0.00
+502                         Waiuku West         NA   NA   NA     NA     NA
+503                         Waiuku East         NA   NA   NA     NA     NA
+504                        South Waiuku         NA   NA   NA     NA     NA
+505                           Pukeoware         NA   NA   NA     NA     NA
+506                              Tuakau         88    1    1   1.14   1.14
+507                            Rotowaro         NA   NA   NA     NA     NA
+508                              Raglan         40    1    1   2.50   2.50
+509               Waikato Western Hills         60    3    2   5.00   3.33
+510                              Te Uku         18    1    1   5.56   5.56
+511                             Te Pahu         20    2    2  10.00  10.00
+512                            Onewhero         44    0    0   0.00   0.00
+513                             Te Akau         10    0    0   0.00   0.00
+514                         Te Kauwhata         23    0    0   0.00   0.00
+515                             Matangi         22    0    0   0.00   0.00
+516                           Sylvester         66    2    2   3.03   3.03
+517                           Flagstaff         44    0    0   0.00   0.00
+518                       Horsham Downs         85    2    2   2.35   2.35
+519                            Rototuna         25    0    0   0.00   0.00
+520                          Huntington        114    1    1   0.88   0.88
+521                           Whitikahu         38    1    1   2.63   2.63
+522                   Taupiri Community         12    0    0   0.00   0.00
+523                           Gordonton         21    1    0   4.76   0.00
+524                              Kainui         33    1    1   3.03   3.03
+525                            Newstead         NA   NA   NA     NA     NA
+526                              Eureka         NA   NA   NA     NA     NA
+527                   Tamahere-Tauwhare         42    1    1   2.38   2.38
+528                             Hautapu         NA   NA   NA     NA     NA
+529                              Swayne         NA   NA   NA     NA     NA
+530                            Waerenga         23    0    0   0.00   0.00
+531                           Maramarua          7    0    0   0.00   0.00
+532                            Meremere         18    0    0   0.00   0.00
+533                         Huntly West         57    1    1   1.75   1.75
+534                         Huntly East         66    0    0   0.00   0.00
+535                     Cambridge North         25    0    0   0.00   0.00
+536                      Cambridge West         20    1    1   5.00   5.00
+537                   Cambridge Central         27    1    0   3.70   0.00
+538                     Leamington West         47    2    1   4.26   2.13
+539                     Leamington East         46    0    0   0.00   0.00
+540                              Ohaupo          8    0    0   0.00   0.00
+541                            Kihikihi         37    0    0   0.00   0.00
+542                            Peacocke          3    0    0   0.00   0.00
+543                         Temple View         18    1    1   5.56   5.56
+544                           Te Kowhai         26    0    0   0.00   0.00
+545                          Whatawhata         31    1    1   3.23   3.23
+546                        Ngahinapouri         33    0    0   0.00   0.00
+547                        Lake Cameron         10    0    0   0.00   0.00
+548                             Horotiu         NA   NA   NA     NA     NA
+549                       Te Rapa North         NA   NA   NA     NA     NA
+550                             Te Rore          8    0    0   0.00   0.00
+551                            Pirongia         20    0    0   0.00   0.00
+552                              Pokuru          6    1    1  16.67  16.67
+553                        Lake Ngaroto          8    0    0   0.00   0.00
+554                             Tokanui          7    0    0   0.00   0.00
+555                            Pukerimu          7    0    0   0.00   0.00
+556                             Kaipaki          8    0    0   0.00   0.00
+557                          Rotoorangi         20    0    0   0.00   0.00
+558                             Te Rahu         10    0    0   0.00   0.00
+559                       Kihikihi Flat          6    1    1  16.67  16.67
+560                          Allen Road          4    0    0   0.00   0.00
+561                           Rotongata          7    1    0  14.29   0.00
+562                         Ngaruawahia        111    1    1   0.90   0.90
+563                              Bryant         96    2    2   2.08   2.08
+564                              Pukete         42    1    1   2.38   2.38
+565                         Pukete West         26    0    0   0.00   0.00
+566                             Te Rapa          2    0    0   0.00   0.00
+567                             Burbush          4    1    1  25.00  25.00
+568                           Rotokauri          1    0    0   0.00   0.00
+569                              Nawton         73    4    4   5.48   5.48
+570                            Crawshaw         62    1    1   1.61   1.61
+571                           Grandview         57    0    0   0.00   0.00
+572                              Brymer         47    0    0   0.00   0.00
+573                      Dinsdale North         47    2    1   4.26   2.13
+574                      Dinsdale South         79    2    2   2.53   2.53
+575                         Beerescourt         53    2    2   3.77   3.77
+576                              Maeroa         80    5    5   6.25   6.25
+577                   Frankton Junction         29    2    1   6.90   3.45
+578                           Swarbrick        111    3    3   2.70   2.70
+579                       Hamilton Lake         72    1    1   1.39   1.39
+580                            Melville         91    2    2   2.20   2.20
+581                            Glenview         91    5    5   5.49   5.49
+582                           Queenwood         34    1    1   2.94   2.94
+583                           Chedworth         50    0    0   0.00   0.00
+584                             Porritt         34    0    0   0.00   0.00
+585                              Insoll         61    2    2   3.28   3.28
+586                      Fairview Downs         65    1    1   1.54   1.54
+587                           Chartwell         31    0    0   0.00   0.00
+588                    Hamilton Central        178    4    3   2.25   1.69
+589                             Clarkin         49    1    0   2.04   0.00
+590                         Claudelands         31    1    1   3.23   3.23
+591                            Enderley         73    2    2   2.74   2.74
+592                          Peachgrove         32    2    2   6.25   6.25
+593                       Hamilton East         49    0    0   0.00   0.00
+594                              Naylor         74    2    1   2.70   1.35
+595                               Bader         91    2    2   2.20   2.20
+596                          University         56    0    0   0.00   0.00
+597                          Silverdale         34    1    1   2.94   2.94
+598                      Hillcrest West         37    1    1   2.70   2.70
+599                            Riverlea         20    0    0   0.00   0.00
+600                     Te Awamutu West         25    0    0   0.00   0.00
+601                  Te Awamutu Central         40    1    1   2.50   2.50
+602                     Te Awamutu East         33    1    1   3.03   3.03
+603                    Te Awamutu South         58    0    0   0.00   0.00
+604                    Kawhia Community          2    0    0   0.00   0.00
+605                          Otorohanga         35    0    0   0.00   0.00
+606               Otorohanga Rural West         25    0    0   0.00   0.00
+607                             Te Kawa          5    0    0   0.00   0.00
+608               Otorohanga Rural East         48    0    0   0.00   0.00
+609                              Piopio          7    0    0   0.00   0.00
+610                             Taharoa          3    0    0   0.00   0.00
+611                            Mahoenui          3    0    0   0.00   0.00
+612                            Marokopa         14    0    0   0.00   0.00
+613                        Waipa Valley          7    0    0   0.00   0.00
+614                               Tiroa          1    0    0   0.00   0.00
+615                            Mokauiti         17    1    1   5.88   5.88
+616                            Te Kuiti         67    0    0   0.00   0.00
+617                               Omori          2    0    0   0.00   0.00
+618                             Owhango          3    0    0   0.00   0.00
+619                               Ohura         NA   NA   NA     NA     NA
+620                             Ngapuke         18    0    0   0.00   0.00
+621                             Kuratau          6    1    0  16.67   0.00
+622                             Raurimu          4    0    0   0.00   0.00
+623                       National Park          6    1    1  16.67  16.67
+624                      Otangiwai-Heao         10    1    1  10.00  10.00
+625                         Tarrangower         21    1    1   4.76   4.76
+626                  Taumarunui Central         25    0    0   0.00   0.00
+627              Sunshine-Hospital Hill          6    0    0   0.00   0.00
+628                             Manunui          6    1    1  16.67  16.67
+629                           Whitianga         53    3    2   5.66   3.77
+630                          Coromandel          9    1    1  11.11  11.11
+631                          Te Rerenga         32    2    2   6.25   6.25
+632                          Whangamata         26    0    0   0.00   0.00
+633                              Tairua          6    0    0   0.00   0.00
+634                         Moanataiari         24    0    0   0.00   0.00
+635                             Parawai         35    1    1   2.86   2.86
+636                       Pauanui Beach          2    0    0   0.00   0.00
+637                              Hikuai         33    2    0   6.06   0.00
+638                Te Puru-Thornton Bay          1    0    0   0.00   0.00
+639                              Ngatea         11    0    0   0.00   0.00
+640                      Hauraki Plains         29    0    0   0.00   0.00
+641                               Turua         12    1    0   8.33   0.00
+642                            Kerepehi          9    0    0   0.00   0.00
+643                         Waihi Beach         15    1    1   6.67   6.67
+644                           Ohinemuri         29    2    2   6.90   6.90
+645                              Paeroa         51    0    0   0.00   0.00
+646                               Waihi         52    3    2   5.77   3.85
+647                             Tahuroa         35    0    0   0.00   0.00
+648                              Waitoa          5    0    0   0.00   0.00
+649                          Springdale         26    0    0   0.00   0.00
+650                       Waihou-Walton         48    1    1   2.08   2.08
+651                            Te Aroha         56    2    2   3.57   3.57
+652                   Morrinsville West         35    0    0   0.00   0.00
+653                   Morrinsville East         60    1    1   1.67   1.67
+654                             Waharoa          8    0    0   0.00   0.00
+655                               Tirau         14    0    0   0.00   0.00
+656                         Mangakaretu          1    0    0   0.00   0.00
+657                            Kinleith          3    0    0   0.00   0.00
+658                              Okauia         18    1    1   5.56   5.56
+659                              Te Poi         14    1    1   7.14   7.14
+660                              Tapapa         12    0    0   0.00   0.00
+661                            Karapiro         19    2    2  10.53  10.53
+662                             Hinuera         13    0    0   0.00   0.00
+663                             Arapuni         30    2    2   6.67   6.67
+664                           Lichfield         16    0    0   0.00   0.00
+665                                Wawa         13    0    0   0.00   0.00
+666                            Paraonui         27    1    1   3.70   3.70
+667                            Parkdale          9    0    0   0.00   0.00
+668                            Matarawa         30    0    0   0.00   0.00
+669                        Stanley Park         31    0    0   0.00   0.00
+670                     Tokoroa Central         10    0    0   0.00   0.00
+671                               Aotea         69    0    0   0.00   0.00
+672                          Strathmore         28    0    0   0.00   0.00
+673                           Amisfield          1    0    0   0.00   0.00
+674                      Matamata North         21    0    0   0.00   0.00
+675                      Matamata South         72    3    3   4.17   4.17
+676                            Putaruru         51    0    0   0.00   0.00
+677                            Athenree          1    0    0   0.00   0.00
+678                  Katikati Community         60    1    1   1.67   1.67
+679                    Maketu Community         16    0    0   0.00   0.00
+680                            Omokoroa         21    0    0   0.00   0.00
+681                  Papamoa Beach East         52    0    0   0.00   0.00
+682                        Palm Springs         52    0    0   0.00   0.00
+683                           Doncaster         71    1    1   1.41   1.41
+684              Island View-Pios Beach         NA   NA   NA     NA     NA
+685                             Te Puna         19    0    0   0.00   0.00
+686                            Matapihi         13    1    1   7.69   7.69
+687     Inlet-Tauranga Harbour Omokoroa         NA   NA   NA     NA     NA
+688              Inlet-Tauranga Harbour         NA   NA   NA     NA     NA
+689                   Waikareao Estuary         NA   NA   NA     NA     NA
+690                     Motuopae Island         NA   NA   NA     NA     NA
+691                              Kairua          5    0    0   0.00   0.00
+692                      Bethlehem East         16    1    1   6.25   6.25
+693                           Bethlehem         31    1    1   3.23   3.23
+694                        Pacific View         31    0    0   0.00   0.00
+695                          Palm Beach         36    0    0   0.00   0.00
+696                             Gravatt         35    0    0   0.00   0.00
+697                     Matakana Island          3    0    0   0.00   0.00
+698        Inlet-Tauranga Harbour North         NA   NA   NA     NA     NA
+699                             Tahawai          7    1    1  14.29  14.29
+700                           Aongatete         15    0    0   0.00   0.00
+701                              Minden         27    2    2   7.41   7.41
+702                              Kaimai         50    0    0   0.00   0.00
+703                     Ohauiti-Ngapeke         12    0    0   0.00   0.00
+704                       Upper Papamoa         26    0    0   0.00   0.00
+705                           Paengaroa         13    0    0   0.00   0.00
+706                            Rangiuru         22    1    1   4.55   4.55
+707                           Pongakawa         45    2    2   4.44   4.44
+708                  Mt Maunganui North        108    0    0   0.00   0.00
+709                               Omanu         47    2    2   4.26   4.26
+710               Tauranga City-Marinas         NA   NA   NA     NA     NA
+711                             Arataki         55    2    2   3.64   3.64
+712                           Te Maunga         27    0    0   0.00   0.00
+713                               Matua         46    0    0   0.00   0.00
+714                            Bellevue         44    1    1   2.27   2.27
+715                     Otumoetai North         36    0    0   0.00   0.00
+716                     Otumoetai South         37    1    1   2.70   2.70
+717                          Brookfield         74    1    1   1.35   1.35
+718                             Te Reti         22    0    0   0.00   0.00
+719                               Judea         32    0    0   0.00   0.00
+720                             Gate Pa         62    2    2   3.23   3.23
+721                            Greerton         72    1    1   1.39   1.39
+722                             Pyes Pa         64    2    1   3.12   1.56
+723                         Yatton Park         52    0    0   0.00   0.00
+724                               Poike         14    0    0   0.00   0.00
+725                             Hairini         68    0    0   0.00   0.00
+726                          Maungatapu         24    0    0   0.00   0.00
+727                   Tauranga Hospital         34    1    1   2.94   2.94
+728                      Tauranga South         40    1    1   2.50   2.50
+729                    Tauranga Central         55    1    1   1.82   1.82
+730                       Sulphur Point         NA   NA   NA     NA     NA
+731                           Kaitemako         26    1    1   3.85   3.85
+732                    Welcome Bay West         72    0    0   0.00   0.00
+733                    Welcome Bay East         54    0    0   0.00   0.00
+734                        Te Puke West         42    0    0   0.00   0.00
+735                        Te Puke East         68    0    0   0.00   0.00
+736                    Ngongotaha North         45    0    0   0.00   0.00
+737                    Ngongotaha South         18    1    1   5.56   5.56
+738                        Poets Corner          6    0    0   0.00   0.00
+739                             Ngapuna          8    0    0   0.00   0.00
+740                        Owhata South          9    0    0   0.00   0.00
+741                             Lynmore         24    0    0   0.00   0.00
+742                         Owhata West         58    0    0   0.00   0.00
+743                         Owhata East         21    0    0   0.00   0.00
+744                            Hamurana         11    0    0   0.00   0.00
+745           Inland Water-Lake Rotorua         NA   NA   NA     NA     NA
+746                            Tikitere         21    0    0   0.00   0.00
+747                    Kaingaroa Forest          3    0    0   0.00   0.00
+748                            Tarawera         10    0    0   0.00   0.00
+749                      Golden Springs         19    0    0   0.00   0.00
+750                             Reporoa         10    0    0   0.00   0.00
+751                             Ngakuru         21    0    0   0.00   0.00
+752                             Arahiwi          2    0    0   0.00   0.00
+753                            Waiwhero          7    0    0   0.00   0.00
+754                              Mamaku         10    0    0   0.00   0.00
+755                      Selwyn Heights         19    0    0   0.00   0.00
+756                     Western Heights         74    0    0   0.00   0.00
+757                       Fairy Springs         24    0    0   0.00   0.00
+758                     Pukehangi North         49    0    0   0.00   0.00
+759                     Pukehangi South         39    0    0   0.00   0.00
+760                         Mangakakahi         49    0    0   0.00   0.00
+761                          Sunnybrook         20    1    1   5.00   5.00
+762                           Fordlands         38    1    1   2.63   2.63
+763                             Utuhina         24    0    0   0.00   0.00
+764                              Pomare         20    0    0   0.00   0.00
+765                           Hillcrest         27    0    0   0.00   0.00
+766                         Springfield         35    0    0   0.00   0.00
+767                        Kawaha Point         22    0    0   0.00   0.00
+768                               Koutu         27    0    0   0.00   0.00
+769                           Ohinemutu          2    0    0   0.00   0.00
+770                              Kuirau         60    0    0   0.00   0.00
+771                            Victoria         25    0    0   0.00   0.00
+772                      Glenholme East         14    0    0   0.00   0.00
+773                      Glenholme West         36    0    0   0.00   0.00
+774                              Fenton         20    0    0   0.00   0.00
+775                               Whaka          4    0    0   0.00   0.00
+776                           Mangakino         11    0    0   0.00   0.00
+777                             Turangi         51    4    2   7.84   3.92
+778                          Acacia Bay         11    0    0   0.00   0.00
+779                  Wairakei-Aratiatia          3    0    0   0.00   0.00
+780                          Maunganamu          2    0    0   0.00   0.00
+781                          Taupo East         NA   NA   NA     NA     NA
+782                           Wharewaka          4    0    0   0.00   0.00
+783                      Rangatira Park          4    0    0   0.00   0.00
+784                           Rangatira         NA   NA   NA     NA     NA
+785                            Lakewood         14    0    0   0.00   0.00
+786                            Marotiri         20    0    0   0.00   0.00
+787                             Kinloch          4    0    0   0.00   0.00
+788                               Tatua         NA   NA   NA     NA     NA
+789                             Oruanui         NA   NA   NA     NA     NA
+790                          Rangitaiki          2    0    0   0.00   0.00
+791                          Broadlands         NA   NA   NA     NA     NA
+792                          Waitahanui         NA   NA   NA     NA     NA
+793                           Tongariro         NA   NA   NA     NA     NA
+794                            Motuoapa         NA   NA   NA     NA     NA
+795                             Tokaanu         NA   NA   NA     NA     NA
+796                             Rangipo          1    0    0   0.00   0.00
+797                             Te More         NA   NA   NA     NA     NA
+798                             Taharua         NA   NA   NA     NA     NA
+799                             Nukuhau         30    0    0   0.00   0.00
+800                       Taupo Central         54    0    0   0.00   0.00
+801                             Tauhara         69    1    0   1.45   0.00
+802                             Hilltop         44    0    0   0.00   0.00
+803                           Waipahihi         16    0    0   0.00   0.00
+804                    Richmond Heights         28    0    0   0.00   0.00
+805                               Ohope         32    1    1   3.12   3.12
+806                              Matata         12    0    0   0.00   0.00
+807                            Taneatua         19    0    0   0.00   0.00
+808                           Edgecumbe         20    0    0   0.00   0.00
+809                             Te Teko          7    0    0   0.00   0.00
+810                     Whakatane North         87    0    0   0.00   0.00
+811                          Coastlands          8    0    0   0.00   0.00
+812                      Whakatane West         59    1    0   1.69   0.00
+813                             Trident         47    1    1   2.13   2.13
+814                   Allandale-Mokorua         38    1    1   2.63   2.63
+815                               Orini          9    0    0   0.00   0.00
+816            Inlet-Ohiwa Harbour West         NA   NA   NA     NA     NA
+817                         Maraetotara         NA   NA   NA     NA     NA
+818                            Poroporo          6    0    0   0.00   0.00
+819                             Otakiri         43    0    0   0.00   0.00
+820                              Rotoma         19    0    0   0.00   0.00
+821                   Matahina-Minginui         25    0    0   0.00   0.00
+822                             Waimana         14    1    1   7.14   7.14
+823                             Urewera         22    1    1   4.55   4.55
+824                             Kawerau        103    0    0   0.00   0.00
+825                            Murupara         29    0    0   0.00   0.00
+826                             Opotiki        102    2    2   1.96   1.96
+827                             Te Kaha          3    0    0   0.00   0.00
+828                        Cape Runaway         15    0    0   0.00   0.00
+829                              Oponae          1    0    0   0.00   0.00
+830            Inlet-Ohiwa Harbour East         NA   NA   NA     NA     NA
+831                            Waiotahi         24    0    0   0.00   0.00
+832                           East Cape         27    0    0   0.00   0.00
+833                            Ruatoria         14    0    0   0.00   0.00
+834                        Tokomaru Bay          6    0    0   0.00   0.00
+835                   Tarndale-Rakauroa         17    1    0   5.88   0.00
+836                           Te Karaka         11    0    0   0.00   0.00
+837                            Patutahi          7    0    0   0.00   0.00
+838                            Makaraka         13    0    0   0.00   0.00
+839                          Matokitoki          2    0    0   0.00   0.00
+840                              Wainui         20    0    0   0.00   0.00
+841                           Wharekaka         25    1    0   4.00   0.00
+842                            Tiniroto         16    0    0   0.00   0.00
+843                            Manutuke         NA   NA   NA     NA     NA
+844                          Tolaga Bay         11    0    0   0.00   0.00
+845                           Mangapapa         72    0    0   0.00   0.00
+846                           Te Hapara         58    1    1   1.72   1.72
+847                    Gisborne Airport         45    0    0   0.00   0.00
+848                          Whataupoko         48    0    0   0.00   0.00
+849                    Gisborne Central         79    0    0   0.00   0.00
+850                         Kaiti North         27    0    0   0.00   0.00
+851                         Outer Kaiti         42    1    1   2.38   2.38
+852                         Kaiti South         44    0    0   0.00   0.00
+853                             Tamarau         47    0    0   0.00   0.00
+854                           Riverdale         27    0    0   0.00   0.00
+855                                Tuai          4    0    0   0.00   0.00
+856                          Frasertown          2    0    0   0.00   0.00
+857                    Ruakituri-Morere          8    0    0   0.00   0.00
+858                       Maungataniwha          2    0    0   0.00   0.00
+859      Inland Water-Lake Waikaremoana         NA   NA   NA     NA     NA
+860                            Raupunga          6    0    0   0.00   0.00
+861                             Whakaki          5    0    0   0.00   0.00
+862                              Nuhaka          5    0    0   0.00   0.00
+863                               Mahia          7    0    0   0.00   0.00
+864                              Wairoa         70    0    0   0.00   0.00
+865                            Bay View         14    1    1   7.14   7.14
+866                             Poraiti         11    0    0   0.00   0.00
+867                             Meeanee         12    0    0   0.00   0.00
+868                             Awatoto          3    0    0   0.00   0.00
+869                             Twyford          5    0    0   0.00   0.00
+870                              Karamu         10    0    0   0.00   0.00
+871                             Whakatu          7    0    0   0.00   0.00
+872                               Clive         20    0    0   0.00   0.00
+873                            Haumoana         21    0    0   0.00   0.00
+874                           Brookvale          2    0    0   0.00   0.00
+875                            Irongate          9    0    0   0.00   0.00
+876                     Longlands South          6    0    0   0.00   0.00
+877                             Tangoio          5    0    0   0.00   0.00
+878                             Eskdale          6    0    0   0.00   0.00
+879                  Sherenden-Puketapu         24    0    0   0.00   0.00
+880                               Omahu          8    0    0   0.00   0.00
+881                            Waiohiki          5    0    0   0.00   0.00
+882                            Pakowhai          2    0    0   0.00   0.00
+883                         Maraekakaho          9    0    0   0.00   0.00
+884                           Bridge Pa         10    0    0   0.00   0.00
+885                             Poukawa         14    0    0   0.00   0.00
+886                            Pakipaki          7    0    0   0.00   0.00
+887                           Waimarama         11    0    0   0.00   0.00
+888                              Tutira          5    0    0   0.00   0.00
+889                          Puketitiri          4    0    0   0.00   0.00
+890                          Whanawhana          4    0    0   0.00   0.00
+891                           Westshore          5    0    0   0.00   0.00
+892                             Ahuriri          5    0    0   0.00   0.00
+893                     Onekawa Central         16    0    0   0.00   0.00
+894                        Onekawa West          1    0    0   0.00   0.00
+895                       Onekawa South         75    0    0   0.00   0.00
+896                              Marewa         73    0    0   0.00   0.00
+897                            Maraenui         70    0    0   0.00   0.00
+898                       Hospital Hill         26    0    0   0.00   0.00
+899                          Bluff Hill         14    0    0   0.00   0.00
+900                         Nelson Park         48    0    0   0.00   0.00
+901                         Mclean Park         27    1    1   3.70   3.70
+902                       Tamatea North         39    0    0   0.00   0.00
+903                       Tamatea South         35    0    0   0.00   0.00
+904                        Greenmeadows         47    0    0   0.00   0.00
+905                      Taradale North         62    1    0   1.61   0.00
+906                      Taradale South         41    1    1   2.44   2.44
+907                             Pirimai         68    0    0   0.00   0.00
+908                              Mahora         61    0    0   0.00   0.00
+909                         St Leonards         41    0    0   0.00   0.00
+910                             Frimley         40    0    0   0.00   0.00
+911                             Raureka         62    1    0   1.61   0.00
+912                             Mayfair         81    1    0   1.23   0.00
+913                            Parkvale         45    0    0   0.00   0.00
+914                    Hastings Central         90    1    0   1.11   0.00
+915                               Akina         72    0    0   0.00   0.00
+916                            Woolwich         NA   NA   NA     NA     NA
+917                           Camberley         41    0    0   0.00   0.00
+918                    Kingsley-Chatham         72    0    0   0.00   0.00
+919                             Lochain         56    1    1   1.79   1.79
+920                       Flaxmere East         87    0    0   0.00   0.00
+921                       Anderson Park         14    0    0   0.00   0.00
+922                                Iona         24    1    1   4.17   4.17
+923                      Havelock Hills          6    0    0   0.00   0.00
+924                             Te Mata         21    0    0   0.00   0.00
+925              Havelock North Central         74    2    1   2.70   1.35
+926                       Te Mata Hills          5    0    0   0.00   0.00
+927                             Takapau          5    0    0   0.00   0.00
+928                             Waipawa         32    1    0   3.12   0.00
+929                            Tikokino         17    0    0   0.00   0.00
+930                               Otane          9    0    0   0.00   0.00
+931                          Waipukurau         52    0    0   0.00   0.00
+932                          Porangahau          4    0    0   0.00   0.00
+933                Elsthorpe-Flemington         31    1    0   3.23   0.00
+934              Norsewood-Herbertville         32    1    1   3.12   3.12
+935                            Owahanga          4    0    0   0.00   0.00
+936                                Mara         NA   NA   NA     NA     NA
+937                     Dannevirke West         23    0    0   0.00   0.00
+938                     Dannevirke East         38    0    0   0.00   0.00
+939                            Papatawa         11    0    0   0.00   0.00
+940                           Woodville         18    0    0   0.00   0.00
+941                              Urenui          7    0    0   0.00   0.00
+942                          Okoki-Okau         18    0    0   0.00   0.00
+943                              Oakura         19    0    0   0.00   0.00
+944                          Bell Block         90    2    2   2.22   2.22
+945                             Paraite          1    0    0   0.00   0.00
+946                           Glen Avon         10    0    0   0.00   0.00
+947                              Bowden          6    0    0   0.00   0.00
+948                          Mangaoraka          9    0    0   0.00   0.00
+949                          Carrington          6    1    1  16.67  16.67
+950                      Highlands Park         18    1    1   5.56   5.56
+951                           Fernleigh          2    0    0   0.00   0.00
+952                             Barrett         16    0    0   0.00   0.00
+953                               Omata          4    0    0   0.00   0.00
+954                           Lepperton         35    0    0   0.00   0.00
+955                             Kaitake         27    0    0   0.00   0.00
+956                               Okato         19    1    1   5.26   5.26
+957                        Waitara West         49    0    0   0.00   0.00
+958                        Waitara East         36    0    0   0.00   0.00
+959                             Moturoa         40    0    0   0.00   0.00
+960                            Lynmouth         31    1    0   3.23   0.00
+961                           Spotswood         25    2    2   8.00   8.00
+962                             Marfell         41    0    0   0.00   0.00
+963                       Upper Westown         14    0    0   0.00   0.00
+964                             Westown         60    0    0   0.00   0.00
+965                New Plymouth Central         46    0    0   0.00   0.00
+966                             Kawaroa         21    0    0   0.00   0.00
+967                         Mount Bryan          6    0    0   0.00   0.00
+968                       Marsland Hill         20    0    0   0.00   0.00
+969                             Fitzroy         32    0    0   0.00   0.00
+970                            Welbourn         15    0    0   0.00   0.00
+971                          Merrilands         34    0    0   0.00   0.00
+972                          Frankleigh         66    0    0   0.00   0.00
+973                         Struan Park         65    3    2   4.62   3.08
+974                      Egmont Village          7    1    1  14.29  14.29
+975                             Kaimata         22    0    0   0.00   0.00
+976                           Inglewood         49    1    1   2.04   2.04
+977                            Midhirst          4    0    0   0.00   0.00
+978                        Whangamomona          1    0    0   0.00   0.00
+979                             Douglas          8    0    0   0.00   0.00
+980                                Toko         10    0    0   0.00   0.00
+981                            Pembroke         12    0    0   0.00   0.00
+982                      Stratford West         64    0    0   0.00   0.00
+983                      Stratford East         26    0    0   0.00   0.00
+984                             Opunake         14    1    0   7.14   0.00
+985                              Rahotu          3    0    0   0.00   0.00
+986                               Kahui         41    1    1   2.44   2.44
+987                             Kaponga         12    0    0   0.00   0.00
+988                    Mangatoki-Moeroa         10    0    0   0.00   0.00
+989                              Eltham         40    0    0   0.00   0.00
+990                              Kapuni         21    0    0   0.00   0.00
+991                              Manaia         20    0    0   0.00   0.00
+992                            Normanby         16    1    1   6.25   6.25
+993                        Hawera North         36    0    0   0.00   0.00
+994                        Hawera South        126    0    0   0.00   0.00
+995                         Ohawe Beach          6    0    0   0.00   0.00
+996                             Tawhiti          5    0    0   0.00   0.00
+997                         Waingongoro          6    0    0   0.00   0.00
+998                         Hawera West          7    0    0   0.00   0.00
+999                             Ohangai          4    0    0   0.00   0.00
+1000                            Okaiawa          9    0    0   0.00   0.00
+1001                          Waitotara          1    0    0   0.00   0.00
+1002                         Whenuakura         12    0    0   0.00   0.00
+1003                           Makakaho         10    0    0   0.00   0.00
+1004                              Patea         21    0    0   0.00   0.00
+1005                           Waverley          8    0    0   0.00   0.00
+1006                           Tangiwai         25    0    0   0.00   0.00
+1007                            Ohakune         17    0    0   0.00   0.00
+1008                            Raetihi         21    0    0   0.00   0.00
+1009                           Otamatea          7    0    0   0.00   0.00
+1010                           Blueskin         10    0    0   0.00   0.00
+1011                            Maxwell         20    0    0   0.00   0.00
+1012                  Castlecliff North         37    0    0   0.00   0.00
+1013                  Castlecliff South         20    0    0   0.00   0.00
+1014                            Mosston         19    0    0   0.00   0.00
+1015                          Balgownie          7    0    0   0.00   0.00
+1016                            Tawhero         13    0    0   0.00   0.00
+1017                     Gonville South         43    0    0   0.00   0.00
+1018                      Gonville East         17    0    0   0.00   0.00
+1019                      Gonville West         22    0    0   0.00   0.00
+1020                    Springvale West         13    0    0   0.00   0.00
+1021                    Springvale East         11    0    0   0.00   0.00
+1022                Wanganui Collegiate         14    0    0   0.00   0.00
+1023                         Laird Park         25    0    0   0.00   0.00
+1024                   Wanganui Central         19    0    0   0.00   0.00
+1025                     Spriggens Park          3    0    0   0.00   0.00
+1026                      Cooks Gardens          1    0    0   0.00   0.00
+1027                      St Johns Hill         20    0    0   0.00   0.00
+1028                      Lower Aramoho         25    0    0   0.00   0.00
+1029                      Upper Aramoho         37    0    0   0.00   0.00
+1030                    Williams Domain         25    0    0   0.00   0.00
+1031                       Wembley Park         32    0    0   0.00   0.00
+1032                        Kowhai Park         31    0    0   0.00   0.00
+1033                        Bastia Hill          1    0    0   0.00   0.00
+1034                         Durie Hill         19    0    0   0.00   0.00
+1035                             Putiki         NA   NA   NA     NA     NA
+1036               Marybank-Gordon Park          3    0    0   0.00   0.00
+1037                   Fordell-Kakatahi         20    0    0   0.00   0.00
+1038                            Waiouru         20    0    0   0.00   0.00
+1039                          Mangaweka          1    1    1 100.00 100.00
+1040                        Hunterville          3    0    0   0.00   0.00
+1041                   Ratana Community          4    0    0   0.00   0.00
+1042                              Bulls         45    0    0   0.00   0.00
+1043                           Ngamatea         NA   NA   NA     NA     NA
+1044                          Moawhango          7    0    0   0.00   0.00
+1045                     Pohonui-Porewa         30    0    0   0.00   0.00
+1046                         Lake Alice         35    1    0   2.86   0.00
+1047                           Koitiata         NA   NA   NA     NA     NA
+1048                            Taihape         34    0    0   0.00   0.00
+1049                             Marton         62    0    0   0.00   0.00
+1050                            Kiwitea         12    0    0   0.00   0.00
+1051                          Pohangina          6    0    0   0.00   0.00
+1052                           Ashhurst         47    1    1   2.13   2.13
+1053                       Stoney Creek          5    0    0   0.00   0.00
+1054                         Whakarongo          8    0    0   0.00   0.00
+1055                       Oroua Bridge          2    0    0   0.00   0.00
+1056                              Maewa         11    0    0   0.00   0.00
+1057                           Halcombe          4    0    0   0.00   0.00
+1058                  Tokorangi-Hiwinui         28    0    0   0.00   0.00
+1059                     Feilding North         66    1    1   1.52   1.52
+1060                      Feilding West         61    1    0   1.64   0.00
+1061                   Feilding Central         32    0    0   0.00   0.00
+1062                      Feilding East         37    1    0   2.70   0.00
+1063                             Sanson          6    1    0  16.67   0.00
+1064                           Rongotea          7    0    0   0.00   0.00
+1065                         Tangimoana          4    0    0   0.00   0.00
+1066                    Himatangi Beach          2    0    0   0.00   0.00
+1067                       Foxton Beach          8    0    0   0.00   0.00
+1068                           Rakiraki          3    0    0   0.00   0.00
+1069                             Ohakea          6    0    0   0.00   0.00
+1070                Oroua Downs-Waitohi         35    1    1   2.86   2.86
+1071                             Moutoa          6    0    0   0.00   0.00
+1072                             Foxton         37    1    0   2.70   0.00
+1073                           Kairanga          3    0    0   0.00   0.00
+1074                           Longburn          9    0    0   0.00   0.00
+1075                  Massey University          1    0    0   0.00   0.00
+1076               Linton Military Camp         16    1    1   6.25   6.25
+1077                           Kauwhata         25    0    0   0.00   0.00
+1078                            Turitea         27    1    1   3.70   3.70
+1079                             Milson         72    0    0   0.00   0.00
+1080                       Kelvin Grove        102    0    0   0.00   0.00
+1081                             Takaro         86    1    1   1.16   1.16
+1082                          Cloverlea         27    0    0   0.00   0.00
+1083          Palmerston North Hospital         23    0    0   0.00   0.00
+1084                           Papaeoia         39    1    1   2.56   2.56
+1085                             Roslyn         98    1    0   1.02   0.00
+1086                        Terrace End         52    0    0   0.00   0.00
+1087                           Highbury         66    0    0   0.00   0.00
+1088                          Westbrook         77    3    1   3.90   1.30
+1089           Palmerston North Central         65    1    1   1.54   1.54
+1090                      Awapuni North         53    3    1   5.66   1.89
+1091                       Awapuni West         12    0    0   0.00   0.00
+1092                      Awapuni South         50    1    1   2.00   2.00
+1093                           West End         59    0    0   0.00   0.00
+1094                     Hokowhitu West         25    0    0   0.00   0.00
+1095                   Hokowhitu Lagoon         10    0    0   0.00   0.00
+1096                     Hokowhitu East         49    1    0   2.04   0.00
+1097                          Aokautere         19    1    1   5.26   5.26
+1098                            Shannon         23    0    0   0.00   0.00
+1099                          Waitarere          1    0    0   0.00   0.00
+1100                     Waikanae Beach         27    1    1   3.70   3.70
+1101                      Waikanae East         16    0    0   0.00   0.00
+1102                          Peka Peka          1    0    0   0.00   0.00
+1103                      Waikanae Park          9    0    0   0.00   0.00
+1104                      Waikanae West         24    3    3  12.50  12.50
+1105                           Tokomaru          8    0    0   0.00   0.00
+1106                              Opiki          9    0    0   0.00   0.00
+1107                            Kaitawa          1    0    0   0.00   0.00
+1108                    Lake Horowhenua          2    0    0   0.00   0.00
+1109                           Waiopehu          9    0    0   0.00   0.00
+1110                           Kohitere          4    0    0   0.00   0.00
+1111                   Mangaore-Manakau         35    1    0   2.86   0.00
+1112                        Otaki Forks          6    0    0   0.00   0.00
+1113                            Te Horo          2    0    0   0.00   0.00
+1114                        Levin North         43    1    1   2.33   2.33
+1115                         Levin West         36    1    0   2.78   0.00
+1116                      Playford Park         44    0    0   0.00   0.00
+1117                        Levin South         33    2    1   6.06   3.03
+1118                         Levin East         51    0    0   0.00   0.00
+1119                              Otaki         73    4    1   5.48   1.37
+1120                         Heretaunga         15    1    1   6.67   6.67
+1121                     Trentham South          3    0    0   0.00   0.00
+1122                          Pinehaven         31    0    0   0.00   0.00
+1123                   Moonshine Valley          2    0    0   0.00   0.00
+1124                Riverstone Terraces         25    0    0   0.00   0.00
+1125                           Glendale         79    0    0   0.00   0.00
+1126                            Parkway         36    0    0   0.00   0.00
+1127                            Fernlea         31    0    0   0.00   0.00
+1128                            Arakura         54    0    0   0.00   0.00
+1129                      Homedale West         42    0    0   0.00   0.00
+1130                      Homedale East         39    0    0   0.00   0.00
+1131                          Pencarrow          3    0    0   0.00   0.00
+1132                        Pauatahanui          8    0    0   0.00   0.00
+1133                          Endeavour         44    1    1   2.27   2.27
+1134                         Resolution          4    0    0   0.00   0.00
+1135                          Adventure         21    1    1   4.76   4.76
+1136                   Paekakariki Hill         NA   NA   NA     NA     NA
+1137            Paraparaumu Beach North         37    2    2   5.41   5.41
+1138                          Otaihanga          8    0    0   0.00   0.00
+1139            Paraparaumu Beach South         43    0    0   0.00   0.00
+1140                Paraparaumu Central         93    3    3   3.23   3.23
+1141                      Raumati Beach         46    1    1   2.17   2.17
+1142                      Raumati South         42    2    2   4.76   4.76
+1143                        Paekakariki         16    0    0   0.00   0.00
+1144                      Kapiti Island         NA   NA   NA     NA     NA
+1145                   Maungakotukutuku          9    0    0   0.00   0.00
+1146                           Te Marua         13    0    0   0.00   0.00
+1147                          Akatarawa         11    0    0   0.00   0.00
+1148                       Emerald Hill         30    0    0   0.00   0.00
+1149                          Maoribank         50    1    1   2.00   2.00
+1150                      Clouston Park         32    0    0   0.00   0.00
+1151                        Totara Park         31    0    0   0.00   0.00
+1152                          Ebdentown         25    0    0   0.00   0.00
+1153                 Upper Hutt Central          7    0    0   0.00   0.00
+1154                          Maidstone          4    0    0   0.00   0.00
+1155                       Wallaceville         33    0    0   0.00   0.00
+1156                          Elderslea         38    0    0   0.00   0.00
+1157                        Poets Block         28    3    2  10.71   7.14
+1158                          Brentwood         22    0    0   0.00   0.00
+1159                     Trentham North         37    0    0   0.00   0.00
+1160            Heretaunga-Silverstream         37    0    0   0.00   0.00
+1161                      Cloustonville          1    0    0   0.00   0.00
+1162                           Mangaroa         12    0    0   0.00   0.00
+1163                             Tawhai         58    1    1   1.72   1.72
+1164                            Holborn         27    0    0   0.00   0.00
+1165                            Delaney         38    0    0   0.00   0.00
+1166                             Manuka         20    0    0   0.00   0.00
+1167                        Taita North         42    0    0   0.00   0.00
+1168                        Taita South         51    0    0   0.00   0.00
+1169                        Avalon East         38    0    0   0.00   0.00
+1170                       Naenae North         58    0    0   0.00   0.00
+1171                       Naenae South         39    0    0   0.00   0.00
+1172                        Avalon West         22    0    0   0.00   0.00
+1173                           Boulcott         33    1    1   3.03   3.03
+1174                         Epuni West         36    1    1   2.78   2.78
+1175                         Epuni East         33    1    1   3.03   3.03
+1176                      Waterloo West          8    0    0   0.00   0.00
+1177                      Waterloo East         35    1    1   2.86   2.86
+1178                     Waiwhetu North         17    0    0   0.00   0.00
+1179                     Waiwhetu South         46    0    0   0.00   0.00
+1180                         Gracefield          1    0    0   0.00   0.00
+1181                              Moera         19    0    0   0.00   0.00
+1182                       Woburn North         10    0    0   0.00   0.00
+1183                       Woburn South          6    0    0   0.00   0.00
+1184                       Hutt Central         22    0    0   0.00   0.00
+1185                            Melling          7    0    0   0.00   0.00
+1186                          Alicetown         39    1    1   2.56   2.56
+1187                         Normandale         30    0    0   0.00   0.00
+1188                         Maungaraki         58    0    0   0.00   0.00
+1189                          Tirohanga          9    0    0   0.00   0.00
+1190                            Belmont         32    0    0   0.00   0.00
+1191                             Kelson         52    0    0   0.00   0.00
+1192                Haywards-Manor Park          2    0    0   0.00   0.00
+1193                           Korokoro         25    0    0   0.00   0.00
+1194                     Petone Central         17    0    0   0.00   0.00
+1195                          Esplanade         31    0    0   0.00   0.00
+1196                            Wilford         38    0    0   0.00   0.00
+1197                         Eastbourne         35    1    1   2.86   2.86
+1198                   Titahi Bay North         34    0    0   0.00   0.00
+1199                            Onepoto         29    0    0   0.00   0.00
+1200                   Titahi Bay South         61    1    1   1.64   1.64
+1201                 Elsdon-Takapuwahia         37    1    1   2.70   2.70
+1202                    Porirua Central         11    0    0   0.00   0.00
+1203                       Porirua East         40    0    0   0.00   0.00
+1204                      Ranui Heights         17    0    0   0.00   0.00
+1205                Cannons Creek North         74    2    1   2.70   1.35
+1206                Cannons Creek South         20    0    0   0.00   0.00
+1207                 Cannons Creek East         85    0    0   0.00   0.00
+1208                        Waitangirua         70    1    1   1.43   1.43
+1209                   Papakowhai North         NA   NA   NA     NA     NA
+1210                   Papakowhai South         NA   NA   NA     NA     NA
+1211                         Ascot Park         50    2    2   4.00   4.00
+1212                        Pukerua Bay         20    1    1   5.00   5.00
+1213                         Plimmerton         23    0    0   0.00   0.00
+1214                      Mana-Camborne         34    1    1   2.94   2.94
+1215                  Paremata-Postgate         35    0    0   0.00   0.00
+1216                          Discovery         45    0    0   0.00   0.00
+1217                        Mana Island         NA   NA   NA     NA     NA
+1218                         Tawa South         26    0    0   0.00   0.00
+1219                       Tawa Central         58    1    1   1.72   1.72
+1220                             Linden         65    1    1   1.54   1.54
+1221                         Greenacres         10    0    0   0.00   0.00
+1222             Thorndon-Tinakori Road         27    0    0   0.00   0.00
+1223                            Lambton         56    0    0   0.00   0.00
+1224    Willis Street-Cambridge Terrace         50    0    0   0.00   0.00
+1225            Wellington City-Marinas         NA   NA   NA     NA     NA
+1226            Aro Street-Nairn Street         24    0    0   0.00   0.00
+1227             Mt Cook-Wallace Street         32    0    0   0.00   0.00
+1228                   Mt Victoria West         35    1    1   2.86   2.86
+1229                     Glenside North          7    0    0   0.00   0.00
+1230                 Churton Park North         NA   NA   NA     NA     NA
+1231                 Churton Park South         NA   NA   NA     NA     NA
+1232                      Grenada North          9    0    0   0.00   0.00
+1233                    Grenada Village         35    0    0   0.00   0.00
+1234                      Newlands East         17    0    0   0.00   0.00
+1235                             Takapu          8    0    0   0.00   0.00
+1236                           Horokiwi          3    0    0   0.00   0.00
+1237                 Johnsonville North         36    1    1   2.78   2.78
+1238               Johnsonville Central         48    0    0   0.00   0.00
+1239                     Paparangi West         NA   NA   NA     NA     NA
+1240                  Johnsonville East         NA   NA   NA     NA     NA
+1241                          Paparangi         NA   NA   NA     NA     NA
+1242                          Woodridge         NA   NA   NA     NA     NA
+1243                     Newlands North         NA   NA   NA     NA     NA
+1244                     Newlands South         48    2    2   4.17   4.17
+1245                     Ngauranga East          2    0    0   0.00   0.00
+1246                              Raroa         53    0    0   0.00   0.00
+1247       Khandallah Park-Broadmeadows         30    1    1   3.33   3.33
+1248                          Te Kainga         27    0    0   0.00   0.00
+1249                     Ngauranga West         NA   NA   NA     NA     NA
+1250                    Rangoon Heights         33    0    0   0.00   0.00
+1251                             Awarua         41    1    1   2.44   2.44
+1252                        Ngaio South         49    0    0   0.00   0.00
+1253                      Kaiwharawhara          2    0    0   0.00   0.00
+1254                          Wadestown         30    0    0   0.00   0.00
+1255                      Crofton Downs         NA   NA   NA     NA     NA
+1256                             Wilton         NA   NA   NA     NA     NA
+1257                    Northland North         NA   NA   NA     NA     NA
+1258                       Karori North         25    0    0   0.00   0.00
+1259                        Karori Park         67    0    0   0.00   0.00
+1260                        Karori East         35    0    0   0.00   0.00
+1261                       Karori South         40    1    1   2.50   2.50
+1262                          Northland         25    0    0   0.00   0.00
+1263                            Kelburn         19    0    0   0.00   0.00
+1264                          Taitville          3    0    0   0.00   0.00
+1265                       Mitchelltown          2    0    0   0.00   0.00
+1266                           Brooklyn         54    0    0   0.00   0.00
+1267                     Vogeltown West         NA   NA   NA     NA     NA
+1268                          Vogeltown         NA   NA   NA     NA     NA
+1269                Kingston-Mornington         30    1    1   3.33   3.33
+1270                     Brooklyn South         10    0    0   0.00   0.00
+1271            Happy Valley-Owhiro Bay         22    0    0   0.00   0.00
+1272                    Island Bay West         44    1    1   2.27   2.27
+1273                    Island Bay East         42    1    1   2.38   2.38
+1274     Melrose-Houghton Bay-Southgate         51    1    1   1.96   1.96
+1275                    Berhampore West         42    2    1   4.76   2.38
+1276                       Newtown West         NA   NA   NA     NA     NA
+1277                    Berhampore East         NA   NA   NA     NA     NA
+1278                       Newtown East         65    0    0   0.00   0.00
+1279                           Adelaide          6    0    0   0.00   0.00
+1280                       Oriental Bay          5    0    0   0.00   0.00
+1281                          Roseneath         15    0    0   0.00   0.00
+1282                     Hataitai North         62    0    0   0.00   0.00
+1283                     Kilbirnie East         57    2    2   3.51   3.51
+1284      Kilbirnie West-Hataitai South         35    0    0   0.00   0.00
+1285                   Evans Bay Marina         NA   NA   NA     NA     NA
+1286        Lyall Bay-Airport-Moa Point         45    0    0   0.00   0.00
+1287                Seatoun Tunnel West         NA   NA   NA     NA     NA
+1288                    Strathmore Park         NA   NA   NA     NA     NA
+1289                      Miramar South         49    0    0   0.00   0.00
+1290                      Miramar North         NA   NA   NA     NA     NA
+1291                            Miramar         NA   NA   NA     NA     NA
+1292              Karaka Bay-Worser Bay          4    0    0   0.00   0.00
+1293                            Seatoun         18    0    0   0.00   0.00
+1294                            Maupuia         NA   NA   NA     NA     NA
+1295                       Miramar West         NA   NA   NA     NA     NA
+1296                      Makara-Ohariu          6    0    0   0.00   0.00
+1297                       Mangatainoka         17    0    0   0.00   0.00
+1298                           Pahiatua         34    0    0   0.00   0.00
+1299                          Eketahuna          2    0    0   0.00   0.00
+1300                   Nireaha-Tiraumea         11    0    0   0.00   0.00
+1301                Homebush-Te Ore Ore          7    0    0   0.00   0.00
+1302                    Opaki-Fernridge          5    0    0   0.00   0.00
+1303                         Kopuaranga         13    0    0   0.00   0.00
+1304                           Whareama         19    0    0   0.00   0.00
+1305                  Masterton Central         19    0    0   0.00   0.00
+1306                     Masterton West         29    1    0   3.45   0.00
+1307                     Masterton East         43    0    0   0.00   0.00
+1308                       Solway North         32    0    0   0.00   0.00
+1309                       Solway South         43    0    0   0.00   0.00
+1310                         Ngaumutawa         16    0    0   0.00   0.00
+1311                  Masterton Railway          5    0    0   0.00   0.00
+1312                          Lansdowne         50    0    0   0.00   0.00
+1313                           Waingawa          2    0    0   0.00   0.00
+1314                      Mt Holdsworth         10    0    0   0.00   0.00
+1315                          Te Wharau         16    0    0   0.00   0.00
+1316                          Carterton         45    0    0   0.00   0.00
+1317                         Tuturumuri          4    0    0   0.00   0.00
+1318                           Kahutara         30    0    0   0.00   0.00
+1319        Inland Water-Lake Wairarapa         NA   NA   NA     NA     NA
+1320                           Greytown         15    0    0   0.00   0.00
+1321                        Featherston         31    2    1   6.45   3.23
+1322                      Martinborough         20    0    0   0.00   0.00
+1323                           Havelock         12    0    0   0.00   0.00
+1324                            Renwick         31    0    0   0.00   0.00
+1325                         Woodbourne          8    0    0   0.00   0.00
+1326                              Omaka          9    0    0   0.00   0.00
+1327             Spring Creek-Grovetown         NA   NA   NA     NA     NA
+1328                         Riverlands         NA   NA   NA     NA     NA
+1329                            Waikawa          7    0    0   0.00   0.00
+1330  Marlborough Sounds Coastal Marine         NA   NA   NA     NA     NA
+1331     Marlborough Sounds Terrestrial         23    0    0   0.00   0.00
+1332                       Wairau North         NA   NA   NA     NA     NA
+1333                          Tuamarina         NA   NA   NA     NA     NA
+1334                            Rapaura         NA   NA   NA     NA     NA
+1335                       Wairau South         NA   NA   NA     NA     NA
+1336                          Weld Pass         NA   NA   NA     NA     NA
+1337                           Fairhall         NA   NA   NA     NA     NA
+1338                             Severn         NA   NA   NA     NA     NA
+1339                               Ward         10    0    0   0.00   0.00
+1340                             Seddon          4    0    0   0.00   0.00
+1341                      Lake Tennyson         NA   NA   NA     NA     NA
+1342                             Picton         18    0    0   0.00   0.00
+1343                        Springlands         27    0    0   0.00   0.00
+1344                           Mayfield         45    0    0   0.00   0.00
+1345                   Blenheim Central         60    0    0   0.00   0.00
+1346                            Whitney         60    0    0   0.00   0.00
+1347                        Redwoodtown         65    0    0   0.00   0.00
+1348                          Witherlea         46    0    0   0.00   0.00
+1349                  Kaikoura Township         34    0    0   0.00   0.00
+1350                     Kaikoura Rural         13    0    0   0.00   0.00
+1351                         Golden Bay         25    0    0   0.00   0.00
+1352                             Takaka         10    0    0   0.00   0.00
+1353                           Glenduan          3    0    0   0.00   0.00
+1354                           Ngawhatu         12    0    0   0.00   0.00
+1355                       Aniseed Hill         NA   NA   NA     NA     NA
+1356                               Hope         11    0    0   0.00   0.00
+1357                      Saxton Island         NA   NA   NA     NA     NA
+1358                  Waimea Inlet East         NA   NA   NA     NA     NA
+1359                             Saxton         10    0    0   0.00   0.00
+1360                        Best Island         NA   NA   NA     NA     NA
+1361                        Bell Island         NA   NA   NA     NA     NA
+1362                             Ranzau          4    0    0   0.00   0.00
+1363                      Richmond Hill         NA   NA   NA     NA     NA
+1364                          Whangamoa          8    0    0   0.00   0.00
+1365                        Brightwater         29    0    0   0.00   0.00
+1366                          Wakefield         35    0    0   0.00   0.00
+1367                              Mapua         11    0    0   0.00   0.00
+1368                      Inlet-Motueka         NA   NA   NA     NA     NA
+1369                        Kaiteriteri          6    0    0   0.00   0.00
+1370                      Motueka Outer         19    0    0   0.00   0.00
+1371                      Rabbit Island         NA   NA   NA     NA     NA
+1372                  Waimea Inlet West         NA   NA   NA     NA     NA
+1373                            Wai-Iti         32    0    0   0.00   0.00
+1374                       Golden Downs          9    0    0   0.00   0.00
+1375                       Lake Rotoroa          4    0    0   0.00   0.00
+1376                          Murchison         10    0    0   0.00   0.00
+1377                           Tapawera          1    0    0   0.00   0.00
+1378                             Riwaka         14    0    0   0.00   0.00
+1379                            Clifton         13    1    1   7.69   7.69
+1380                            Atawhai         28    0    0   0.00   0.00
+1381                        Port Nelson          1    0    0   0.00   0.00
+1382                           The Wood         28    0    0   0.00   0.00
+1383                          Britannia          9    0    0   0.00   0.00
+1384                         Washington         51    0    0   0.00   0.00
+1385                          Trafalgar         28    0    0   0.00   0.00
+1386                             Maitai          4    0    0   0.00   0.00
+1387                              Kirks          9    0    0   0.00   0.00
+1388                             Bronte          6    0    0   0.00   0.00
+1389                             Atmore         11    0    0   0.00   0.00
+1390                          Tahunanui         33    1    1   3.03   3.03
+1391                       Tahuna Hills         16    0    0   0.00   0.00
+1392                            Toi Toi         41    0    0   0.00   0.00
+1393                             Broads         18    0    0   0.00   0.00
+1394                          Grampians         25    0    0   0.00   0.00
+1395                          The Brook         21    0    0   0.00   0.00
+1396                     Nelson Airport          5    0    0   0.00   0.00
+1397                            Nayland          6    0    0   0.00   0.00
+1398                        Enner Glynn         40    0    0   0.00   0.00
+1399                          Maitlands         20    0    0   0.00   0.00
+1400                          Isel Park         39    0    0   0.00   0.00
+1401                           Langbein         26    0    0   0.00   0.00
+1402                      Richmond East         19    0    0   0.00   0.00
+1403                      Richmond West         88    0    0   0.00   0.00
+1404                       Motueka West         34    0    0   0.00   0.00
+1405                       Motueka East         40    0    0   0.00   0.00
+1406                      Moutere Inlet         NA   NA   NA     NA     NA
+1407                     Jackett Island         NA   NA   NA     NA     NA
+1408                            Karamea          2    0    0   0.00   0.00
+1409                    Hector-Ngakawau          2    0    0   0.00   0.00
+1410                            Granity          1    0    0   0.00   0.00
+1411                           Orowaiti          2    0    0   0.00   0.00
+1412                    Little Wanganui          1    0    0   0.00   0.00
+1413                          Mokihinui         NA   NA   NA     NA     NA
+1414                  Buller Coalfields          6    0    0   0.00   0.00
+1415                     Westport Rural         14    0    0   0.00   0.00
+1416                         Charleston          2    0    0   0.00   0.00
+1417                 Inangahua Junction         NA   NA   NA     NA     NA
+1418                     Westport Urban         52    0    0   0.00   0.00
+1419                            Reefton          9    0    0   0.00   0.00
+1420                   Inangahua Valley          2    0    0   0.00   0.00
+1421                         Mawheraiti          3    0    0   0.00   0.00
+1422                             Maruia          1    0    0   0.00   0.00
+1423                             Karoro          7    0    0   0.00   0.00
+1424                             Kaiata          3    0    0   0.00   0.00
+1425               South Beach-Camerons         12    0    0   0.00   0.00
+1426                          Blackball         NA   NA   NA     NA     NA
+1427                    Point Elizabeth         NA   NA   NA     NA     NA
+1428                             Dobson         11    1    1   9.09   9.09
+1429                          Barrytown          4    0    0   0.00   0.00
+1430                         Coal Creek         NA   NA   NA     NA     NA
+1431                             Atarau          2    0    0   0.00   0.00
+1432                    Greymouth Rural         NA   NA   NA     NA     NA
+1433                     Marsden-Hohonu          2    0    0   0.00   0.00
+1434                      Arnold Valley          2    0    0   0.00   0.00
+1435               Nelson Creek-Ngahere          1    0    0   0.00   0.00
+1436                             Ahaura          3    0    0   0.00   0.00
+1437                       Lake Brunner         NA   NA   NA     NA     NA
+1438                            Haupiri         18    0    0   0.00   0.00
+1439                    Runanga-Rapahoe         10    0    0   0.00   0.00
+1440                             Cobden         23    0    0   0.00   0.00
+1441                          Blaketown          9    0    0   0.00   0.00
+1442                  Greymouth Central         12    0    0   0.00   0.00
+1443                    Greymouth South         30    0    0   0.00   0.00
+1444                             Kumara          3    0    0   0.00   0.00
+1445                            Kaniere          6    0    0   0.00   0.00
+1446                               Ross          6    0    0   0.00   0.00
+1447                           Harihari          9    1    0  11.11   0.00
+1448                        Franz Josef          8    0    0   0.00   0.00
+1449                        Fox Glacier          4    0    0   0.00   0.00
+1450                          Taramakau          1    0    0   0.00   0.00
+1451                              Otira         NA   NA   NA     NA     NA
+1452                     Waimea-Arahura          5    0    0   0.00   0.00
+1453                     Hokitika Rural          9    0    0   0.00   0.00
+1454                    Hokitika Valley          6    0    0   0.00   0.00
+1455                       Totara River         NA   NA   NA     NA     NA
+1456                            Waitaha          1    0    0   0.00   0.00
+1457                           Whataroa          4    0    0   0.00   0.00
+1458                              Waiho         NA   NA   NA     NA     NA
+1459                         Karangarua         NA   NA   NA     NA     NA
+1460                  Bruce Bay-Paringa          1    0    0   0.00   0.00
+1461                              Haast          3    0    0   0.00   0.00
+1462                     Hokitika Urban         45    1    0   2.22   0.00
+1463                     Hanmer Springs          8    0    0   0.00   0.00
+1464                          Culverden         14    0    0   0.00   0.00
+1465                              Waiau          5    0    0   0.00   0.00
+1466                              Amuri          7    0    0   0.00   0.00
+1467                          Parnassus          4    0    0   0.00   0.00
+1468                            Cheviot         11    0    0   0.00   0.00
+1469                            Hurunui         21    0    0   0.00   0.00
+1470                           Amberley         36    1    0   2.78   0.00
+1471                         Leithfield          9    0    0   0.00   0.00
+1472                             Sefton          1    0    0   0.00   0.00
+1473                              Okuku          1    0    0   0.00   0.00
+1474                             Loburn          7    0    0   0.00   0.00
+1475                             Ashley          4    0    0   0.00   0.00
+1476                            Camside          1    0    0   0.00   0.00
+1477                Pines-Kairaki Beach          2    0    0   0.00   0.00
+1478                            Waikuku         10    0    0   0.00   0.00
+1479                               Cust          3    0    0   0.00   0.00
+1480                            Mairaki          2    0    0   0.00   0.00
+1481                            Woodend         34    1    0   2.94   0.00
+1482                           Fernside         NA   NA   NA     NA     NA
+1483                            Lehmans         NA   NA   NA     NA     NA
+1484                            Pegasus         NA   NA   NA     NA     NA
+1485                      Woodend Beach         NA   NA   NA     NA     NA
+1486                         Coldstream         NA   NA   NA     NA     NA
+1487                         Ravenswood         NA   NA   NA     NA     NA
+1488                            Tuahiwi         NA   NA   NA     NA     NA
+1489                       Woodend West         NA   NA   NA     NA     NA
+1490                      Rangiora East          5    1    0  20.00   0.00
+1491                         Southbrook          3    0    0   0.00   0.00
+1492                          Kingsbury          4    0    0   0.00   0.00
+1493                     Rangiora North        194    0    0   0.00   0.00
+1494                      Rangiora West         NA   NA   NA     NA     NA
+1495                   Rangiora Central         NA   NA   NA     NA     NA
+1496                      Kaiapoi South          7    0    0   0.00   0.00
+1497                          Mansfield          1    0    0   0.00   0.00
+1498                          Courtenay         NA   NA   NA     NA     NA
+1499                       Kaiapoi East         NA   NA   NA     NA     NA
+1500                 Kaiapoi North West         NA   NA   NA     NA     NA
+1501                 Kaiapoi North East         NA   NA   NA     NA     NA
+1502                         Clarkville          2    0    0   0.00   0.00
+1503                       Kaiapoi West         NA   NA   NA     NA     NA
+1504                       Silverstream         NA   NA   NA     NA     NA
+1505                         Mandeville         11    0    0   0.00   0.00
+1506                              Ohoka          7    0    0   0.00   0.00
+1507                       West Eyreton         NA   NA   NA     NA     NA
+1508                           Eyrewell         NA   NA   NA     NA     NA
+1509                       Ashley Gorge          9    0    0   0.00   0.00
+1510                             Oxford         27    0    0   0.00   0.00
+1511                           Darfield         40    0    0   0.00   0.00
+1512                             Kirwee         39    0    0   0.00   0.00
+1513              Burnham Military Camp         32    1    1   3.12   3.12
+1514                            Malvern         32    0    0   0.00   0.00
+1515                     Halswell South         69    0    0   0.00   0.00
+1516                      Oaklands West         28    0    0   0.00   0.00
+1517                      Oaklands East         47    1    0   2.13   0.00
+1518                       Hornby North         49    1    1   2.04   2.04
+1519                       Hornby South         76    0    0   0.00   0.00
+1520                           Sockburn         79    0    0   0.00   0.00
+1521                             Wigram         83    0    0   0.00   0.00
+1522                          Yaldhurst         30    0    0   0.00   0.00
+1523                         Broomfield         33    0    0   0.00   0.00
+1524                            Paparua         NA   NA   NA     NA     NA
+1525                          Templeton         NA   NA   NA     NA     NA
+1526                          Islington         41    0    0   0.00   0.00
+1527                      Halswell West         14    0    0   0.00   0.00
+1528                        Westmorland         11    0    0   0.00   0.00
+1529                         Aidanfield         32    0    0   0.00   0.00
+1530                    Halswell Domain         19    0    0   0.00   0.00
+1531                   Hendersons Basin          5    0    0   0.00   0.00
+1532                         Prebbleton         NA   NA   NA     NA     NA
+1533                   Trents-Ladbrooks         NA   NA   NA     NA     NA
+1534                     Mcleans Island          1    0    0   0.00   0.00
+1535                      Kennedys Bush          1    0    0   0.00   0.00
+1536                        West Melton         78    1    1   1.28   1.28
+1537                            Taitapu          3    0    0   0.00   0.00
+1538                      Redwood North         55    0    0   0.00   0.00
+1539                      Redwood South         27    0    0   0.00   0.00
+1540                          Styx Mill         24    0    0   0.00   0.00
+1541                          Casebrook         50    0    0   0.00   0.00
+1542                      Belfast South         28    0    0   0.00   0.00
+1543                       Sawyers Arms         31    0    0   0.00   0.00
+1544                   Bishopdale North         67    0    0   0.00   0.00
+1545                           Harewood         40    0    0   0.00   0.00
+1546                         Bishopdale         30    1    0   3.33   0.00
+1547                            Russley         32    0    0   0.00   0.00
+1548                           Burnside         22    1    0   4.55   0.00
+1549                          Wairarapa         22    0    0   0.00   0.00
+1550                        Jellie Park         42    1    1   2.38   2.38
+1551                            Bryndwr         26    1    0   3.85   0.00
+1552                           Holmwood          7    0    0   0.00   0.00
+1553                          Fendalton         18    0    0   0.00   0.00
+1554                         Deans Bush          5    0    0   0.00   0.00
+1555                        Hawthornden         20    0    0   0.00   0.00
+1556                             Merrin         11    0    0   0.00   0.00
+1557                           Westburn         25    0    0   0.00   0.00
+1558                      Avonhead West         37    0    0   0.00   0.00
+1559                           Avonhead         46    0    0   0.00   0.00
+1560                               Ilam         31    0    0   0.00   0.00
+1561                    Upper Riccarton         17    0    0   0.00   0.00
+1562                           Wharenui         19    0    0   0.00   0.00
+1563                          Middleton         31    0    0   0.00   0.00
+1564                            Belfast         62    0    0   0.00   0.00
+1565                     Travis Wetland         29    0    0   0.00   0.00
+1566                     Mairehau North         NA   NA   NA     NA     NA
+1567                          Westhaven         NA   NA   NA     NA     NA
+1568                     Highfield Park         NA   NA   NA     NA     NA
+1569                           Prestons         NA   NA   NA     NA     NA
+1570                          Parklands         65    0    0   0.00   0.00
+1571                     Waimairi Beach         43    1    1   2.33   2.33
+1572                               Styx         27    0    0   0.00   0.00
+1573                          Mona Vale         17    0    0   0.00   0.00
+1574                     Riccarton West         24    0    0   0.00   0.00
+1575                          Riccarton         62    0    0   0.00   0.00
+1576                    Riccarton South          5    0    0   0.00   0.00
+1577                      Cashmere West         18    0    0   0.00   0.00
+1578                      Cashmere East         32    0    0   0.00   0.00
+1579                       Rapaki Track         15    0    0   0.00   0.00
+1580                   Heathcote Valley         17    0    0   0.00   0.00
+1581                   Cathedral Square         25    0    0   0.00   0.00
+1582                        Hagley Park          6    0    0   0.00   0.00
+1583                          Avon Loop         45    0    0   0.00   0.00
+1584                          Northcote         31    0    0   0.00   0.00
+1585                            Papanui         52    0    0   0.00   0.00
+1586                            Aorangi         67    0    0   0.00   0.00
+1587                            Strowan         22    0    0   0.00   0.00
+1588                           Merivale         25    0    0   0.00   0.00
+1589                            Rutland         54    0    0   0.00   0.00
+1590                     St Albans West         28    0    0   0.00   0.00
+1591                     St Albans East         66    0    0   0.00   0.00
+1592                           Mairehau         50    0    0   0.00   0.00
+1593                           Edgeware         60    0    0   0.00   0.00
+1594                       Shirley West         72    2    1   2.78   1.39
+1595                       Shirley East         52    0    0   0.00   0.00
+1596                            Burwood         14    0    0   0.00   0.00
+1597                         Dallington         27    0    0   0.00   0.00
+1598                             Travis         17    0    0   0.00   0.00
+1599                           Avondale         34    0    0   0.00   0.00
+1600                            Wainoni         44    1    0   2.27   0.00
+1601                             Aranui         74    0    0   0.00   0.00
+1602                     Richmond North         28    0    0   0.00   0.00
+1603                     Richmond South         30    0    0   0.00   0.00
+1604                           Avonside         30    0    0   0.00   0.00
+1605                            Linwood         70    0    0   0.00   0.00
+1606                       Phillipstown         72    0    0   0.00   0.00
+1607                      Linwood North         40    0    0   0.00   0.00
+1608                       Linwood East         32    0    0   0.00   0.00
+1609                             Bexley         25    0    0   0.00   0.00
+1610                            Bromley         55    0    0   0.00   0.00
+1611                      Woolston West         49    0    0   0.00   0.00
+1612                          Ferrymead         34    0    0   0.00   0.00
+1613                     Woolston South         25    0    0   0.00   0.00
+1614                             Ensors         61    2    1   3.28   1.64
+1615                              Opawa         36    0    0   0.00   0.00
+1616                         St Martins         50    0    0   0.00   0.00
+1617                            Waltham         11    0    0   0.00   0.00
+1618                           Sydenham         98    0    0   0.00   0.00
+1619                          Addington         54    0    0   0.00   0.00
+1620                   Barrington North         76    1    0   1.32   0.00
+1621                   Barrington South         33    0    0   0.00   0.00
+1622                           Spreydon         62    0    0   0.00   0.00
+1623                           Hoon Hay         51    0    0   0.00   0.00
+1624                     Hoon Hay South         29    0    0   0.00   0.00
+1625                         Hillmorton         78    0    0   0.00   0.00
+1626                         Somerfield         47    0    0   0.00   0.00
+1627                          Beckenham         26    0    0   0.00   0.00
+1628                        North Beach         61    0    0   0.00   0.00
+1629                            Rawhiti         44    0    0   0.00   0.00
+1630                       New Brighton         26    1    0   3.85   0.00
+1631                     South Brighton         48    0    0   0.00   0.00
+1632                        Mt Pleasant         18    0    0   0.00   0.00
+1633             Avon-Heathcote Estuary         NA   NA   NA     NA     NA
+1634                         Moncks Bay         28    1    0   3.57   0.00
+1635                             Sumner         36    0    0   0.00   0.00
+1636                          Lyttelton         35    1    0   2.86   0.00
+1637                    Diamond Harbour          8    0    0   0.00   0.00
+1638                      Governors Bay          6    0    0   0.00   0.00
+1639                       Quail Island         NA   NA   NA     NA     NA
+1640                          Port Levy         NA   NA   NA     NA     NA
+1641                             Akaroa         10    0    0   0.00   0.00
+1642                     Akaroa Harbour          3    0    0   0.00   0.00
+1643       Banks Peninsula Eastern Bays          2    0    0   0.00   0.00
+1644                    Chatham Islands          6    0    0   0.00   0.00
+1645                       Little River          9    0    0   0.00   0.00
+1646  Inland Water-Lake Ellesmere South         NA   NA   NA     NA     NA
+1647                            Lincoln         30    0    0   0.00   0.00
+1648                            Leeston         26    0    0   0.00   0.00
+1649                        Southbridge          9    0    0   0.00   0.00
+1650                          Dunsandel          9    0    0   0.00   0.00
+1651  Inland Water-Lake Ellesmere North         NA   NA   NA     NA     NA
+1652                      Selwyn-Rakaia         47    0    0   0.00   0.00
+1653               Rolleston North West         NA   NA   NA     NA     NA
+1654                  Rolleston Central         NA   NA   NA     NA     NA
+1655               Rolleston North East         NA   NA   NA     NA     NA
+1656               Rolleston South West         NA   NA   NA     NA     NA
+1657                         Springston         NA   NA   NA     NA     NA
+1658               Rolleston South East         NA   NA   NA     NA     NA
+1659                            Methven         23    0    0   0.00   0.00
+1660                     Plains Railway          4    0    0   0.00   0.00
+1661                    Ashburton North         NA   NA   NA     NA     NA
+1662                            Fairton         NA   NA   NA     NA     NA
+1663                     Ashburton East         NA   NA   NA     NA     NA
+1664                          Mt Somers         28    0    0   0.00   0.00
+1665                              Hinds         80    0    0   0.00   0.00
+1666                           Chertsey         19    0    0   0.00   0.00
+ [ reached getOption("max.print") -- omitted 338 rows ]
