@@ -1665,4 +1665,341 @@
 1664                          Mt Somers         28    0    0   0.00   0.00
 1665                              Hinds         80    0    0   0.00   0.00
 1666                           Chertsey         19    0    0   0.00   0.00
- [ reached getOption("max.print") -- omitted 338 rows ]
+1667                             Rakaia         41    0    0   0.00   0.00
+1668                      Allenton West         NA   NA   NA     NA     NA
+1669                      Allenton East         NA   NA   NA     NA     NA
+1670             Ashburton Central West          5    0    0   0.00   0.00
+1671                           Netherby         24    0    0   0.00   0.00
+1672             Ashburton Central East         44    0    0   0.00   0.00
+1673                          Hampstead         50    0    0   0.00   0.00
+1674                            Tinwald         41    0    0   0.00   0.00
+1675                         Winchester          4    0    0   0.00   0.00
+1676               Fairview-Scarborough          2    0    0   0.00   0.00
+1677         Otipua Creek-Washdyke Flat          5    0    0   0.00   0.00
+1678                         Ben Mcleod         NA   NA   NA     NA     NA
+1679                              Orari         46    0    0   0.00   0.00
+1680                             Levels         33    0    0   0.00   0.00
+1681                            Pareora          6    0    0   0.00   0.00
+1682                     Pleasant Point         15    0    0   0.00   0.00
+1683                          Geraldine         43    0    0   0.00   0.00
+1684                             Temuka         52    0    0   0.00   0.00
+1685                           Washdyke          5    0    0   0.00   0.00
+1686                        Waimataitai         20    0    0   0.00   0.00
+1687                          Marchwiel         54    0    0   0.00   0.00
+1688                         Maori Park         12    0    0   0.00   0.00
+1689                          Highfield         31    0    0   0.00   0.00
+1690                           Glenwood          7    0    0   0.00   0.00
+1691                            Gleniti         22    0    0   0.00   0.00
+1692                        Fraser Park         31    0    0   0.00   0.00
+1693                            Seaview         50    0    0   0.00   0.00
+1694                         Watlington         32    0    0   0.00   0.00
+1695                           Parkside         20    0    0   0.00   0.00
+1696                     Timaru Gardens         30    0    0   0.00   0.00
+1697                            Redruth         NA   NA   NA     NA     NA
+1698                   Twizel Community         17    0    0   0.00   0.00
+1699                            Fairlie          6    1    1  16.67  16.67
+1700                            Mt Cook          2    0    0   0.00   0.00
+1701                        Lake Tekapo          7    0    0   0.00   0.00
+1702      Inland Water-Lake Alexandrina         NA   NA   NA     NA     NA
+1703           Inland Water-Lake Tekapo         NA   NA   NA     NA     NA
+1704                          Mackenzie         21    0    0   0.00   0.00
+1705                             Waihao         45    0    0   0.00   0.00
+1706                         St Andrews          2    0    0   0.00   0.00
+1707                            Waimate         33    0    0   0.00   0.00
+1708                             Weston         11    0    0   0.00   0.00
+1709                            Pukeuri          1    0    0   0.00   0.00
+1710                           Ardgowan          3    0    0   0.00   0.00
+1711                       Cape Wanbrow          1    0    0   0.00   0.00
+1712                           Duntroon          1    0    0   0.00   0.00
+1713                              Kurow          6    0    0   0.00   0.00
+1714                             Maheno         39    0    0   0.00   0.00
+1715                            Omarama          1    0    0   0.00   0.00
+1716                            Kakanui          3    0    0   0.00   0.00
+1717                          Otematata          1    0    0   0.00   0.00
+1718                           Aviemore         13    0    0   0.00   0.00
+1719             Inland Water-Lake Ohau         NA   NA   NA     NA     NA
+1720                            Hampden          2    0    0   0.00   0.00
+1721                       Oamaru North         29    0    0   0.00   0.00
+1722                         Orana Park         29    0    0   0.00   0.00
+1723                     Oamaru Central         36    1    0   2.78   0.00
+1724                       Oamaru South         19    0    0   0.00   0.00
+1725                         Palmerston         12    0    0   0.00   0.00
+1726                            Waihemo          5    0    0   0.00   0.00
+1727                               Hyde         NA   NA   NA     NA     NA
+1728                         Waikouaiti         13    0    0   0.00   0.00
+1729                           Aramoana          2    0    0   0.00   0.00
+1730                            Waitati          4    0    0   0.00   0.00
+1731                          Evansdale          9    0    0   0.00   0.00
+1732                           Karitane          2    0    0   0.00   0.00
+1733                         Warrington          4    0    0   0.00   0.00
+1734                           Nenthorn         NA   NA   NA     NA     NA
+1735                          Fairfield         16    0    0   0.00   0.00
+1736                           Brighton         12    0    0   0.00   0.00
+1737                       Waldronville         10    0    0   0.00   0.00
+1738                             Outram         10    0    0   0.00   0.00
+1739                        Middlemarch          2    0    0   0.00   0.00
+1740                   Wyllies Crossing          1    0    0   0.00   0.00
+1741                           Wingatui          6    0    0   0.00   0.00
+1742                      Kaikorai Hill          4    0    0   0.00   0.00
+1743                        Saddle Hill          7    0    0   0.00   0.00
+1744                             Taieri         20    0    0   0.00   0.00
+1745                      Strath Taieri          4    0    0   0.00   0.00
+1746                        Harbourside         NA   NA   NA     NA     NA
+1747                           Fernhill          7    0    0   0.00   0.00
+1748                  High St-Stuart St         15    0    0   0.00   0.00
+1749             Stuart St-Frederick St         71    0    0   0.00   0.00
+1750                              Opoho         12    0    0   0.00   0.00
+1751                     Forrester Park          5    0    0   0.00   0.00
+1752                  North East Valley         35    0    0   0.00   0.00
+1753                          Pine Hill         37    0    0   0.00   0.00
+1754                          Woodhaugh          6    0    0   0.00   0.00
+1755                      North Dunedin         NA   NA   NA     NA     NA
+1756                   Otago University          2    0    0   0.00   0.00
+1757                         Maori Hill         15    0    0   0.00   0.00
+1758                         Balmacewen          9    0    0   0.00   0.00
+1759                          Glenleith         10    0    0   0.00   0.00
+1760                        Helensburgh         10    0    0   0.00   0.00
+1761                             Wakari         44    0    0   0.00   0.00
+1762                       Halfway Bush         27    0    0   0.00   0.00
+1763                         Brockville         55    0    0   0.00   0.00
+1764                       Roslyn North         21    0    0   0.00   0.00
+1765                       Roslyn South         19    0    0   0.00   0.00
+1766                         Mornington         43    0    0   0.00   0.00
+1767                        Belleknowes         20    0    0   0.00   0.00
+1768                            Kenmure         18    0    0   0.00   0.00
+1769                          Caversham         79    0    0   0.00   0.00
+1770                  Corstorphine West          8    0    0   0.00   0.00
+1771                  Corstorphine East          9    0    0   0.00   0.00
+1772                         Caledonian         NA   NA   NA     NA     NA
+1773                      South Dunedin         22    0    0   0.00   0.00
+1774                            Forbury         10    0    0   0.00   0.00
+1775                           St Clair         49    0    0   0.00   0.00
+1776                        Musselburgh         27    0    0   0.00   0.00
+1777                      Andersons Bay         28    0    0   0.00   0.00
+1778                           Vauxhall         32    0    0   0.00   0.00
+1779            St Leonards-Blanket Bay          8    0    0   0.00   0.00
+1780                       Ravensbourne          7    0    0   0.00   0.00
+1781                    Inner Peninsula         10    0    0   0.00   0.00
+1782                        Company Bay          6    0    0   0.00   0.00
+1783                      Macandrew Bay         14    0    0   0.00   0.00
+1784               Broad Bay-Portobello         11    0    0   0.00   0.00
+1785              Taiaroa-Cape Saunders          2    0    0   0.00   0.00
+1786                         Sandymount          2    0    0   0.00   0.00
+1787                        Sawyers Bay         12    0    0   0.00   0.00
+1788                      Port Chalmers         13    0    0   0.00   0.00
+1789                      St Kilda West         23    0    0   0.00   0.00
+1790                   St Kilda Central         22    0    0   0.00   0.00
+1791                      St Kilda East         25    0    0   0.00   0.00
+1792                       Green Island         36    0    0   0.00   0.00
+1793                         Abbotsford         22    0    0   0.00   0.00
+1794                            Concord         31    0    0   0.00   0.00
+1795                       Mosgiel East         33    0    0   0.00   0.00
+1796                      Mosgiel South         13    0    0   0.00   0.00
+1797                        East Taieri          8    0    0   0.00   0.00
+1798                          Bush Road         26    0    0   0.00   0.00
+1799                             Benhar          3    0    0   0.00   0.00
+1800                           Stirling          3    0    0   0.00   0.00
+1801                              Bruce         26    0    0   0.00   0.00
+1802                             Milton         15    0    0   0.00   0.00
+1803                         Kaitangata          6    0    0   0.00   0.00
+1804                            Clinton          6    0    0   0.00   0.00
+1805                         Kaka Point          2    0    0   0.00   0.00
+1806                              Owaka          6    0    0   0.00   0.00
+1807                             Clutha         32    0    0   0.00   0.00
+1808                          Balclutha         37    0    0   0.00   0.00
+1809                             Teviot          7    0    0   0.00   0.00
+1810                            Tuapeka         19    0    0   0.00   0.00
+1811                            Tapanui         10    0    0   0.00   0.00
+1812                           Lawrence          3    0    0   0.00   0.00
+1813                           Roxburgh          3    0    0   0.00   0.00
+1814                           Ranfurly          4    0    0   0.00   0.00
+1815                          Maniototo         10    0    0   0.00   0.00
+1816                             Naseby          1    0    0   0.00   0.00
+1817                            Dunstan         35    0    0   0.00   0.00
+1818                              Clyde          5    0    0   0.00   0.00
+1819                              Hawea         27    1    0   3.70   0.00
+1820            Inland Water-Lake Hawea         NA   NA   NA     NA     NA
+1821                          Alexandra         44    0    0   0.00   0.00
+1822                           Cromwell         54    0    0   0.00   0.00
+1823                           Frankton         26    0    0   0.00   0.00
+1824                             Wanaka         79    0    0   0.00   0.00
+1825                            Milford         NA   NA   NA     NA     NA
+1826                          Glenorchy         NA   NA   NA     NA     NA
+1827                     Kingston South         NA   NA   NA     NA     NA
+1828                     Kelvin Heights         10    1    0  10.00   0.00
+1829                       Sunshine Bay         36    0    0   0.00   0.00
+1830         Inland Water-Lake Wakatipu         NA   NA   NA     NA     NA
+1831                         Lake Hayes          1    0    0   0.00   0.00
+1832                         Matukituki          1    0    0   0.00   0.00
+1833           Inland Water-Lake Wanaka         NA   NA   NA     NA     NA
+1834                     Outer Wakatipu         NA   NA   NA     NA     NA
+1835                     Wakatipu Basin         NA   NA   NA     NA     NA
+1836                      Frankton East         NA   NA   NA     NA     NA
+1837                   Lake Hayes South         NA   NA   NA     NA     NA
+1838                        Jacks Point         NA   NA   NA     NA     NA
+1839                          Arrowtown         28    0    0   0.00   0.00
+1840                    Queenstown Hill         73    1    0   1.37   0.00
+1841                      Arthurs Point         NA   NA   NA     NA     NA
+1842                     Queenstown Bay         NA   NA   NA     NA     NA
+1843                  Balfour Community          1    0    0   0.00   0.00
+1844               Riversdale Community          5    0    0   0.00   0.00
+1845                  Lumsden Community          9    0    0   0.00   0.00
+1846                 Edendale Community          8    0    0   0.00   0.00
+1847                            Wyndham         12    0    0   0.00   0.00
+1848                     Makarewa North          3    0    0   0.00   0.00
+1849                           Makarewa         11    0    0   0.00   0.00
+1850                      Bay Road West          1    0    0   0.00   0.00
+1851                  Mill Road-Woodend          5    0    0   0.00   0.00
+1852                        Bushy Point          1    0    0   0.00   0.00
+1853                            Otatara         22    1    1   4.55   4.55
+1854                           Charlton          5    0    0   0.00   0.00
+1855                            Waikaia         25    0    0   0.00   0.00
+1856                             Kaweku          3    0    0   0.00   0.00
+1857                            Chatton         19    0    0   0.00   0.00
+1858                            Kaiwera          6    0    0   0.00   0.00
+1859                            Hokonui         29    0    0   0.00   0.00
+1860                           Waianiwa         17    2    2  11.76  11.76
+1861                        Oreti Beach          7    0    0   0.00   0.00
+1862                              Dacre         16    0    0   0.00   0.00
+1863                        Myross Bush          4    0    0   0.00   0.00
+1864                            Waituna         24    0    0   0.00   0.00
+1865                          Woodlands          5    0    0   0.00   0.00
+1866                         Greenhills          6    0    0   0.00   0.00
+1867                        Tiwai Point         NA   NA   NA     NA     NA
+1868                            Toetoes         14    0    0   0.00   0.00
+1869                        Wallacetown          9    0    0   0.00   0.00
+1870                         North Gore         23    0    0   0.00   0.00
+1871                          East Gore         17    0    0   0.00   0.00
+1872                       Central Gore          9    0    0   0.00   0.00
+1873                          West Gore         30    0    0   0.00   0.00
+1874                         South Gore          8    0    0   0.00   0.00
+1875                            Mataura         21    0    0   0.00   0.00
+1876                             Winton         41    0    0   0.00   0.00
+1877                           Grasmere         47    1    0   2.13   0.00
+1878                            Waikiwi         18    0    0   0.00   0.00
+1879                           Rosedale         32    0    0   0.00   0.00
+1880                   Gladstone-Avenal         25    0    0   0.00   0.00
+1881                            Windsor         28    0    0   0.00   0.00
+1882                 Waverley-Glengarry         28    0    0   0.00   0.00
+1883                       Hawthorndale         27    0    0   0.00   0.00
+1884                           Richmond         34    0    0   0.00   0.00
+1885                       Otakaro Park         59    0    0   0.00   0.00
+1886                             Crinan         16    0    0   0.00   0.00
+1887                  West Invercargill          1    0    0   0.00   0.00
+1888                         Georgetown         30    0    0   0.00   0.00
+1889                  Newfield-Rockdale         48    0    0   0.00   0.00
+1890                         Heidelberg         57    0    0   0.00   0.00
+1891                          Strathern         33    0    0   0.00   0.00
+1892                        Appleby-Kew         24    0    0   0.00   0.00
+1893                  Kingswell-Clifton         56    0    0   0.00   0.00
+1894                            Tisbury          3    0    0   0.00   0.00
+1895                              Bluff         12    0    0   0.00   0.00
+1896                          Nightcaps          2    0    0   0.00   0.00
+1897                               Ohai          4    0    0   0.00   0.00
+1898                            Te Anau         28    0    0   0.00   0.00
+1899                          Tuatapere         11    0    0   0.00   0.00
+1900                            Otautau         12    0    0   0.00   0.00
+1901                          Manapouri         NA   NA   NA     NA     NA
+1902                           Mossburn          6    0    0   0.00   0.00
+1903                      Mararoa River         14    0    0   0.00   0.00
+1904          Inland Water-Lake Te Anau         NA   NA   NA     NA     NA
+1905                             Wairio         18    0    0   0.00   0.00
+1906                          Te Waewae          6    0    0   0.00   0.00
+1907                            Fairfax         22    0    0   0.00   0.00
+1908                      Riverton East          7    0    0   0.00   0.00
+1909                      Riverton West         13    0    0   0.00   0.00
+1910                          Fiordland         NA   NA   NA     NA     NA
+1911        Inland Water-Lake Manapouri         NA   NA   NA     NA     NA
+1912          Inland Water-Lake Hauroko         NA   NA   NA     NA     NA
+1913                     Stewart Island         NA   NA   NA     NA     NA
+1914             Inlet-Hokianga Harbour         NA   NA   NA     NA     NA
+1915                Three Kings Islands         NA   NA   NA     NA     NA
+1916           Oceanic-Northland Region         NA   NA   NA     NA     NA
+1917             Inlet-Rangaunu Harbour         NA   NA   NA     NA     NA
+1918                Inlet-Doubtless Bay         NA   NA   NA     NA     NA
+1919            Inlet-Whangaroa Harbour         NA   NA   NA     NA     NA
+1920               Inlet-Bay of Islands         NA   NA   NA     NA     NA
+1921             Inlet-Tutukaka Harbour         NA   NA   NA     NA     NA
+1922            Inlet-Whangarei Harbour         NA   NA   NA     NA     NA
+1923               Inlet-Port Whangarei         NA   NA   NA     NA     NA
+1924            Inlet-Mangawhai Harbour         NA   NA   NA     NA     NA
+1925                   Mokohinau Island         NA   NA   NA     NA     NA
+1926              Little Barrier Island         NA   NA   NA     NA     NA
+1927     Kaikoura and Rangiahua Islands         NA   NA   NA     NA     NA
+1928                 Inlet-Port Fitzroy         NA   NA   NA     NA     NA
+1929                       Cape Barrier         NA   NA   NA     NA     NA
+1930                      Rakitu Island         NA   NA   NA     NA     NA
+1931                      Browns Island         NA   NA   NA     NA     NA
+1932                   Aiguilles Island         NA   NA   NA     NA     NA
+1933        Inlet-Kaipara Harbour North         NA   NA   NA     NA     NA
+1934        Inlet-Kaipara Harbour South         NA   NA   NA     NA     NA
+1935                Inlet-Kaipara River         NA   NA   NA     NA     NA
+1936                Inlet-Takapuna Head         NA   NA   NA     NA     NA
+1937                   Inlet-Hobson Bay         NA   NA   NA     NA     NA
+1938       Oceanic-Auckland Region East          1    0    0   0.00   0.00
+1939         Tidal-Great Barrier Island         NA   NA   NA     NA     NA
+1940  Tidal-Motutapu and Browns Islands         NA   NA   NA     NA     NA
+1941       Oceanic-Auckland Region West         NA   NA   NA     NA     NA
+1942              Tidal-Manukau Harbour         NA   NA   NA     NA     NA
+1943              Inlet-Manukau Harbour          1    0    0   0.00   0.00
+1944        Tidal-Manukau Harbour North         NA   NA   NA     NA     NA
+1945                       Tidal-Tamaki         NA   NA   NA     NA     NA
+1946                      Tamaki Strait         NA   NA   NA     NA     NA
+1947                 Tidal-Eastern Bays         NA   NA   NA     NA     NA
+1948                 Inlet-Waiuku River         NA   NA   NA     NA     NA
+1949            Inlet-Waitemata Harbour         NA   NA   NA     NA     NA
+1950            Tidal-Waitemata Harbour         NA   NA   NA     NA     NA
+1951              Auckland City-Marinas         NA   NA   NA     NA     NA
+1952                     Te Motu Island         NA   NA   NA     NA     NA
+1953                      Motiti Island         NA   NA   NA     NA     NA
+1954                       Mayor Island         NA   NA   NA     NA     NA
+1955               Inlet-Raglan Harbour         NA   NA   NA     NA     NA
+1956          Inlet-Aotea Harbour North         NA   NA   NA     NA     NA
+1957         Inlets-Otorohanga District         NA   NA   NA     NA     NA
+1958             Inlet-Waitomo District         NA   NA   NA     NA     NA
+1959        Oceanic-Waikato Region West         NA   NA   NA     NA     NA
+1960  Inlets-Thames-Coromandel District         NA   NA   NA     NA     NA
+1961 Islands-Thames-Coromandel District         NA   NA   NA     NA     NA
+1962    Bays-Thames-Coromandel District         NA   NA   NA     NA     NA
+1963        Oceanic-Waikato Region East         NA   NA   NA     NA     NA
+1964              Inlet-Firth of Thames         NA   NA   NA     NA     NA
+1965                   Moutohora Island         NA   NA   NA     NA     NA
+1966       Oceanic-Bay of Plenty Region         NA   NA   NA     NA     NA
+1967                       White Island         NA   NA   NA     NA     NA
+1968            Inland Water-Lake Taupo         NA   NA   NA     NA     NA
+1969            Oceanic-Gisborne Region         NA   NA   NA     NA     NA
+1970                  Inlet-Port Napier         NA   NA   NA     NA     NA
+1971         Oceanic-Hawke's Bay Region         NA   NA   NA     NA     NA
+1972                        Bare Island         NA   NA   NA     NA     NA
+1973                      Port-Taranaki         NA   NA   NA     NA     NA
+1974            Oceanic-Taranaki Region         NA   NA   NA     NA     NA
+1975       Oceanic-Tararua Constituency         NA   NA   NA     NA     NA
+1976           Inlet-Wellington Harbour         NA   NA   NA     NA     NA
+1977                     Seaview Marina         NA   NA   NA     NA     NA
+1978              Inlet-Porirua Harbour         NA   NA   NA     NA     NA
+1979          Oceanic-Wellington Region         NA   NA   NA     NA     NA
+1980   Oceanic-Manawatu-Wanganui Region         NA   NA   NA     NA     NA
+1981                   Inlet-Tasman Bay         NA   NA   NA     NA     NA
+1982              Oceanic-Tasman Region          1    0    0   0.00   0.00
+1983              Oceanic-Nelson Region         NA   NA   NA     NA     NA
+1984         Oceanic-Marlborough Region         NA   NA   NA     NA     NA
+1985    Oceanic-Canterbury Region North         NA   NA   NA     NA     NA
+1986                    Inlet-Ligar Bay         NA   NA   NA     NA     NA
+1987                 Inlet-Buller River         NA   NA   NA     NA     NA
+1988          Oceanic-West Coast Region         NA   NA   NA     NA     NA
+1989               Inlet-Port Lyttelton         NA   NA   NA     NA     NA
+1990        Inlets-Banks Peninsula Bays         NA   NA   NA     NA     NA
+1991    Oceanic-Canterbury Region South         NA   NA   NA     NA     NA
+1992            Oceanic-Chatham Islands         NA   NA   NA     NA     NA
+1993                  Inlet-Port Timaru         NA   NA   NA     NA     NA
+1994                Inlet-Otago Harbour         NA   NA   NA     NA     NA
+1995            Inlet-Dunedin City Bays         NA   NA   NA     NA     NA
+1996               Oceanic-Otago Region         NA   NA   NA     NA     NA
+1997                  Inlet-Port Oamaru         NA   NA   NA     NA     NA
+1998                Inlet-Milford Sound         NA   NA   NA     NA     NA
+1999                         Dog Island         NA   NA   NA     NA     NA
+2000                      Centre Island         NA   NA   NA     NA     NA
+2001                Inlet-Bluff Harbour         NA   NA   NA     NA     NA
+2002            Inlet-New River Estuary         NA   NA   NA     NA     NA
+2003         Inlet-Jacobs River Estuary         NA   NA   NA     NA     NA
+2004           Oceanic-Southland Region          1    0    0   0.00   0.00

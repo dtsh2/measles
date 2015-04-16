@@ -1665,4 +1665,341 @@
 1664                          Mt Somers         41   39   39  95.12  95.12
 1665                              Hinds         72   70   68  97.22  94.44
 1666                           Chertsey         27   26   24  96.30  88.89
- [ reached getOption("max.print") -- omitted 338 rows ]
+1667                             Rakaia         23   21   20  91.30  86.96
+1668                      Allenton West         NA   NA   NA     NA     NA
+1669                      Allenton East         NA   NA   NA     NA     NA
+1670             Ashburton Central West         11   11   11 100.00 100.00
+1671                           Netherby         26   26   26 100.00 100.00
+1672             Ashburton Central East         49   46   46  93.88  93.88
+1673                          Hampstead         48   47   45  97.92  93.75
+1674                            Tinwald         52   51   49  98.08  94.23
+1675                         Winchester          3    3    3 100.00 100.00
+1676               Fairview-Scarborough          6    6    6 100.00 100.00
+1677         Otipua Creek-Washdyke Flat          6    6    6 100.00 100.00
+1678                         Ben Mcleod          1    1    1 100.00 100.00
+1679                              Orari         63   62   61  98.41  96.83
+1680                             Levels         39   39   39 100.00 100.00
+1681                            Pareora          5    5    5 100.00 100.00
+1682                     Pleasant Point         20   19   17  95.00  85.00
+1683                          Geraldine         38   35   35  92.11  92.11
+1684                             Temuka         52   51   48  98.08  92.31
+1685                           Washdyke          3    3    3 100.00 100.00
+1686                        Waimataitai         18   17   16  94.44  88.89
+1687                          Marchwiel         63   62   62  98.41  98.41
+1688                         Maori Park         15   14   13  93.33  86.67
+1689                          Highfield         37   36   34  97.30  91.89
+1690                           Glenwood         26   25   25  96.15  96.15
+1691                            Gleniti         17   17   14 100.00  82.35
+1692                        Fraser Park         43   41   41  95.35  95.35
+1693                            Seaview         45   44   43  97.78  95.56
+1694                         Watlington         33   33   32 100.00  96.97
+1695                           Parkside         31   30   30  96.77  96.77
+1696                     Timaru Gardens         25   25   25 100.00 100.00
+1697                            Redruth         NA   NA   NA     NA     NA
+1698                   Twizel Community         27   27   27 100.00 100.00
+1699                            Fairlie          7    7    7 100.00 100.00
+1700                            Mt Cook          2    2    2 100.00 100.00
+1701                        Lake Tekapo          7    7    7 100.00 100.00
+1702      Inland Water-Lake Alexandrina         NA   NA   NA     NA     NA
+1703           Inland Water-Lake Tekapo         NA   NA   NA     NA     NA
+1704                          Mackenzie         17   16   15  94.12  88.24
+1705                             Waihao         61   60   57  98.36  93.44
+1706                         St Andrews          3    3    3 100.00 100.00
+1707                            Waimate         33   32   33  96.97 100.00
+1708                             Weston         11   11   11 100.00 100.00
+1709                            Pukeuri          1    1    1 100.00 100.00
+1710                           Ardgowan          9    9    9 100.00 100.00
+1711                       Cape Wanbrow          4    4    4 100.00 100.00
+1712                           Duntroon          2    2    2 100.00 100.00
+1713                              Kurow          5    4    4  80.00  80.00
+1714                             Maheno         38   36   36  94.74  94.74
+1715                            Omarama          3    3    3 100.00 100.00
+1716                            Kakanui          1    1    1 100.00 100.00
+1717                          Otematata          4    3    3  75.00  75.00
+1718                           Aviemore          4    4    4 100.00 100.00
+1719             Inland Water-Lake Ohau         NA   NA   NA     NA     NA
+1720                            Hampden          2    2    2 100.00 100.00
+1721                       Oamaru North         43   39   37  90.70  86.05
+1722                         Orana Park         29   29   27 100.00  93.10
+1723                     Oamaru Central         45   41   35  91.11  77.78
+1724                       Oamaru South         50   49   47  98.00  94.00
+1725                         Palmerston         25   23   22  92.00  88.00
+1726                            Waihemo          9    9    8 100.00  88.89
+1727                               Hyde          2    2    2 100.00 100.00
+1728                         Waikouaiti         26   24   23  92.31  88.46
+1729                           Aramoana          1    1    1 100.00 100.00
+1730                            Waitati         13   12   11  92.31  84.62
+1731                          Evansdale         19   18   17  94.74  89.47
+1732                           Karitane         NA   NA   NA     NA     NA
+1733                         Warrington          7    7    7 100.00 100.00
+1734                           Nenthorn          1    1    1 100.00 100.00
+1735                          Fairfield         24   22   23  91.67  95.83
+1736                           Brighton         20   18   18  90.00  90.00
+1737                       Waldronville          8    8    8 100.00 100.00
+1738                             Outram         19   19   16 100.00  84.21
+1739                        Middlemarch          2    2    1 100.00  50.00
+1740                   Wyllies Crossing          4    4    4 100.00 100.00
+1741                           Wingatui         15   14   13  93.33  86.67
+1742                      Kaikorai Hill          8    7    7  87.50  87.50
+1743                        Saddle Hill         16   15   14  93.75  87.50
+1744                             Taieri         33   31   30  93.94  90.91
+1745                      Strath Taieri          7    7    5 100.00  71.43
+1746                        Harbourside         NA   NA   NA     NA     NA
+1747                           Fernhill          7    5    3  71.43  42.86
+1748                  High St-Stuart St         14   13   11  92.86  78.57
+1749             Stuart St-Frederick St         42   38   34  90.48  80.95
+1750                              Opoho         17   16   16  94.12  94.12
+1751                     Forrester Park         11   10    9  90.91  81.82
+1752                  North East Valley         39   33   32  84.62  82.05
+1753                          Pine Hill         38   38   35 100.00  92.11
+1754                          Woodhaugh          1    1    1 100.00 100.00
+1755                      North Dunedin          1    1    1 100.00 100.00
+1756                   Otago University          2    2    1 100.00  50.00
+1757                         Maori Hill         22   21   19  95.45  86.36
+1758                         Balmacewen         15   15   15 100.00 100.00
+1759                          Glenleith          5    4    4  80.00  80.00
+1760                        Helensburgh          8    8    8 100.00 100.00
+1761                             Wakari         44   43   42  97.73  95.45
+1762                       Halfway Bush         25   25   24 100.00  96.00
+1763                         Brockville         49   45   44  91.84  89.80
+1764                       Roslyn North         19   19   15 100.00  78.95
+1765                       Roslyn South         21   20   18  95.24  85.71
+1766                         Mornington         58   57   54  98.28  93.10
+1767                        Belleknowes         23   22   22  95.65  95.65
+1768                            Kenmure         25   24   24  96.00  96.00
+1769                          Caversham         65   63   54  96.92  83.08
+1770                  Corstorphine West         13   13   12 100.00  92.31
+1771                  Corstorphine East          8    8    7 100.00  87.50
+1772                         Caledonian         NA   NA   NA     NA     NA
+1773                      South Dunedin         27   27   23 100.00  85.19
+1774                            Forbury         17   17   13 100.00  76.47
+1775                           St Clair         56   54   51  96.43  91.07
+1776                        Musselburgh         41   39   35  95.12  85.37
+1777                      Andersons Bay         36   34   33  94.44  91.67
+1778                           Vauxhall         54   49   45  90.74  83.33
+1779            St Leonards-Blanket Bay          7    7    7 100.00 100.00
+1780                       Ravensbourne         19   17   17  89.47  89.47
+1781                    Inner Peninsula         16   14   13  87.50  81.25
+1782                        Company Bay          6    6    6 100.00 100.00
+1783                      Macandrew Bay         22   22   18 100.00  81.82
+1784               Broad Bay-Portobello         13   13   13 100.00 100.00
+1785              Taiaroa-Cape Saunders          7    7    6 100.00  85.71
+1786                         Sandymount          3    3    3 100.00 100.00
+1787                        Sawyers Bay         18   17   16  94.44  88.89
+1788                      Port Chalmers         23   22   19  95.65  82.61
+1789                      St Kilda West         31   30   28  96.77  90.32
+1790                   St Kilda Central         25   25   25 100.00 100.00
+1791                      St Kilda East         27   27   26 100.00  96.30
+1792                       Green Island         38   37   35  97.37  92.11
+1793                         Abbotsford         35   34   33  97.14  94.29
+1794                            Concord         25   25   24 100.00  96.00
+1795                       Mosgiel East         59   56   52  94.92  88.14
+1796                      Mosgiel South         19   19   17 100.00  89.47
+1797                        East Taieri         18   17   16  94.44  88.89
+1798                          Bush Road         24   23   23  95.83  95.83
+1799                             Benhar          4    4    3 100.00  75.00
+1800                           Stirling          5    5    5 100.00 100.00
+1801                              Bruce         36   36   34 100.00  94.44
+1802                             Milton         27   27   26 100.00  96.30
+1803                         Kaitangata         15   15   15 100.00 100.00
+1804                            Clinton          4    4    4 100.00 100.00
+1805                         Kaka Point         NA   NA   NA     NA     NA
+1806                              Owaka          3    3    3 100.00 100.00
+1807                             Clutha         50   49   47  98.00  94.00
+1808                          Balclutha         50   48   46  96.00  92.00
+1809                             Teviot          6    6    6 100.00 100.00
+1810                            Tuapeka         18   18   18 100.00 100.00
+1811                            Tapanui         15   15   15 100.00 100.00
+1812                           Lawrence          8    7    6  87.50  75.00
+1813                           Roxburgh         13   12   11  92.31  84.62
+1814                           Ranfurly         16   14   11  87.50  68.75
+1815                          Maniototo         15   15   15 100.00 100.00
+1816                             Naseby         NA   NA   NA     NA     NA
+1817                            Dunstan         46   44   46  95.65 100.00
+1818                              Clyde         12   12   12 100.00 100.00
+1819                              Hawea         35   34   32  97.14  91.43
+1820            Inland Water-Lake Hawea         NA   NA   NA     NA     NA
+1821                          Alexandra         61   60   56  98.36  91.80
+1822                           Cromwell         67   62   58  92.54  86.57
+1823                           Frankton         21   21   20 100.00  95.24
+1824                             Wanaka        104  101   96  97.12  92.31
+1825                            Milford         NA   NA   NA     NA     NA
+1826                          Glenorchy         NA   NA   NA     NA     NA
+1827                     Kingston South         NA   NA   NA     NA     NA
+1828                     Kelvin Heights         15   14   14  93.33  93.33
+1829                       Sunshine Bay         21   20   20  95.24  95.24
+1830         Inland Water-Lake Wakatipu         NA   NA   NA     NA     NA
+1831                         Lake Hayes          5    5    5 100.00 100.00
+1832                         Matukituki          3    3    3 100.00 100.00
+1833           Inland Water-Lake Wanaka         NA   NA   NA     NA     NA
+1834                     Outer Wakatipu         NA   NA   NA     NA     NA
+1835                     Wakatipu Basin         NA   NA   NA     NA     NA
+1836                      Frankton East         NA   NA   NA     NA     NA
+1837                   Lake Hayes South         NA   NA   NA     NA     NA
+1838                        Jacks Point         NA   NA   NA     NA     NA
+1839                          Arrowtown         57   55   52  96.49  91.23
+1840                    Queenstown Hill         59   54   51  91.53  86.44
+1841                      Arthurs Point         NA   NA   NA     NA     NA
+1842                     Queenstown Bay         NA   NA   NA     NA     NA
+1843                  Balfour Community          3    3    3 100.00 100.00
+1844               Riversdale Community          8    8    8 100.00 100.00
+1845                  Lumsden Community         11   10   10  90.91  90.91
+1846                 Edendale Community          8    8    8 100.00 100.00
+1847                            Wyndham         12   11   11  91.67  91.67
+1848                     Makarewa North          6    6    6 100.00 100.00
+1849                           Makarewa         15   14   14  93.33  93.33
+1850                      Bay Road West          2    2    2 100.00 100.00
+1851                  Mill Road-Woodend          9    9    9 100.00 100.00
+1852                        Bushy Point          5    5    4 100.00  80.00
+1853                            Otatara         43   42   42  97.67  97.67
+1854                           Charlton          8    8    8 100.00 100.00
+1855                            Waikaia         27   27   26 100.00  96.30
+1856                             Kaweku          4    4    4 100.00 100.00
+1857                            Chatton         21   20   20  95.24  95.24
+1858                            Kaiwera         13   13   13 100.00 100.00
+1859                            Hokonui         58   56   55  96.55  94.83
+1860                           Waianiwa         20   20   19 100.00  95.00
+1861                        Oreti Beach          8    8    8 100.00 100.00
+1862                              Dacre         28   27   25  96.43  89.29
+1863                        Myross Bush         11   11   11 100.00 100.00
+1864                            Waituna         23   22   21  95.65  91.30
+1865                          Woodlands          3    3    3 100.00 100.00
+1866                         Greenhills         12   11   11  91.67  91.67
+1867                        Tiwai Point         NA   NA   NA     NA     NA
+1868                            Toetoes         18   17   17  94.44  94.44
+1869                        Wallacetown         15   15   12 100.00  80.00
+1870                         North Gore         36   34   32  94.44  88.89
+1871                          East Gore         33   33   32 100.00  96.97
+1872                       Central Gore          6    6    5 100.00  83.33
+1873                          West Gore         39   39   39 100.00 100.00
+1874                         South Gore         11   11   11 100.00 100.00
+1875                            Mataura         23   23   23 100.00 100.00
+1876                             Winton         37   37   35 100.00  94.59
+1877                           Grasmere         61   60   58  98.36  95.08
+1878                            Waikiwi         19   19   19 100.00 100.00
+1879                           Rosedale         48   48   48 100.00 100.00
+1880                   Gladstone-Avenal         52   52   50 100.00  96.15
+1881                            Windsor         25   23   22  92.00  88.00
+1882                 Waverley-Glengarry         38   38   35 100.00  92.11
+1883                       Hawthorndale         45   44   41  97.78  91.11
+1884                           Richmond         43   42   40  97.67  93.02
+1885                       Otakaro Park         38   35   34  92.11  89.47
+1886                             Crinan         23   22   21  95.65  91.30
+1887                  West Invercargill         NA   NA   NA     NA     NA
+1888                         Georgetown         45   43   38  95.56  84.44
+1889                  Newfield-Rockdale         48   47   43  97.92  89.58
+1890                         Heidelberg         63   61   59  96.83  93.65
+1891                          Strathern         29   27   25  93.10  86.21
+1892                        Appleby-Kew         36   36   35 100.00  97.22
+1893                  Kingswell-Clifton         55   54   51  98.18  92.73
+1894                            Tisbury          6    6    6 100.00 100.00
+1895                              Bluff         28   28   28 100.00 100.00
+1896                          Nightcaps          2    2    2 100.00 100.00
+1897                               Ohai          2    2    2 100.00 100.00
+1898                            Te Anau         25   23   23  92.00  92.00
+1899                          Tuatapere          9    9    9 100.00 100.00
+1900                            Otautau         16   15   15  93.75  93.75
+1901                          Manapouri          1    1    1 100.00 100.00
+1902                           Mossburn          6    6    6 100.00 100.00
+1903                      Mararoa River         17   17   16 100.00  94.12
+1904          Inland Water-Lake Te Anau         NA   NA   NA     NA     NA
+1905                             Wairio         13   13   13 100.00 100.00
+1906                          Te Waewae         13   12   12  92.31  92.31
+1907                            Fairfax         22   22   21 100.00  95.45
+1908                      Riverton East          8    8    7 100.00  87.50
+1909                      Riverton West         24   23   21  95.83  87.50
+1910                          Fiordland         NA   NA   NA     NA     NA
+1911        Inland Water-Lake Manapouri         NA   NA   NA     NA     NA
+1912          Inland Water-Lake Hauroko         NA   NA   NA     NA     NA
+1913                     Stewart Island          3    2    2  66.67  66.67
+1914             Inlet-Hokianga Harbour          1    1    0 100.00   0.00
+1915                Three Kings Islands         NA   NA   NA     NA     NA
+1916           Oceanic-Northland Region         NA   NA   NA     NA     NA
+1917             Inlet-Rangaunu Harbour         NA   NA   NA     NA     NA
+1918                Inlet-Doubtless Bay         NA   NA   NA     NA     NA
+1919            Inlet-Whangaroa Harbour         NA   NA   NA     NA     NA
+1920               Inlet-Bay of Islands         NA   NA   NA     NA     NA
+1921             Inlet-Tutukaka Harbour         NA   NA   NA     NA     NA
+1922            Inlet-Whangarei Harbour         NA   NA   NA     NA     NA
+1923               Inlet-Port Whangarei         NA   NA   NA     NA     NA
+1924            Inlet-Mangawhai Harbour         NA   NA   NA     NA     NA
+1925                   Mokohinau Island         NA   NA   NA     NA     NA
+1926              Little Barrier Island         NA   NA   NA     NA     NA
+1927     Kaikoura and Rangiahua Islands          1    1    1 100.00 100.00
+1928                 Inlet-Port Fitzroy         NA   NA   NA     NA     NA
+1929                       Cape Barrier         NA   NA   NA     NA     NA
+1930                      Rakitu Island         NA   NA   NA     NA     NA
+1931                      Browns Island         NA   NA   NA     NA     NA
+1932                   Aiguilles Island         NA   NA   NA     NA     NA
+1933        Inlet-Kaipara Harbour North         NA   NA   NA     NA     NA
+1934        Inlet-Kaipara Harbour South         NA   NA   NA     NA     NA
+1935                Inlet-Kaipara River         NA   NA   NA     NA     NA
+1936                Inlet-Takapuna Head         NA   NA   NA     NA     NA
+1937                   Inlet-Hobson Bay         NA   NA   NA     NA     NA
+1938       Oceanic-Auckland Region East          1    1    1 100.00 100.00
+1939         Tidal-Great Barrier Island         NA   NA   NA     NA     NA
+1940  Tidal-Motutapu and Browns Islands         NA   NA   NA     NA     NA
+1941       Oceanic-Auckland Region West         NA   NA   NA     NA     NA
+1942              Tidal-Manukau Harbour         NA   NA   NA     NA     NA
+1943              Inlet-Manukau Harbour         NA   NA   NA     NA     NA
+1944        Tidal-Manukau Harbour North         NA   NA   NA     NA     NA
+1945                       Tidal-Tamaki         NA   NA   NA     NA     NA
+1946                      Tamaki Strait         NA   NA   NA     NA     NA
+1947                 Tidal-Eastern Bays         NA   NA   NA     NA     NA
+1948                 Inlet-Waiuku River         NA   NA   NA     NA     NA
+1949            Inlet-Waitemata Harbour         NA   NA   NA     NA     NA
+1950            Tidal-Waitemata Harbour         NA   NA   NA     NA     NA
+1951              Auckland City-Marinas         NA   NA   NA     NA     NA
+1952                     Te Motu Island         NA   NA   NA     NA     NA
+1953                      Motiti Island         NA   NA   NA     NA     NA
+1954                       Mayor Island         NA   NA   NA     NA     NA
+1955               Inlet-Raglan Harbour         NA   NA   NA     NA     NA
+1956          Inlet-Aotea Harbour North         NA   NA   NA     NA     NA
+1957         Inlets-Otorohanga District         NA   NA   NA     NA     NA
+1958             Inlet-Waitomo District         NA   NA   NA     NA     NA
+1959        Oceanic-Waikato Region West         NA   NA   NA     NA     NA
+1960  Inlets-Thames-Coromandel District         NA   NA   NA     NA     NA
+1961 Islands-Thames-Coromandel District         NA   NA   NA     NA     NA
+1962    Bays-Thames-Coromandel District         NA   NA   NA     NA     NA
+1963        Oceanic-Waikato Region East         NA   NA   NA     NA     NA
+1964              Inlet-Firth of Thames         NA   NA   NA     NA     NA
+1965                   Moutohora Island         NA   NA   NA     NA     NA
+1966       Oceanic-Bay of Plenty Region         NA   NA   NA     NA     NA
+1967                       White Island         NA   NA   NA     NA     NA
+1968            Inland Water-Lake Taupo         NA   NA   NA     NA     NA
+1969            Oceanic-Gisborne Region         NA   NA   NA     NA     NA
+1970                  Inlet-Port Napier         NA   NA   NA     NA     NA
+1971         Oceanic-Hawke's Bay Region         NA   NA   NA     NA     NA
+1972                        Bare Island         NA   NA   NA     NA     NA
+1973                      Port-Taranaki         NA   NA   NA     NA     NA
+1974            Oceanic-Taranaki Region         NA   NA   NA     NA     NA
+1975       Oceanic-Tararua Constituency         NA   NA   NA     NA     NA
+1976           Inlet-Wellington Harbour         NA   NA   NA     NA     NA
+1977                     Seaview Marina         NA   NA   NA     NA     NA
+1978              Inlet-Porirua Harbour         NA   NA   NA     NA     NA
+1979          Oceanic-Wellington Region         NA   NA   NA     NA     NA
+1980   Oceanic-Manawatu-Wanganui Region         NA   NA   NA     NA     NA
+1981                   Inlet-Tasman Bay         NA   NA   NA     NA     NA
+1982              Oceanic-Tasman Region         NA   NA   NA     NA     NA
+1983              Oceanic-Nelson Region         NA   NA   NA     NA     NA
+1984         Oceanic-Marlborough Region         NA   NA   NA     NA     NA
+1985    Oceanic-Canterbury Region North         NA   NA   NA     NA     NA
+1986                    Inlet-Ligar Bay          1    1    1 100.00 100.00
+1987                 Inlet-Buller River         NA   NA   NA     NA     NA
+1988          Oceanic-West Coast Region         NA   NA   NA     NA     NA
+1989               Inlet-Port Lyttelton         NA   NA   NA     NA     NA
+1990        Inlets-Banks Peninsula Bays          1    1    1 100.00 100.00
+1991    Oceanic-Canterbury Region South         NA   NA   NA     NA     NA
+1992            Oceanic-Chatham Islands         NA   NA   NA     NA     NA
+1993                  Inlet-Port Timaru         NA   NA   NA     NA     NA
+1994                Inlet-Otago Harbour         NA   NA   NA     NA     NA
+1995            Inlet-Dunedin City Bays         NA   NA   NA     NA     NA
+1996               Oceanic-Otago Region         NA   NA   NA     NA     NA
+1997                  Inlet-Port Oamaru         NA   NA   NA     NA     NA
+1998                Inlet-Milford Sound         NA   NA   NA     NA     NA
+1999                         Dog Island         NA   NA   NA     NA     NA
+2000                      Centre Island         NA   NA   NA     NA     NA
+2001                Inlet-Bluff Harbour          1    1    1 100.00 100.00
+2002            Inlet-New River Estuary         NA   NA   NA     NA     NA
+2003         Inlet-Jacobs River Estuary         NA   NA   NA     NA     NA
+2004           Oceanic-Southland Region         NA   NA   NA     NA     NA

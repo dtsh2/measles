@@ -24,7 +24,7 @@ grouped_n2 <- data_n %>% filter(VACCINE_DOSE == 2) %>% group_by(DOMICILE_CODE, Y
 grouped <- grouped_d %>% left_join(grouped_n1) %>% left_join(grouped_n2)
 
 ## 2006 -- 2014
-grouped <- grouped[grouped$Year == 2014,]
+grouped <- grouped[grouped$Year == 2006,]
 
 ####
 grouped_all_years <- grouped %>% group_by(DOMICILE_CODE) %>% summarize(total=sum(total), vacc1=sum(vacc1, na.rm=T), vacc2=sum(vacc2, na.rm=T))
@@ -108,8 +108,8 @@ results<-cbind.data.frame(nams,results)
 colnames(results)<-c("Area","Population","MMR1","MMR2","MMR1 %", "MMR2 %")
 
 ####
-sink(file="results2014.txt") 
-
+sink(file="results2006.txt") 
+options(max.print=999999)
 ####
 results
 sink(NULL)
