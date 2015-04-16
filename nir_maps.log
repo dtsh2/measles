@@ -1,0 +1,1046 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.22)  15 APR 2015 22:34
+entering extended mode
+**nir_maps.tex
+("C:\Users\David Hayman\Documents\GitHub\measles\nir_maps.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Users\David Hayman\Documents\GitHub\measles\nir_maps.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count88
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count89
+\nofMParguments=\count90
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count91
+\MPscratchDim=\dimen106
+\MPnumerator=\count92
+\makeMPintoPDFobject=\count93
+\everyMPtoPDFconversion=\toks16
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 9.
+ [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR1_NIR_2006.pdf, id=8, 505.89pt x 361.35pt>
+File: nir_census_MMR1_NIR_2006.pdf Graphic file (type pdf)
+
+<use nir_census_MMR1_NIR_2006.pdf>
+Package pdftex.def Info: nir_census_MMR1_NIR_2006.pdf used on input line 13.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14     \caption
+                 {MMR1 2006}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 13--16
+[][]
+ []
+
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR2_NIR_2006.pdf, id=9, 505.89pt x 361.35pt>
+File: nir_census_MMR2_NIR_2006.pdf Graphic file (type pdf)
+
+<use nir_census_MMR2_NIR_2006.pdf>
+Package pdftex.def Info: nir_census_MMR2_NIR_2006.pdf used on input line 19.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20     \caption
+                 {MMR2 2006}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 19--22
+[][]
+ []
+
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR1_NIR_2007.pdf, id=10, 505.89pt x 361.35pt>
+File: nir_census_MMR1_NIR_2007.pdf Graphic file (type pdf)
+
+<use nir_census_MMR1_NIR_2007.pdf>
+Package pdftex.def Info: nir_census_MMR1_NIR_2007.pdf used on input line 25.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26     \caption
+                 {MMR1 2007}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 25--28
+[][]
+ []
+
+[2 <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR1_NIR_2006.pdf
+> <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR2_NIR_2006.pdf>
+]
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR2_NIR_2007.pdf, id=24, 505.89pt x 361.35pt>
+File: nir_census_MMR2_NIR_2007.pdf Graphic file (type pdf)
+
+<use nir_census_MMR2_NIR_2007.pdf>
+Package pdftex.def Info: nir_census_MMR2_NIR_2007.pdf used on input line 31.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32     \caption
+                 {MMR2 2007}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 31--34
+[][]
+ []
+
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR1_NIR_2008.pdf, id=25, 505.89pt x 361.35pt>
+File: nir_census_MMR1_NIR_2008.pdf Graphic file (type pdf)
+
+<use nir_census_MMR1_NIR_2008.pdf>
+Package pdftex.def Info: nir_census_MMR1_NIR_2008.pdf used on input line 38.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39     \caption
+                 {MMR1 2008}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 38--41
+[][]
+ []
+
+[3 <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR1_NIR_2007.pdf
+> <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR2_NIR_2007.pdf>
+]
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR2_NIR_2008.pdf, id=39, 505.89pt x 361.35pt>
+File: nir_census_MMR2_NIR_2008.pdf Graphic file (type pdf)
+
+<use nir_census_MMR2_NIR_2008.pdf>
+Package pdftex.def Info: nir_census_MMR2_NIR_2008.pdf used on input line 44.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45     \caption
+                 {MMR2 2008}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 44--47
+[][]
+ []
+
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR1_NIR_2009.pdf, id=40, 505.89pt x 361.35pt>
+File: nir_census_MMR1_NIR_2009.pdf Graphic file (type pdf)
+
+<use nir_census_MMR1_NIR_2009.pdf>
+Package pdftex.def Info: nir_census_MMR1_NIR_2009.pdf used on input line 51.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52     \caption
+                 {MMR1 2009}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 51--54
+[][]
+ []
+
+[4 <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR1_NIR_2008.pdf
+> <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR2_NIR_2008.pdf>
+]
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR2_NIR_2009.pdf, id=54, 505.89pt x 361.35pt>
+File: nir_census_MMR2_NIR_2009.pdf Graphic file (type pdf)
+
+<use nir_census_MMR2_NIR_2009.pdf>
+Package pdftex.def Info: nir_census_MMR2_NIR_2009.pdf used on input line 57.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58     \caption
+                 {MMR2 2009}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 57--60
+[][]
+ []
+
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR1_NIR_2010.pdf, id=55, 505.89pt x 361.35pt>
+File: nir_census_MMR1_NIR_2010.pdf Graphic file (type pdf)
+
+<use nir_census_MMR1_NIR_2010.pdf>
+Package pdftex.def Info: nir_census_MMR1_NIR_2010.pdf used on input line 64.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65     \caption
+                 {MMR1 2010}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 64--67
+[][]
+ []
+
+[5 <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR1_NIR_2009.pdf
+> <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR2_NIR_2009.pdf>
+]
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR2_NIR_2010.pdf, id=69, 505.89pt x 361.35pt>
+File: nir_census_MMR2_NIR_2010.pdf Graphic file (type pdf)
+
+<use nir_census_MMR2_NIR_2010.pdf>
+Package pdftex.def Info: nir_census_MMR2_NIR_2010.pdf used on input line 70.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71     \caption
+                 {MMR2 2010}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 70--73
+[][]
+ []
+
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.75 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR1_NIR_2011.pdf, id=70, 505.89pt x 361.35pt>
+File: nir_census_MMR1_NIR_2011.pdf Graphic file (type pdf)
+
+<use nir_census_MMR1_NIR_2011.pdf>
+Package pdftex.def Info: nir_census_MMR1_NIR_2011.pdf used on input line 77.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78     \caption
+                 {MMR1 2011}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 77--80
+[][]
+ []
+
+[6 <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR1_NIR_2010.pdf
+> <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR2_NIR_2010.pdf>
+]
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.81 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR2_NIR_2011.pdf, id=84, 505.89pt x 361.35pt>
+File: nir_census_MMR2_NIR_2011.pdf Graphic file (type pdf)
+
+<use nir_census_MMR2_NIR_2011.pdf>
+Package pdftex.def Info: nir_census_MMR2_NIR_2011.pdf used on input line 83.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84     \caption
+                 {MMR2 2011}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 83--86
+[][]
+ []
+
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR1_NIR_2012.pdf, id=85, 505.89pt x 361.35pt>
+File: nir_census_MMR1_NIR_2012.pdf Graphic file (type pdf)
+
+<use nir_census_MMR1_NIR_2012.pdf>
+Package pdftex.def Info: nir_census_MMR1_NIR_2012.pdf used on input line 90.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.91     \caption
+                 {MMR1 2012}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 90--93
+[][]
+ []
+
+[7 <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR1_NIR_2011.pdf
+> <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR2_NIR_2011.pdf>
+]
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94 \begin{sidewaysfigure}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR2_NIR_2012.pdf, id=100, 505.89pt x 361.35pt>
+File: nir_census_MMR2_NIR_2012.pdf Graphic file (type pdf)
+
+<use nir_census_MMR2_NIR_2012.pdf>
+Package pdftex.def Info: nir_census_MMR2_NIR_2012.pdf used on input line 96.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.97     \caption
+                 {MMR2 2012}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 \end{sidewaysfigure}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 96--99
+[][]
+ []
+
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101 \begin{sidewaysfigure}
+                            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR1_NIR_2013.pdf, id=101, 505.89pt x 361.35pt>
+File: nir_census_MMR1_NIR_2013.pdf Graphic file (type pdf)
+
+<use nir_census_MMR1_NIR_2013.pdf>
+Package pdftex.def Info: nir_census_MMR1_NIR_2013.pdf used on input line 103.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104     \caption
+                  {MMR1 2013}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.105 \end{sidewaysfigure}
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 103--106
+[][]
+ []
+
+[8 <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR1_NIR_2012.pdf
+> <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR2_NIR_2012.pdf>
+]
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 \begin{sidewaysfigure}
+                            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR2_NIR_2013.pdf, id=115, 505.89pt x 361.35pt>
+File: nir_census_MMR2_NIR_2013.pdf Graphic file (type pdf)
+
+<use nir_census_MMR2_NIR_2013.pdf>
+Package pdftex.def Info: nir_census_MMR2_NIR_2013.pdf used on input line 109.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110     \caption
+                  {MMR2 2013}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.111 \end{sidewaysfigure}
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 109--112
+[][]
+ []
+
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.114 \begin{sidewaysfigure}
+                            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR1_NIR_2014.pdf, id=116, 505.89pt x 361.35pt>
+File: nir_census_MMR1_NIR_2014.pdf Graphic file (type pdf)
+
+<use nir_census_MMR1_NIR_2014.pdf>
+Package pdftex.def Info: nir_census_MMR1_NIR_2014.pdf used on input line 116.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117     \caption
+                  {MMR1 2014}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 \end{sidewaysfigure}
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 116--119
+[][]
+ []
+
+[9 <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR1_NIR_2013.pdf
+> <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR2_NIR_2013.pdf>
+]
+
+! LaTeX Error: Environment sidewaysfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 \begin{sidewaysfigure}
+                            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<nir_census_MMR2_NIR_2014.pdf, id=130, 505.89pt x 361.35pt>
+File: nir_census_MMR2_NIR_2014.pdf Graphic file (type pdf)
+
+<use nir_census_MMR2_NIR_2014.pdf>
+Package pdftex.def Info: nir_census_MMR2_NIR_2014.pdf used on input line 122.
+(pdftex.def)             Requested size: 361.34999pt x 258.10966pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123     \caption
+                  {MMR2 2014}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{sidewaysfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.124 \end{sidewaysfigure}
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (16.34999pt too wide) in paragraph at lines 122--125
+[][]
+ []
+
+[10 <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR1_NIR_2014.pd
+f> <C:/Users/David Hayman/Documents/GitHub/measles/nir_census_MMR2_NIR_2014.pdf
+>] ("C:\Users\David Hayman\Documents\GitHub\measles\nir_maps.aux") ) 
+Here is how much of TeX's memory you used:
+ 1212 strings out of 493921
+ 17654 string characters out of 3147261
+ 62950 words of memory out of 3000000
+ 4532 multiletter control sequences out of 15000+200000
+ 6675 words of font info for 24 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,6n,19p,220b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on nir_maps.pdf (10 pages, 49895922 bytes).
+PDF statistics:
+ 155 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+
