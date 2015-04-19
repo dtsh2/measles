@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  17 APR 2015 18:06
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  20 APR 2015 09:40
 entering extended mode
 **draftfinalreport_v3.tex
 (C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport_v3.tex
@@ -1511,22 +1511,6 @@ pdf>] [32] [33 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_
 2014.pdf>] [40 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_
 2014.pdf>] [41]
 
-LaTeX Warning: Reference `fig:WestCoast' on page 42 undefined on input line 924
-.
-
-
-LaTeX Warning: Reference `fig:Canterbury' on page 42 undefined on input line 92
-5.
-
-
-LaTeX Warning: Reference `fig:SouthCanterbury' on page 42 undefined on input li
-ne 926.
-
-
-LaTeX Warning: Reference `fig:Southern' on page 42 undefined on input line 927.
-
-
-
 LaTeX Warning: Reference `fig:naive_au' on page 42 undefined on input line 930.
 
 
@@ -1534,61 +1518,61 @@ LaTeX Warning: Reference `fig:naive_au' on page 42 undefined on input line 930.
 LaTeX Warning: Reference `fig:naive_au_prop' on page 42 undefined on input line
  930.
 
-[42] <2013totnp2.pdf, id=792, 722.7pt x 361.35pt>
+[42] <2013totnp2.pdf, id=800, 722.7pt x 361.35pt>
 File: 2013totnp2.pdf Graphic file (type pdf)
  <use 2013totnp2.pdf>
 Package pdftex.def Info: 2013totnp2.pdf used on input line 1300.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013totnp3.pdf, id=795, 722.7pt x 361.35pt>
+<2013totnp3.pdf, id=803, 722.7pt x 361.35pt>
 File: 2013totnp3.pdf Graphic file (type pdf)
  <use 2013totnp3.pdf>
 Package pdftex.def Info: 2013totnp3.pdf used on input line 1308.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013np1.pdf, id=798, 722.7pt x 361.35pt>
+<2013np1.pdf, id=806, 722.7pt x 361.35pt>
 File: 2013np1.pdf Graphic file (type pdf)
  <use 2013np1.pdf>
 Package pdftex.def Info: 2013np1.pdf used on input line 1316.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013nznp1.pdf, id=799, 722.7pt x 361.35pt>
+<2013nznp1.pdf, id=807, 722.7pt x 361.35pt>
 File: 2013nznp1.pdf Graphic file (type pdf)
  <use 2013nznp1.pdf>
 Package pdftex.def Info: 2013nznp1.pdf used on input line 1324.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013totnp1.pdf, id=800, 722.7pt x 361.35pt>
+<2013totnp1.pdf, id=808, 722.7pt x 361.35pt>
 File: 2013totnp1.pdf Graphic file (type pdf)
  <use 2013totnp1.pdf>
 Package pdftex.def Info: 2013totnp1.pdf used on input line 1332.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013totnp4.pdf, id=801, 722.7pt x 361.35pt>
+<2013totnp4.pdf, id=809, 722.7pt x 361.35pt>
 File: 2013totnp4.pdf Graphic file (type pdf)
  <use 2013totnp4.pdf>
 Package pdftex.def Info: 2013totnp4.pdf used on input line 1340.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013nznp4.pdf, id=802, 722.7pt x 361.35pt>
+<2013nznp4.pdf, id=810, 722.7pt x 361.35pt>
 File: 2013nznp4.pdf Graphic file (type pdf)
  <use 2013nznp4.pdf>
 Package pdftex.def Info: 2013nznp4.pdf used on input line 1348.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013np4.pdf, id=803, 722.7pt x 361.35pt>
+<2013np4.pdf, id=811, 722.7pt x 361.35pt>
 File: 2013np4.pdf Graphic file (type pdf)
  <use 2013np4.pdf>
 Package pdftex.def Info: 2013np4.pdf used on input line 1356.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<draftfinalreport_v3-032.pdf, id=804, 433.62pt x 433.62pt>
+<draftfinalreport_v3-032.pdf, id=812, 433.62pt x 433.62pt>
 File: draftfinalreport_v3-032.pdf Graphic file (type pdf)
 
 <use draftfinalreport_v3-032.pdf>
 Package pdftex.def Info: draftfinalreport_v3-032.pdf used on input line 1364.
 (pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
- <nzers.pdf, id=805, 361.35pt x 361.35pt>
+ <nzers.pdf, id=813, 361.35pt x 361.35pt>
 File: nzers.pdf Graphic file (type pdf)
 
 <use nzers.pdf>
@@ -1611,43 +1595,27 @@ LaTeX Warning: Reference `fig:naive_au_prop' on page 62 undefined on input line
 LaTeX Warning: Reference `fig:naive_au' on page 62 undefined on input line 1386
 .
 
-
-LaTeX Warning: Reference `fig:WestCoast' on page 62 undefined on input line 138
-8.
-
-
-LaTeX Warning: Reference `fig:Canterbury' on page 62 undefined on input line 13
-88.
-
-
-LaTeX Warning: Reference `fig:SouthCanterbury' on page 62 undefined on input li
-ne 1388.
-
-
-LaTeX Warning: Reference `fig:Southern' on page 62 undefined on input line 1388
-.
-
-[62] [63] [64] <cases_by_dhb_2009_2014.pdf, id=1047, 722.7pt x 361.35pt>
+[62] [63] [64] <cases_by_dhb_2009_2014.pdf, id=1059, 722.7pt x 361.35pt>
 File: cases_by_dhb_2009_2014.pdf Graphic file (type pdf)
 
 <use cases_by_dhb_2009_2014.pdf>
 Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 1425.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<outbreaks_2009_2014.pdf, id=1048, 722.7pt x 361.35pt>
+<outbreaks_2009_2014.pdf, id=1060, 722.7pt x 361.35pt>
 File: outbreaks_2009_2014.pdf Graphic file (type pdf)
 
 <use outbreaks_2009_2014.pdf>
 Package pdftex.def Info: outbreaks_2009_2014.pdf used on input line 1433.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<averageR0_all_ob.pdf, id=1049, 578.16pt x 433.62pt>
+<averageR0_all_ob.pdf, id=1061, 578.16pt x 433.62pt>
 File: averageR0_all_ob.pdf Graphic file (type pdf)
 
 <use averageR0_all_ob.pdf>
 Package pdftex.def Info: averageR0_all_ob.pdf used on input line 1441.
 (pdftex.def)             Requested size: 494.99664pt x 371.2452pt.
- <R0_outbreak33.pdf, id=1052, 578.16pt x 289.08pt>
+ <R0_outbreak33.pdf, id=1064, 578.16pt x 289.08pt>
 File: R0_outbreak33.pdf Graphic file (type pdf)
 
 <use R0_outbreak33.pdf>
@@ -1662,7 +1630,7 @@ Overfull \hbox (0.49591pt too wide) in paragraph at lines 1536--1537
 une New Zealand
  []
 
-[71] [72] [73] [74] [75] [76] [77] [78] <p.pdf, id=1303, 505.89pt x 361.35pt>
+[71] [72] [73] [74] [75] [76] [77] [78] <p.pdf, id=1315, 505.89pt x 361.35pt>
 File: p.pdf Graphic file (type pdf)
 
 <use p.pdf>
@@ -1673,26 +1641,26 @@ Overfull \hbox (19.61333pt too wide) in paragraph at lines 1786--1812
  [] 
  []
 
-[82] <sim.pdf, id=1350, 505.89pt x 361.35pt>
+[82] <sim.pdf, id=1362, 505.89pt x 361.35pt>
 File: sim.pdf Graphic file (type pdf)
  <use sim.pdf>
 Package pdftex.def Info: sim.pdf used on input line 1826.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<sim1.pdf, id=1355, 505.89pt x 361.35pt>
+<sim1.pdf, id=1367, 505.89pt x 361.35pt>
 File: sim1.pdf Graphic file (type pdf)
  <use sim1.pdf>
 Package pdftex.def Info: sim1.pdf used on input line 1833.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-Overfull \hbox (61.61633pt too wide) in paragraph at lines 1841--1866
+Overfull \hbox (61.61633pt too wide) in paragraph at lines 1842--1867
  [] 
  []
 
 ! Argument of \caption@ydblarg has an extra }.
 <inserted text> 
                 \par 
-l.1866 ...textit{B/C} is the benefit--cost ratio.}
+l.1867 ...textit{B/C} is the benefit--cost ratio.}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1706,21 +1674,21 @@ Runaway argument?
 ! Paragraph ended before \caption@ydblarg was complete.
 <to be read again> 
                    \par 
-l.1866 ...textit{B/C} is the benefit--cost ratio.}
+l.1867 ...textit{B/C} is the benefit--cost ratio.}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 
-Overfull \hbox (61.61633pt too wide) in paragraph at lines 1873--1898
+Overfull \hbox (61.61633pt too wide) in paragraph at lines 1874--1899
  [] 
  []
 
 ! Argument of \caption@ydblarg has an extra }.
 <inserted text> 
                 \par 
-l.1898 ...textit{B/C} is the benefit--cost ratio.}
+l.1899 ...textit{B/C} is the benefit--cost ratio.}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1734,7 +1702,7 @@ Runaway argument?
 ! Paragraph ended before \caption@ydblarg was complete.
 <to be read again> 
                    \par 
-l.1898 ...textit{B/C} is the benefit--cost ratio.}
+l.1899 ...textit{B/C} is the benefit--cost ratio.}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -1742,190 +1710,179 @@ My plan is to forget the whole thing and hope for the best.
 
 [83 <C:/Users/dtshayma/Documents/GitHub/measles/sim.pdf>] [84] [85 <C:/Users/dt
 shayma/Documents/GitHub/measles/sim1.pdf>] [86] [87] [88] [89] [90] [91]
-[92] [93] [94] [95] [96] <case_age_nzdep.pdf, id=1526, 505.89pt x 361.35pt>
+[92] [93] [94] [95] [96] <case_age_nzdep.pdf, id=1538, 505.89pt x 361.35pt>
 File: case_age_nzdep.pdf Graphic file (type pdf)
 
 <use case_age_nzdep.pdf>
-Package pdftex.def Info: case_age_nzdep.pdf used on input line 2227.
+Package pdftex.def Info: case_age_nzdep.pdf used on input line 2228.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- <case_eth_nzdep.pdf, id=1529, 505.89pt x 361.35pt>
+ <case_eth_nzdep.pdf, id=1541, 505.89pt x 361.35pt>
 File: case_eth_nzdep.pdf Graphic file (type pdf)
 
 <use case_eth_nzdep.pdf>
-Package pdftex.def Info: case_eth_nzdep.pdf used on input line 2235.
+Package pdftex.def Info: case_eth_nzdep.pdf used on input line 2236.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
  [97 <C:/Users/dtshayma/Documents/GitHub/measles/case_age_nzdep.pdf>] <case_age
-_eth.pdf, id=1543, 505.89pt x 361.35pt>
+_eth.pdf, id=1555, 505.89pt x 361.35pt>
 File: case_age_eth.pdf Graphic file (type pdf)
 
 <use case_age_eth.pdf>
-Package pdftex.def Info: case_age_eth.pdf used on input line 2243.
+Package pdftex.def Info: case_age_eth.pdf used on input line 2244.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
  [98 <C:/Users/dtshayma/Documents/GitHub/measles/case_eth_nzdep.pdf>] <percap_n
-zdep_age.pdf, id=1556, 505.89pt x 361.35pt>
+zdep_age.pdf, id=1568, 505.89pt x 361.35pt>
 File: percap_nzdep_age.pdf Graphic file (type pdf)
 
 <use percap_nzdep_age.pdf>
-Package pdftex.def Info: percap_nzdep_age.pdf used on input line 2251.
+Package pdftex.def Info: percap_nzdep_age.pdf used on input line 2252.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
  [99 <C:/Users/dtshayma/Documents/GitHub/measles/case_age_eth.pdf>] <percap_eth
-_nzdep.pdf, id=1569, 505.89pt x 361.35pt>
+_nzdep.pdf, id=1581, 505.89pt x 361.35pt>
 File: percap_eth_nzdep.pdf Graphic file (type pdf)
 
 <use percap_eth_nzdep.pdf>
-Package pdftex.def Info: percap_eth_nzdep.pdf used on input line 2259.
+Package pdftex.def Info: percap_eth_nzdep.pdf used on input line 2260.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
  [100 <C:/Users/dtshayma/Documents/GitHub/measles/percap_nzdep_age.pdf>] <perca
-p_eth_age.pdf, id=1582, 505.89pt x 361.35pt>
+p_eth_age.pdf, id=1594, 505.89pt x 361.35pt>
 File: percap_eth_age.pdf Graphic file (type pdf)
 
 <use percap_eth_age.pdf>
-Package pdftex.def Info: percap_eth_age.pdf used on input line 2267.
+Package pdftex.def Info: percap_eth_age.pdf used on input line 2268.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
  [101 <C:/Users/dtshayma/Documents/GitHub/measles/percap_eth_nzdep.pdf>] <dhb1.
-pdf, id=1595, 505.89pt x 505.89pt>
+pdf, id=1607, 505.89pt x 505.89pt>
 File: dhb1.pdf Graphic file (type pdf)
  <use dhb1.pdf>
-Package pdftex.def Info: dhb1.pdf used on input line 2275.
+Package pdftex.def Info: dhb1.pdf used on input line 2276.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
 
 [102 <C:/Users/dtshayma/Documents/GitHub/measles/percap_eth_age.pdf>]
-<dhb2.pdf, id=1608, 505.89pt x 505.89pt>
+<dhb2.pdf, id=1620, 505.89pt x 505.89pt>
 File: dhb2.pdf Graphic file (type pdf)
  <use dhb2.pdf>
-Package pdftex.def Info: dhb2.pdf used on input line 2284.
+Package pdftex.def Info: dhb2.pdf used on input line 2285.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [103 <C:/Users/dtshayma/Documents/GitHub/measles/dhb1.pdf>] <dhb3.pdf, id=1622
+ [103 <C:/Users/dtshayma/Documents/GitHub/measles/dhb1.pdf>] <dhb3.pdf, id=1634
 , 505.89pt x 505.89pt>
 File: dhb3.pdf Graphic file (type pdf)
 
 <use dhb3.pdf>
-Package pdftex.def Info: dhb3.pdf used on input line 2292.
+Package pdftex.def Info: dhb3.pdf used on input line 2293.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
  [104 <C:/Users/dtshayma/Documents/GitHub/measles/dhb2.pdf>]
-<dhb4.pdf, id=1635, 505.89pt x 505.89pt>
+<dhb4.pdf, id=1647, 505.89pt x 505.89pt>
 File: dhb4.pdf Graphic file (type pdf)
  <use dhb4.pdf>
-Package pdftex.def Info: dhb4.pdf used on input line 2300.
+Package pdftex.def Info: dhb4.pdf used on input line 2301.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [105 <C:/Users/dtshayma/Documents/GitHub/measles/dhb3.pdf>] <dhb5.pdf, id=1648
+ [105 <C:/Users/dtshayma/Documents/GitHub/measles/dhb3.pdf>] <dhb5.pdf, id=1660
 , 505.89pt x 505.89pt>
 File: dhb5.pdf Graphic file (type pdf)
 
 <use dhb5.pdf>
-Package pdftex.def Info: dhb5.pdf used on input line 2308.
+Package pdftex.def Info: dhb5.pdf used on input line 2309.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
  [106 <C:/Users/dtshayma/Documents/GitHub/measles/dhb4.pdf>]
-<dhb6.pdf, id=1661, 505.89pt x 505.89pt>
+<dhb6.pdf, id=1673, 505.89pt x 505.89pt>
 File: dhb6.pdf Graphic file (type pdf)
  <use dhb6.pdf>
-Package pdftex.def Info: dhb6.pdf used on input line 2316.
+Package pdftex.def Info: dhb6.pdf used on input line 2317.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [107 <C:/Users/dtshayma/Documents/GitHub/measles/dhb5.pdf>] <dhb7.pdf, id=1674
+ [107 <C:/Users/dtshayma/Documents/GitHub/measles/dhb5.pdf>] <dhb7.pdf, id=1686
 , 505.89pt x 505.89pt>
 File: dhb7.pdf Graphic file (type pdf)
 
 <use dhb7.pdf>
-Package pdftex.def Info: dhb7.pdf used on input line 2324.
+Package pdftex.def Info: dhb7.pdf used on input line 2325.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
  [108 <C:/Users/dtshayma/Documents/GitHub/measles/dhb6.pdf>]
-<dhb8.pdf, id=1687, 505.89pt x 505.89pt>
+<dhb8.pdf, id=1699, 505.89pt x 505.89pt>
 File: dhb8.pdf Graphic file (type pdf)
  <use dhb8.pdf>
-Package pdftex.def Info: dhb8.pdf used on input line 2332.
+Package pdftex.def Info: dhb8.pdf used on input line 2333.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [109 <C:/Users/dtshayma/Documents/GitHub/measles/dhb7.pdf>] <dhb9.pdf, id=1701
+ [109 <C:/Users/dtshayma/Documents/GitHub/measles/dhb7.pdf>] <dhb9.pdf, id=1713
 , 505.89pt x 505.89pt>
 File: dhb9.pdf Graphic file (type pdf)
 
 <use dhb9.pdf>
-Package pdftex.def Info: dhb9.pdf used on input line 2340.
+Package pdftex.def Info: dhb9.pdf used on input line 2341.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
  [110 <C:/Users/dtshayma/Documents/GitHub/measles/dhb8.pdf>]
-<dhb10.pdf, id=1714, 505.89pt x 505.89pt>
+<dhb10.pdf, id=1726, 505.89pt x 505.89pt>
 File: dhb10.pdf Graphic file (type pdf)
  <use dhb10.pdf>
-Package pdftex.def Info: dhb10.pdf used on input line 2348.
+Package pdftex.def Info: dhb10.pdf used on input line 2349.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
  [111 <C:/Users/dtshayma/Documents/GitHub/measles/dhb9.pdf>]
-<dhb11.pdf, id=1727, 505.89pt x 505.89pt>
+<dhb11.pdf, id=1739, 505.89pt x 505.89pt>
 File: dhb11.pdf Graphic file (type pdf)
  <use dhb11.pdf>
-Package pdftex.def Info: dhb11.pdf used on input line 2356.
+Package pdftex.def Info: dhb11.pdf used on input line 2357.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
  [112 <C:/Users/dtshayma/Documents/GitHub/measles/dhb10.pdf>]
-<dhb12.pdf, id=1740, 505.89pt x 505.89pt>
+<dhb12.pdf, id=1752, 505.89pt x 505.89pt>
 File: dhb12.pdf Graphic file (type pdf)
  <use dhb12.pdf>
-Package pdftex.def Info: dhb12.pdf used on input line 2364.
+Package pdftex.def Info: dhb12.pdf used on input line 2365.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
  [113 <C:/Users/dtshayma/Documents/GitHub/measles/dhb11.pdf>]
-<dhb13.pdf, id=1753, 505.89pt x 505.89pt>
+<dhb13.pdf, id=1765, 505.89pt x 505.89pt>
 File: dhb13.pdf Graphic file (type pdf)
  <use dhb13.pdf>
-Package pdftex.def Info: dhb13.pdf used on input line 2372.
+Package pdftex.def Info: dhb13.pdf used on input line 2373.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
  [114 <C:/Users/dtshayma/Documents/GitHub/measles/dhb12.pdf>]
-<dhb14.pdf, id=1766, 505.89pt x 505.89pt>
+<dhb14.pdf, id=1778, 505.89pt x 505.89pt>
 File: dhb14.pdf Graphic file (type pdf)
  <use dhb14.pdf>
-Package pdftex.def Info: dhb14.pdf used on input line 2380.
+Package pdftex.def Info: dhb14.pdf used on input line 2381.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
  [115 <C:/Users/dtshayma/Documents/GitHub/measles/dhb13.pdf>]
-<dhb15.pdf, id=1780, 505.89pt x 505.89pt>
+<dhb15.pdf, id=1792, 505.89pt x 505.89pt>
 File: dhb15.pdf Graphic file (type pdf)
  <use dhb15.pdf>
-Package pdftex.def Info: dhb15.pdf used on input line 2388.
+Package pdftex.def Info: dhb15.pdf used on input line 2389.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
  [116 <C:/Users/dtshayma/Documents/GitHub/measles/dhb14.pdf>]
-<dhb16.pdf, id=1793, 505.89pt x 505.89pt>
+<dhb16.pdf, id=1805, 505.89pt x 505.89pt>
 File: dhb16.pdf Graphic file (type pdf)
  <use dhb16.pdf>
-Package pdftex.def Info: dhb16.pdf used on input line 2396.
+Package pdftex.def Info: dhb16.pdf used on input line 2397.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
  [117 <C:/Users/dtshayma/Documents/GitHub/measles/dhb15.pdf>]
-<dhb17.pdf, id=1806, 505.89pt x 505.89pt>
+<dhb17.pdf, id=1818, 505.89pt x 505.89pt>
 File: dhb17.pdf Graphic file (type pdf)
  <use dhb17.pdf>
-Package pdftex.def Info: dhb17.pdf used on input line 2404.
+Package pdftex.def Info: dhb17.pdf used on input line 2405.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
  [118 <C:/Users/dtshayma/Documents/GitHub/measles/dhb16.pdf>]
-<dhb18.pdf, id=1819, 505.89pt x 505.89pt>
+<dhb18.pdf, id=1831, 505.89pt x 505.89pt>
 File: dhb18.pdf Graphic file (type pdf)
  <use dhb18.pdf>
-Package pdftex.def Info: dhb18.pdf used on input line 2412.
+Package pdftex.def Info: dhb18.pdf used on input line 2413.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
-
-<dhb19.pdf, id=1822, 505.89pt x 505.89pt>
+ [119 <C:/Users/dtshayma/Documents/GitHub/measles/dhb17.pdf>]
+<dhb19.pdf, id=1844, 505.89pt x 505.89pt>
 File: dhb19.pdf Graphic file (type pdf)
  <use dhb19.pdf>
-Package pdftex.def Info: dhb19.pdf used on input line 2419.
+Package pdftex.def Info: dhb19.pdf used on input line 2421.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
-
-<dhb20.pdf, id=1825, 505.89pt x 505.89pt>
+ [120 <C:/Users/dtshayma/Documents/GitHub/measles/dhb18.pdf>]
+<dhb20.pdf, id=1857, 505.89pt x 505.89pt>
 File: dhb20.pdf Graphic file (type pdf)
  <use dhb20.pdf>
-Package pdftex.def Info: dhb20.pdf used on input line 2427.
+Package pdftex.def Info: dhb20.pdf used on input line 2429.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
+ [121 <C:/Users/dtshayma/Documents/GitHub/measles/dhb19.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2436.
+ [122 <C:/Users/dtshayma/Documents/GitHub/measles/dhb20.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2436.
 
-
-! LaTeX Error: \begin{figure} on input line 2410 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2434 \end{document}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2434.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2434.
 (C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport_v3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2434.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2434.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2436.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2436.
 
 Package rerunfilecheck Info: File `draftfinalreport_v3.out' has not changed.
 (rerunfilecheck)             Checksum: D5B107415CA1D5C352FD419B4D06C5C9;1838.
@@ -1933,54 +1890,43 @@ Package rerunfilecheck Info: File `draftfinalreport_v3.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2434.
-! You can't use `\end' in internal vertical mode.
-\enddocument ...es \z@ \Call@AtVeryVeryEnd \@@end 
-                                                  
-l.2434 \end{document}
-                     
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
-! LaTeX Error: \begin{figure} on input line 2410 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2434 \end{document}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.2434 \end{document}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-)
-! Emergency stop.
-<*> draftfinalreport_v3.tex
-                           
-*** (job aborted, no legal \end found)
-
- 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2436.
+ ) 
 Here is how much of TeX's memory you used:
- 19916 strings out of 493921
- 338193 string characters out of 3147273
- 474393 words of memory out of 3000000
+ 19924 strings out of 493921
+ 338297 string characters out of 3147273
+ 476041 words of memory out of 3000000
  22314 multiletter control sequences out of 15000+200000
  57433 words of font info for 116 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  61i,14n,96p,2172b,548s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmti7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on draftfinalreport_v3.pdf (122 pages, 53191306 bytes).
+PDF statistics:
+ 2044 PDF objects out of 2073 (max. 8388607)
+ 368 named destinations out of 1000 (max. 500000)
+ 587 words of extra memory for PDF output out of 10000 (max. 10000000)
+
