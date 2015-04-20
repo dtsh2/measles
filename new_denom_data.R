@@ -24,7 +24,7 @@ grouped_n2 <- data_n %>% filter(VACCINE_DOSE == 2) %>% group_by(DOMICILE_CODE, Y
 grouped <- grouped_d %>% left_join(grouped_n1) %>% left_join(grouped_n2)
 
 ## 2006 -- 2014
-grouped <- grouped[grouped$Year == 2006,]
+grouped <- grouped[grouped$Year == 2014,]
 
 ####
 grouped_all_years <- grouped %>% group_by(DOMICILE_CODE) %>% summarize(total=sum(total), vacc1=sum(vacc1, na.rm=T), vacc2=sum(vacc2, na.rm=T))
@@ -42,6 +42,11 @@ data_au <- data_au %>% left_join(grouped_all_years)
 
 in_the_sea <- grepl("^Oceanic", data_au$AU2013_NAM)
 
+pdf(paste("nir_census_MMR1_NIR_2014_cor.pdf"), width=7, height=7)
+plot(data_au$prop1,data_au$prop2,xlab="MMR1",ylab="MMR2")
+txt<-c(round(cor(data_au$prop1,data_au$prop2,use="complete.obs"),2))
+text(x=c(0,0.05),y=c(1.1,1.1),c(expression("R = "),txt))
+dev.off()
 ## plot and save
 
 fixedBreaks <- c(0,0.4,0.5,0.6,0.7,0.8,0.9,0.95,1,Inf)
