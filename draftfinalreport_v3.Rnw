@@ -724,6 +724,49 @@ t22013<-read.csv("MMR2summary2013.txt",header=T,sep="")
 t12014<-read.csv("MMR1summary2014.txt",header=T,sep="")
 t22014<-read.csv("MMR2summary2014.txt",header=T,sep="")
 
+table_nir_mmr<-rbind(
+t12006,
+t22006,
+t12007,
+t22007,
+t12008,
+t22008,
+t12009,
+t22009,
+t12010,
+t22010,
+t12011,
+t22011,
+t12012,
+t22012,
+t12013,
+t22013,
+t12014,
+t22014)
+colnames(table_nir_mmr)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+yr_nir<-c('MMR1 2006',
+'MMR2 2006',
+'MMR1 2007',
+'MMR2 2007',
+'MMR1 2008',
+'MMR2 2008',
+'MMR1 2009',
+'MMR2 2009',
+'MMR1 2010',
+'MMR2 2010',
+'MMR1 2011',
+'MMR2 2011',
+"MMR1 2012",
+"MMR2 2012",
+"MMR1 2013",
+"MMR2 2013",
+"MMR1 2014",
+"MMR2 2014")
+table_nir_mmr$Year <-yr_nir
+table_nir_mmr<-table_nir_mmr[c(10,1:7)]
+table_nir_mmr[2:7]<-table_nir_mmr[2:7]*100
+latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
+
 R0 = 12.8;
 x0max = 0.3;
 Nx0 = 200;
@@ -954,342 +997,341 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
  \vspace{5mm} %5mm vertical space
 \begin{table}
 <<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t12006)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t12006[1:7], file="", table.env=FALSE,rowname=NULL)
+latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 @
-\caption{Summary of the proportion of 2006 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12006}.}
-\label{table:tab12006}
+\caption{Summary of the proportion of 2006--2014 birth cohorts vaccinated against measles-mumps-rubella (MMR) dose 1 and MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12006}, \autoref{fig:fig22006}, \autoref{fig:fig12007}, \autoref{fig:fig22007}, \autoref{fig:fig12008}, \autoref{fig:fig22008}, \autoref{fig:fig12009}, \autoref{fig:fig22009}, \autoref{fig:fig12010}, \autoref{fig:fig22010}, \autoref{fig:fig12011}, \autoref{fig:fig22011}, \autoref{fig:fig12012}, \autoref{fig:fig22012}, \autoref{fig:fig12013}, \autoref{fig:fig22013}, \autoref{fig:fig12014}, and \autoref{fig:fig22014}.}
+\label{table:tab_mmr_nir}
 \end{table}
 
 \begin{sidewaysfigure}
    \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2006.pdf}
     \end{center}
-    \caption{Proportion of the New Zealand population born in 2006 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab12006} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2006 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12006}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t22006)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t22006[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2006 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22006}.}
-\label{table:tab22006}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t22006)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t22006[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2006 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22006}.}
+% \label{table:tab22006}
+% \end{table}
 
 
 \begin{sidewaysfigure}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2006.pdf}
 \end{center}
-    \caption{Proportion of the New Zealand population born in 2006 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab22006} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2006 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22006}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t12007)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t12007[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2007 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12007}.}
-\label{table:tab12007}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t12007)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t12007[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2007 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12007}.}
+% \label{table:tab12007}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2007.pdf}
 \end{center}
-    \caption{Proportion of the New Zealand population born in 2007 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab12007} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2007 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12007}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t22007)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t22007[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2007 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22007}.}
-\label{table:tab22007}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t22007)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t22007[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2007 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22007}.}
+% \label{table:tab22007}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2007.pdf}
 \end{center}
-    \caption{Proportion of the New Zealand population born in 2007 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab22007} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2007 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22007}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t12008)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t12008[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2008 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12008}.}
-\label{table:tab12008}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t12008)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t12008[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2008 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12008}.}
+% \label{table:tab12008}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2008.pdf}
 \end{center}
-    \caption{Proportion of the New Zealand population born in 2008 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab12008} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2008 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12008}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t22008)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t22008[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2008 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22008}.}
-\label{table:tab22008}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t22008)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t22008[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2008 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22008}.}
+% \label{table:tab22008}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2008.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2008 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab22008} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2008 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22008}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t12009)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t12009[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2009 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12009}.}
-\label{table:tab12009}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t12009)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t12009[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2009 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12009}.}
+% \label{table:tab12009}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2009.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2009 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab12009} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2009 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12009}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t22009)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t22009[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2009 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22009}.}
-\label{table:tab22009}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t22009)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t22009[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2009 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22009}.}
+% \label{table:tab22009}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2009.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2009 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab22009} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2009 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig22009}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t12010)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t12010[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2010 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12010}.}
-\label{table:tab12010}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t12010)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t12010[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2010 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12010}.}
+% \label{table:tab12010}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2010.pdf}
 \end{center}
-    \caption{Proportion of the New Zealand population born in 2010 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab12010} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2010 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12010}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t22010)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t22010[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2010 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22010}.}
-\label{table:tab22010}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t22010)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t22010[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2010 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22010}.}
+% \label{table:tab22010}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2010.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2010 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab22010} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2010 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig22010}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t12011)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t12011[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2011 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12011}.}
-\label{table:tab12011}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t12011)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t12011[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2011 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12011}.}
+% \label{table:tab12011}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2011.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2011 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab12011} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2011 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12011}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t22011)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t22011[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2011 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22011}.}
-\label{table:tab22011}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t22011)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t22011[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2011 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22011}.}
+% \label{table:tab22011}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2011.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2011 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab22011} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2011 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig22011}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t12012)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t12012[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2012 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12012}.}
-\label{table:tab12012}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t12012)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t12012[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2012 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12012}.}
+% \label{table:tab12012}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2012.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2012 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab12012} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2012 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12012}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t22012)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t22012[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2012 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22012}.}
-\label{table:tab22012}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t22012)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t22012[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2012 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22012}.}
+% \label{table:tab22012}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2012.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2012 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab22012} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2012 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22012}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t12013)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t12013[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2006 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12013}.}
-\label{table:tab12013}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t12013)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t12013[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2006 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12013}.}
+% \label{table:tab12013}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2013.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2013 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab12013} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2013 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12013}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t22013)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t22013[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2006 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22013}.}
-\label{table:tab22013}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t22013)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t22013[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2006 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22013}.}
+% \label{table:tab22013}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2013.pdf}
 \end{center}
-\caption{Proportion of the New Zealand population born in 2013 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab22013} and the supplementary data for details.}
+\caption{Proportion of the New Zealand population born in 2013 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %     \end{center}
 \label{fig:fig22013}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t12014)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t12014[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2014 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12014}.}
-\label{table:tab12014}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t12014)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t12014[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2014 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12014}.}
+% \label{table:tab12014}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2014.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2014 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab12014} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2014 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12014}
 \end{sidewaysfigure}
 
- \vspace{5mm} %5mm vertical space
-\begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-colnames(t22014)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-latex(t22014[1:7], file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2014 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22014}.}
-\label{table:tab22014}
-\end{table}
+%  \vspace{5mm} %5mm vertical space
+% \begin{table}
+% <<include=FALSE,echo=FALSE,results=tex>>=
+% colnames(t22014)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
+% latex(t22014[1:7], file="", table.env=FALSE,rowname=NULL)
+% @
+% \caption{Summary of the proportion of 2014 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22014}.}
+% \label{table:tab22014}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2014.pdf}
  \end{center}
-\caption{Proportion of the New Zealand population born in 2014 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab22014} and the supplementary data for details.}
+\caption{Proportion of the New Zealand population born in 2014 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22014}
 \end{sidewaysfigure}
@@ -1318,7 +1360,7 @@ The majority of the na\"{\i}ve among the general New Zealand population are in t
 \item Southern: \autoref{fig:Southern}
 \end{itemize}
 
-Plotting the lower level data from the 2013 area unit data, available from the NIR database, shows that there is heterogeneity at the local level and an obvious temporal lag, as the proportion vaccinated declines with birth cohort (\autoref{fig:mmr_nir}), though recent vaccination levels are consistently high for MMR1. For full details, see \autoref{fig:fig12006} (MMR1, 2006), \autoref{fig:fig22006} (MMR2, 2006), \autoref{fig:fig12007} (MMR1, 2007), \autoref{fig:fig22007} (MMR2, 2007), \autoref{fig:fig12008} (MMR1, 2008), \autoref{fig:fig22008} (MMR2, 2008), \autoref{fig:fig12009} (MMR1, 2009), \autoref{fig:fig22009} (MMR2, 2009), \autoref{fig:fig12010} (MMR1, 2010), \autoref{fig:fig22010} (MMR2, 2010), \autoref{fig:fig12011} (MMR1, 2011), \autoref{fig:fig22011} (MMR2, 2011), \autoref{fig:fig12012} (MMR1, 2012), \autoref{fig:fig22012} (MMR2, 2012), \autoref{fig:fig12013} (MMR1, 2013), \autoref{fig:fig22013} (MMR2, 2013), \autoref{fig:fig12014} (MMR1, 2014), \autoref{fig:fig22014} (MMR2, 2014), \autoref{table:tab12006} (MMR1, 2006), \autoref{table:tab22006} (MMR2, 2006), \autoref{table:tab12007} (MMR1, 2007), \autoref{table:tab22007} (MMR2, 2007), \autoref{table:tab12008} (MMR1, 2008), \autoref{table:tab22008} (MMR2, 2008), \autoref{table:tab12009} (MMR1, 2009), \autoref{table:tab22009} (MMR2, 2009), \autoref{table:tab12010} (MMR1, 2010), \autoref{table:tab22010} (MMR2, 2010), \autoref{table:tab12011} (MMR1, 2011), \autoref{table:tab22011} (MMR2, 2011), \autoref{table:tab12012} (MMR1, 2012), \autoref{table:tab22012} (MMR2, 2012), \autoref{table:tab12013} (MMR1, 2013), \autoref{table:tab22013} (MMR2, 2013), \autoref{table:tab12014} (MMR1, 2014), \autoref{table:tab22014} (MMR2, 2014) and the supplementary files.
+Plotting the lower level data from the 2013 area unit data, available from the NIR database, shows that there is heterogeneity at the local level and an obvious temporal lag, as the proportion vaccinated declines with birth cohort (\autoref{fig:mmr_nir}), though recent vaccination levels are consistently high for MMR1. For full details, see \autoref{fig:fig12006} (MMR1, 2006), \autoref{fig:fig22006} (MMR2, 2006), \autoref{fig:fig12007} (MMR1, 2007), \autoref{fig:fig22007} (MMR2, 2007), \autoref{fig:fig12008} (MMR1, 2008), \autoref{fig:fig22008} (MMR2, 2008), \autoref{fig:fig12009} (MMR1, 2009), \autoref{fig:fig22009} (MMR2, 2009), \autoref{fig:fig12010} (MMR1, 2010), \autoref{fig:fig22010} (MMR2, 2010), \autoref{fig:fig12011} (MMR1, 2011), \autoref{fig:fig22011} (MMR2, 2011), \autoref{fig:fig12012} (MMR1, 2012), \autoref{fig:fig22012} (MMR2, 2012), \autoref{fig:fig12013} (MMR1, 2013), \autoref{fig:fig22013} (MMR2, 2013), \autoref{fig:fig12014} (MMR1, 2014), \autoref{fig:fig22014} (MMR2, 2014), \autoref{table:tab_mmr_nir} and the supplementary files.
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 MMR1<-c(0.9604,0.9621,0.971,0.9722,0.9667,0.9643,0.9667,0.6333,0)
