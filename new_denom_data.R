@@ -17,14 +17,14 @@ data_n <- data_n %>% mutate(Year = year(dmy(DATE_OF_BIRTH)))
 grouped_n1 <- data_n %>% filter(VACCINE_DOSE == 1) %>% group_by(DOMICILE_CODE, Year) %>% summarize(vacc1 = length(unique(UNIQUE_PATIENT_IDENTIFIER)))
 grouped_n2 <- data_n %>% filter(VACCINE_DOSE == 2) %>% group_by(DOMICILE_CODE, Year) %>% summarize(vacc2 = length(unique(UNIQUE_PATIENT_IDENTIFIER)))
 
-####
+#############################################################################
 ## from here for each new year
 ###
 
 grouped <- grouped_d %>% left_join(grouped_n1) %>% left_join(grouped_n2)
 
 ## 2006 -- 2014
-grouped <- grouped[grouped$Year == 2014,]
+grouped <- grouped[grouped$Year == 2006,]
 
 ####
 grouped_all_years <- grouped %>% group_by(DOMICILE_CODE) %>% summarize(total=sum(total), vacc1=sum(vacc1, na.rm=T), vacc2=sum(vacc2, na.rm=T))
@@ -42,19 +42,14 @@ data_au <- data_au %>% left_join(grouped_all_years)
 
 in_the_sea <- grepl("^Oceanic", data_au$AU2013_NAM)
 
-pdf(paste("nir_census_MMR1_NIR_2014_cor.pdf"), width=7, height=7)
-plot(data_au$prop1,data_au$prop2,xlab="MMR1",ylab="MMR2")
-txt<-c(round(cor(data_au$prop1,data_au$prop2,use="complete.obs"),2))
-text(x=c(0,0.05),y=c(1.1,1.1),c(expression("R = "),txt))
-dev.off()
 ## plot and save
 
 fixedBreaks <- c(0,0.4,0.5,0.6,0.7,0.8,0.9,0.95,1,Inf)
 
-####
+################
 
-breaks <- cut(data_au$prop1, fixedBreaks)
-# breaks <- cut(data_au$prop2, fixedBreaks)
+# breaks <- cut(data_au$prop1, fixedBreaks)
+ breaks <- cut(data_au$prop2, fixedBreaks)
 
 ####
 
@@ -66,8 +61,8 @@ par(mfrow=c(1,1))
 
 #####
 
-pdf(paste("nir_census_MMR1_NIR_2014.pdf"), width=7, height=5)
-# pdf(paste("nir_census_MMR2_NIR_2014.pdf"), width=7, height=5)
+# pdf(paste("nir_census_MMR1_NIR_2006.pdf"), width=7, height=5)
+  pdf(paste("nir_census_MMR2_NIR_2006.pdf"), width=7, height=5)
 
 #####
 
@@ -79,8 +74,8 @@ par(fig = c(0.05, 0.4, 0.5,0.9), mar=c(5,5,2,2), new=TRUE)
 
 #####
 
-hist(data_au$prop1, breaks=50,col="grey", xlab="Proportion vaccinated",main="")
-# hist(data_au$prop2, breaks=50,col="grey", xlab="Proportion vaccinated",main="")
+# hist(data_au$prop1, breaks=50,col="grey", xlab="Proportion vaccinated",main="")
+  hist(data_au$prop2, breaks=50,col="grey", xlab="Proportion vaccinated",main="")
 
 ##### 
 
@@ -88,15 +83,73 @@ abline(v=.95,col="red",lty=3,lwd=3)
 
 #####
 
-abline(v=median(data_au$prop1,na.rm=T),col="orange",lty=3,lwd=3)
-# abline(v=median(data_au$prop2,na.rm=T),col="orange",lty=3,lwd=3)
+# abline(v=median(data_au$prop1,na.rm=T),col="orange",lty=3,lwd=3)
+ abline(v=median(data_au$prop2,na.rm=T),col="orange",lty=3,lwd=3)
 
 #####
 dev.off()
 par(mfrow=c(1,1))
 
-####
+###
 
+## Christchurch
+
+# pdf(paste("nir_census_MMR1_NIR_ChCh_2006.pdf"), width=7, height=5)
+  pdf(paste("nir_census_MMR2_NIR_ChCh_2006.pdf"), width=7, height=5)
+
+#####
+
+plot(au, col=cols,lwd=1,lty=3,main="MMR1",xlim=c(1550461 , 1559320),ylim=c(5141317 , 5212140)) # Christchurch
+legend("left",c("0-40%","41-50%","51-60%","61-70%","71-80%","81-90%","91-95%","96-100%",">100%","NA")
+       ,fill=c(pal,"white"),
+      # bty="n",inset=0.0,
+      title="Percent vaccinated",bg="white",box.col="white")
+#####
+dev.off()
+par(mfrow=c(1,1))
+
+
+## Auckland
+
+# pdf(paste("nir_census_MMR1_NIR_Auk_2006.pdf"), width=7, height=5)
+ pdf(paste("nir_census_MMR2_NIR_Auk_2006.pdf"), width=7, height=5)
+
+#####
+
+plot(au, col=cols,lwd=1,lty=3,main="MMR1",xlim=c( 1693320, 1803320),ylim=c(5892140, 5952140)) # auckland
+legend("left",c("0-40%","41-50%","51-60%","61-70%","71-80%","81-90%","91-95%","96-100%",">100%","NA")
+       ,fill=c(pal,"white"),
+       # bty="n",inset=0.0,
+       title="Percent vaccinated",bg="white",box.col="white")
+#####
+dev.off()
+par(mfrow=c(1,1))
+
+## Wellington
+
+# pdf(paste("nir_census_MMR1_NIR_Well_2006.pdf"), width=7, height=5)
+ pdf(paste("nir_census_MMR2_NIR_Well_2006.pdf"), width=7, height=5)
+
+#####
+
+plot(au, col=cols,lwd=1,lty=3,main="MMR1",xlim=c( 1730320, 1784500),ylim=c(5421140, 5444400)) # wellington
+legend("left",c("0-40%","41-50%","51-60%","61-70%","71-80%","81-90%","91-95%","96-100%",">100%","NA")
+       ,fill=c(pal,"white"),
+       # bty="n",inset=0.0,
+       title="Percent vaccinated",bg="white",box.col="white")
+#####
+dev.off()
+par(mfrow=c(1,1))
+
+
+######################################################################
+pdf(paste("nir_census_MMR1_NIR_2014_cor.pdf"), width=7, height=7)
+plot(data_au$prop1,data_au$prop2,xlab="MMR1",ylab="MMR2")
+txt<-c(round(cor(data_au$prop1,data_au$prop2,use="complete.obs"),2))
+text(x=c(0,0.05),y=c(1.1,1.1),c(expression("R = "),txt))
+dev.off()
+
+########################################################################
 sink(file="MMR1summary2014.txt") 
 summary(data_au$prop1)
 # sink(file="MMR2summary2014.txt") 
