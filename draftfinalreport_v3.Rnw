@@ -857,7 +857,7 @@ Where $y$ is the number of cases, $\lambda$ is cases per capita, $n$ is populati
 \subsection{Regression analyses results}
 \label{sub:regression_results}
 
-The cases and per capita measles values are in \autoref{fig:cases_all} and \autoref{fig:percap_all}. The distribution of the measles cases per category used in the regression analyses are in \autoref{fig:histcasecat}. The predicted values from the regression model plotted against the reported cases are shown in \autoref{fig:predict}, and the residuals are shown in \autoref{fig:resid}. The significance of the different predictor variables can be seen in the ANOVA results (\autoref{table:anova}). A summary of the regression model (\autoref{eq:reg}) with the individual effects and the statistical support for the estimated coefficients can be seen in \autoref{table:regression_riskfactors}.
+The cases and per capita measles rates are in \autoref{fig:cases_all} and \autoref{fig:percap_all}. The distribution of the measles cases per category used in the regression analyses are in \autoref{fig:histcasecat}. The predicted values from the regression model plotted against the reported cases are shown in \autoref{fig:predict}, and the residuals are shown in \autoref{fig:resid}. The significance of the different predictor variables can be seen in the ANOVA results (\autoref{table:anova}). A summary of the regression model (\autoref{eq:reg}) with the individual effects and the statistical support for the estimated coefficients can be seen in \autoref{table:regression_riskfactors}.
 
 \begin{figure}
 \begin{center}
@@ -901,7 +901,7 @@ print(resan,floating = FALSE)
 \label{table:regression_riskfactors}
 \end{table}
 
-Apart from over-representation of some MLA categories discussed above and not included here, the results of the regression model suggest that age is a strong predictor of being a measles case (\autoref{table:regression_riskfactors}). Indeed, all age categories are significantly less likely to be measles cases compared to 0--1 year olds, and the likelihood generally decreases with age (\autoref{table:regression_riskfactors}, \autoref{fig:cases_all}, \autoref{fig:percap_all}, see also \autoref{fig:ageinyears}).
+Apart from over-representation of some MLA categories discussed above and not included here, the results of the regression model suggest that age is a strong predictor of being a measles case (\autoref{table:anova}). Indeed, all age categories are significantly less likely to be measles cases compared to 0--1 year olds, and the likelihood generally decreases with age (\autoref{table:regression_riskfactors}, \autoref{fig:cases_all}, \autoref{fig:percap_all}, see also \autoref{fig:ageinyears}).
 
 The majority of measles cases are among people of European ancestry (\autoref{table:percap} and \autoref{fig:cases_all}). Indeed, the majority of cases were in more wealthy European 5--17 year olds (\autoref{fig:cases_all}). However, per capita rates for this large age class were lower than in the very young (0--1 year olds, \autoref{fig:percap_all}). People of Pacific origin are over-represented as measles cases on a per capita basis ($\beta$ = 1.22, standard error (SE) = 0.21, p--value < 0.0001; \autoref{table:regression_riskfactors}), and in particular the 0--1 year old less wealthy (NZDep 8--10) (\autoref{fig:percap_all}). Note however that generally those people in NZDep levels 4--10 are less represented on a per capita basis (NZDep 4--7 $\beta$ = -0.26, SE = 0.09, p--value 0.009; NZDep 8--10 $\beta$ = -0.3, SE = 0.1, p--value = 0.006; \autoref{table:regression_riskfactors}), and in European and Maori ethnicities there is a trend opposite to that in than Pacific people, with the more wealthy more likely to be cases (\autoref{fig:percap_all} and \autoref{fig:cases_all}).
 
@@ -939,7 +939,7 @@ Age &  Proportion immune\\
 
 \subsection{Vaccination history and measles infection results}
 
-The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unvaccinated people (\autoref{fig:ageandvac}). However, 12.6\% (154/1154) cases had received their first dose of vaccine and 4.7\% had received their second. A further breakdown of those data suggest that majority of those 'vaccine failures' were vaccinated around the first year of age (\autoref{fig:vaccstat}). Plotting the unvaccinated cases (\autoref{fig:yearandvac}) and vaccine failures (\autoref{fig:yearandvacf}) by year of birth to look at cohort effects appears to simply reflect the age of vaccine data (\autoref{fig:ageandvac}).
+The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unvaccinated people (\autoref{fig:ageandvac}). However, 12.6\% (154/1154) cases had received their first dose of vaccine and 4.7\% had received their second. A further breakdown of those data suggest that majority of those `vaccine failures' were vaccinated around the first year of age (\autoref{fig:vaccstat}). Plotting the unvaccinated cases (\autoref{fig:yearandvac}) and vaccine failures (\autoref{fig:yearandvacf}) by year of birth to look at cohort effects appears to simply reflect the age of vaccine data (\autoref{fig:ageandvac}).
 
 \begin{figure}
 \begin{center}
