@@ -939,7 +939,7 @@ Age &  Proportion immune\\
 
 \subsection{Vaccination history and measles infection results}
 
-The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unvaccinated people (\autoref{fig:ageandvac}). However, 12.6\% (154/1154) cases had received their first dose of vaccine and 4.7\% had received their second. A further breakdown of those data suggest that majority of those `vaccine failures' were vaccinated around the first year of age (\autoref{fig:vaccstat}). Plotting the unvaccinated cases (\autoref{fig:yearandvac}) and vaccine failures (\autoref{fig:yearandvacf}) by year of birth to look at cohort effects appears to simply reflect the age of vaccine data (\autoref{fig:ageandvac}).
+The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unvaccinated people (\autoref{fig:ageandvac}). However, 12.6\% (154/1154) cases had received their first dose of vaccine and 4.7\% had received their second. A further breakdown of those data suggest that majority of those `vaccine failures' were vaccinated around the first year of age (\autoref{fig:vaccstat}). The unvaccinated cases and vaccine failures by year of birth are shown in \autoref{fig:yearandvac} and \autoref{fig:yearandvacf}.
 
 \begin{figure}
 \begin{center}
