@@ -1879,7 +1879,7 @@ The quantity that determines whether an epidemic will occur is the basic reprodu
 
 \subsection{Modelling methods}
 
-To understand the transmission dynamics of measles in the partially immune population and how likely an outbreak was of becoming endemic, we estimated $R_v$ from all the outbreaks in New Zealand since 2009. To do this we estimated $R_t$, following an adaptation of the methods in \citep{obidia12,wallinga4}. We are required to compute the generation time for measles to do so. The generation time is the average time an index case infects others after becoming infected. We used a lognormal distribution with mean 12.0 and standard deviation (s.d.) 3.5 from \citep{klinkenberg11}. We then estimated $R_t$ from the notification data (confirmed and probable cases) for each outbreak, defining outbreaks in the dataset given their reported outbreak numbers. The geographic locations of cases are shown in \autoref{fig:dhbcases}. The outbreaks we used in our analyses are shown in \autoref{fig:outbreaks}. Note these analyses do not use those sporadic cases not linked to other outbreaks.
+To understand the transmission dynamics of measles in the partially immune population and how likely an outbreak was of becoming endemic, we estimated $R_v$ from all the outbreaks in New Zealand since 2009. To do this we estimated $R_t$, following an adaptation of the methods in \citep{obidia12,wallinga4}. We are required to compute the generation time for measles to do so. The generation time is the average time an index case infects others after becoming infected. We used a lognormal distribution with mean 12.0 and standard deviation (s.d.) 3.5 from \citep{klinkenberg11}. We then estimated $R_t$ from the notification data (confirmed and probable cases) for each outbreak, defining outbreaks in the dataset given their reported outbreak numbers. The geographic location of cases are shown in \autoref{fig:dhbcases}. The outbreaks we used in our analyses are shown in \autoref{fig:outbreaks}. Note these analyses do not use those sporadic cases not linked to other outbreaks.
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -1914,29 +1914,24 @@ To understand the transmission dynamics of measles in the partially immune popul
 \end{sidewaysfigure}
 
 To estimate the proportion of the population requiring vaccination utilising our estimates of $R_v$, we use the well-known equation for the final size of an epidemic in a homogeneously mixing susceptible population \citep{diekmann13}:
-
 \begin{equation} \label{eq:eqn1}
-\log\left(1-\Pe\right)+\Ro\Pe=0
+\log\left(1-\Pe\right)+\Ro\Pe=0,
 \end{equation}
-
 where $\Ro$ is the basic reproduction number and $\Pe$ is the proportion of the population infected over the course of the outbreak.
 
 If a proportion $x_0$ of the population is susceptible following vaccination, then the  reproduction number under vaccination is $\Rr_V=x_0\Ro$, and the final size equation becomes
-
 \begin{equation} \label{eq:eqn2}
-\log\left(1-\frac{\Pe}{x_0}\right)+\Ro\Pe=0
+\log\left(1-\frac{\Pe}{x_0}\right)+\Ro\Pe=0.
 \end{equation}
 
 Hence the relationship between the proportion initially susceptible and the proportion infected in an epidemic is
-
 \begin{equation} \label{eq:eqn3}
-x_0=\frac{\Pe}{1-e^{-\Ro\Pe}}
+x_0=\frac{\Pe}{1-e^{-\Ro\Pe}}.
 \end{equation}
 
 In order to prevent future epidemics, it is necessary that $\Rr_V<1$. Hence, the proportion of the population that must be vaccinated to prevent future outbreaks, $\Pv$ is
-
 \begin{equation} \label{eq:prop}
-\Pv = x_0-1/\Ro
+\Pv = x_0-1/\Ro.
 \end{equation}
 
 These formulae are applied at a District Health Board (DHB) level, assuming no mixing between DHBs.
@@ -1945,11 +1940,11 @@ These formulae are applied at a District Health Board (DHB) level, assuming no m
 
 The estimated $R_v$ for each outbreak is shown in \autoref{fig:r0}. Our analyses suggest the $R_v$ for the 2009--2014 outbreaks range between 0.18--3.92, and for the last outbreak that ended in August 2014, but for which data were available until 12 June 2014, a mean estimate of 3.66 (range 3.4--3.92). The probability density of the $R_v$ estimates for 13 of 20 outbreaks for which we had outbreak numbers include one. Of particular note there have been a number of outbreaks for which our estimated $R_v$ was well above one and thus we may expect outbreaks to occur if conditions remain the same. An important caveat to the analysis of the last outbreak is that because this outbreak that ended in August was ongoing when the data were collected, and not in decline, $R_v$ is necessarily over one, and so the comparison with others must be cautious. However, this is not the only case for which the $R_v$ is greater than one (\autoref{fig:r0}).
 
-These analyses also imply that the regular importation of measles is an ongoing process. Given the risk of importation of measles as highlighted in \autoref{sub:imp_risk} is likely to continue, these analyses suggest substantial efforts are required to increase immunisation to high enough levels that measles does not become endemic and large outbreaks prevented. One measles outbreak in 2011--2012 had an $R_v$ of just greater than one, and yet it persisted for over 12 months (\autoref{fig:r0_2011}). This implies that outbreaks may persist within the population for a substantial period, even if $R_v$ values are not much greater than one. A caveat to this and other $R_v$ estimates is that the outbreaks may include some sporadic cases misclassified, but also exclude some sporadic cases as yet not associated with another outbreak. Undetected and unreported cases may lower the estimate. Thus the true basic reproduction numbers may differ to those estimated. The relative contributions of both to our estimates are currently unknown. 
+These analyses also imply that the regular importation of measles is an ongoing process. Given the risk of importation of measles as highlighted in \autoref{sub:imp_risk} is likely to continue, these analyses suggest substantial efforts are required to increase immunisation to high enough levels that measles does not become endemic and large outbreaks prevented. One measles outbreak in 2011--2012 had an $R_v$ of just greater than one, and yet it persisted for over 12 months (\autoref{fig:r0_2011}). This implies that outbreaks may persist within the population for a substantial period, even if $R_v$ values are not much greater than one. A caveat to this and other $R_v$ estimates is that the outbreaks may include some sporadic cases misclassified, but also exclude some sporadic cases as yet not associated with an outbreak. Undetected and unreported cases may lower the estimate. Thus the true basic reproduction numbers may differ to those estimated. The relative contributions of both to our estimates are currently unknown. 
 
 To use the results from our modelling exercise to help inform the appropriate measles vaccination coverage, we use \autoref{eq:prop}. The proportion of the population requiring additional vaccination to make $R_v$ < 1 ranged from 17\% to 34\% at the DHB level, with a national average of approximately 28\% (\autoref{table:attack}). These additional vaccination numbers can be calculated in a number of different ways, as discussed in the benefit--cost section (\autoref{sub:cost_benefit}). However, they require differing numbers of vaccinations per DHB. Estimates for West Coast, Wairarapa, and South Canterbury, for example, are fewer than 1000 (\autoref{table:attack}). The estimated numbers to vaccinate in the Auckland area, however, are higher for each DHB, with those estimated for Waitemata, Auckland, and Counties Manukau DHBs all over 17,000  (\autoref{table:attack}). Note that there is also evidence for vaccine failure (\autoref{fig:vaccstat}) and pockets of susceptible populations \citep{glass4} may require greater vaccination effort than these estimates and this is considered further in the \autoref{sec:cb}.
 
-The results of these modelling exercises suggest vaccination levels are close to eliminating the possibility of endemic measles transmission, as estimates of $R_v$ typically include 1 (\autoref{fig:r0}). However, the na\"{\i}ve population (\autoref{fig:naive} and \autoref{fig:naive_map}) and the higher $R_v$ for some of the 2009--2014 outbreaks (\autoref{fig:r0}) suggests that catch up vaccination is necessary (\autoref{table:attack}). The results of these analyses support other studies that suggest very high rates of vaccination are required to eliminate measles and prevent epidemics. Vaccinating 85\% of susceptible children aged one to seven years at five-yearly intervals was suggested to be sufficient to prevent epidemics in Israel \citep{agur93}, but nearly all other studies in Europe suggest no strategies succeeded if coverage rates were below approximately 87\%, which the population level immunity in New Zealand has only just reached, with approximately 11\% currently na\"{\i}ve. Analysis of measles vaccination in various regions suggest that 85\% coverage at MMR1 and MMR2 could be sufficient to prevent future measles epidemics \citep{agur93, babad95, edmunds0, gay98, wallinga1}, whereas \citep{glass4} showed that high overall levels of measles vaccination can obscure pockets of poor coverage, resulting in localised regions with increased risk of infection making effective immunisation difficult. Future analyses at a smaller, more local level would be useful, but the lack of appropriate data matching between the NIR data and the census unit area data currently prevent these.
+The results of these modelling exercises suggest vaccination levels are close to eliminating the possibility of endemic measles transmission, as estimates of $R_v$ typically include 1 (\autoref{fig:r0}). However, the na\"{\i}ve population (\autoref{fig:naive} and \autoref{fig:naive_map}) and the higher $R_v$ for some of the 2009--2014 outbreaks (\autoref{fig:r0}) suggests that catch up vaccination is necessary (\autoref{table:attack}). The results of these analyses support other studies that suggest very high rates of vaccination are required to eliminate measles and prevent epidemics. Vaccinating 85\% of susceptible children aged one to seven years at five-yearly intervals was suggested to be sufficient to prevent epidemics in Israel \citep{agur93}, but nearly all other studies in Europe suggest no strategies succeeded if coverage rates were below approximately 87\%, which the population level immunity in New Zealand has only just reached, with approximately 11\% currently na\"{\i}ve. Analysis of measles vaccination in various regions suggest that 85\% coverage at MMR1 and MMR2 could be sufficient to prevent future measles epidemics \citep{agur93, babad95, edmunds0, gay98, wallinga1}, whereas \citep{glass4} showed that high overall levels of measles vaccination can obscure pockets of poor coverage, resulting in localised regions with increased risk of infection making effective immunisation difficult.
 
 \begin{table}[htdp]\small
 \begin{center}
@@ -1996,7 +1991,7 @@ TOTAL   & 		4241739   & 		459420   & 		24882   & 		128034 & 28\\
 \begin{itemize}
 \item Regular introductions of measles pose an ongoing threat to New Zealand's efforts to eliminate measles (also see \autoref{sub:risk_analyses}).
 \item The reproduction number for measles in the partially immune New Zealand population is often close to and exceeding one, suggesting increased population level immunity is required to ensure prevention of measles persistence following importation.
- \item Additional vaccination levels to push $R_v$ below one among the currently na\"{\i}ve population in New Zealand range from 17\% to 34\% among DHBs, and 28\% at the national level (approximately 128,034 vaccinations).
+ \item Additional vaccination of the currently na\"{\i}ve population in New Zealand required to push $R_v$ below one ranges from 17\% to 34\% among DHBs, and is 28\% at the national level (approximately 128,034 vaccinations).
 \end{itemize}
 
 \section{Cost analyses}
