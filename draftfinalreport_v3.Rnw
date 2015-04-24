@@ -173,7 +173,7 @@ In this section we provide work that we believe will help inform the Ministry of
 \begin{sidewaysfigure}
      %\centering
      \includegraphics[width=0.9\textwidth]{incidence_1997_2014.pdf}
-     \caption{Measles incidence in New Zealand from 1997 to 2014}
+     \caption{Measles notifications (confirmed and probable cases) in New Zealand from 1997 to 2014}
      \label{fig:incidence1997}
 \end{sidewaysfigure}
 
@@ -1880,7 +1880,7 @@ The quantity that determines whether an epidemic will occur is the basic reprodu
 
 \subsection{Modelling methods}
 
-To understand the transmission dynamics of measles in the partially immune population and how likely an outbreak was of becoming endemic, we estimated $R_v$ from all the outbreaks in New Zealand since 2009. To do this we estimated $R_t$, following an adaptation of the methods in \citep{obidia12,wallinga4}. We are required to compute the generation time for measles to do so. The generation time is the average time an index case infects others after becoming infected. We used a lognormal distribution with mean 12.0 and standard deviation (s.d.) 3.5 from \citep{klinkenberg11}. We then estimated $R_t$ from the incidence data for each outbreak, defining outbreaks in the dataset given their reported outbreak numbers. The geographic locations of cases are shown in \autoref{fig:dhbcases}. The outbreaks we used in our analyses are shown in \autoref{fig:outbreaks}. Note these analyses do not use those sporadic cases not linked to other outbreaks.
+To understand the transmission dynamics of measles in the partially immune population and how likely an outbreak was of becoming endemic, we estimated $R_v$ from all the outbreaks in New Zealand since 2009. To do this we estimated $R_t$, following an adaptation of the methods in \citep{obidia12,wallinga4}. We are required to compute the generation time for measles to do so. The generation time is the average time an index case infects others after becoming infected. We used a lognormal distribution with mean 12.0 and standard deviation (s.d.) 3.5 from \citep{klinkenberg11}. We then estimated $R_t$ from the notification data (confirmed and probable cases) for each outbreak, defining outbreaks in the dataset given their reported outbreak numbers. The geographic locations of cases are shown in \autoref{fig:dhbcases}. The outbreaks we used in our analyses are shown in \autoref{fig:outbreaks}. Note these analyses do not use those sporadic cases not linked to other outbreaks.
 
 \begin{sidewaysfigure}
 \begin{center}
