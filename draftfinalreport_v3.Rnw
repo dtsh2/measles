@@ -997,7 +997,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 <<include=FALSE,echo=FALSE,results=tex>>=
 latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 @
-\caption{Summary of the proportion of 2006--2014 birth cohorts vaccinated against measles-mumps-rubella (MMR) dose 1 and MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12006}, \autoref{fig:fig22006}, \autoref{fig:fig12007}, \autoref{fig:fig22007}, \autoref{fig:fig12008}, \autoref{fig:fig22008}, \autoref{fig:fig12009}, \autoref{fig:fig22009}, \autoref{fig:fig12010}, \autoref{fig:fig22010}, \autoref{fig:fig12011}, \autoref{fig:fig22011}, \autoref{fig:fig12012}, \autoref{fig:fig22012}, \autoref{fig:fig12013}, \autoref{fig:fig22013}, \autoref{fig:fig12014}, and \autoref{fig:fig22014}.}
+\caption{Summary of the proportion of 2006--2014 birth cohorts vaccinated against measles-mumps-rubella (MMR) dose 1 and MMR2 across area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12006}, \autoref{fig:fig22006}, \autoref{fig:fig12007}, \autoref{fig:fig22007}, \autoref{fig:fig12008}, \autoref{fig:fig22008}, \autoref{fig:fig12009}, \autoref{fig:fig22009}, \autoref{fig:fig12010}, \autoref{fig:fig22010}, \autoref{fig:fig12011}, \autoref{fig:fig22011}, \autoref{fig:fig12012}, \autoref{fig:fig22012}, \autoref{fig:fig12013}, \autoref{fig:fig22013}, \autoref{fig:fig12014}, and \autoref{fig:fig22014}.}
 \label{table:tab_mmr_nir}
 \end{table}
 
@@ -1005,18 +1005,17 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
    \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2006.pdf}
     \end{center}
-    \caption{Proportion of the New Zealand population born in 2006 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2006 vaccinated against measles using MMR1 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12006}
 \end{sidewaysfigure}
-
 
 
 \begin{sidewaysfigure}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2006.pdf}
 \end{center}
-    \caption{Proportion of the New Zealand population born in 2006 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2006 vaccinated against measles using MMR2 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22006}
 \end{sidewaysfigure}
@@ -1026,7 +1025,7 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 \begin{center}
 \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2007.pdf}
 \end{center}
-    \caption{Proportion of the New Zealand population born in 2007 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2007 vaccinated against measles using MMR1 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12007}
 \end{sidewaysfigure}
@@ -1036,7 +1035,7 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2007.pdf}
 \end{center}
-    \caption{Proportion of the New Zealand population born in 2007 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2007 vaccinated against measles using MMR2 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22007}
 \end{sidewaysfigure}
@@ -1046,7 +1045,7 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2008.pdf}
 \end{center}
-    \caption{Proportion of the New Zealand population born in 2008 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2008 vaccinated against measles using MMR1 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12008}
 \end{sidewaysfigure}
@@ -1056,7 +1055,7 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2008.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2008 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2008 vaccinated against measles using MMR2 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22008}
 \end{sidewaysfigure}
@@ -1066,7 +1065,7 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2009.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2009 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2009 vaccinated against measles using MMR1 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12009}
 \end{sidewaysfigure}
@@ -1076,7 +1075,7 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2009.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2009 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2009 vaccinated against measles using MMR2 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig22009}
 \end{sidewaysfigure}
@@ -1086,7 +1085,7 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2010.pdf}
 \end{center}
-    \caption{Proportion of the New Zealand population born in 2010 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2010 vaccinated against measles using MMR1 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12010}
 \end{sidewaysfigure}
@@ -1096,7 +1095,7 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2010.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2010 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2010 vaccinated against measles using MMR2 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig22010}
 \end{sidewaysfigure}
@@ -1106,7 +1105,7 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2011.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2011 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2011 vaccinated against measles using MMR1 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12011}
 \end{sidewaysfigure}
@@ -1116,7 +1115,7 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2011.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2011 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2011 vaccinated against measles using MMR2 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig22011}
 \end{sidewaysfigure}
@@ -1126,17 +1125,16 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2012.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2012 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2012 vaccinated against measles using MMR1 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12012}
 \end{sidewaysfigure}
-
 
 \begin{sidewaysfigure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2013.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2013 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2013 vaccinated against measles using MMR1 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12013}
 \end{sidewaysfigure}
@@ -1146,7 +1144,7 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_2014.pdf}
  \end{center}
-    \caption{Proportion of the New Zealand population born in 2014 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the New Zealand population born in 2014 vaccinated against measles using MMR1 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12014}
 \end{sidewaysfigure}
@@ -1596,7 +1594,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \label{fig:fig12013_c}
 \end{figure}
 
-Plotting the lower level data from the 2013 area unit data, available from the NIR database, shows that there is heterogeneity at the local level and an obvious temporal lag, as the proportion vaccinated declines with birth cohort (\autoref{fig:mmr_nir}), though recent vaccination levels are consistently high for MMR1. For full details, see \autoref{fig:fig12006} (MMR1, 2006), \autoref{fig:fig22006} (MMR2, 2006), \autoref{fig:fig12007} (MMR1, 2007), \autoref{fig:fig22007} (MMR2, 2007), \autoref{fig:fig12008} (MMR1, 2008), \autoref{fig:fig22008} (MMR2, 2008), \autoref{fig:fig12009} (MMR1, 2009), \autoref{fig:fig22009} (MMR2, 2009), \autoref{fig:fig12010} (MMR1, 2010), \autoref{fig:fig22010} (MMR2, 2010), \autoref{fig:fig12011} (MMR1, 2011), \autoref{fig:fig22011} (MMR2, 2011), \autoref{fig:fig12012} (MMR1, 2012), \autoref{fig:fig22012} (MMR2, 2012), \autoref{fig:fig12013} (MMR1, 2013), \autoref{fig:fig22013} (MMR2, 2013), \autoref{fig:fig12014} (MMR1, 2014), \autoref{fig:fig22014} (MMR2, 2014), \autoref{table:tab_mmr_nir} and the supplementary files.
+Plotting the lower level data from the area unit data, available from the NIR database, shows that there is heterogeneity at the local level and an obvious temporal lag, as the proportion vaccinated declines with birth cohort (\autoref{fig:mmr_nir}), though recent vaccination levels are consistently high for MMR1. For full details, see \autoref{fig:fig12006} (MMR1, 2006), \autoref{fig:fig22006} (MMR2, 2006), \autoref{fig:fig12007} (MMR1, 2007), \autoref{fig:fig22007} (MMR2, 2007), \autoref{fig:fig12008} (MMR1, 2008), \autoref{fig:fig22008} (MMR2, 2008), \autoref{fig:fig12009} (MMR1, 2009), \autoref{fig:fig22009} (MMR2, 2009), \autoref{fig:fig12010} (MMR1, 2010), \autoref{fig:fig22010} (MMR2, 2010), \autoref{fig:fig12011} (MMR1, 2011), \autoref{fig:fig22011} (MMR2, 2011), \autoref{fig:fig12012} (MMR1, 2012), \autoref{fig:fig22012} (MMR2, 2012), \autoref{fig:fig12013} (MMR1, 2013), \autoref{fig:fig22013} (MMR2, 2013), \autoref{fig:fig12014} (MMR1, 2014), \autoref{fig:fig22014} (MMR2, 2014), \autoref{table:tab_mmr_nir} and the supplementary files.
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 MMR1<-c(0.9604,0.9621,0.971,0.9722,0.9667,0.9643,0.9667,0.6333,0)
@@ -1618,17 +1616,17 @@ abline(h=0.95,col="orange",lty=3,lwd=4)
 \label{fig:mmr_nir}
 \end{figure}
 
-The correlation between the percentage vaccinated against MMR1 and MMR2 for the 2004 2013 area units is shown in figure \autoref{fig:cor_nir}.
+The correlation between the percentage vaccinated against MMR1 and MMR2 across the area units is shown in figure \autoref{fig:cor_nir}.
 
 \begin{figure}[H]
      \begin{center}
      \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_cor.pdf}
      \end{center}
-     \caption{The correlation between measles-mumps-rubella (MMR) vaccination doses (MMR1 and MMR2) at the 2013 area unit level from the National Immunisation Register database for 2006--2014.}
+     \caption{The correlation between measles-mumps-rubella (MMR) vaccination doses (MMR1 and MMR2) at the area unit level from the National Immunisation Register database for 2006--2014.}
      \label{fig:cor_nir}
 \end{figure}
 
-Vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>13$ years) among different age classes provided by the Ministry were also used to map the immunity among the 2004 2013 area units for those ages not included on the NIR database. Vaccine efficacy for 0--4 year olds was not necessary for these analyses, for those $\leq$ 13 years 99\% vaccine efficacy was used (\autoref{table:sero}) and for $\geq$ 14 year olds equivocal serological results were considered non-immune (\autoref{table:sero}). Again there was heterogeneity at the local level (\autoref{fig:sero_imm_map}) with pockets of the nation and cities with lower coverage than other areas (\autoref{fig:sero_imm_a}, \autoref{fig:sero_imm_w}, and \autoref{fig:sero_imm_c}).
+Vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>13$ years) among different age classes provided by the Ministry were also used to map the immunity among the area units for those ages not included on the NIR database. Vaccine efficacy for 0--4 year olds was not necessary for these analyses, for those $\leq$ 13 years 99\% vaccine efficacy was used (\autoref{table:sero}) and for $\geq$ 14 year olds equivocal serological results were considered non-immune (\autoref{table:sero}). Again there was heterogeneity at the local level (\autoref{fig:sero_imm_map}) with pockets of the nation and cities with lower coverage than other areas (\autoref{fig:sero_imm_a}, \autoref{fig:sero_imm_w}, and \autoref{fig:sero_imm_c}).
 
 \begin{sidewaysfigure}[H]
      \begin{center}
