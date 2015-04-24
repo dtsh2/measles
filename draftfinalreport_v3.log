@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  24 APR 2015 16:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  24 APR 2015 17:12
 entering extended mode
 **draftfinalreport_v3.tex
 (C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport_v3.tex
@@ -1300,22 +1300,7 @@ Package pdftex.def Info: percap_ordert.pdf used on input line 212.
 (pdftex.def)             Requested size: 440.00168pt x 219.99861pt.
 
 
-! Package caption Error: `tiny' undefined in families `caption@fnt'.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.221 ...tionsetup{width=1\textwidth, font={tiny}}
-                                                  
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Float too large for page by 129.59998pt on input line 306.
+LaTeX Warning: Float too large for page by 110.09996pt on input line 306.
 
 [9] [10 <C:/Users/dtshayma/Documents/GitHub/measles/case_ordert.pdf>] [11 <C:/U
 sers/dtshayma/Documents/GitHub/measles/percap_ordert.pdf>] [12]
@@ -3808,7 +3793,7 @@ sy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on draftfinalreport_v3.pdf (175 pages, 672313739 bytes).
+Output written on draftfinalreport_v3.pdf (175 pages, 672314486 bytes).
 PDF statistics:
  2929 PDF objects out of 2984 (max. 8388607)
  463 named destinations out of 1000 (max. 500000)

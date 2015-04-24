@@ -549,9 +549,9 @@ par(cex.axis=1)
 hist(vac$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",main="",cex.lab=1,ylab="Frequency")
 abline(v=12,col="blue")
 hist(vac$Dose2Mths,breaks=50,add=T,col=rgb(1,0,0,1/4))
-abline(v=60,col="red")
+abline(v=48,col="red")
 legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=15,bty="n",cex=1)
-legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1)
+legend("top",c("12 months","48 months"),col=c("blue","red"),lty=1,bty="n",cex=1)
 dev.off()
 
 DOB<-as.numeric(levels(testv$RptYear))[testv$RptYear]-testv$AgeInYears
