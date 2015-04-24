@@ -3,23 +3,23 @@
 \contentsline {section}{\numberline {3}Risk analysis review}{4}{section.3}
 \contentsline {section}{\numberline {4}Risk analyses}{6}{section.4}
 \contentsline {subsection}{\numberline {4.1}Risk of measles infection in New Zealand analyses methods}{6}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Regression analyses results}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}Regression analyses results}{9}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Vaccination history of measles infection and population immunity estimation methods}{16}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Vaccination history and measles infection results}{16}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Population immunity results}{16}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Measles importation risk methods}{79}{subsection.4.6}
-\contentsline {subsection}{\numberline {4.7}Measles importation risk results}{80}{subsection.4.7}
-\contentsline {subsection}{\numberline {4.8}Risk analysis summary}{100}{subsection.4.8}
-\contentsline {section}{\numberline {5}Modelling measles epidemics}{101}{section.5}
-\contentsline {subsection}{\numberline {5.1}Modelling methods}{102}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Modelling results and discussion}{107}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Summary of modelling}{108}{subsection.5.3}
-\contentsline {section}{\numberline {6}Cost analyses}{108}{section.6}
-\contentsline {subsection}{\numberline {6.1}Cost analyses methods}{113}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Cost analyses results}{114}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Benefit--cost analyses methods}{119}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Benefit--cost analyses results}{120}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Benefit--cost analyses discussion}{126}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Benefit--cost analysis summary}{130}{subsection.6.6}
-\contentsline {section}{\numberline {7}Acknowledgments}{130}{section.7}
-\contentsline {section}{\numberline {8}Appendix}{134}{section.8}
+\contentsline {subsection}{\numberline {4.5}Population immunity results}{20}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Measles importation risk methods}{85}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Measles importation risk results}{86}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Risk analysis summary}{106}{subsection.4.8}
+\contentsline {section}{\numberline {5}Modelling measles epidemics}{107}{section.5}
+\contentsline {subsection}{\numberline {5.1}Modelling methods}{108}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Modelling results and discussion}{113}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Summary of modelling}{114}{subsection.5.3}
+\contentsline {section}{\numberline {6}Cost analyses}{114}{section.6}
+\contentsline {subsection}{\numberline {6.1}Cost analyses methods}{119}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Cost analyses results}{120}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Benefit--cost analyses methods}{123}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Benefit--cost analyses results}{125}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Benefit--cost analyses discussion}{131}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Benefit--cost analysis summary}{136}{subsection.6.6}
+\contentsline {section}{\numberline {7}Acknowledgments}{136}{section.7}
+\contentsline {section}{\numberline {8}Appendix}{140}{section.8}

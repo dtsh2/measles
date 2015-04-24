@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  24 APR 2015 17:12
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  24 APR 2015 18:22
 entering extended mode
 **draftfinalreport_v3.tex
 (C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport_v3.tex
@@ -963,7 +963,7 @@ Package: authblk 2001/02/27 1.3 (PWD)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\morefloats\morefloats.sty"
 Package: morefloats 2012/01/28 v1.0f Raise limit of unprocessed floats (HMM; DH
 )
-Package morefloats Info: Maximum number of possible floats asked for: 36.
+Package morefloats Info: Maximum number of possible floats asked for: 50.
 (morefloats)             LaTeX might run out of memory before this
 (morefloats)             (in which case it will notify you).
 (morefloats)              on input line 171.
@@ -985,6 +985,20 @@ Package morefloats Info: Maximum number of possible floats asked for: 36.
 \bx@AH=\insert218
 \bx@AI=\insert217
 \bx@AJ=\insert216
+\bx@AK=\insert215
+\bx@AL=\insert214
+\bx@AM=\insert213
+\bx@AN=\insert212
+\bx@AO=\insert211
+\bx@AP=\insert210
+\bx@AQ=\insert209
+\bx@AR=\insert208
+\bx@AS=\insert207
+\bx@AT=\insert206
+\bx@AU=\insert205
+\bx@AV=\insert204
+\bx@AW=\insert203
+\bx@AX=\insert202
 )
 (C:/PROGRA~1/R/R-30~1.2/share/texmf/tex/latex\Sweave.sty
 Package: Sweave 
@@ -1268,7 +1282,7 @@ File: ts1aer.fd
 LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10> not available
 (Font)              Font shape `TS1/cmr/m/n' tried instead on input line 127.
  [2] [3] [4] [5]
-<incidence_1997_2014.pdf, id=186, 722.7pt x 361.35pt>
+<incidence_1997_2014.pdf, id=184, 722.7pt x 361.35pt>
 File: incidence_1997_2014.pdf Graphic file (type pdf)
 
 <use incidence_1997_2014.pdf>
@@ -1280,20 +1294,20 @@ LaTeX Font Info:    Try loading font information for T1+aess on input line 183.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 ) [6] [7 <C:/Users/dtshayma/Documents/GitHub/measles/incidence_1997_2014.pdf>]
-<case_age_dist.pdf, id=206, 505.89pt x 361.35pt>
+<case_age_dist.pdf, id=204, 505.89pt x 361.35pt>
 File: case_age_dist.pdf Graphic file (type pdf)
  <use case_age_dist.pdf>
 Package pdftex.def Info: case_age_dist.pdf used on input line 192.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
 [8 <C:/Users/dtshayma/Documents/GitHub/measles/case_age_dist.pdf>]
-<case_ordert.pdf, id=219, 722.7pt x 361.35pt>
+<case_ordert.pdf, id=217, 722.7pt x 361.35pt>
 File: case_ordert.pdf Graphic file (type pdf)
  <use case_ordert.pdf>
 Package pdftex.def Info: case_ordert.pdf used on input line 204.
 (pdftex.def)             Requested size: 440.00168pt x 219.99861pt.
 
-<percap_ordert.pdf, id=224, 722.7pt x 361.35pt>
+<percap_ordert.pdf, id=222, 722.7pt x 361.35pt>
 File: percap_ordert.pdf Graphic file (type pdf)
  <use percap_ordert.pdf>
 Package pdftex.def Info: percap_ordert.pdf used on input line 212.
@@ -1302,2066 +1316,812 @@ Package pdftex.def Info: percap_ordert.pdf used on input line 212.
 
 LaTeX Warning: Float too large for page by 110.09996pt on input line 306.
 
+
+LaTeX Warning: Reference `eq:reg' on page 9 undefined on input line 319.
+
 [9] [10 <C:/Users/dtshayma/Documents/GitHub/measles/case_ordert.pdf>] [11 <C:/U
 sers/dtshayma/Documents/GitHub/measles/percap_ordert.pdf>] [12]
-<Cases_regmodel.pdf, id=288, 505.89pt x 361.35pt>
+<Cases_regmodel.pdf, id=285, 505.89pt x 361.35pt>
 File: Cases_regmodel.pdf Graphic file (type pdf)
  <use Cases_regmodel.pdf>
-Package pdftex.def Info: Cases_regmodel.pdf used on input line 322.
+Package pdftex.def Info: Cases_regmodel.pdf used on input line 323.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<Cases_regmodel_prediction.pdf, id=293, 505.89pt x 361.35pt>
+
+LaTeX Warning: Reference `eq:reg' on page 13 undefined on input line 325.
+
+
+LaTeX Warning: Reference `eq:reg' on page 13 undefined on input line 325.
+
+<Cases_regmodel_prediction.pdf, id=288, 505.89pt x 361.35pt>
 File: Cases_regmodel_prediction.pdf Graphic file (type pdf)
 
 <use Cases_regmodel_prediction.pdf>
-Package pdftex.def Info: Cases_regmodel_prediction.pdf used on input line 330.
+Package pdftex.def Info: Cases_regmodel_prediction.pdf used on input line 331.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<Cases_regmodel_resid.pdf, id=298, 505.89pt x 361.35pt>
+
+LaTeX Warning: Reference `eq:reg' on page 13 undefined on input line 333.
+
+
+LaTeX Warning: Reference `eq:reg' on page 13 undefined on input line 333.
+
+<Cases_regmodel_resid.pdf, id=291, 505.89pt x 361.35pt>
 File: Cases_regmodel_resid.pdf Graphic file (type pdf)
 
 <use Cases_regmodel_resid.pdf>
-Package pdftex.def Info: Cases_regmodel_resid.pdf used on input line 338.
+Package pdftex.def Info: Cases_regmodel_resid.pdf used on input line 339.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-Overfull \hbox (0.66412pt too wide) in paragraph at lines 348--358
+
+LaTeX Warning: Reference `eq:reg' on page 13 undefined on input line 341.
+
+
+LaTeX Warning: Reference `eq:reg' on page 13 undefined on input line 341.
+
+
+Overfull \hbox (0.66412pt too wide) in paragraph at lines 349--359
 [][] 
  []
+
+
+LaTeX Warning: Reference `eq:reg' on page 13 undefined on input line 359.
+
+
+LaTeX Warning: Reference `eq:reg' on page 13 undefined on input line 359.
+
+
+LaTeX Warning: Reference `eq:reg' on page 13 undefined on input line 394.
+
+
+LaTeX Warning: Reference `eq:reg' on page 13 undefined on input line 394.
 
 [13 <C:/Users/dtshayma/Documents/GitHub/measles/Cases_regmodel.pdf>] [14 <C:/Us
 ers/dtshayma/Documents/GitHub/measles/Cases_regmodel_prediction.pdf> <C:/Users/
 dtshayma/Documents/GitHub/measles/Cases_regmodel_resid.pdf>] [15]
-<vacc_status.pdf, id=370, 505.89pt x 361.35pt>
+<vacc_status.pdf, id=354, 505.89pt x 361.35pt>
 File: vacc_status.pdf Graphic file (type pdf)
  <use vacc_status.pdf>
-Package pdftex.def Info: vacc_status.pdf used on input line 439.
+Package pdftex.def Info: vacc_status.pdf used on input line 440.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<vacc_age.pdf, id=371, 505.89pt x 361.35pt>
+<vacc_age.pdf, id=355, 505.89pt x 361.35pt>
 File: vacc_age.pdf Graphic file (type pdf)
  <use vacc_age.pdf>
-Package pdftex.def Info: vacc_age.pdf used on input line 447.
+Package pdftex.def Info: vacc_age.pdf used on input line 448.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<dob_vacc_unvac.pdf, id=372, 505.89pt x 361.35pt>
+<dob_vacc_unvac.pdf, id=356, 505.89pt x 361.35pt>
 File: dob_vacc_unvac.pdf Graphic file (type pdf)
  <use dob_vacc_unvac.pdf>
-Package pdftex.def Info: dob_vacc_unvac.pdf used on input line 455.
+Package pdftex.def Info: dob_vacc_unvac.pdf used on input line 456.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<dob_vacc_dose.pdf, id=373, 505.89pt x 361.35pt>
+<dob_vacc_dose.pdf, id=357, 505.89pt x 361.35pt>
 File: dob_vacc_dose.pdf Graphic file (type pdf)
  <use dob_vacc_dose.pdf>
-Package pdftex.def Info: dob_vacc_dose.pdf used on input line 463.
+Package pdftex.def Info: dob_vacc_dose.pdf used on input line 464.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<naive_allPop.pdf, id=374, 505.89pt x 361.35pt>
+<naive_allPop.pdf, id=358, 505.89pt x 361.35pt>
 File: naive_allPop.pdf Graphic file (type pdf)
  <use naive_allPop.pdf>
-Package pdftex.def Info: naive_allPop.pdf used on input line 471.
+Package pdftex.def Info: naive_allPop.pdf used on input line 472.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
-
-<naive_map.pdf, id=377, 728.7225pt x 447.6725pt>
-File: naive_map.pdf Graphic file (type pdf)
- <use naive_map.pdf>
-Package pdftex.def Info: naive_map.pdf used on input line 479.
-(pdftex.def)             Requested size: 310.4979pt x 190.7467pt.
-
-<nir_census_MMR1_NIR_2006.pdf, id=416, 505.89pt x 433.62pt>
+ [16]
+[17 <C:/Users/dtshayma/Documents/GitHub/measles/vacc_status.pdf>] [18 <C:/Users
+/dtshayma/Documents/GitHub/measles/vacc_age.pdf> <C:/Users/dtshayma/Documents/G
+itHub/measles/dob_vacc_unvac.pdf>] [19 <C:/Users/dtshayma/Documents/GitHub/meas
+les/dob_vacc_dose.pdf>]
+<nir_census_MMR1_NIR_2006.pdf, id=447, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_2006.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_2006.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_2006.pdf used on input line 521.
+Package pdftex.def Info: nir_census_MMR1_NIR_2006.pdf used on input line 514.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR2_NIR_2006.pdf, id=419, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_2006.pdf, id=450, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_2006.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_2006.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_2006.pdf used on input line 532.
+Package pdftex.def Info: nir_census_MMR2_NIR_2006.pdf used on input line 524.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR1_NIR_2007.pdf, id=422, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_2007.pdf, id=453, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_2007.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_2007.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_2007.pdf used on input line 542.
+Package pdftex.def Info: nir_census_MMR1_NIR_2007.pdf used on input line 534.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR2_NIR_2007.pdf, id=425, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_2007.pdf, id=456, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_2007.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_2007.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_2007.pdf used on input line 552.
+Package pdftex.def Info: nir_census_MMR2_NIR_2007.pdf used on input line 544.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR1_NIR_2008.pdf, id=428, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_2008.pdf, id=459, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_2008.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_2008.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_2008.pdf used on input line 562.
+Package pdftex.def Info: nir_census_MMR1_NIR_2008.pdf used on input line 554.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR2_NIR_2008.pdf, id=431, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_2008.pdf, id=462, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_2008.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_2008.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_2008.pdf used on input line 572.
+Package pdftex.def Info: nir_census_MMR2_NIR_2008.pdf used on input line 564.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR1_NIR_2009.pdf, id=434, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_2009.pdf, id=465, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_2009.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_2009.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_2009.pdf used on input line 582.
+Package pdftex.def Info: nir_census_MMR1_NIR_2009.pdf used on input line 574.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR2_NIR_2009.pdf, id=437, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_2009.pdf, id=468, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_2009.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_2009.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_2009.pdf used on input line 592.
+Package pdftex.def Info: nir_census_MMR2_NIR_2009.pdf used on input line 584.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR1_NIR_2010.pdf, id=440, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_2010.pdf, id=471, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_2010.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_2010.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_2010.pdf used on input line 602.
+Package pdftex.def Info: nir_census_MMR1_NIR_2010.pdf used on input line 594.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR2_NIR_2010.pdf, id=443, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_2010.pdf, id=474, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_2010.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_2010.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_2010.pdf used on input line 612.
+Package pdftex.def Info: nir_census_MMR2_NIR_2010.pdf used on input line 604.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR1_NIR_2011.pdf, id=446, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_2011.pdf, id=477, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_2011.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_2011.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_2011.pdf used on input line 622.
+Package pdftex.def Info: nir_census_MMR1_NIR_2011.pdf used on input line 614.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR2_NIR_2011.pdf, id=449, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_2011.pdf, id=480, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_2011.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_2011.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_2011.pdf used on input line 632.
+Package pdftex.def Info: nir_census_MMR2_NIR_2011.pdf used on input line 624.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR1_NIR_2012.pdf, id=452, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_2012.pdf, id=483, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_2012.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_2012.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_2012.pdf used on input line 642.
+Package pdftex.def Info: nir_census_MMR1_NIR_2012.pdf used on input line 634.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR1_NIR_2013.pdf, id=455, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_2013.pdf, id=486, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_2013.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_2013.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_2013.pdf used on input line 652.
+Package pdftex.def Info: nir_census_MMR1_NIR_2013.pdf used on input line 643.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR1_NIR_2014.pdf, id=458, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_2014.pdf, id=489, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_2014.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_2014.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_2014.pdf used on input line 662.
+Package pdftex.def Info: nir_census_MMR1_NIR_2014.pdf used on input line 653.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
- [16] [17 <C:/Users/dtshayma/Documents/GitHub/measles/vacc_status.pdf>] [18 <C:
-/Users/dtshayma/Documents/GitHub/measles/vacc_age.pdf> <C:/Users/dtshayma/Docum
-ents/GitHub/measles/dob_vacc_unvac.pdf>]
-[19 <C:/Users/dtshayma/Documents/GitHub/measles/dob_vacc_dose.pdf>] [20 <C:/Use
-rs/dtshayma/Documents/GitHub/measles/naive_allPop.pdf> <C:/Users/dtshayma/Docum
-ents/GitHub/measles/naive_map.pdf>] [21] [22 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR1_NIR_2006.pdf>] [23 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR2_NIR_2006.pdf>] [24 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR1_NIR_2007.pdf>] [25 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR2_NIR_2007.pdf>] [26 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR1_NIR_2008.pdf>] [27 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR2_NIR_2008.pdf>] [28 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR1_NIR_2009.pdf>] [29 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR2_NIR_2009.pdf>] [30 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR1_NIR_2010.pdf>] [31 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR2_NIR_2010.pdf>] [32 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR1_NIR_2011.pdf>] [33 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR2_NIR_2011.pdf>] [34 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR1_NIR_2012.pdf>] [35 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR1_NIR_2013.pdf>] [36 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR1_NIR_2014.pdf>]
-
-LaTeX Warning: Reference `fig:fig12010_c' on page 37 undefined on input line 69
-3.
-
-
-LaTeX Warning: Reference `fig:fig12011_c' on page 37 undefined on input line 69
-3.
-
-
-LaTeX Warning: Reference `fig:fig12012_c' on page 37 undefined on input line 69
-3.
-
-<nir_census_MMR1_NIR_Auk_2006.pdf, id=762, 505.89pt x 433.62pt>
+ [20 <C:/Users/dtshayma/Documents/GitHub/measles/naive_allPop.pdf>] [21] [22 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_2006.pdf>] [23 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_2006.pdf>] [24 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_2007.pdf>] [25 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_2007.pdf>] [26 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_2008.pdf>] [27 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_2008.pdf>] [28 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_2009.pdf>] [29 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_2009.pdf>] [30 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_2010.pdf>] [31 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_2010.pdf>] [32 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_2011.pdf>] [33 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_2011.pdf>] [34 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_2012.pdf>] [35 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_2013.pdf>] [36 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_2014.pdf>]
+<nir_census_MMR1_NIR_Auk_2006.pdf, id=753, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Auk_2006.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Auk_2006.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2006.pdf used on input line 69
-9.
+0.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Auk_2006.pdf, id=765, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Auk_2006.pdf, id=756, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Auk_2006.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Auk_2006.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2006.pdf used on input line 70
-8.
+Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2006.pdf used on input line 69
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Auk_2007.pdf, id=768, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Auk_2007.pdf, id=759, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Auk_2007.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Auk_2007.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2007.pdf used on input line 71
-8.
+Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2007.pdf used on input line 70
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Auk_2007.pdf, id=771, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Auk_2007.pdf, id=762, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Auk_2007.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Auk_2007.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2007.pdf used on input line 72
-8.
+Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2007.pdf used on input line 71
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Auk_2008.pdf, id=774, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Auk_2008.pdf, id=765, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Auk_2008.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Auk_2008.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2008.pdf used on input line 73
-8.
+Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2008.pdf used on input line 72
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Auk_2008.pdf, id=777, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Auk_2008.pdf, id=768, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Auk_2008.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Auk_2008.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2008.pdf used on input line 74
-8.
+Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2008.pdf used on input line 73
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Auk_2009.pdf, id=780, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Auk_2009.pdf, id=771, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Auk_2009.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Auk_2009.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2009.pdf used on input line 75
-8.
+Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2009.pdf used on input line 74
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Auk_2009.pdf, id=783, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Auk_2009.pdf, id=774, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Auk_2009.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Auk_2009.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2009.pdf used on input line 76
-8.
+Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2009.pdf used on input line 75
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Auk_2010.pdf, id=786, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Auk_2010.pdf, id=777, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Auk_2010.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Auk_2010.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2010.pdf used on input line 77
-8.
+Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2010.pdf used on input line 76
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Auk_2010.pdf, id=789, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Auk_2010.pdf, id=780, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Auk_2010.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Auk_2010.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2010.pdf used on input line 78
-8.
+Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2010.pdf used on input line 77
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Auk_2011.pdf, id=792, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Auk_2011.pdf, id=783, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Auk_2011.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Auk_2011.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2011.pdf used on input line 79
-8.
+Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2011.pdf used on input line 78
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Auk_2011.pdf, id=795, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Auk_2011.pdf, id=786, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Auk_2011.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Auk_2011.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2011.pdf used on input line 80
-8.
+Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2011.pdf used on input line 79
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Auk_2012.pdf, id=798, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Auk_2012.pdf, id=789, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Auk_2012.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Auk_2012.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2012.pdf used on input line 81
-8.
+Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2012.pdf used on input line 80
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Auk_2013.pdf, id=801, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Auk_2013.pdf, id=792, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Auk_2013.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Auk_2013.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2013.pdf used on input line 82
-8.
+Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2013.pdf used on input line 81
+9.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Well_2006.pdf, id=804, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Well_2006.pdf, id=795, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Well_2006.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Well_2006.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_Well_2006.pdf used on input line 8
-39.
+30.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Well_2006.pdf, id=807, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Well_2006.pdf, id=798, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Well_2006.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Well_2006.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_Well_2006.pdf used on input line 8
-48.
+39.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Well_2007.pdf, id=810, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Well_2007.pdf, id=801, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Well_2007.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Well_2007.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_Well_2007.pdf used on input line 8
-58.
+49.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Well_2007.pdf, id=813, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Well_2007.pdf, id=804, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Well_2007.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Well_2007.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_Well_2007.pdf used on input line 8
-68.
+59.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Well_2008.pdf, id=816, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Well_2008.pdf, id=807, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Well_2008.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Well_2008.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_Well_2008.pdf used on input line 8
-78.
+69.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Well_2008.pdf, id=819, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Well_2008.pdf, id=810, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Well_2008.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Well_2008.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_Well_2008.pdf used on input line 8
-88.
+79.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Well_2009.pdf, id=822, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Well_2009.pdf, id=813, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Well_2009.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Well_2009.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_Well_2009.pdf used on input line 8
-98.
+89.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Well_2009.pdf, id=825, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Well_2009.pdf, id=816, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Well_2009.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Well_2009.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_Well_2009.pdf used on input line 9
-08.
+Package pdftex.def Info: nir_census_MMR2_NIR_Well_2009.pdf used on input line 8
+99.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Well_2010.pdf, id=828, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Well_2010.pdf, id=819, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Well_2010.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Well_2010.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_Well_2010.pdf used on input line 9
-18.
+09.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Well_2010.pdf, id=831, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Well_2010.pdf, id=822, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Well_2010.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Well_2010.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_Well_2010.pdf used on input line 9
-28.
+19.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Well_2011.pdf, id=834, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Well_2011.pdf, id=825, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Well_2011.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Well_2011.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_Well_2011.pdf used on input line 9
-38.
+29.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Well_2011.pdf, id=837, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Well_2011.pdf, id=828, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Well_2011.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Well_2011.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_Well_2011.pdf used on input line 9
-48.
+39.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Well_2012.pdf, id=840, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Well_2012.pdf, id=831, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Well_2012.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Well_2012.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_Well_2012.pdf used on input line 9
-58.
+49.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Well_2013.pdf, id=843, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Well_2013.pdf, id=834, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Well_2013.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Well_2013.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_Well_2013.pdf used on input line 9
-68.
+59.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_ChCh_2006.pdf, id=846, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_ChCh_2006.pdf, id=837, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_ChCh_2006.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_ChCh_2006.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_ChCh_2006.pdf used on input line 9
-79.
+70.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_ChCh_2006.pdf, id=849, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_ChCh_2006.pdf, id=840, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_ChCh_2006.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_ChCh_2006.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_ChCh_2006.pdf used on input line 9
-88.
+79.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_ChCh_2007.pdf, id=852, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_ChCh_2007.pdf, id=843, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_ChCh_2007.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_ChCh_2007.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_ChCh_2007.pdf used on input line 9
-98.
+89.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_ChCh_2007.pdf, id=855, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_ChCh_2007.pdf, id=846, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_ChCh_2007.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_ChCh_2007.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_ChCh_2007.pdf used on input line 1
-008.
+Package pdftex.def Info: nir_census_MMR2_NIR_ChCh_2007.pdf used on input line 9
+99.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_ChCh_2008.pdf, id=858, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_ChCh_2008.pdf, id=849, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_ChCh_2008.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_ChCh_2008.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_ChCh_2008.pdf used on input line 1
-018.
+009.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_ChCh_2008.pdf, id=861, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_ChCh_2008.pdf, id=852, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_ChCh_2008.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_ChCh_2008.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_ChCh_2008.pdf used on input line 1
-028.
+019.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_ChCh_2009.pdf, id=864, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_ChCh_2009.pdf, id=855, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_ChCh_2009.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_ChCh_2009.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_ChCh_2009.pdf used on input line 1
-038.
+029.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_ChCh_2009.pdf, id=867, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_ChCh_2009.pdf, id=858, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_ChCh_2009.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_ChCh_2009.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_ChCh_2009.pdf used on input line 1
-048.
+039.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-
-! LaTeX Error: Too many unprocessed floats.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1057 \begin
-             {center}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Undefined control sequence.
-\@float@Hx ...ltovf \fi \global \setbox \@currbox 
-                                                  \color@vbox \normalcolor \...
-l.1057 \begin
-             {center}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vbox 
-l.1057 \begin
-             {center}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-<nir_census_MMR1_NIR_ChCh_2010.pdf, id=870, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_ChCh_2010.pdf, id=861, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_ChCh_2010.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_ChCh_2010.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_ChCh_2010.pdf used on input line 1
-058.
+049.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-! Undefined control sequence.
-\@largefloatcheck ->\ifdim \ht \@currbox 
-                                         >\textheight \@tempdima -\textheigh...
-l.1063 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   >
-l.1063 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \@currbox 
-                     
-l.1063 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Argument of \@xnext has an extra }.
-<inserted text> 
-                \par 
-l.1063 \end{figure}
-                   
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
-TC.
-! Paragraph ended before \@xnext was complete.
-<to be read again> 
-                   \par 
-l.1063 \end{figure}
-                   
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Extra \else.
-\sf@end@float ...ma \penalty \@floatpenalty \else 
-                                                  \vadjust {\penalty -\@Miv ...
-l.1063 \end{figure}
-                   
-I'm ignoring this; it doesn't match any \if.
-
-! You can't use `\vadjust' in vertical mode.
-\sf@end@float ...ty \@floatpenalty \else \vadjust 
-                                                  {\penalty -\@Miv \vbox {}\...
-l.1063 \end{figure}
-                   
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Argument of \@xnext has an extra }.
-<inserted text> 
-                \par 
-l.1063 \end{figure}
-                   
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
-TC.
-! Paragraph ended before \@xnext was complete.
-<to be read again> 
-                   \par 
-l.1063 \end{figure}
-                   
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
-! LaTeX Error: Too many unprocessed floats.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1067 \begin
-             {center}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Undefined control sequence.
-\@float@Hx ...ltovf \fi \global \setbox \@currbox 
-                                                  \color@vbox \normalcolor \...
-l.1067 \begin
-             {center}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vbox 
-l.1067 \begin
-             {center}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-<nir_census_MMR2_NIR_ChCh_2010.pdf, id=873, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_ChCh_2010.pdf, id=864, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_ChCh_2010.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_ChCh_2010.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_ChCh_2010.pdf used on input line 1
-068.
+059.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-! Undefined control sequence.
-\@largefloatcheck ->\ifdim \ht \@currbox 
-                                         >\textheight \@tempdima -\textheigh...
-l.1073 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   >
-l.1073 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \@currbox 
-                     
-l.1073 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \@elt 
-l.1073 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing = inserted for \ifnum.
-<to be read again> 
-                   \@elt 
-l.1073 \end{figure}
-                   
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \@elt 
-l.1073 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-! LaTeX Error: This may be a LaTeX bug.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1073 \end{figure}
-                   
-Call for help
-
-! Undefined control sequence.
-\@addmarginpar ...advance \@tempdima \ht \@marbox 
-                                                  \ifdim \@tempdima >\z@ \@l...
-l.1073 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Bad register code (-30539776).
-\@addmarginpar ...e \space moved}\else \@tempdima 
-                                                  \z@ \fi \global \@mparbott...
-l.1073 \end{figure}
-                   
-A register number must be between 0 and 32767.
-I changed this one to zero.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.1073 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \global 
-l.1073 \end{figure}
-                   
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...vance \@mparbottom \dp \@marbox 
-                                                  \global \advance \@mparbot...
-l.1073 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.1073 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
-                                                  \global \setbox \@marbox \...
-l.1073 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.1073 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...marbox \global \setbox \@marbox 
-                                                  \vbox {\vskip \@tempdima \...
-l.1073 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vbox 
-l.1073 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...\vskip \@tempdima \box \@marbox 
-                                                  }\global \ht \@marbox \z@ ...
-l.1073 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.1073 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ... \@marbox }\global \ht \@marbox 
-                                                  \z@ \global \dp \@marbox \...
-l.1073 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.1073 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \global 
-l.1073 \end{figure}
-                   
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...marbox \z@ \global \dp \@marbox 
-                                                  \z@ \kern -\@pagedp \noint...
-l.1073 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \kern 
-l.1073 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \kern 
-l.1073 \end{figure}
-                   
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...arginparwidth \fi \box \@marbox 
-                                                  \hss }\nointerlineskip \hb...
-l.1073 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \hss 
-l.1073 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-! LaTeX Error: Too many unprocessed floats.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1077 \begin
-             {center}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Undefined control sequence.
-\@float@Hx ...ltovf \fi \global \setbox \@currbox 
-                                                  \color@vbox \normalcolor \...
-l.1077 \begin
-             {center}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vbox 
-l.1077 \begin
-             {center}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-<nir_census_MMR1_NIR_ChCh_2011.pdf, id=876, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_ChCh_2011.pdf, id=867, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_ChCh_2011.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_ChCh_2011.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_ChCh_2011.pdf used on input line 1
-078.
+069.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-! Undefined control sequence.
-\@largefloatcheck ->\ifdim \ht \@currbox 
-                                         >\textheight \@tempdima -\textheigh...
-l.1083 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   >
-l.1083 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \@currbox 
-                     
-l.1083 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Argument of \@xnext has an extra }.
-<inserted text> 
-                \par 
-l.1083 \end{figure}
-                   
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
-TC.
-! Paragraph ended before \@xnext was complete.
-<to be read again> 
-                   \par 
-l.1083 \end{figure}
-                   
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Extra \else.
-\sf@end@float ...ma \penalty \@floatpenalty \else 
-                                                  \vadjust {\penalty -\@Miv ...
-l.1083 \end{figure}
-                   
-I'm ignoring this; it doesn't match any \if.
-
-! You can't use `\vadjust' in vertical mode.
-\sf@end@float ...ty \@floatpenalty \else \vadjust 
-                                                  {\penalty -\@Miv \vbox {}\...
-l.1083 \end{figure}
-                   
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Argument of \@xnext has an extra }.
-<inserted text> 
-                \par 
-l.1083 \end{figure}
-                   
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
-TC.
-! Paragraph ended before \@xnext was complete.
-<to be read again> 
-                   \par 
-l.1083 \end{figure}
-                   
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
-! LaTeX Error: Too many unprocessed floats.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1087 \begin
-             {center}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Undefined control sequence.
-\@float@Hx ...ltovf \fi \global \setbox \@currbox 
-                                                  \color@vbox \normalcolor \...
-l.1087 \begin
-             {center}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vbox 
-l.1087 \begin
-             {center}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-<nir_census_MMR2_NIR_ChCh_2011.pdf, id=879, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_ChCh_2011.pdf, id=870, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_ChCh_2011.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_ChCh_2011.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_ChCh_2011.pdf used on input line 1
-088.
+079.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-! Undefined control sequence.
-\@largefloatcheck ->\ifdim \ht \@currbox 
-                                         >\textheight \@tempdima -\textheigh...
-l.1093 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   >
-l.1093 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \@currbox 
-                     
-l.1093 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \@elt 
-l.1093 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing = inserted for \ifnum.
-<to be read again> 
-                   \@elt 
-l.1093 \end{figure}
-                   
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \@elt 
-l.1093 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-! LaTeX Error: This may be a LaTeX bug.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1093 \end{figure}
-                   
-Call for help
-
-! Undefined control sequence.
-\@addmarginpar ...advance \@tempdima \ht \@marbox 
-                                                  \ifdim \@tempdima >\z@ \@l...
-l.1093 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Bad register code (-8313760).
-\@addmarginpar ...e \space moved}\else \@tempdima 
-                                                  \z@ \fi \global \@mparbott...
-l.1093 \end{figure}
-                   
-A register number must be between 0 and 32767.
-I changed this one to zero.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.1093 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \global 
-l.1093 \end{figure}
-                   
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...vance \@mparbottom \dp \@marbox 
-                                                  \global \advance \@mparbot...
-l.1093 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.1093 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
-                                                  \global \setbox \@marbox \...
-l.1093 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.1093 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...marbox \global \setbox \@marbox 
-                                                  \vbox {\vskip \@tempdima \...
-l.1093 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vbox 
-l.1093 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...\vskip \@tempdima \box \@marbox 
-                                                  }\global \ht \@marbox \z@ ...
-l.1093 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.1093 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ... \@marbox }\global \ht \@marbox 
-                                                  \z@ \global \dp \@marbox \...
-l.1093 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.1093 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \global 
-l.1093 \end{figure}
-                   
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...marbox \z@ \global \dp \@marbox 
-                                                  \z@ \kern -\@pagedp \noint...
-l.1093 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \kern 
-l.1093 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \kern 
-l.1093 \end{figure}
-                   
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...arginparwidth \fi \box \@marbox 
-                                                  \hss }\nointerlineskip \hb...
-l.1093 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \hss 
-l.1093 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-! LaTeX Error: Too many unprocessed floats.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1097 \begin
-             {center}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Undefined control sequence.
-\@float@Hx ...ltovf \fi \global \setbox \@currbox 
-                                                  \color@vbox \normalcolor \...
-l.1097 \begin
-             {center}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vbox 
-l.1097 \begin
-             {center}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-<nir_census_MMR1_NIR_ChCh_2012.pdf, id=882, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_ChCh_2012.pdf, id=873, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_ChCh_2012.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_ChCh_2012.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_ChCh_2012.pdf used on input line 1
-098.
+089.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-! Undefined control sequence.
-\@largefloatcheck ->\ifdim \ht \@currbox 
-                                         >\textheight \@tempdima -\textheigh...
-l.1103 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   >
-l.1103 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \@currbox 
-                     
-l.1103 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Argument of \@xnext has an extra }.
-<inserted text> 
-                \par 
-l.1103 \end{figure}
-                   
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
-TC.
-! Paragraph ended before \@xnext was complete.
-<to be read again> 
-                   \par 
-l.1103 \end{figure}
-                   
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Extra \else.
-\sf@end@float ...ma \penalty \@floatpenalty \else 
-                                                  \vadjust {\penalty -\@Miv ...
-l.1103 \end{figure}
-                   
-I'm ignoring this; it doesn't match any \if.
-
-! You can't use `\vadjust' in vertical mode.
-\sf@end@float ...ty \@floatpenalty \else \vadjust 
-                                                  {\penalty -\@Miv \vbox {}\...
-l.1103 \end{figure}
-                   
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Argument of \@xnext has an extra }.
-<inserted text> 
-                \par 
-l.1103 \end{figure}
-                   
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
-TC.
-! Paragraph ended before \@xnext was complete.
-<to be read again> 
-                   \par 
-l.1103 \end{figure}
-                   
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
-! LaTeX Error: Too many unprocessed floats.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1106 \begin
-             {center}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Undefined control sequence.
-\@float@Hx ...ltovf \fi \global \setbox \@currbox 
-                                                  \color@vbox \normalcolor \...
-l.1106 \begin
-             {center}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vbox 
-l.1106 \begin
-             {center}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-<nir_census_MMR1_NIR_ChCh_2013.pdf, id=885, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_ChCh_2013.pdf, id=876, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_ChCh_2013.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_ChCh_2013.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_ChCh_2013.pdf used on input line 1
-107.
+098.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
-
-! Undefined control sequence.
-\@largefloatcheck ->\ifdim \ht \@currbox 
-                                         >\textheight \@tempdima -\textheigh...
-l.1112 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   >
-l.1112 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \@currbox 
-                     
-l.1112 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \@elt 
-l.1112 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing = inserted for \ifnum.
-<to be read again> 
-                   \@elt 
-l.1112 \end{figure}
-                   
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \@elt 
-l.1112 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-! LaTeX Error: This may be a LaTeX bug.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1112 \end{figure}
-                   
-Call for help
-
-! Undefined control sequence.
-\@addmarginpar ...advance \@tempdima \ht \@marbox 
-                                                  \ifdim \@tempdima >\z@ \@l...
-l.1112 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.1112 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-LaTeX Warning: Marginpar on page 37 moved.
-
-! Undefined control sequence.
-\@addmarginpar ...vance \@mparbottom \dp \@marbox 
-                                                  \global \advance \@mparbot...
-l.1112 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.1112 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
-                                                  \global \setbox \@marbox \...
-l.1112 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.1112 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...marbox \global \setbox \@marbox 
-                                                  \vbox {\vskip \@tempdima \...
-l.1112 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vbox 
-l.1112 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...\vskip \@tempdima \box \@marbox 
-                                                  }\global \ht \@marbox \z@ ...
-l.1112 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.1112 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ... \@marbox }\global \ht \@marbox 
-                                                  \z@ \global \dp \@marbox \...
-l.1112 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \global 
-l.1112 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \global 
-l.1112 \end{figure}
-                   
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...marbox \z@ \global \dp \@marbox 
-                                                  \z@ \kern -\@pagedp \noint...
-l.1112 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \kern 
-l.1112 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \kern 
-l.1112 \end{figure}
-                   
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Undefined control sequence.
-\@addmarginpar ...arginparwidth \fi \box \@marbox 
-                                                  \hss }\nointerlineskip \hb...
-l.1112 \end{figure}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \hss 
-l.1112 \end{figure}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-[37 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_ChCh_2010.p
-df> <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_ChCh_2011.p
-df> <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_ChCh_2013.p
-df>] [38 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_Auk_20
-06.pdf>] [39 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_Au
-k_2006.pdf>] [40 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NI
-R_Auk_2007.pdf>] [41 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR
-2_NIR_Auk_2007.pdf>] [42 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census
-_MMR1_NIR_Auk_2008.pdf>] [43 <C:/Users/dtshayma/Documents/GitHub/measles/nir_ce
-nsus_MMR2_NIR_Auk_2008.pdf>] [44 <C:/Users/dtshayma/Documents/GitHub/measles/ni
-r_census_MMR1_NIR_Auk_2009.pdf>] [45 <C:/Users/dtshayma/Documents/GitHub/measle
-s/nir_census_MMR2_NIR_Auk_2009.pdf>] [46 <C:/Users/dtshayma/Documents/GitHub/me
-asles/nir_census_MMR1_NIR_Auk_2010.pdf>] [47 <C:/Users/dtshayma/Documents/GitHu
-b/measles/nir_census_MMR2_NIR_Auk_2010.pdf>] [48 <C:/Users/dtshayma/Documents/G
-itHub/measles/nir_census_MMR1_NIR_Auk_2011.pdf>] [49 <C:/Users/dtshayma/Documen
-ts/GitHub/measles/nir_census_MMR2_NIR_Auk_2011.pdf>] [50 <C:/Users/dtshayma/Doc
-uments/GitHub/measles/nir_census_MMR1_NIR_Auk_2012.pdf>] [51 <C:/Users/dtshayma
-/Documents/GitHub/measles/nir_census_MMR1_NIR_Auk_2013.pdf>] [52 <C:/Users/dtsh
-ayma/Documents/GitHub/measles/nir_census_MMR1_NIR_Well_2006.pdf>] [53 <C:/Users
-/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_Well_2006.pdf>] [54 <C:/
-Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_Well_2007.pdf>]
-[55 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_Well_2007.p
-df>] [56 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_Well_2
-008.pdf>] [57 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_W
-ell_2008.pdf>] [58 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_
-NIR_Well_2009.pdf>] [59 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_
-MMR2_NIR_Well_2009.pdf>] [60 <C:/Users/dtshayma/Documents/GitHub/measles/nir_ce
-nsus_MMR1_NIR_Well_2010.pdf>] [61 <C:/Users/dtshayma/Documents/GitHub/measles/n
-ir_census_MMR2_NIR_Well_2010.pdf>] [62 <C:/Users/dtshayma/Documents/GitHub/meas
-les/nir_census_MMR1_NIR_Well_2011.pdf>] [63 <C:/Users/dtshayma/Documents/GitHub
-/measles/nir_census_MMR2_NIR_Well_2011.pdf>] [64 <C:/Users/dtshayma/Documents/G
-itHub/measles/nir_census_MMR1_NIR_Well_2012.pdf>] [65 <C:/Users/dtshayma/Docume
-nts/GitHub/measles/nir_census_MMR1_NIR_Well_2013.pdf>] [66 <C:/Users/dtshayma/D
-ocuments/GitHub/measles/nir_census_MMR1_NIR_ChCh_2006.pdf>] [67 <C:/Users/dtsha
-yma/Documents/GitHub/measles/nir_census_MMR2_NIR_ChCh_2006.pdf>] [68 <C:/Users/
-dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_ChCh_2007.pdf>] [69 <C:/U
-sers/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_ChCh_2007.pdf>]
-[70 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_ChCh_2008.p
-df>] [71 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_ChCh_2
-008.pdf>] [72 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_C
-hCh_2009.pdf>] [73 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_
-NIR_ChCh_2009.pdf>]
-<draftfinalreport_v3-007.pdf, id=1331, 433.62pt x 433.62pt>
+ [37] [38 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_Auk_2
+006.pdf>] [39 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_A
+uk_2006.pdf>] [40 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_N
+IR_Auk_2007.pdf>] [41 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MM
+R2_NIR_Auk_2007.pdf>] [42 <C:/Users/dtshayma/Documents/GitHub/measles/nir_censu
+s_MMR1_NIR_Auk_2008.pdf>] [43 <C:/Users/dtshayma/Documents/GitHub/measles/nir_c
+ensus_MMR2_NIR_Auk_2008.pdf>] [44 <C:/Users/dtshayma/Documents/GitHub/measles/n
+ir_census_MMR1_NIR_Auk_2009.pdf>]
+[45 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_Auk_2009.pd
+f>] [46 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_Auk_201
+0.pdf>] [47 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_Auk
+_2010.pdf>] [48 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR
+_Auk_2011.pdf>] [49 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2
+_NIR_Auk_2011.pdf>] [50 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_
+MMR1_NIR_Auk_2012.pdf>] [51 <C:/Users/dtshayma/Documents/GitHub/measles/nir_cen
+sus_MMR1_NIR_Auk_2013.pdf>] [52 <C:/Users/dtshayma/Documents/GitHub/measles/nir
+_census_MMR1_NIR_Well_2006.pdf>] [53 <C:/Users/dtshayma/Documents/GitHub/measle
+s/nir_census_MMR2_NIR_Well_2006.pdf>] [54 <C:/Users/dtshayma/Documents/GitHub/m
+easles/nir_census_MMR1_NIR_Well_2007.pdf>] [55 <C:/Users/dtshayma/Documents/Git
+Hub/measles/nir_census_MMR2_NIR_Well_2007.pdf>] [56 <C:/Users/dtshayma/Document
+s/GitHub/measles/nir_census_MMR1_NIR_Well_2008.pdf>] [57 <C:/Users/dtshayma/Doc
+uments/GitHub/measles/nir_census_MMR2_NIR_Well_2008.pdf>] [58 <C:/Users/dtshaym
+a/Documents/GitHub/measles/nir_census_MMR1_NIR_Well_2009.pdf>] [59 <C:/Users/dt
+shayma/Documents/GitHub/measles/nir_census_MMR2_NIR_Well_2009.pdf>] [60 <C:/Use
+rs/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_Well_2010.pdf>]
+[61 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_Well_2010.p
+df>] [62 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_Well_2
+011.pdf>] [63 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_W
+ell_2011.pdf>] [64 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_
+NIR_Well_2012.pdf>] [65 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_
+MMR1_NIR_Well_2013.pdf>] [66 <C:/Users/dtshayma/Documents/GitHub/measles/nir_ce
+nsus_MMR1_NIR_ChCh_2006.pdf>] [67 <C:/Users/dtshayma/Documents/GitHub/measles/n
+ir_census_MMR2_NIR_ChCh_2006.pdf>] [68 <C:/Users/dtshayma/Documents/GitHub/meas
+les/nir_census_MMR1_NIR_ChCh_2007.pdf>] [69 <C:/Users/dtshayma/Documents/GitHub
+/measles/nir_census_MMR2_NIR_ChCh_2007.pdf>] [70 <C:/Users/dtshayma/Documents/G
+itHub/measles/nir_census_MMR1_NIR_ChCh_2008.pdf>] [71 <C:/Users/dtshayma/Docume
+nts/GitHub/measles/nir_census_MMR2_NIR_ChCh_2008.pdf>] [72 <C:/Users/dtshayma/D
+ocuments/GitHub/measles/nir_census_MMR1_NIR_ChCh_2009.pdf>] [73 <C:/Users/dtsha
+yma/Documents/GitHub/measles/nir_census_MMR2_NIR_ChCh_2009.pdf>] [74 <C:/Users/
+dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_ChCh_2010.pdf>] [75 <C:/U
+sers/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_ChCh_2010.pdf>]
+[76 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_ChCh_2011.p
+df>] [77 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_ChCh_2
+011.pdf>] [78 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_C
+hCh_2012.pdf>] [79 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_
+NIR_ChCh_2013.pdf>]
+<draftfinalreport_v3-007.pdf, id=1352, 433.62pt x 433.62pt>
 File: draftfinalreport_v3-007.pdf Graphic file (type pdf)
 
 <use draftfinalreport_v3-007.pdf>
-Package pdftex.def Info: draftfinalreport_v3-007.pdf used on input line 1119.
+Package pdftex.def Info: draftfinalreport_v3-007.pdf used on input line 1112.
 (pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
 
-Overfull \hbox (4.01604pt too wide) in paragraph at lines 1125--1126
+Overfull \hbox (4.01604pt too wide) in paragraph at lines 1118--1119
 []\T1/aer/m/n/10 The cor-re-la-tion be-tween the per-cent-age vac-ci-nated agai
 nst MMR1 and MMR2
  []
 
-<nir_census_MMR1_NIR_cor.pdf, id=1333, 505.89pt x 505.89pt>
+<nir_census_MMR1_NIR_cor.pdf, id=1354, 505.89pt x 505.89pt>
 File: nir_census_MMR1_NIR_cor.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_cor.pdf>
-Package pdftex.def Info: nir_census_MMR1_NIR_cor.pdf used on input line 1129.
+Package pdftex.def Info: nir_census_MMR1_NIR_cor.pdf used on input line 1122.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [74 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport_v3-007.pdf>]
+ [80
 
-LaTeX Warning: Reference `fig:sero_imm_map' on page 75 undefined on input line 
-1135.
+ <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport_v3-007.pdf>]
 
-<census_immunity_age.pdf, id=1349, 505.89pt x 361.35pt>
+LaTeX Warning: Reference `fig:sero_imm_map' on page 81 undefined on input line 
+1128.
+
+<census_immunity_age.pdf, id=1371, 505.89pt x 361.35pt>
 File: census_immunity_age.pdf Graphic file (type pdf)
 
 <use census_immunity_age.pdf>
-Package pdftex.def Info: census_immunity_age.pdf used on input line 1139.
+Package pdftex.def Info: census_immunity_age.pdf used on input line 1132.
 (pdftex.def)             Requested size: 494.99664pt x 353.57472pt.
 
-<census_immunity_age_Auk.pdf, id=1360, 505.89pt x 361.35pt>
+<census_immunity_age_Auk.pdf, id=1382, 505.89pt x 361.35pt>
 File: census_immunity_age_Auk.pdf Graphic file (type pdf)
 
 <use census_immunity_age_Auk.pdf>
-Package pdftex.def Info: census_immunity_age_Auk.pdf used on input line 1147.
+Package pdftex.def Info: census_immunity_age_Auk.pdf used on input line 1140.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- [75 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_cor.pdf>]
-<census_immunity_age_Well.pdf, id=1376, 505.89pt x 361.35pt>
+ [81 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_cor.pdf>]
+<census_immunity_age_Well.pdf, id=1398, 505.89pt x 361.35pt>
 File: census_immunity_age_Well.pdf Graphic file (type pdf)
 
 <use census_immunity_age_Well.pdf>
-Package pdftex.def Info: census_immunity_age_Well.pdf used on input line 1155.
+Package pdftex.def Info: census_immunity_age_Well.pdf used on input line 1148.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- [76 <C:/Users/dtshayma/Documents/GitHub/measles/census_immunity_age_Auk.pdf>]
-<census_immunity_age_ChCh.pdf, id=1388, 505.89pt x 361.35pt>
+ [82 <C:/Users/dtshayma/Documents/GitHub/measles/census_immunity_age_Auk.pdf>]
+<census_immunity_age_ChCh.pdf, id=1410, 505.89pt x 361.35pt>
 File: census_immunity_age_ChCh.pdf Graphic file (type pdf)
 
 <use census_immunity_age_ChCh.pdf>
-Package pdftex.def Info: census_immunity_age_ChCh.pdf used on input line 1163.
+Package pdftex.def Info: census_immunity_age_ChCh.pdf used on input line 1156.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- [77 <C:/Users/dtshayma/Documents/GitHub/measles/census_immunity_age_Well.pdf>]
+ [83 <C:/Users/dtshayma/Documents/GitHub/measles/census_immunity_age_Well.pdf>]
 
-<census_immunity_age_hist.pdf, id=1400, 505.89pt x 361.35pt>
+<census_immunity_age_hist.pdf, id=1422, 505.89pt x 361.35pt>
 File: census_immunity_age_hist.pdf Graphic file (type pdf)
 
 <use census_immunity_age_hist.pdf>
-Package pdftex.def Info: census_immunity_age_hist.pdf used on input line 1171.
+Package pdftex.def Info: census_immunity_age_hist.pdf used on input line 1164.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
 
-LaTeX Warning: Reference `fig:sero_imm_map' on page 78 undefined on input line 
-1173.
+LaTeX Warning: Reference `fig:sero_imm_map' on page 84 undefined on input line 
+1166.
 
 
-LaTeX Warning: Reference `fig:sero_imm_map' on page 78 undefined on input line 
-1173.
+LaTeX Warning: Reference `fig:sero_imm_map' on page 84 undefined on input line 
+1166.
 
-[78 <C:/Users/dtshayma/Documents/GitHub/measles/census_immunity_age_ChCh.pdf>]
-[79 <C:/Users/dtshayma/Documents/GitHub/measles/census_immunity_age_hist.pdf>]
-<2013totnp2.pdf, id=1453, 722.7pt x 361.35pt>
+[84 <C:/Users/dtshayma/Documents/GitHub/measles/census_immunity_age_ChCh.pdf>]
+[85 <C:/Users/dtshayma/Documents/GitHub/measles/census_immunity_age_hist.pdf>]
+<2013totnp2.pdf, id=1475, 722.7pt x 361.35pt>
 File: 2013totnp2.pdf Graphic file (type pdf)
  <use 2013totnp2.pdf>
-Package pdftex.def Info: 2013totnp2.pdf used on input line 1545.
+Package pdftex.def Info: 2013totnp2.pdf used on input line 1538.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013totnp3.pdf, id=1456, 722.7pt x 361.35pt>
+<2013totnp3.pdf, id=1478, 722.7pt x 361.35pt>
 File: 2013totnp3.pdf Graphic file (type pdf)
  <use 2013totnp3.pdf>
-Package pdftex.def Info: 2013totnp3.pdf used on input line 1553.
+Package pdftex.def Info: 2013totnp3.pdf used on input line 1546.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013np1.pdf, id=1459, 722.7pt x 361.35pt>
+<2013np1.pdf, id=1481, 722.7pt x 361.35pt>
 File: 2013np1.pdf Graphic file (type pdf)
  <use 2013np1.pdf>
-Package pdftex.def Info: 2013np1.pdf used on input line 1561.
+Package pdftex.def Info: 2013np1.pdf used on input line 1554.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013nznp1.pdf, id=1460, 722.7pt x 361.35pt>
+<2013nznp1.pdf, id=1482, 722.7pt x 361.35pt>
 File: 2013nznp1.pdf Graphic file (type pdf)
  <use 2013nznp1.pdf>
-Package pdftex.def Info: 2013nznp1.pdf used on input line 1569.
+Package pdftex.def Info: 2013nznp1.pdf used on input line 1562.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013totnp1.pdf, id=1461, 722.7pt x 361.35pt>
+<2013totnp1.pdf, id=1483, 722.7pt x 361.35pt>
 File: 2013totnp1.pdf Graphic file (type pdf)
  <use 2013totnp1.pdf>
-Package pdftex.def Info: 2013totnp1.pdf used on input line 1577.
+Package pdftex.def Info: 2013totnp1.pdf used on input line 1570.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013totnp4.pdf, id=1462, 722.7pt x 361.35pt>
+<2013totnp4.pdf, id=1484, 722.7pt x 361.35pt>
 File: 2013totnp4.pdf Graphic file (type pdf)
  <use 2013totnp4.pdf>
-Package pdftex.def Info: 2013totnp4.pdf used on input line 1585.
+Package pdftex.def Info: 2013totnp4.pdf used on input line 1578.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013nznp4.pdf, id=1463, 722.7pt x 361.35pt>
+<2013nznp4.pdf, id=1485, 722.7pt x 361.35pt>
 File: 2013nznp4.pdf Graphic file (type pdf)
  <use 2013nznp4.pdf>
-Package pdftex.def Info: 2013nznp4.pdf used on input line 1593.
+Package pdftex.def Info: 2013nznp4.pdf used on input line 1586.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<2013np4.pdf, id=1464, 722.7pt x 361.35pt>
+<2013np4.pdf, id=1486, 722.7pt x 361.35pt>
 File: 2013np4.pdf Graphic file (type pdf)
  <use 2013np4.pdf>
-Package pdftex.def Info: 2013np4.pdf used on input line 1601.
+Package pdftex.def Info: 2013np4.pdf used on input line 1594.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<draftfinalreport_v3-017.pdf, id=1465, 433.62pt x 433.62pt>
+<draftfinalreport_v3-017.pdf, id=1487, 433.62pt x 433.62pt>
 File: draftfinalreport_v3-017.pdf Graphic file (type pdf)
 
 <use draftfinalreport_v3-017.pdf>
-Package pdftex.def Info: draftfinalreport_v3-017.pdf used on input line 1609.
+Package pdftex.def Info: draftfinalreport_v3-017.pdf used on input line 1602.
 (pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
- <nzers.pdf, id=1466, 361.35pt x 361.35pt>
+ <nzers.pdf, id=1488, 361.35pt x 361.35pt>
 File: nzers.pdf Graphic file (type pdf)
 
 <use nzers.pdf>
-Package pdftex.def Info: nzers.pdf used on input line 1617.
+Package pdftex.def Info: nzers.pdf used on input line 1610.
 (pdftex.def)             Requested size: 310.4979pt x 310.50131pt.
- [80] [81] [82] [83] [84] [85] [86] [87] [88] [89 <C:/Users/dtshayma/Documents/
-GitHub/measles/2013totnp2.pdf>] [90 <C:/Users/dtshayma/Documents/GitHub/measles
-/2013totnp3.pdf>] [91 <C:/Users/dtshayma/Documents/GitHub/measles/2013np1.pdf>]
- [92 <C:/Users/dtshayma/Documents/GitHub/measles/2013nznp1.pdf>] [93 <C:/Users/
-dtshayma/Documents/GitHub/measles/2013totnp1.pdf>] [94 <C:/Users/dtshayma/Docum
-ents/GitHub/measles/2013totnp4.pdf>] [95 <C:/Users/dtshayma/Documents/GitHub/me
-asles/2013nznp4.pdf>] [96 <C:/Users/dtshayma/Documents/GitHub/measles/2013np4.p
-df>] [97 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport_v3-017.pd
-f>] [98 <C:/Users/dtshayma/Documents/GitHub/measles/nzers.pdf>]
-[99] [100] [101] <cases_by_dhb_2009_2014.pdf, id=1734, 722.7pt x 361.35pt>
+ [86] [87] [88] [89] [90] [91] [92] [93] [94] [95 <C:/Users/dtshayma/Documents/
+GitHub/measles/2013totnp2.pdf>] [96 <C:/Users/dtshayma/Documents/GitHub/measles
+/2013totnp3.pdf>] [97 <C:/Users/dtshayma/Documents/GitHub/measles/2013np1.pdf>]
+ [98 <C:/Users/dtshayma/Documents/GitHub/measles/2013nznp1.pdf>] [99 <C:/Users/
+dtshayma/Documents/GitHub/measles/2013totnp1.pdf>] [100 <C:/Users/dtshayma/Docu
+ments/GitHub/measles/2013totnp4.pdf>] [101 <C:/Users/dtshayma/Documents/GitHub/
+measles/2013nznp4.pdf>] [102 <C:/Users/dtshayma/Documents/GitHub/measles/2013np
+4.pdf>] [103 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport_v3-01
+7.pdf>] [104 <C:/Users/dtshayma/Documents/GitHub/measles/nzers.pdf>] [105] [106
+] [107]
+<cases_by_dhb_2009_2014.pdf, id=1756, 722.7pt x 361.35pt>
 File: cases_by_dhb_2009_2014.pdf Graphic file (type pdf)
 
 <use cases_by_dhb_2009_2014.pdf>
-Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 1670.
+Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 1663.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<outbreaks_2009_2014.pdf, id=1735, 722.7pt x 361.35pt>
+<outbreaks_2009_2014.pdf, id=1757, 722.7pt x 361.35pt>
 File: outbreaks_2009_2014.pdf Graphic file (type pdf)
 
 <use outbreaks_2009_2014.pdf>
-Package pdftex.def Info: outbreaks_2009_2014.pdf used on input line 1678.
+Package pdftex.def Info: outbreaks_2009_2014.pdf used on input line 1671.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<averageR0_all_ob.pdf, id=1736, 578.16pt x 433.62pt>
+<averageR0_all_ob.pdf, id=1758, 578.16pt x 433.62pt>
 File: averageR0_all_ob.pdf Graphic file (type pdf)
 
 <use averageR0_all_ob.pdf>
-Package pdftex.def Info: averageR0_all_ob.pdf used on input line 1686.
+Package pdftex.def Info: averageR0_all_ob.pdf used on input line 1679.
 (pdftex.def)             Requested size: 494.99664pt x 371.2452pt.
- <R0_outbreak33.pdf, id=1739, 578.16pt x 289.08pt>
+ <R0_outbreak33.pdf, id=1761, 578.16pt x 289.08pt>
 File: R0_outbreak33.pdf Graphic file (type pdf)
 
 <use R0_outbreak33.pdf>
-Package pdftex.def Info: R0_outbreak33.pdf used on input line 1694.
+Package pdftex.def Info: R0_outbreak33.pdf used on input line 1687.
 (pdftex.def)             Requested size: 494.99664pt x 247.49678pt.
- [102] [103 <C:/Users/dtshayma/Documents/GitHub/measles/cases_by_dhb_2009_2014.
-pdf>] [104 <C:/Users/dtshayma/Documents/GitHub/measles/outbreaks_2009_2014.pdf>
-] [105 <C:/Users/dtshayma/Documents/GitHub/measles/averageR0_all_ob.pdf>] [106 
-<C:/Users/dtshayma/Documents/GitHub/measles/R0_outbreak33.pdf>] [107]
-Overfull \hbox (0.49591pt too wide) in paragraph at lines 1782--1783
+ [108] [109 <C:/Users/dtshayma/Documents/GitHub/measles/cases_by_dhb_2009_2014.
+pdf>] [110 <C:/Users/dtshayma/Documents/GitHub/measles/outbreaks_2009_2014.pdf>
+] [111 <C:/Users/dtshayma/Documents/GitHub/measles/averageR0_all_ob.pdf>] [112 
+<C:/Users/dtshayma/Documents/GitHub/measles/R0_outbreak33.pdf>] [113]
+Overfull \hbox (0.49591pt too wide) in paragraph at lines 1770--1771
 []\T1/aer/m/n/10 The re-pro-duc-tion num-ber for measles in the par-tially im-m
 une New Zealand
  []
 
-[108] [109] [110] [111] [112] [113] [114] [115]
-<p.pdf, id=1991, 505.89pt x 361.35pt>
+[114] [115] [116] [117] [118] [119] <p.pdf, id=1998, 505.89pt x 361.35pt>
 File: p.pdf Graphic file (type pdf)
- <use p.pdf>
-Package pdftex.def Info: p.pdf used on input line 1914.
+
+<use p.pdf>
+Package pdftex.def Info: p.pdf used on input line 1902.
 (pdftex.def)             Requested size: 276.00105pt x 197.14412pt.
- [116] [117] [118 <C:/Users/dtshayma/Documents/GitHub/measles/p.pdf>]
-Overfull \hbox (19.0701pt too wide) in paragraph at lines 2032--2058
+ [120] [121] [122 <C:/Users/dtshayma/Documents/GitHub/measles/p.pdf>] [123] [12
+4]
+Overfull \hbox (19.0701pt too wide) in paragraph at lines 2020--2046
  [] 
  []
 
-[119] <sim.pdf, id=2037, 505.89pt x 361.35pt>
+[125] [126] <sim.pdf, id=2066, 505.89pt x 361.35pt>
 File: sim.pdf Graphic file (type pdf)
  <use sim.pdf>
-Package pdftex.def Info: sim.pdf used on input line 2072.
+Package pdftex.def Info: sim.pdf used on input line 2060.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<sim1.pdf, id=2042, 505.89pt x 361.35pt>
+<sim1.pdf, id=2071, 505.89pt x 361.35pt>
 File: sim1.pdf Graphic file (type pdf)
  <use sim1.pdf>
-Package pdftex.def Info: sim1.pdf used on input line 2079.
+Package pdftex.def Info: sim1.pdf used on input line 2067.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-Overfull \hbox (61.61633pt too wide) in paragraph at lines 2088--2113
+Overfull \hbox (61.61633pt too wide) in paragraph at lines 2076--2101
  [] 
  []
 
 ! Argument of \caption@ydblarg has an extra }.
 <inserted text> 
                 \par 
-l.2113 ...textit{B/C} is the benefit--cost ratio.}
+l.2101 ...textit{B/C} is the benefit--cost ratio.}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -3375,21 +2135,21 @@ Runaway argument?
 ! Paragraph ended before \caption@ydblarg was complete.
 <to be read again> 
                    \par 
-l.2113 ...textit{B/C} is the benefit--cost ratio.}
+l.2101 ...textit{B/C} is the benefit--cost ratio.}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 
-Overfull \hbox (88.99762pt too wide) in paragraph at lines 2120--2145
+Overfull \hbox (88.99762pt too wide) in paragraph at lines 2108--2133
  [] 
  []
 
 ! Argument of \caption@ydblarg has an extra }.
 <inserted text> 
                 \par 
-l.2145 ...textit{B/C} is the benefit--cost ratio.}
+l.2133 ...textit{B/C} is the benefit--cost ratio.}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -3403,327 +2163,327 @@ Runaway argument?
 ! Paragraph ended before \caption@ydblarg was complete.
 <to be read again> 
                    \par 
-l.2145 ...textit{B/C} is the benefit--cost ratio.}
+l.2133 ...textit{B/C} is the benefit--cost ratio.}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-[120 <C:/Users/dtshayma/Documents/GitHub/measles/sim.pdf>] [121] [122 <C:/Users
-/dtshayma/Documents/GitHub/measles/sim1.pdf>] [123] [124] [125] [126] [127]
-[128] [129] [130] [131] [132] [133]
-<case_age_nzdep.pdf, id=2214, 505.89pt x 361.35pt>
+[127 <C:/Users/dtshayma/Documents/GitHub/measles/sim.pdf>] [128 <C:/Users/dtsha
+yma/Documents/GitHub/measles/sim1.pdf>] [129] [130] [131] [132] [133] [134]
+[135] [136] [137] [138] [139]
+<case_age_nzdep.pdf, id=2233, 505.89pt x 361.35pt>
 File: case_age_nzdep.pdf Graphic file (type pdf)
  <use case_age_nzdep.pdf>
-Package pdftex.def Info: case_age_nzdep.pdf used on input line 2474.
+Package pdftex.def Info: case_age_nzdep.pdf used on input line 2462.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<case_eth_nzdep.pdf, id=2217, 505.89pt x 361.35pt>
+<case_eth_nzdep.pdf, id=2236, 505.89pt x 361.35pt>
 File: case_eth_nzdep.pdf Graphic file (type pdf)
  <use case_eth_nzdep.pdf>
-Package pdftex.def Info: case_eth_nzdep.pdf used on input line 2482.
+Package pdftex.def Info: case_eth_nzdep.pdf used on input line 2470.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-[134 <C:/Users/dtshayma/Documents/GitHub/measles/case_age_nzdep.pdf>]
-<case_age_eth.pdf, id=2230, 505.89pt x 361.35pt>
+[140 <C:/Users/dtshayma/Documents/GitHub/measles/case_age_nzdep.pdf>]
+<case_age_eth.pdf, id=2249, 505.89pt x 361.35pt>
 File: case_age_eth.pdf Graphic file (type pdf)
  <use case_age_eth.pdf>
-Package pdftex.def Info: case_age_eth.pdf used on input line 2490.
+Package pdftex.def Info: case_age_eth.pdf used on input line 2478.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-[135 <C:/Users/dtshayma/Documents/GitHub/measles/case_eth_nzdep.pdf>]
-<percap_nzdep_age.pdf, id=2243, 505.89pt x 361.35pt>
+[141 <C:/Users/dtshayma/Documents/GitHub/measles/case_eth_nzdep.pdf>]
+<percap_nzdep_age.pdf, id=2262, 505.89pt x 361.35pt>
 File: percap_nzdep_age.pdf Graphic file (type pdf)
 
 <use percap_nzdep_age.pdf>
-Package pdftex.def Info: percap_nzdep_age.pdf used on input line 2498.
+Package pdftex.def Info: percap_nzdep_age.pdf used on input line 2486.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- [136 <C:/Users/dtshayma/Documents/GitHub/measles/case_age_eth.pdf>] <percap_et
-h_nzdep.pdf, id=2256, 505.89pt x 361.35pt>
+ [142 <C:/Users/dtshayma/Documents/GitHub/measles/case_age_eth.pdf>] <percap_et
+h_nzdep.pdf, id=2275, 505.89pt x 361.35pt>
 File: percap_eth_nzdep.pdf Graphic file (type pdf)
 
 <use percap_eth_nzdep.pdf>
-Package pdftex.def Info: percap_eth_nzdep.pdf used on input line 2506.
+Package pdftex.def Info: percap_eth_nzdep.pdf used on input line 2494.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- [137 <C:/Users/dtshayma/Documents/GitHub/measles/percap_nzdep_age.pdf>] <perca
-p_eth_age.pdf, id=2269, 505.89pt x 361.35pt>
+ [143 <C:/Users/dtshayma/Documents/GitHub/measles/percap_nzdep_age.pdf>] <perca
+p_eth_age.pdf, id=2288, 505.89pt x 361.35pt>
 File: percap_eth_age.pdf Graphic file (type pdf)
 
 <use percap_eth_age.pdf>
-Package pdftex.def Info: percap_eth_age.pdf used on input line 2514.
+Package pdftex.def Info: percap_eth_age.pdf used on input line 2502.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- [138 <C:/Users/dtshayma/Documents/GitHub/measles/percap_eth_nzdep.pdf>] <nir_c
-ensus_MMR2_NIR_2012.pdf, id=2282, 505.89pt x 433.62pt>
+ [144 <C:/Users/dtshayma/Documents/GitHub/measles/percap_eth_nzdep.pdf>] <nir_c
+ensus_MMR2_NIR_2012.pdf, id=2301, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_2012.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_2012.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_2012.pdf used on input line 2523.
+Package pdftex.def Info: nir_census_MMR2_NIR_2012.pdf used on input line 2511.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR2_NIR_2013.pdf, id=2285, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_2013.pdf, id=2304, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_2013.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_2013.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_2013.pdf used on input line 2532.
+Package pdftex.def Info: nir_census_MMR2_NIR_2013.pdf used on input line 2520.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR2_NIR_2014.pdf, id=2288, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_2014.pdf, id=2307, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_2014.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_2014.pdf>
-Package pdftex.def Info: nir_census_MMR2_NIR_2014.pdf used on input line 2542.
+Package pdftex.def Info: nir_census_MMR2_NIR_2014.pdf used on input line 2530.
 (pdftex.def)             Requested size: 494.99664pt x 424.28967pt.
 
-<nir_census_MMR2_NIR_Auk_2012.pdf, id=2291, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Auk_2012.pdf, id=2310, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Auk_2012.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Auk_2012.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2012.pdf used on input line 25
-52.
+40.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Auk_2013.pdf, id=2294, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Auk_2013.pdf, id=2313, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Auk_2013.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Auk_2013.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2013.pdf used on input line 25
-61.
+49.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Auk_2014.pdf, id=2297, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Auk_2014.pdf, id=2316, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Auk_2014.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Auk_2014.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_Auk_2014.pdf used on input line 25
-71.
+59.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Auk_2014.pdf, id=2300, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Auk_2014.pdf, id=2319, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Auk_2014.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Auk_2014.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_Auk_2014.pdf used on input line 25
-80.
+68.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Well_2012.pdf, id=2303, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Well_2012.pdf, id=2322, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Well_2012.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Well_2012.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_Well_2012.pdf used on input line 2
-589.
+577.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Well_2013.pdf, id=2306, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Well_2013.pdf, id=2325, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Well_2013.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Well_2013.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_Well_2013.pdf used on input line 2
-598.
+586.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_Well_2014.pdf, id=2309, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_Well_2014.pdf, id=2328, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_Well_2014.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Well_2014.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_Well_2014.pdf used on input line 2
-608.
+596.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 File: nir_census_MMR1_NIR_Well_2014.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_Well_2014.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_Well_2014.pdf used on input line 2
-617.
+605.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_Well_2014.pdf, id=2314, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_Well_2014.pdf, id=2333, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_Well_2014.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_Well_2014.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_Well_2014.pdf used on input line 2
-627.
+615.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_ChCh_2012.pdf, id=2317, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_ChCh_2012.pdf, id=2336, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_ChCh_2012.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_ChCh_2012.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_ChCh_2012.pdf used on input line 2
-637.
+625.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_ChCh_2013.pdf, id=2320, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_ChCh_2013.pdf, id=2339, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_ChCh_2013.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_ChCh_2013.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_ChCh_2013.pdf used on input line 2
-646.
+634.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR1_NIR_ChCh_2014.pdf, id=2323, 505.89pt x 433.62pt>
+<nir_census_MMR1_NIR_ChCh_2014.pdf, id=2342, 505.89pt x 433.62pt>
 File: nir_census_MMR1_NIR_ChCh_2014.pdf Graphic file (type pdf)
 
 <use nir_census_MMR1_NIR_ChCh_2014.pdf>
 Package pdftex.def Info: nir_census_MMR1_NIR_ChCh_2014.pdf used on input line 2
-656.
+644.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<nir_census_MMR2_NIR_ChCh_2014.pdf, id=2326, 505.89pt x 433.62pt>
+<nir_census_MMR2_NIR_ChCh_2014.pdf, id=2345, 505.89pt x 433.62pt>
 File: nir_census_MMR2_NIR_ChCh_2014.pdf Graphic file (type pdf)
 
 <use nir_census_MMR2_NIR_ChCh_2014.pdf>
 Package pdftex.def Info: nir_census_MMR2_NIR_ChCh_2014.pdf used on input line 2
-665.
+653.
 (pdftex.def)             Requested size: 310.4979pt x 266.14209pt.
 
-<dhb1.pdf, id=2329, 505.89pt x 505.89pt>
+<dhb1.pdf, id=2348, 505.89pt x 505.89pt>
 File: dhb1.pdf Graphic file (type pdf)
  <use dhb1.pdf>
-Package pdftex.def Info: dhb1.pdf used on input line 2674.
+Package pdftex.def Info: dhb1.pdf used on input line 2662.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [139 <C:/Users/dtshayma/Documents/GitHub/measles/percap_eth_age.pdf>] [140 <C:
-/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_2012.pdf>] [141 <C
-:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_2013.pdf>] [142 <
-C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_2014.pdf>] [143 
+ [145 <C:/Users/dtshayma/Documents/GitHub/measles/percap_eth_age.pdf>] [146 <C:
+/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_2012.pdf>] [147 <C
+:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_2013.pdf>] [148 <
+C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_2014.pdf>] [149 
 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_Auk_2012.pdf>] 
-[144 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_Auk_2013.p
-df>] [145 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_Auk_2
-014.pdf>] [146 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_
-Auk_2014.pdf>] [147 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2
+[150 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_Auk_2013.p
+df>] [151 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_Auk_2
+014.pdf>] [152 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_
+Auk_2014.pdf>] [153 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2
 _NIR_Well_2012.pdf>]
-[148 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_Well_2013.
-pdf>] [149 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_Well
-_2014.pdf>] [150] [151 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_M
-MR2_NIR_Well_2014.pdf>] [152 <C:/Users/dtshayma/Documents/GitHub/measles/nir_ce
-nsus_MMR2_NIR_ChCh_2012.pdf>] [153 <C:/Users/dtshayma/Documents/GitHub/measles/
-nir_census_MMR2_NIR_ChCh_2013.pdf>] [154 <C:/Users/dtshayma/Documents/GitHub/me
-asles/nir_census_MMR1_NIR_ChCh_2014.pdf>] [155 <C:/Users/dtshayma/Documents/Git
+[154 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR2_NIR_Well_2013.
+pdf>] [155 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_MMR1_NIR_Well
+_2014.pdf>] [156] [157 <C:/Users/dtshayma/Documents/GitHub/measles/nir_census_M
+MR2_NIR_Well_2014.pdf>] [158 <C:/Users/dtshayma/Documents/GitHub/measles/nir_ce
+nsus_MMR2_NIR_ChCh_2012.pdf>] [159 <C:/Users/dtshayma/Documents/GitHub/measles/
+nir_census_MMR2_NIR_ChCh_2013.pdf>] [160 <C:/Users/dtshayma/Documents/GitHub/me
+asles/nir_census_MMR1_NIR_ChCh_2014.pdf>] [161 <C:/Users/dtshayma/Documents/Git
 Hub/measles/nir_census_MMR2_NIR_ChCh_2014.pdf>]
-<dhb2.pdf, id=2485, 505.89pt x 505.89pt>
+<dhb2.pdf, id=2504, 505.89pt x 505.89pt>
 File: dhb2.pdf Graphic file (type pdf)
  <use dhb2.pdf>
-Package pdftex.def Info: dhb2.pdf used on input line 2683.
+Package pdftex.def Info: dhb2.pdf used on input line 2671.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [156 <C:/Users/dtshayma/Documents/GitHub/measles/dhb1.pdf>] <dhb3.pdf, id=2498
+ [162 <C:/Users/dtshayma/Documents/GitHub/measles/dhb1.pdf>] <dhb3.pdf, id=2517
 , 505.89pt x 505.89pt>
 File: dhb3.pdf Graphic file (type pdf)
 
 <use dhb3.pdf>
-Package pdftex.def Info: dhb3.pdf used on input line 2691.
+Package pdftex.def Info: dhb3.pdf used on input line 2679.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [157 <C:/Users/dtshayma/Documents/GitHub/measles/dhb2.pdf>]
-<dhb4.pdf, id=2512, 505.89pt x 505.89pt>
+ [163 <C:/Users/dtshayma/Documents/GitHub/measles/dhb2.pdf>]
+<dhb4.pdf, id=2531, 505.89pt x 505.89pt>
 File: dhb4.pdf Graphic file (type pdf)
  <use dhb4.pdf>
-Package pdftex.def Info: dhb4.pdf used on input line 2699.
+Package pdftex.def Info: dhb4.pdf used on input line 2687.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [158 <C:/Users/dtshayma/Documents/GitHub/measles/dhb3.pdf>] <dhb5.pdf, id=2525
+ [164 <C:/Users/dtshayma/Documents/GitHub/measles/dhb3.pdf>] <dhb5.pdf, id=2544
 , 505.89pt x 505.89pt>
 File: dhb5.pdf Graphic file (type pdf)
 
 <use dhb5.pdf>
-Package pdftex.def Info: dhb5.pdf used on input line 2707.
+Package pdftex.def Info: dhb5.pdf used on input line 2695.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [159 <C:/Users/dtshayma/Documents/GitHub/measles/dhb4.pdf>]
-<dhb6.pdf, id=2538, 505.89pt x 505.89pt>
+ [165 <C:/Users/dtshayma/Documents/GitHub/measles/dhb4.pdf>]
+<dhb6.pdf, id=2557, 505.89pt x 505.89pt>
 File: dhb6.pdf Graphic file (type pdf)
  <use dhb6.pdf>
-Package pdftex.def Info: dhb6.pdf used on input line 2715.
+Package pdftex.def Info: dhb6.pdf used on input line 2703.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [160 <C:/Users/dtshayma/Documents/GitHub/measles/dhb5.pdf>] <dhb7.pdf, id=2551
+ [166 <C:/Users/dtshayma/Documents/GitHub/measles/dhb5.pdf>] <dhb7.pdf, id=2570
 , 505.89pt x 505.89pt>
 File: dhb7.pdf Graphic file (type pdf)
 
 <use dhb7.pdf>
-Package pdftex.def Info: dhb7.pdf used on input line 2723.
+Package pdftex.def Info: dhb7.pdf used on input line 2711.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [161 <C:/Users/dtshayma/Documents/GitHub/measles/dhb6.pdf>]
-<dhb8.pdf, id=2564, 505.89pt x 505.89pt>
+ [167 <C:/Users/dtshayma/Documents/GitHub/measles/dhb6.pdf>]
+<dhb8.pdf, id=2583, 505.89pt x 505.89pt>
 File: dhb8.pdf Graphic file (type pdf)
  <use dhb8.pdf>
-Package pdftex.def Info: dhb8.pdf used on input line 2731.
+Package pdftex.def Info: dhb8.pdf used on input line 2719.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [162 <C:/Users/dtshayma/Documents/GitHub/measles/dhb7.pdf>] <dhb9.pdf, id=2577
+ [168 <C:/Users/dtshayma/Documents/GitHub/measles/dhb7.pdf>] <dhb9.pdf, id=2596
 , 505.89pt x 505.89pt>
 File: dhb9.pdf Graphic file (type pdf)
 
 <use dhb9.pdf>
-Package pdftex.def Info: dhb9.pdf used on input line 2739.
+Package pdftex.def Info: dhb9.pdf used on input line 2727.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [163 <C:/Users/dtshayma/Documents/GitHub/measles/dhb8.pdf>]
-<dhb10.pdf, id=2591, 505.89pt x 505.89pt>
+ [169 <C:/Users/dtshayma/Documents/GitHub/measles/dhb8.pdf>]
+<dhb10.pdf, id=2610, 505.89pt x 505.89pt>
 File: dhb10.pdf Graphic file (type pdf)
  <use dhb10.pdf>
-Package pdftex.def Info: dhb10.pdf used on input line 2747.
+Package pdftex.def Info: dhb10.pdf used on input line 2735.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [164 <C:/Users/dtshayma/Documents/GitHub/measles/dhb9.pdf>]
-<dhb11.pdf, id=2604, 505.89pt x 505.89pt>
+ [170 <C:/Users/dtshayma/Documents/GitHub/measles/dhb9.pdf>]
+<dhb11.pdf, id=2623, 505.89pt x 505.89pt>
 File: dhb11.pdf Graphic file (type pdf)
  <use dhb11.pdf>
-Package pdftex.def Info: dhb11.pdf used on input line 2755.
+Package pdftex.def Info: dhb11.pdf used on input line 2743.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [165 <C:/Users/dtshayma/Documents/GitHub/measles/dhb10.pdf>]
-<dhb12.pdf, id=2617, 505.89pt x 505.89pt>
+ [171 <C:/Users/dtshayma/Documents/GitHub/measles/dhb10.pdf>]
+<dhb12.pdf, id=2636, 505.89pt x 505.89pt>
 File: dhb12.pdf Graphic file (type pdf)
  <use dhb12.pdf>
-Package pdftex.def Info: dhb12.pdf used on input line 2763.
+Package pdftex.def Info: dhb12.pdf used on input line 2751.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [166 <C:/Users/dtshayma/Documents/GitHub/measles/dhb11.pdf>]
-<dhb13.pdf, id=2630, 505.89pt x 505.89pt>
+ [172 <C:/Users/dtshayma/Documents/GitHub/measles/dhb11.pdf>]
+<dhb13.pdf, id=2649, 505.89pt x 505.89pt>
 File: dhb13.pdf Graphic file (type pdf)
  <use dhb13.pdf>
-Package pdftex.def Info: dhb13.pdf used on input line 2771.
+Package pdftex.def Info: dhb13.pdf used on input line 2759.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [167 <C:/Users/dtshayma/Documents/GitHub/measles/dhb12.pdf>]
-<dhb14.pdf, id=2643, 505.89pt x 505.89pt>
+ [173 <C:/Users/dtshayma/Documents/GitHub/measles/dhb12.pdf>]
+<dhb14.pdf, id=2662, 505.89pt x 505.89pt>
 File: dhb14.pdf Graphic file (type pdf)
  <use dhb14.pdf>
-Package pdftex.def Info: dhb14.pdf used on input line 2779.
+Package pdftex.def Info: dhb14.pdf used on input line 2767.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [168 <C:/Users/dtshayma/Documents/GitHub/measles/dhb13.pdf>]
-<dhb15.pdf, id=2656, 505.89pt x 505.89pt>
+ [174 <C:/Users/dtshayma/Documents/GitHub/measles/dhb13.pdf>]
+<dhb15.pdf, id=2675, 505.89pt x 505.89pt>
 File: dhb15.pdf Graphic file (type pdf)
  <use dhb15.pdf>
-Package pdftex.def Info: dhb15.pdf used on input line 2787.
+Package pdftex.def Info: dhb15.pdf used on input line 2775.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [169 <C:/Users/dtshayma/Documents/GitHub/measles/dhb14.pdf>]
-<dhb16.pdf, id=2670, 505.89pt x 505.89pt>
+ [175 <C:/Users/dtshayma/Documents/GitHub/measles/dhb14.pdf>]
+<dhb16.pdf, id=2689, 505.89pt x 505.89pt>
 File: dhb16.pdf Graphic file (type pdf)
  <use dhb16.pdf>
-Package pdftex.def Info: dhb16.pdf used on input line 2795.
+Package pdftex.def Info: dhb16.pdf used on input line 2783.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [170 <C:/Users/dtshayma/Documents/GitHub/measles/dhb15.pdf>]
-<dhb17.pdf, id=2683, 505.89pt x 505.89pt>
+ [176 <C:/Users/dtshayma/Documents/GitHub/measles/dhb15.pdf>]
+<dhb17.pdf, id=2702, 505.89pt x 505.89pt>
 File: dhb17.pdf Graphic file (type pdf)
  <use dhb17.pdf>
-Package pdftex.def Info: dhb17.pdf used on input line 2803.
+Package pdftex.def Info: dhb17.pdf used on input line 2791.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [171 <C:/Users/dtshayma/Documents/GitHub/measles/dhb16.pdf>]
-<dhb18.pdf, id=2696, 505.89pt x 505.89pt>
+ [177 <C:/Users/dtshayma/Documents/GitHub/measles/dhb16.pdf>]
+<dhb18.pdf, id=2715, 505.89pt x 505.89pt>
 File: dhb18.pdf Graphic file (type pdf)
  <use dhb18.pdf>
-Package pdftex.def Info: dhb18.pdf used on input line 2811.
+Package pdftex.def Info: dhb18.pdf used on input line 2799.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [172 <C:/Users/dtshayma/Documents/GitHub/measles/dhb17.pdf>]
-<dhb19.pdf, id=2709, 505.89pt x 505.89pt>
+ [178 <C:/Users/dtshayma/Documents/GitHub/measles/dhb17.pdf>]
+<dhb19.pdf, id=2728, 505.89pt x 505.89pt>
 File: dhb19.pdf Graphic file (type pdf)
  <use dhb19.pdf>
-Package pdftex.def Info: dhb19.pdf used on input line 2819.
+Package pdftex.def Info: dhb19.pdf used on input line 2807.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [173 <C:/Users/dtshayma/Documents/GitHub/measles/dhb18.pdf>]
-<dhb20.pdf, id=2722, 505.89pt x 505.89pt>
+ [179 <C:/Users/dtshayma/Documents/GitHub/measles/dhb18.pdf>]
+<dhb20.pdf, id=2741, 505.89pt x 505.89pt>
 File: dhb20.pdf Graphic file (type pdf)
  <use dhb20.pdf>
-Package pdftex.def Info: dhb20.pdf used on input line 2827.
+Package pdftex.def Info: dhb20.pdf used on input line 2815.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [174 <C:/Users/dtshayma/Documents/GitHub/measles/dhb19.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2833.
- [175 <C:/Users/dtshayma/Documents/GitHub/measles/dhb20.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2833.
+ [180 <C:/Users/dtshayma/Documents/GitHub/measles/dhb19.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2821.
+ [181 <C:/Users/dtshayma/Documents/GitHub/measles/dhb20.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2821.
 
 (C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport_v3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2833.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2833.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2821.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2821.
 
 Package rerunfilecheck Info: File `draftfinalreport_v3.out' has not changed.
 (rerunfilecheck)             Checksum: D5B107415CA1D5C352FD419B4D06C5C9;1838.
@@ -3734,68 +2494,43 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2833.
- )
-(\end occurred when \ifnum on line 1103 was incomplete)
-(\end occurred when \ifnum on line 1103 was incomplete)
-(\end occurred when \ifx on line 1103 was incomplete)
-(\end occurred when \ifnum on line 1103 was incomplete)
-(\end occurred when \ifnum on line 1103 was incomplete)
-(\end occurred when \ifnum on line 1103 was incomplete)
-(\end occurred when \ifnum on line 1103 was incomplete)
-(\end occurred when \ifnum on line 1103 was incomplete)
-(\end occurred when \ifnum on line 1083 was incomplete)
-(\end occurred when \ifnum on line 1083 was incomplete)
-(\end occurred when \ifx on line 1083 was incomplete)
-(\end occurred when \ifnum on line 1083 was incomplete)
-(\end occurred when \ifnum on line 1083 was incomplete)
-(\end occurred when \ifnum on line 1083 was incomplete)
-(\end occurred when \ifnum on line 1083 was incomplete)
-(\end occurred when \ifnum on line 1083 was incomplete)
-(\end occurred when \ifnum on line 1063 was incomplete)
-(\end occurred when \ifnum on line 1063 was incomplete)
-(\end occurred when \ifx on line 1063 was incomplete)
-(\end occurred when \ifnum on line 1063 was incomplete)
-(\end occurred when \ifnum on line 1063 was incomplete)
-(\end occurred when \ifnum on line 1063 was incomplete)
-(\end occurred when \ifnum on line 1063 was incomplete)
-(\end occurred when \ifnum on line 1063 was incomplete) 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2821.
+ ) 
 Here is how much of TeX's memory you used:
- 20370 strings out of 493921
- 351226 string characters out of 3147273
- 504133 words of memory out of 3000000
- 22601 multiletter control sequences out of 15000+200000
+ 20385 strings out of 493921
+ 351266 string characters out of 3147273
+ 504435 words of memory out of 3000000
+ 22610 multiletter control sequences out of 15000+200000
  57433 words of font info for 116 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  61i,14n,96p,2172b,548s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX
- 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-sy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on draftfinalreport_v3.pdf (175 pages, 672314486 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmti7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on draftfinalreport_v3.pdf (181 pages, 704112052 bytes).
 PDF statistics:
- 2929 PDF objects out of 2984 (max. 8388607)
- 463 named destinations out of 1000 (max. 500000)
- 892 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2951 PDF objects out of 2984 (max. 8388607)
+ 470 named destinations out of 1000 (max. 500000)
+ 887 words of extra memory for PDF output out of 10000 (max. 10000000)
 

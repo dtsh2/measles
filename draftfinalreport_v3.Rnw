@@ -32,7 +32,7 @@
 \usepackage{framed}
 \usepackage{float}
 \usepackage{authblk}
-\usepackage{morefloats}
+\usepackage[maxfloats=50]{morefloats}
 \newcommand{\vecA}{\mathbf{A}}
 \newcommand{\vecB}{\mathbf{B}}
 \newcommand{\vecC}{\mathbf{C}}
@@ -1585,6 +1585,8 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 % \end{center}
 \label{fig:fig12013_c}
 \end{figure}
+
+\clearpage
 
 Plotting the lower level data from the area unit data, available from the NIR database, shows that there is heterogeneity at the local level and an obvious temporal lag, as the proportion vaccinated declines with birth cohort (\autoref{fig:mmr_nir}), though recent vaccination levels are consistently high for MMR1. For full details, see \autoref{fig:fig12006} (MMR1, 2006), \autoref{fig:fig22006} (MMR2, 2006), \autoref{fig:fig12007} (MMR1, 2007), \autoref{fig:fig22007} (MMR2, 2007), \autoref{fig:fig12008} (MMR1, 2008), \autoref{fig:fig22008} (MMR2, 2008), \autoref{fig:fig12009} (MMR1, 2009), \autoref{fig:fig22009} (MMR2, 2009), \autoref{fig:fig12010} (MMR1, 2010), \autoref{fig:fig22010} (MMR2, 2010), \autoref{fig:fig12011} (MMR1, 2011), \autoref{fig:fig22011} (MMR2, 2011), \autoref{fig:fig12012} (MMR1, 2012), \autoref{fig:fig22012} (MMR2, 2012), \autoref{fig:fig12013} (MMR1, 2013), \autoref{fig:fig22013} (MMR2, 2013), \autoref{fig:fig12014} (MMR1, 2014), \autoref{fig:fig22014} (MMR2, 2014), \autoref{table:tab_mmr_nir} and the supplementary files.
 
