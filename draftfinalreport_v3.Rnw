@@ -814,7 +814,7 @@ write.csv(Z,"dhb_vacc.csv",row.names=F)
 \label{fig:ageinyears}
 \end{figure}
 
-This large number of categories, some with small population sizes, leads to both overdispersion and zeroinflation, as there are many categories with zero cases in, particularly in the adult age classes. Furthermore, initial preliminary analyses, including multi-- and univariate analyses (not shown) suggested little effect of \textit{individual} NZDep classifications and several higher order interactions, and therefore we reduced the number of NZDep categories from ten to three: NZDep 1--3 (least deprived), NZDep 4--7, and NZDep 8--10 (most deprived) (\href{http://www.otago.ac.nz/wellington/research/hirp/otago020194.html}{www.otago.ac.nz}) following discussion with the Ministry regarding the most appropriate categories. We also incorporated the 65+ age classes into the 25--64 age category, to make a 25+ age category. By doing so, we reduce the zeroinflation present in the data. 
+This large number of categories, some with small population sizes, leads to both overdispersion and zeroinflation, as there are many categories with zero cases, particularly in the adult age classes. Furthermore, initial preliminary multi-- and univariate analyses (not shown) suggested little effect of \textit{individual} NZDep classifications and several higher order interactions. Following discussion with the Ministry regarding the most appropriate NZDep categories, we reduced the number of categories from ten to three: NZDep 1--3 (least deprived), NZDep 4--7, and NZDep 8--10 (most deprived) (\href{http://www.otago.ac.nz/wellington/research/hirp/otago020194.html}{www.otago.ac.nz}). We also incorporated the 65+ age classes into the 25--64 age category, to make a 25+ age category. By doing so, we reduce the zeroinflation present in the data. 
 
 The Prioritized Ethnicities for cases are:  European; Maori; Pacific Peoples; Asian; Middle Eastern/Latin American/African (MLA); Other Ethnicity; Residual Categories. For the analyses in this report only the first five are used, as these categories cover the overwhelming number of cases, with only 1.9\% (22/1137) of cases having no Prioritized Ethnicity. 
 
@@ -834,7 +834,7 @@ The Prioritized Ethnicities for cases are:  European; Maori; Pacific Peoples; As
 \label{fig:percap_all}
 \end{sidewaysfigure}
 
-The numbers of cases per category and population sizes for the complete data set from 2007-2014 can be seen in \autoref{table:percap}. Subsequent regression analyses (not shown) also suggested that the MLA category was over-- or underrepresented in per capita rates given the very small sample sizes for this classification (\autoref{table:percap}), leading to very large standard error in regression analyses. However, there are also numerous issues with the data for MLA ethnicity category above and beyond the small population sizes, creating issues for estimating the denominator data for this group (University of Otago, personal communication). Thus, we removed this grouping for our subsequent analyses and are left with Asian, European, Maori and Pacific as Prioritized Ethnicities. This left us with 1102/1115 (99\%) of the measles cases with Prioritized Ethnicity recorded from 2007, and 1102/1137 (97\%) of all measles cases recorded since 2007 (\autoref{table:percap}). The breakdown of cases and per capita measles values can be see in \autoref{fig:cases_all} and \autoref{fig:percap_all}. Two way interactions are shown in the Appendix (\autoref{sec:app}, \autoref{fig:CaseAgeNzdep}, \autoref{fig:CaseNzdepEth}, \autoref{fig:CaseAgeEth}, \autoref{fig:PerCapAgeNzdep}, \autoref{fig:PerCapNzdepEth}, \autoref{fig:PerCapAgeEth}).
+The numbers of cases per category and population sizes for the complete data set from 2007--2014 can be seen in \autoref{table:percap}. Subsequent regression analyses (not shown) also suggested that the MLA category was over-- or underrepresented in per capita rates given the very small sample sizes for this classification (\autoref{table:percap}), leading to very large standard errors in regression analyses. However, there are also numerous issues with the data for MLA ethnicity category above and beyond the small population sizes, creating issues for estimating the denominator data for this group (University of Otago, personal communication). Thus, we removed this grouping for our subsequent analyses and are left with Asian, European, Maori and Pacific as Prioritized Ethnicities. This left us with 1102/1115 (99\%) of the measles cases with Prioritized Ethnicity recorded from 2007, and 1102/1137 (97\%) of all measles cases recorded since 2007 (\autoref{table:percap}). The breakdown of cases and per capita measles values can be see in \autoref{fig:cases_all} and \autoref{fig:percap_all}. Two way interactions are shown in the Appendix (\autoref{sec:app}, \autoref{fig:CaseAgeNzdep}, \autoref{fig:CaseNzdepEth}, \autoref{fig:CaseAgeEth}, \autoref{fig:PerCapAgeNzdep}, \autoref{fig:PerCapNzdepEth}, \autoref{fig:PerCapAgeEth}).
 
 \begin{table}[hbtp] \scriptsize
 \captionsetup{width=1\textwidth, font={footnotesize}}
@@ -846,12 +846,13 @@ latex(PerCap, file="", table.env=FALSE,rowname=NULL)
 \label{table:percap}
 \end{table}
 
-For all our statistical analyses (including those above not shown) we used a Poisson error structure, but in all cases there was a need to account for overdispersion and thus we used and present the results of a quasipoission regression model. We also account for differences in population sizes by using an offset term, the log(population size). We used a model simplification approach, by beginning our analyses with all terms and all interactions, and then simplifying the models through removal of non-significant higher order interaction terms. Thus, the final model that remained with all significant interaction terms had the following linear predictor:
+For all our statistical analyses (including those above not shown) we used a Poisson error structure with rate adjusted for population size, but in all cases there was a need to account for overdispersion and thus we used and present the results of a quasipoission regression model. We used a model simplification approach, by beginning our analyses with all terms and all interactions, and then simplifying the models through removal of non-significant higher order interaction terms. Thus, the final model that remained with all significant interaction terms had the following linear predictor:
 
-\begin{equation} \label{eq:reg}
- \log(y) = \alpha + \beta _a (x_a)+ \beta _e(x_e)+ \beta _n (x_n) + \beta _a{}_e(x_a \times x_e)+ \log(population)  + \epsilon
-  \end{equation}
-Where $\alpha$ is the intercept, $y$ signifies cases, $_a$ signifies age, $_e$ signifies Prioritized Ethnicity, $_n$ signifies NZDep, and $\epsilon$ is the error term.
+\begin{align*} \label{eq:reg}
+ y &\sim \textsf{Poisson}(\lambda n)\\
+ \log(\lambda) &= \alpha + \beta _a (x_a)+ \beta _e(x_e)+ \beta _s (x_s) + \beta _a{}_e(x_a \times x_e)
+  \end{align*}
+Where $y$ is the number of cases, $\lambda$ is cases per capita, $n$ is population size, $\alpha$ is the intercept, $_a$ signifies age, $_e$ signifies Prioritized Ethnicity and $_s$ signifies NZDep.
 
 \subsection{Regression analyses results}
 \label{sub:regression_results}
