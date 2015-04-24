@@ -61,8 +61,8 @@ par(mfrow=c(1,1))
 
 #####
 
-# pdf(paste("nir_census_MMR1_NIR_2006.pdf"), width=7, height=5)
-  pdf(paste("nir_census_MMR2_NIR_2006.pdf"), width=7, height=5)
+# pdf(paste("nir_census_MMR1_NIR_2006.pdf"), width=7, height=6)
+  pdf(paste("nir_census_MMR2_NIR_2006.pdf"), width=7, height=6)
 
 #####
 
@@ -75,7 +75,7 @@ par(fig = c(0.05, 0.4, 0.5,0.9), mar=c(5,5,2,2), new=TRUE)
 #####
 
 # hist(data_au$prop1, breaks=50,col="grey", xlab="Proportion vaccinated",main="")
-  hist(data_au$prop2, breaks=50,col="grey", xlab="Proportion vaccinated",main="")
+ hist(data_au$prop2, breaks=50,col="grey", xlab="Proportion vaccinated",main="")
 
 ##### 
 
@@ -94,8 +94,8 @@ par(mfrow=c(1,1))
 
 ## Christchurch
 
-# pdf(paste("nir_census_MMR1_NIR_ChCh_2006.pdf"), width=7, height=5)
-  pdf(paste("nir_census_MMR2_NIR_ChCh_2006.pdf"), width=7, height=5)
+# pdf(paste("nir_census_MMR1_NIR_ChCh_2006.pdf"), width=7, height=6)
+  pdf(paste("nir_census_MMR2_NIR_ChCh_2006.pdf"), width=7, height=6)
 
 #####
 
@@ -111,8 +111,8 @@ par(mfrow=c(1,1))
 
 ## Auckland
 
-# pdf(paste("nir_census_MMR1_NIR_Auk_2006.pdf"), width=7, height=5)
- pdf(paste("nir_census_MMR2_NIR_Auk_2006.pdf"), width=7, height=5)
+# pdf(paste("nir_census_MMR1_NIR_Auk_2006.pdf"), width=7, height=6)
+ pdf(paste("nir_census_MMR2_NIR_Auk_2006.pdf"), width=7, height=6)
 
 #####
 
@@ -127,8 +127,8 @@ par(mfrow=c(1,1))
 
 ## Wellington
 
-# pdf(paste("nir_census_MMR1_NIR_Well_2006.pdf"), width=7, height=5)
- pdf(paste("nir_census_MMR2_NIR_Well_2006.pdf"), width=7, height=5)
+# pdf(paste("nir_census_MMR1_NIR_Well_2006.pdf"), width=7, height=6)
+ pdf(paste("nir_census_MMR2_NIR_Well_2006.pdf"), width=7, height=6)
 
 #####
 

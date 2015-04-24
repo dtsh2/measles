@@ -114,7 +114,7 @@ pdf(paste("census_immunity_age.pdf"), width=7, height=5)
 plot(au, col=cols,lwd=1,lty=3,main="MMR1")
 legend("topright",c("0-85%","86-90%","91-95%","96-100%",">100%","NA")
        ,fill=c(pal,"white"),
-       bty="n",inset=0.1,title="Percent vaccinated")
+       bty="n",inset=0.1,title="Percent immune")
 dev.off()
 #####
 
@@ -136,7 +136,7 @@ plot(au, col=cols,lwd=1,lty=3,main="MMR1",xlim=c(1550461 , 1559320),ylim=c(51413
 legend("topright",c("0-85%","86-90%","91-95%","96-100%",">100%","NA")
        ,fill=c(pal,"white"),
        # bty="n",inset=0.0,
-       title="Percent vaccinated",bg="white",box.col="white")
+       title="Percent immune",bg="white",box.col="white")
  dev.off()
 
 
@@ -148,7 +148,7 @@ plot(au, col=cols,lwd=1,lty=3,main="MMR1",xlim=c( 1693320, 1803320),ylim=c(58921
 legend("topright",c("0-85%","86-90%","91-95%","96-100%",">100%","NA")
        ,fill=c(pal,"white"),
        # bty="n",inset=0.0,
-       title="Percent vaccinated",bg="white",box.col="white")
+       title="Percent immune",bg="white",box.col="white")
  dev.off()
 
 ## Wellington
@@ -159,7 +159,7 @@ plot(au, col=cols,lwd=1,lty=3,main="MMR1",xlim=c( 1730320, 1784500),ylim=c(54211
 legend("topright",c("0-85%","86-90%","91-95%","96-100%",">100%","NA")
        ,fill=c(pal,"white"),
        # bty="n",inset=0.0,
-       title="Percent vaccinated",bg="white",box.col="white")
+       title="Percent immune",bg="white",box.col="white")
 dev.off()
 
 ##############

@@ -113,6 +113,12 @@
 \date{}
 \maketitle
 
+\tableofcontents
+
+% \listoffigures
+%  
+% \listoftables
+
 \section{Abstract}
 
 New Zealand has been working towards elimination of endemic (domestic) measles virus transmission, but has suffered from small, yet significant outbreaks after measles introductions from abroad. In this draft final report we review the draft \emph {Progress Towards Measles Elimination in New Zealand - Final} report from the New Zealand Ministry of Health to the World Health Organization (WHO) Western Pacific Region. We identify additional analyses that may help understand risk of infection in New Zealand. Here we present the results of statistical analyses of risk factors for measles cases in New Zealand during outbreaks since 2007 until 12 June 2014. We provide cost analyses for the measles outbreaks in New Zealand, and include modelling of measles outbreaks, including pre- and post-vaccination scenarios, based on the numbers of na\"{\i}ve people at the District Health Board (DHB) and national level. We provide benefit--cost analyses using the results from those model simulations, along with a number of alternative vaccination strategies to achieve different vaccination coverage levels. Our key findings are:
@@ -212,7 +218,7 @@ The Prioritized Ethnicities for cases are:  European; Maori; Pacific Peoples; As
 The numbers of cases per category and population sizes for the complete data set from 2007-2014 can be seen in \autoref{table:percap}. Subsequent regression analyses (not shown) also suggested that the MLA category was over-- or underrepresented in per capita rates given the very small sample sizes for this classification (\autoref{table:percap}), leading to very large standard error in regression analyses. However, there are also numerous issues with the data for MLA ethnicity category above and beyond the small population sizes, creating issues for estimating the denominator data for this group (University of Otago, personal communication). Thus, we removed this grouping for our subsequent analyses and are left with Asian, European, Maori and Pacific as Prioritized Ethnicities. This left us with 1102/1115 (99\%) of the measles cases with Prioritized Ethnicity recorded from 2007, and 1102/1137 (97\%) of all measles cases recorded since 2007 (\autoref{table:percap}). The breakdown of cases and per capita measles values can be see in \autoref{fig:cases_all} and \autoref{fig:percap_all}. Two way interactions are shown in the Appendix (\autoref{sec:app}, \autoref{fig:CaseAgeNzdep}, \autoref{fig:CaseNzdepEth}, \autoref{fig:CaseAgeEth}, \autoref{fig:PerCapAgeNzdep}, \autoref{fig:PerCapNzdepEth}, \autoref{fig:PerCapAgeEth}).
 
 \begin{table}[hbtp] \scriptsize
-\captionsetup{width=1\textwidth}
+\captionsetup{width=1\textwidth, font={tiny}}
 %latex.default(PerCap, file = "", table.env = FALSE, rowname = NULL)%
 \begin{center}
 \begin{tabular}{lllrrr}
@@ -299,15 +305,6 @@ The numbers of cases per category and population sizes for the complete data set
 \label{table:percap}
 \end{table}
 
-% \begin{table}[hbtp]\footnotesize
-% <<results=tex,echo=FALSE>>=
-% colnames(propvCohort) <- c("Age range", "Proportion")
-% latex(propvCohort, file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Proportions of the na\"{\i}ve population the would be covered if vaccinated by age groups}
-% \label{table:vaccine_cohort}
-% \end{table}
-
 For all our statistical analyses (including those above not shown) we used a Poisson error structure, but in all cases there was a need to account for overdispersion and thus we used and present the results of a quasipoission regression model. We also account for differences in population sizes by using an offset term, the log(population size). We used a model simplification approach, by beginning our analyses with all terms and all interactions, and then simplifying the models through removal of non-significant higher order interaction terms. Thus, the final model that remained with all significant interaction terms had the following linear predictor:
 
 \begin{equation} \label{eq:reg}
@@ -347,7 +344,7 @@ The cases and per capita measles values are in \autoref{fig:cases_all} and \auto
 \vspace{5mm} %5mm vertical space
 \begin{table}
 % latex table generated in R 3.0.2 by xtable 1.7-3 package
-% Tue Apr 21 10:02:47 2015
+% Fri Apr 24 16:29:15 2015
 \begin{tabular}{lrrrrrr}
   \hline
  & Df & Deviance & Resid. Df & Resid. Dev & F & Pr($>$F) \\ 
@@ -365,7 +362,7 @@ NULL &  &  & 59 & 1532.80 &  &  \\
 \vspace{5mm} %5mm vertical space
 \begin{table}
 % latex table generated in R 3.0.2 by xtable 1.7-3 package
-% Tue Apr 21 10:02:47 2015
+% Fri Apr 24 16:29:15 2015
 \begin{tabular}{rrrrr}
   \hline
  & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
@@ -528,15 +525,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig12006}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t22006)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t22006[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2006 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22006}.}
-% \label{table:tab22006}
-% \end{table}
 
 
 \begin{sidewaysfigure}
@@ -548,15 +536,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig22006}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t12007)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t12007[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2007 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12007}.}
-% \label{table:tab12007}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -567,15 +546,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig12007}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t22007)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t22007[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2007 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22007}.}
-% \label{table:tab22007}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -586,15 +556,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig22007}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t12008)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t12008[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2008 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12008}.}
-% \label{table:tab12008}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -605,15 +566,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig12008}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t22008)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t22008[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2008 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22008}.}
-% \label{table:tab22008}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -624,15 +576,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig22008}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t12009)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t12009[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2009 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12009}.}
-% \label{table:tab12009}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -643,15 +586,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig12009}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t22009)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t22009[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2009 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22009}.}
-% \label{table:tab22009}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -662,15 +596,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig22009}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t12010)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t12010[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2010 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12010}.}
-% \label{table:tab12010}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -681,15 +606,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig12010}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t22010)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t22010[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2010 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22010}.}
-% \label{table:tab22010}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -700,15 +616,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig22010}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t12011)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t12011[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2011 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12011}.}
-% \label{table:tab12011}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -719,15 +626,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig12011}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t22011)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t22011[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2011 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22011}.}
-% \label{table:tab22011}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -738,15 +636,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig22011}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t12012)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t12012[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2012 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12012}.}
-% \label{table:tab12012}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -757,34 +646,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig12012}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t22012)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t22012[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2012 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22012}.}
-% \label{table:tab22012}
-% \end{table}
-
-\begin{sidewaysfigure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2012.pdf}
- \end{center}
-    \caption{Proportion of the New Zealand population born in 2012 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig22012}
-\end{sidewaysfigure}
-
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t12013)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t12013[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2006 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12013}.}
-% \label{table:tab12013}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -795,34 +656,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
 \label{fig:fig12013}
 \end{sidewaysfigure}
 
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t22013)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t22013[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2006 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22013}.}
-% \label{table:tab22013}
-% \end{table}
-
-\begin{sidewaysfigure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2013.pdf}
-\end{center}
-\caption{Proportion of the New Zealand population born in 2013 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-%     \end{center}
-\label{fig:fig22013}
-\end{sidewaysfigure}
-
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t12014)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t12014[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2014 birth cohort vaccinated against MMR1 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12014}.}
-% \label{table:tab12014}
-% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -831,25 +664,6 @@ MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
     \caption{Proportion of the New Zealand population born in 2014 vaccinated against measles using MMR1 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12014}
-\end{sidewaysfigure}
-
-%  \vspace{5mm} %5mm vertical space
-% \begin{table}
-% <<include=FALSE,echo=FALSE,results=tex>>=
-% colnames(t22014)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-% latex(t22014[1:7], file="", table.env=FALSE,rowname=NULL)
-% @
-% \caption{Summary of the proportion of 2014 birth cohort vaccinated against MMR2 across the 2013 area units. Area units are aggregations of meshblock data. See \autoref{fig:fig22014}.}
-% \label{table:tab22014}
-% \end{table}
-
-\begin{sidewaysfigure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2014.pdf}
- \end{center}
-\caption{Proportion of the New Zealand population born in 2014 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig22014}
 \end{sidewaysfigure}
 
 The majority of the na\"{\i}ve among the general New Zealand population are in their first years of life (\autoref{fig:naive}). However, the distribution of na\"{\i}ve at a national level shows that the recent MMR vaccination schemes are reducing the proportions of na\"{\i}ve population in the 3--5 year old age group to greater levels than in older young people  (\autoref{fig:naive}). Plotting the breakdown of these figures by DHB clearly shows that the greatest numbers of na\"{\i}ve people are in DHBs with larger urban areas (\autoref{fig:naive_map}). The distribution of the numbers of na\"{\i}ve and the total na\"{\i}ve populations per DHB, assuming national immunisation and immunity rates are representative, are given in the following figures in the appendix (\autoref{sec:app}): 
@@ -876,6 +690,427 @@ The majority of the na\"{\i}ve among the general New Zealand population are in t
 \item Southern: \autoref{fig:Southern}
 \end{itemize}
 
+Plotting the NIR data at the city level for the three major cities, Auckland (\autoref{fig:fig12006_a}, \autoref{fig:fig22006_a}, \autoref{fig:fig12007_a}, \autoref{fig:fig22007_a}, \autoref{fig:fig12008_a}, \autoref{fig:fig22008_a}, \autoref{fig:fig12009_a}, \autoref{fig:fig22009_a}, \autoref{fig:fig12010_a}, \autoref{fig:fig22010_a}, \autoref{fig:fig12011_a}, \autoref{fig:fig22011_a}, \autoref{fig:fig12012_a}, \autoref{fig:fig22012_a}, \autoref{fig:fig12013_a}, \autoref{fig:fig22013_a}, \autoref{fig:fig12014_a}, and \autoref{fig:fig22014_a}.), Wellington (\autoref{fig:fig12006_w}, \autoref{fig:fig22006_w}, \autoref{fig:fig12007_w}, \autoref{fig:fig22007_w}, \autoref{fig:fig12008_w}, \autoref{fig:fig22008_w}, \autoref{fig:fig12009_w}, \autoref{fig:fig22009_w}, \autoref{fig:fig12010_w}, \autoref{fig:fig22010_w}, \autoref{fig:fig12011_w}, \autoref{fig:fig22011_w}, \autoref{fig:fig12012_w}, \autoref{fig:fig22012_w}, \autoref{fig:fig12013_w}, \autoref{fig:fig22013_w}, \autoref{fig:fig12014_w}, and \autoref{fig:fig22014_w}) and Christchurch (\autoref{fig:fig12006_c}, \autoref{fig:fig22006_c}, \autoref{fig:fig12007_c}, \autoref{fig:fig22007_c}, \autoref{fig:fig12008_c}, \autoref{fig:fig22008_c}, \autoref{fig:fig12009_c}, \autoref{fig:fig22009_c}, \autoref{fig:fig12010_c}, \autoref{fig:fig22010_c}, \autoref{fig:fig12011_c}, \autoref{fig:fig22011_c}, \autoref{fig:fig12012_c}, \autoref{fig:fig22012_c}, \autoref{fig:fig12013_c}, \autoref{fig:fig22013_c}, \autoref{fig:fig12014_c}, and \autoref{fig:fig22014_c}) shows that there is heterogeneity among vaccination levels within the larger urban areas.
+
+%%% Auck
+% 
+\begin{figure}
+   \begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2006.pdf}
+    \end{center}
+    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12006_a}
+\end{figure}
+% 
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2006.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22006_a}
+\end{figure}
+% 
+% 
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2007.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12007_a}
+\end{figure}
+% 
+% 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2007.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22007_a}
+\end{figure}
+
+% 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2008.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12008_a}
+\end{figure}
+
+% 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2008.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22008_a}
+\end{figure}
+% 
+% 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2009.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12009_a}
+\end{figure}
+
+% 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2009.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig22009_a}
+\end{figure}
+% 
+% 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2010.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12010_a}
+\end{figure}
+% 
+% 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2010.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig22010_a}
+\end{figure}
+% 
+% 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2011.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12011_a}
+\end{figure}
+% 
+% 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2011.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig22011_a}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2012.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12012_a}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2013.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2013 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12013_a}
+\end{figure}
+
+%%% Well
+% 
+\begin{figure}
+   \begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2006.pdf}
+    \end{center}
+    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12006_w}
+\end{figure}
+% 
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2006.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22006_w}
+\end{figure}
+% 
+% 
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2007.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12007_w}
+\end{figure}
+% % 
+% % 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2007.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22007_w}
+\end{figure}
+
+% 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2008.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12008_w}
+\end{figure}
+% 
+% 
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2008.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22008_w}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2009.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12009_w}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2009.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig22009_w}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2010.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12010_w}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2010.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig22010_w}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2011.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12011_w}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2011.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig22011_w}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2012.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12012_w}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2013.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2013 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12013_w}
+\end{figure}
+
+%%% ChCh
+
+\begin{figure}
+   \begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2006.pdf}
+    \end{center}
+    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12006_c}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2006.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22006_c}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2007.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12007_c}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2007.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22007_c}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2008.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12008_c}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2008.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22008_c}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2009.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12009_c}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2009.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig22009_c}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2010.pdf}
+\end{center}
+    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12010_c}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2010.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig22010_c}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2011.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12011_c}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2011.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig22011_c}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2012.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%\end{center}
+\label{fig:fig12012_c}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2013.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2013 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12013_c}
+\end{figure}
+
 Plotting the lower level data from the 2013 area unit data, available from the NIR database, shows that there is heterogeneity at the local level and an obvious temporal lag, as the proportion vaccinated declines with birth cohort (\autoref{fig:mmr_nir}), though recent vaccination levels are consistently high for MMR1. For full details, see \autoref{fig:fig12006} (MMR1, 2006), \autoref{fig:fig22006} (MMR2, 2006), \autoref{fig:fig12007} (MMR1, 2007), \autoref{fig:fig22007} (MMR2, 2007), \autoref{fig:fig12008} (MMR1, 2008), \autoref{fig:fig22008} (MMR2, 2008), \autoref{fig:fig12009} (MMR1, 2009), \autoref{fig:fig22009} (MMR2, 2009), \autoref{fig:fig12010} (MMR1, 2010), \autoref{fig:fig22010} (MMR2, 2010), \autoref{fig:fig12011} (MMR1, 2011), \autoref{fig:fig22011} (MMR2, 2011), \autoref{fig:fig12012} (MMR1, 2012), \autoref{fig:fig22012} (MMR2, 2012), \autoref{fig:fig12013} (MMR1, 2013), \autoref{fig:fig22013} (MMR2, 2013), \autoref{fig:fig12014} (MMR1, 2014), \autoref{fig:fig22014} (MMR2, 2014), \autoref{table:tab_mmr_nir} and the supplementary files.
 
 
@@ -897,6 +1132,47 @@ The correlation between the percentage vaccinated against MMR1 and MMR2 for the 
      \label{fig:cor_nir}
 \end{figure}
 
+Vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>13$ years) among different age classes provided by the Ministry were also used to map the immunity among the 2004 2013 area units for those ages not included on the NIR database. Vaccine efficacy for 0--4 year olds was not necessary for these analyses, for those $\leq$ 13 years 99\% vaccine efficacy was used (\autoref{table:sero}) and for $\geq$ 14 year olds equivocal serological results were considered non-immune (\autoref{table:sero}). Again there was heterogeneity at the local level (\autoref{fig:sero_imm_map}) with pockets of the nation and cities with lower coverage than other areas (\autoref{fig:sero_imm_a}, \autoref{fig:sero_imm_w}, and \autoref{fig:sero_imm_c}).
+
+\begin{sidewaysfigure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{census_immunity_age.pdf}
+     \end{center}
+     \caption{The estimated immunity levels at the 2013 area unit level using the vaccine efficacy and serosurvey data presented in \autoref{table:sero}. See \autoref{fig:sero_imm_hist}, \autoref{fig:sero_imm_a}\autoref{fig:sero_imm_w}, \autoref{fig:sero_imm_c} for city maps and the distribution of immunity levels}
+     \label{fig:sero_imm_map}
+\end{sidewaysfigure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{census_immunity_age_Auk.pdf}
+     \end{center}
+     \caption{The estimated immunity levels at the 2013 area unit level for the Auckland vicinity using the vaccine efficacy and serosurvey data presented in \autoref{table:sero}.}
+     \label{fig:sero_imm_a}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{census_immunity_age_Well.pdf}
+     \end{center}
+    \caption{The estimated immunity levels at the 2013 area unit level for the Wellington vicinity using the vaccine efficacy and serosurvey data presented in \autoref{table:sero}.}
+     \label{fig:sero_imm_w}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{census_immunity_age_ChCh.pdf}
+     \end{center}
+    \caption{The estimated immunity levels at the 2013 area unit level for the Christchurch vicinity using the vaccine efficacy and serosurvey data presented in \autoref{table:sero}.}
+     \label{fig:sero_imm_c}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{census_immunity_age_hist.pdf}
+     \end{center}
+     \caption{The distribution of estimated immunity levels at the 2013 area unit level using the vaccine efficacy and serosurvey data presented in \autoref{table:sero}. See \autoref{fig:sero_imm_map} for the plotted data}
+     \label{fig:sero_imm_hist}
+\end{figure}
 
 \subsection{Measles importation risk methods}
 \label{sub:imp_risk}
@@ -1348,7 +1624,7 @@ Though the global incidence of measles is declining, in recent years that declin
 
 \subsection*{Risk analysis discussion}
 
-The regression analyses suggest that age is a particularly strong risk factor for measles. This comes as no surpise to epidemiologists or health care providers. However, our analyses also highlight other groups that are at greater risk of measles. In particular, Pacific people are at greater risk per capita, as are the less deprived (NZDep 1--3), and European and Maori 5--17 year old children compared to Asian and Pacific ethnicity children of the same age. Furthermore, Pacific origin people of all categories from 2--24 years old were less likely on a per capita basis to be cases than Europeans or Maori. Interpretation of these results must still be viewed with some caution, however, as there is very likely a spatial effect that might not be accounted for in these analyses. For example, increased numbers of more wealthy Europeans were measles cases, as was true for Maori. However, the alternative situation was clear for Pacific people, especially of the 0--1 year olds (\autoref{fig:percap_all} and \autoref{fig:cases_all}). Results such as this may simply be due to the spatial effects in the communities the outbreaks were occurring in, rather than an effect of wealth. The risk maps using the spatially explicit NIR vaccination data suggest that there is some heterogeneity in the vaccination cover at the area unit (a level above meshblock) for both MMR1 and MMR2 (see histograms within \autoref{fig:fig12006}, \autoref{fig:fig12007}, \autoref{fig:fig12008}, \autoref{fig:fig12009}, \autoref{fig:fig12010}, \autoref{fig:fig12011}, \autoref{fig:fig12012}, \autoref{fig:fig12013}, \autoref{fig:fig12014}, \autoref{fig:fig22006}, \autoref{fig:fig22007}, \autoref{fig:fig22008}, \autoref{fig:fig22009}, \autoref{fig:fig22010}, \autoref{fig:fig22011}, \autoref{fig:fig22012}, \autoref{fig:fig22013}, and \autoref{fig:fig22014}).
+The regression analyses suggest that age is a particularly strong risk factor for measles. This comes as no surpise to epidemiologists or health care providers. However, our analyses also highlight other groups that are at greater risk of measles. In particular, Pacific people are at greater risk per capita, as are the less deprived (NZDep 1--3), and European and Maori 5--17 year old children compared to Asian and Pacific ethnicity children of the same age. Furthermore, Pacific origin people of all categories from 2--24 years old were less likely on a per capita basis to be cases than Europeans or Maori. Interpretation of these results must still be viewed with some caution, however, as there is very likely a spatial effect that might not be accounted for in these analyses. For example, increased numbers of more wealthy Europeans were measles cases, as was true for Maori. However, the alternative situation was clear for Pacific people, especially of the 0--1 year olds (\autoref{fig:percap_all} and \autoref{fig:cases_all}). Results such as this may simply be due to the spatial effects in the communities the outbreaks were occurring in, rather than an effect of wealth. The risk maps using the spatially explicit NIR vaccination data suggest that there is some heterogeneity in the vaccination cover at the area unit (a level above meshblock) for both MMR1 and MMR2 (see histograms within \autoref{fig:fig12006}, \autoref{fig:fig12007}, \autoref{fig:fig12008}, \autoref{fig:fig12009}, \autoref{fig:fig12010}, \autoref{fig:fig12011}, \autoref{fig:fig12012}, \autoref{fig:fig12013}, \autoref{fig:fig12014}, \autoref{fig:fig22006}, \autoref{fig:fig22007}, \autoref{fig:fig22008}, \autoref{fig:fig22009}, \autoref{fig:fig22010}, \autoref{fig:fig22011}, \autoref{fig:fig22012}, \autoref{fig:fig22013}, and \autoref{fig:fig22014}). This is also seen at the city level. The level of immunity within the population more broadly is also heterogeneous, however, it is noticable that the majority of area units have between 85 -- 96\% immunity, with few below this and few above this (\autoref{fig:sero_imm_hist}).
 
 The distribution of the measles cases (\autoref{fig:ageandvac}) appears to reflect the distribution of na\"{\i}ve individuals in the population (\autoref{fig:naive}). The vaccination history of the cases suggests that lack of vaccination cover is the main contributor to the outbreak, though it is noticeable that a number ($>16\%$) of cases had been vaccinated at least once. However, the majority of these received only one vaccination, and were vaccinated when they were young (\autoref{fig:vaccstat}). The majority of na\"{\i}ve among the New Zealand population is clearly focused in the DHB with large urban areas (\autoref{fig:naive_map}). 
 
@@ -2240,6 +2516,158 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
      \caption{Per capita measles case rates by prioritized ethnicity and age from 2007--2014. Full details are given in (\autoref{fig:percap_all})}
      \label{fig:PerCapAgeEth}
 \end{figure}
+% 
+
+\begin{sidewaysfigure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2012.pdf}
+ \end{center}
+    \caption{Proportion of the New Zealand population born in 2012 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22012}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2013.pdf}
+\end{center}
+\caption{Proportion of the New Zealand population born in 2013 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%     \end{center}
+\label{fig:fig22013}
+\end{sidewaysfigure}
+
+
+\begin{sidewaysfigure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2014.pdf}
+ \end{center}
+\caption{Proportion of the New Zealand population born in 2014 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22014}
+\end{sidewaysfigure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2012.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22012_a}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2013.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2013 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22013_a}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2014.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12014_a}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2014.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22014_a}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2012.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22012_w}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2013.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2013 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22013_w}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2014.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12014_w}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2014.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12014_w}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2014.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22014_w}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2012.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22012_c}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2013.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2013 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22013_c}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2014.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig12014_c}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2014.pdf}
+ \end{center}
+    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \end{center}
+\label{fig:fig22014_c}
+\end{figure}
 
 \begin{figure}[H]
      \begin{center}
@@ -2401,6 +2829,5 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
      \caption{Numbers of na\"{\i}ve individuals per age class, Southern District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Southern}
 \end{figure}
-
 
 \end{document}
