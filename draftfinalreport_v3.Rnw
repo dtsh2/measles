@@ -953,7 +953,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 \begin{center}
      \includegraphics[width=0.9\textwidth]{vacc_age.pdf}
 \end{center}
-\caption{Age of vaccination of vaccinated measles cases, 2007- 12 June 2014. Recommended vaccination age in months is shown for the measles, mumps, rubella (MMR) dose 1 (12 months) and MMR dose 2 (60 months)}
+\caption{Age of vaccination of vaccinated measles cases, 2007--12~June~2014. Recommended vaccination age in months is shown for the measles, mumps, rubella (MMR) dose 1 (12 months) and MMR dose 2 (4 years)}
 \label{fig:vaccstat}
 \end{figure}
 
@@ -961,7 +961,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 \begin{center}
      \includegraphics[width=0.9\textwidth]{dob_vacc_unvac.pdf}
 \end{center}
-\caption{Year of birth of unvaccinated of measles cases, 2007- 12 June 2014}
+\caption{Year of birth of unvaccinated of measles cases, 2007--12~June~2014}
 \label{fig:yearandvac}
 \end{figure}
 
@@ -969,7 +969,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 \begin{center}
      \includegraphics[width=0.9\textwidth]{dob_vacc_dose.pdf}
 \end{center}
-\caption{Year of birth of unvaccinated of measles cases, 2007- 12 June 2014. The year of birth for those vaccinated with measles, mumps, and rubella (MMR) dose 1 is shown in the upper panel, MMR dose 2 the lower panel.}
+\caption{The year of birth for those vaccinated with measles, mumps, and rubella (MMR) dose 1 is shown in the upper panel, MMR dose 2 the lower panel.}
 \label{fig:yearandvacf}
 \end{figure}
 
