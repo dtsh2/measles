@@ -29,7 +29,7 @@ for (i in 1:length(outbreak_files))
 }
 
 outbreak_files <- outbreak_files[order(max_dates)]
-cols <- rainbow(length(outbreak_files))
+cols <- rev(rainbow(length(outbreak_files))) # reversed as the output files are in reverse order so they plot in order
 # function for modifying colours to make them transparent
 alpha <- function(col, a)
 {
@@ -136,7 +136,7 @@ my_vioplot <- function(dat, bw, border, col, at)
 
 pdf("averageR0_all_ob.pdf", width=8, height=6)
 range_R0 <- range(sapply(average_R0, function(x) { if(!any(is.na(x))) { range(x, na.rm=T) } else { NA } }), na.rm=T)
-plot(NULL, xlim=c(0.5,length(average_R0)+0.5), ylim=range_R0 + diff(range_R0)*0.05*c(-1,1), ylab="Average R0", xlab="", xaxt="n", yaxs="i")
+plot(NULL, xlim=c(0.5,length(average_R0)+0.5), ylim=range_R0 + diff(range_R0)*0.05*c(-1,1), ylab="Average Rv", xlab="", xaxt="n", yaxs="i")
 for (i in 1:length(average_R0))
   my_vioplot(average_R0[[i]], bw=0.015, border=cols[i], col=cols[i], at=i)
 abline(h=1, col="black")
