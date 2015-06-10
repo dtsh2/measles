@@ -41,3 +41,11 @@ draftfinalreport_v3.pdf
 nir_census*.pdf
 NIR_MMR_numerator_raw_data_20150106_encrypted.txt
 NIR_CI_denominator_raw_data_20150106_encrypted.txt
+draftfinalreport_v3_not_in_git.pdf
+*.Rhistory
+draftfinalreport_v4-007.pdf
+draftfinalreport_v4-017.pdf
+*.bbl
+*.log
+*.toc
+draftfinalreport_v4.pdf
