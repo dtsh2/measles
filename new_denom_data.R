@@ -23,123 +23,82 @@ grouped_n2 <- data_n %>% filter(VACCINE_DOSE == 2) %>% group_by(DOMICILE_CODE, Y
 
 grouped <- grouped_d %>% left_join(grouped_n1) %>% left_join(grouped_n2)
 
-## 2006 -- 2014
-grouped <- grouped[grouped$Year == 2006,]
-
-####
-grouped_all_years <- grouped %>% group_by(DOMICILE_CODE) %>% summarize(total=sum(total), vacc1=sum(vacc1, na.rm=T), vacc2=sum(vacc2, na.rm=T))
-
-any(grouped_all_years$vacc1 > grouped_all_years$total)
-
 data_dom <- read.csv("NIR_MMR_data_20060101-20140731/domicile_code.csv")
 
-grouped_all_years <- grouped_all_years %>% mutate(dom = DOMICILE_CODE)
-grouped_all_years <- grouped_all_years %>% left_join(data_dom)
+# output folder
+map_dir <- "nir_maps"
+dir.create(map_dir, showWarnings = FALSE)
 
-grouped_all_years <- grouped_all_years %>% mutate(AU2013 = area.unit, prop1 = vacc1/total, prop2= vacc2/total)
-data_au <- slot(au, "data") %>% mutate(AU2013 = as.numeric(as.character(AU2013)))
-data_au <- data_au %>% left_join(grouped_all_years)
+years <- 2006:2014
 
-in_the_sea <- grepl("^Oceanic", data_au$AU2013_NAM)
+for (year in years) {
+  
+  grouped_year <- grouped[grouped$Year == year,]
 
-## plot and save
+  ####
+  grouped_year <- grouped_year %>% group_by(DOMICILE_CODE) %>% summarize(total=sum(total), vacc1=sum(vacc1, na.rm=T), vacc2=sum(vacc2, na.rm=T))
 
-fixedBreaks <- c(0,0.4,0.5,0.6,0.7,0.8,0.9,0.95,1,Inf)
+  any(grouped_year$vacc1 > grouped_year$total)
 
-################
+  grouped_year <- grouped_year %>% mutate(dom = DOMICILE_CODE)
+  grouped_year <- grouped_year %>% left_join(data_dom)
 
-# breaks <- cut(data_au$prop1, fixedBreaks)
- breaks <- cut(data_au$prop2, fixedBreaks)
+  grouped_year <- grouped_year %>% mutate(AU2013 = area.unit, prop1 = vacc1/total, prop2= vacc2/total)
 
-####
+  data_au <- slot(au, "data") %>% mutate(AU2013 = as.numeric(as.character(AU2013)))
+  data_au <- data_au %>% left_join(grouped_year)
 
-pal<-c(heat.colors(7),"green","blue")
-cols <- pal[breaks]
+  fixedBreaks <- c(0,0.4,0.5,0.6,0.7,0.8,0.9,0.95,0.98,1,Inf)
 
-cols[in_the_sea] <- NA
-par(mfrow=c(1,1))
+  for (vaccine in 1:2) {
+    breaks <- cut(data_au[, paste0("prop",vaccine)], fixedBreaks)
 
-#####
+    pal<-c(heat.colors(8),"green","blue")
+    cols <- pal[breaks]
+  
+    # make the AUs in the sea transparent
+    in_the_sea <- grepl("^Oceanic", data_au$AU2013_NAM)
+    cols[in_the_sea] <- NA
+  
+    # do the plot
+    map_file <- paste0("nir_census_MMR", vaccine, "_NIR_", year, ".pdf")
+    pdf(file.path(map_dir, map_file), width=9, height=6)
+    text.cex <- 0.8
+    par(mai=rep(0.1,4))
+    xlim <- c(0, 2120000)
+    ylim <- c(4974000, 5920000)
+  
+    plot(au, col=cols,lty=0, xlim=xlim, ylim=ylim)
+    legend(2120000,5274000,c("0-40%","41-50%","51-60%","61-70%","71-80%","81-90%","91-95%","96-98%", "99-100%",">100%","NA")
+         ,fill=c(pal,"white"),
+         bty="n",inset=0.1,title="Percent vaccinated", cex=text.cex, xjust=1)
+  
+    par(fig = c(0, 0.65, 0.35, 0.95), mar=c(5,5,2,2), new=TRUE)
+    hist(data_au$prop2, breaks=50,col="grey", border=NA, xlab="Proportion vaccinated",main="", cex.axis=text.cex)
+    abline(v=.95,col="red",lty=3,lwd=3)
+    abline(v=median(data_au$prop2,na.rm=T),col="orange",lty=3,lwd=3)
+    dev.off()
 
-# pdf(paste("nir_census_MMR1_NIR_2006.pdf"), width=7, height=6)
-  pdf(paste("nir_census_MMR2_NIR_2006.pdf"), width=7, height=6)
+    main_centers <- read.table(header=TRUE, text = "
+      City xmin    xmax    ymin    ymax
+      ChCh 1550461 1559320 5141317 5212140
+      Auk  1693320 1803320 5892140 5952140
+      Well 1730320 1784500 5421140 5444400")
+    
+    for (center in 1:nrow(main_centers)) {
+      map_file <- paste0("nir_census_MMR", vaccine, "_NIR_", main_centers$City[center], "_", year, ".pdf")
+      pdf(file.path(map_dir, map_file), width=7, height=6)
 
-#####
-
-plot(au, col=cols,lwd=1,lty=3,main="MMR1")
-legend("topright",c("0-40%","41-50%","51-60%","61-70%","71-80%","81-90%","91-95%","96-100%",">100%","NA")
+      xlim <- as.numeric(main_centers[center, c("xmin", "xmax")])
+      ylim <- as.numeric(main_centers[center, c("ymin", "ymax")])
+      plot(au, col=cols, lty=0, xlim=xlim, ylim=ylim)
+      legend("left",c("0-40%","41-50%","51-60%","61-70%","71-80%","81-90%","91-95%","96-98%", "99-100%",">100%","NA")
        ,fill=c(pal,"white"),
-       bty="n",inset=0.1,title="Percent vaccinated")
-par(fig = c(0.05, 0.4, 0.5,0.9), mar=c(5,5,2,2), new=TRUE)
-
-#####
-
-# hist(data_au$prop1, breaks=50,col="grey", xlab="Proportion vaccinated",main="")
- hist(data_au$prop2, breaks=50,col="grey", xlab="Proportion vaccinated",main="")
-
-##### 
-
-abline(v=.95,col="red",lty=3,lwd=3)
-
-#####
-
-# abline(v=median(data_au$prop1,na.rm=T),col="orange",lty=3,lwd=3)
- abline(v=median(data_au$prop2,na.rm=T),col="orange",lty=3,lwd=3)
-
-#####
-dev.off()
-par(mfrow=c(1,1))
-
-###
-
-## Christchurch
-
-# pdf(paste("nir_census_MMR1_NIR_ChCh_2006.pdf"), width=7, height=6)
-  pdf(paste("nir_census_MMR2_NIR_ChCh_2006.pdf"), width=7, height=6)
-
-#####
-
-plot(au, col=cols,lwd=1,lty=3,main="MMR1",xlim=c(1550461 , 1559320),ylim=c(5141317 , 5212140)) # Christchurch
-legend("left",c("0-40%","41-50%","51-60%","61-70%","71-80%","81-90%","91-95%","96-100%",">100%","NA")
-       ,fill=c(pal,"white"),
-      # bty="n",inset=0.0,
       title="Percent vaccinated",bg="white",box.col="white")
-#####
-dev.off()
-par(mfrow=c(1,1))
-
-
-## Auckland
-
-# pdf(paste("nir_census_MMR1_NIR_Auk_2006.pdf"), width=7, height=6)
- pdf(paste("nir_census_MMR2_NIR_Auk_2006.pdf"), width=7, height=6)
-
-#####
-
-plot(au, col=cols,lwd=1,lty=3,main="MMR1",xlim=c( 1693320, 1803320),ylim=c(5892140, 5952140)) # auckland
-legend("left",c("0-40%","41-50%","51-60%","61-70%","71-80%","81-90%","91-95%","96-100%",">100%","NA")
-       ,fill=c(pal,"white"),
-       # bty="n",inset=0.0,
-       title="Percent vaccinated",bg="white",box.col="white")
-#####
-dev.off()
-par(mfrow=c(1,1))
-
-## Wellington
-
-# pdf(paste("nir_census_MMR1_NIR_Well_2006.pdf"), width=7, height=6)
- pdf(paste("nir_census_MMR2_NIR_Well_2006.pdf"), width=7, height=6)
-
-#####
-
-plot(au, col=cols,lwd=1,lty=3,main="MMR1",xlim=c( 1730320, 1784500),ylim=c(5421140, 5444400)) # wellington
-legend("left",c("0-40%","41-50%","51-60%","61-70%","71-80%","81-90%","91-95%","96-100%",">100%","NA")
-       ,fill=c(pal,"white"),
-       # bty="n",inset=0.0,
-       title="Percent vaccinated",bg="white",box.col="white")
-#####
-dev.off()
-par(mfrow=c(1,1))
+      dev.off()
+    }
+  }
+}
 
 
 ######################################################################
