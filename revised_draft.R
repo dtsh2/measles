@@ -22,6 +22,7 @@ library(raster)
 library(sp)
 library(utils)
 library(xtable)
+
 ## get data
 # set wd
 # setwd("~/Massey 2014/DHayman_20140627")
@@ -521,7 +522,7 @@ pdf(paste("Cases_regmodel_resid.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
 #hist(model3$residuals,main="",xlab="residuals",col="grey",cex.lab=1,ylab="")
-hist(model2$residuals,main="",xlab="residuals",col="grey",cex.lab=1,ylab="")
+hist(model2$residuals,main="",xlab="residuals",col="grey",cex.lab=1,ylab="frequency")
 dev.off()
 
 resan<-xtable(anova(model3,test="F"))
@@ -617,6 +618,23 @@ plot(pop,xlab="Age",ylab="Population",cex.lab=1)
 points(naive,pch=16)
 legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1)
 dev.off()
+
+pdf(paste("naive_allPop_yob.pdf"), width=7, height=5)
+par(mfrow=c(2,1))
+par(cex.axis=1)
+par(mar=c(4,5,1,2)+0.1)
+plot(rev(pop),xlab="Year of birth",ylab="Population",cex.lab=1,xaxt="n")
+points(rev(naive),pch=16)
+legend("topleft",c("Population","Naive"),pch=c(1,16),bty="n",cex=1)
+plotting_age <- seq(0,100,by=10)
+axis(side=1, at=plotting_age, labels=2013-rev(plotting_age))
+plot(x=100-rev(caseyr[,1]),y=rev(caseyr[,2]),pch=16,col=2,cex.lab=1,xaxt="n",xlim=c(0,100),
+     ylab="Cases",xlab="Year of birth")
+legend("topleft",c("Cases"),pch=c(16),col='red',bty="n",cex=1)
+plotting_age <- seq(0,100,by=10)
+axis(side=1, at=plotting_age, labels=2013-rev(plotting_age))
+dev.off()
+
 
 popimmune<-read.csv("PopnImmunityAll.csv",header=T)
 popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
@@ -748,14 +766,14 @@ denom <- denom[,c(1,9:2)]
 
 dose2_merge <- merge(dose2, denom, by.x="cau", by.y="denom", all=T)
 diff <- dose2_merge[,2:8+7] - dose2_merge[,2:8]
-image(as.matrix(diff > 0))
+#image(as.matrix(diff > 0))
 
 dose2_num <- data.frame(cau=dose2_merge$cau, vacc = rowSums(dose2_merge[,2:5]), total = rowSums(dose2_merge[,10:13]))
 diff <- dose2_num$total - dose2_num$vacc
 
 dose1_merge <- merge(dose1, denom, by.x="cau", by.y="denom", all=T)
 diff <- dose1_merge[,2:8] - dose1_merge[,2:8+7]
-image(as.matrix(diff > 0))
+#image(as.matrix(diff > 0))
 
 au_new <- merge(au_data, dose2_num, by.x="AU2013", by.y="cau", all.x=T)
 au_new$prop <- au_new$vacc / au_new$total

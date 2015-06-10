@@ -127,7 +127,7 @@ New Zealand has been working towards the elimination of endemic (domestic) measl
 \item The regression analyses suggest that age is a particularly strong risk factor for measles.  Increased wealth (NZDep 1--3) was a risk factor and people of European ethnicity make up the majority of cases. However, our analyses also highlight other groups that are at greater risk of measles on a per capita basis. Pacific people are at greater risk per capita. However, this was driven by young Pacific children, as 2--24 year old Pacific people are less at risk than European and Maori, as are 5--17 year old Asian children.
 \item Of the 11\% of the overall population of New Zealand that are currently considered to be immunologically na\"{\i}ve to measles, it was estimated that approximately 28\% would require additional vaccination to ensure measles does not persist, leading to an additional 128,034 effective vaccinations nationally.
 \item New Zealand is at risk of frequent measles importation due to travel and endemic measles elsewhere in the globe. Peak overall overseas travel rates, and thus presumably risk from measles importation, is in December. However, New Zealander and immigrant or non--New Zealander travel is otherwise out of phase, with peak travel for New Zealanders during winter, and non--New Zealanders during summer.
-\item Analyses of outbreak data suggest that measles basic reproduction number ($R_v$, the number of secondary infections in a partially vaccinated population) values often include or exceed one, including 2013--2014 outbreaks that ewre ongoing at the time of analysis. As analysed from data until 12 June 2014, the last outbreak to end in 2014 had an $R_v$ well above 1 (mean estimate 3.66, range 3.4--3.92). The range of estimates for $R_v$ between 2009--2014 was 0.18--3.92. These analyses suggest improved vaccination is a requisite to prevent measles persisting in the population and that large outbreaks could occur.
+\item Analyses of outbreak data suggest that measles basic reproduction number ($R_v$, the number of secondary infections in a partially vaccinated population) values often include or exceed one, including 2013--2014 outbreaks that were ongoing at the time of analysis. As analysed from data until 12 June 2014, the last outbreak to end in 2014 had an $R_v$ well above 1 (mean estimate 3.66, range 3.4--3.92). The range of estimates for $R_v$ between 2009--2014 was 0.18--3.92. These analyses suggest improved vaccination is a requisite to prevent measles persisting in the population and that large outbreaks could occur.
 \item The cost of the first 187 measles cases in 2014 is estimated to be approximately \$1,041,186 due to earnings lost relating to cases and contacts, case management and hospitalisation costs.
 \item The mean wage loss per measles case is estimated to be approximately \$839.
 \item The mean cost of those measles cases that attend hospital is estimated to be \$1,877 per attending case. Approximately 17\% of measles cases attend hospital.
@@ -558,8 +558,8 @@ res<-predict(model3)
 cor(exp(res),tpsub$cases)
 cor.test(exp(res),tpsub$cases)
 
-resan<-xtable(anova(model3,test="F"))
-xtb<-xtable(summary(model3))
+resan<-xtable(anova(model3, test="F")[-1,6, drop=FALSE])
+xtb<-xtable(summary(model3)$coefficients[,-3])
 
 AgeVac<-table(testv$VC,testv$AgeInYears)
 row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
@@ -779,9 +779,9 @@ P = (1:Nx0)*x0max/(Nx0+1);
 x0 = P/(1-exp(-R0*P));
 Rv = R0*x0;
 Pop = c(436350,206000,482180,283700,469300,151700,138380,98196,162560,137000,151690,
-        55620,297420,43650,109750,359310,41112,525550,32151,60120,4241739);
-Naive = c(51673,20511,50995,32406,55085,15471,15078,10470,17196,12960,14793,5199,
-          31389,4727,11378,39087,3901,57904,3172,6025,459420);
+        55620,297420,43650,109750,359310,41112,525550,32151,60120,4353189);
+Naive = c(50088,19701,46169,31313,52938,14854,14531,10066,16526,12468,14194,
+          4996,30189,4536,10962,37600,3745,55816,3061,5788,456318);
 RvDHB = R0*Naive/Pop;
 
 library(akima)
@@ -800,9 +800,9 @@ Z[i,3] = round(FSDHB[i]);
 Z[i,4] = round(VDHB[i]);
 Z[i,5] = round(round(VDHB[i])/Naive[i],2)}
 colnames(Z)<-c("Population","Naive","Outbreak","Vaccination","PC")
-
+Z$DHB <- c("Auckland", "Bay of Plenty", "Canterbury", "Capital and Coast", "Counties Manukau", "Hawke's Bay", "Hutt Valley", "Lakes", "MidCentral", "Nelson Marlborough", "Northland", "South Canterbury", "Southern", "Tairawhiti", "Taranaki", "Waikato", "Wairarapa", "Waitemata", "West Coast", "Whanganui", "TOTAL")
+Z <- Z[,c(6,1:5)]
 write.csv(Z,"dhb_vacc.csv",row.names=F)
-
 @
 
 \begin{figure}
@@ -851,7 +851,7 @@ For all our statistical analyses (including those above not shown) we used a Poi
  y &\sim \textsf{Poisson}(\lambda n)\\
  \log(\lambda) &= \alpha + \beta _a (x_a)+ \beta _e(x_e)+ \beta _s (x_s) + \beta _a{}_e(x_a \times x_e)
   \end{align*}
-Where $y$ is the number of cases, $\lambda$ is cases per capita, $n$ is population size, $\alpha$ is the intercept, $\beta$ the regression coefficient, {x} the regression coefficient, $_a$ signifies age, $_e$ signifies Prioritized Ethnicity and $_s$ signifies NZDep.
+Where $y$ is the number of cases, $\lambda$ is cases per capita, $n$ is population size, $\alpha$ is the intercept, $\beta$ the regression coefficient, $x$ is the variable, $_a$ signifies age, $_e$ signifies Prioritized Ethnicity and $_s$ signifies NZDep.
 
 \subsection{Regression analyses results}
 \label{sub:regression_results}
@@ -878,7 +878,7 @@ The cases and per capita measles rates are in \autoref{fig:cases_all} and \autor
 \begin{center}
      \includegraphics[width=0.9\textwidth]{Cases_regmodel_resid.pdf}
 \end{center}
-\caption{Histogram of residuals from the regression model (\autoref{eq:reg}) and a quasipoisson error structure}
+\caption{Histogram of residuals from the regression model (\autoref{eq:reg}) and a quasipoisson error structure. Y-axis is the frequency}
 \label{fig:resid}
 \end{figure}
 
@@ -887,7 +887,7 @@ The cases and per capita measles rates are in \autoref{fig:cases_all} and \autor
 <<include=FALSE,echo=FALSE,results=tex>>=
 print(resan,floating = FALSE)
 @
-\caption{Significance of different predictor variables for measles risk factors from 2007-2014, estimated using \autoref{eq:reg} and a quasipoisson error structure}
+\caption{Significance of different predictor variables for measles risk factors from 2007-2014, estimated using \autoref{eq:reg} and a quasipoisson error structure. Pr($>$F) is p-value, the statistical significance of the result}
 \label{table:anova}
 \end{table}
 
@@ -896,7 +896,7 @@ print(resan,floating = FALSE)
 <<include=FALSE,echo=FALSE,results=tex>>=
   print(xtb,floating = FALSE)
 @
-\caption{Summary of the regression model results using \autoref{eq:reg} and a quasipoisson error structure, for measles risk factors for cases from 2007-12 June 2014}
+\caption{Summary of the regression model results using \autoref{eq:reg} and a quasipoisson error structure, for measles risk factors for cases from 2007-12 June 2014. Estimate: negative values indicate rates are lower for this category compared to the base category, which does not appear (e.g. Age 5--17 has a lower measles rate per capita compared to the 0--1 age class that is not shown), and positive values indicate the rates are greater than the baseline rate; Std. error is the standard error, a measure of uncertainty in the estimates; and Pr(>|t|) is the p-value, the statistical significance of the result.}
 \label{table:regression_riskfactors}
 \end{table}
 
@@ -904,7 +904,7 @@ Apart from over-representation of some MELAA categories discussed above and not 
 
 The majority of measles cases are among people of European ancestry (\autoref{table:percap} and \autoref{fig:cases_all}). Indeed, the majority of cases were in more wealthy European 5--17 year olds (\autoref{fig:cases_all}). However, per capita rates for this large age class were lower than in the very young (0--1 year olds, \autoref{fig:percap_all}). People of Pacific origin are over-represented as measles cases on a per capita basis ($\beta$ = 1.22, standard error (SE) = 0.21, p--value < 0.0001; \autoref{table:regression_riskfactors}), and in particular the 0--1 year old less wealthy (NZDep 8--10) (\autoref{fig:percap_all}). Note however that generally those people in NZDep levels 4--10 are less represented on a per capita basis (NZDep 4--7 $\beta$ = -0.26, SE = 0.09, p--value 0.009; NZDep 8--10 $\beta$ = -0.3, SE = 0.1, p--value = 0.006; \autoref{table:regression_riskfactors}), and in European and Maori ethnicities there is a trend opposite to that in than Pacific people, with the more wealthy more likely to be cases (\autoref{fig:percap_all} and \autoref{fig:cases_all}).
 
-There are some other age:ethnicity classes that are significantly less represented in the data compared to Europeans in those ages classes, particularly in the 5--17 age classes. In later measles outbreaks (since 2007) there has been a shift in the distribution of ages infected. The very young (<2 years old) are still most likely to be infected, but school aged children and older teenagers are more likely to be represented than the under tens (\autoref{fig:ageinyears} and \autoref{fig:ageandvac}). This pattern suggests that improving vaccination coverage in the young is reducing the burden of measles in those age categories (\autoref{table:percap}, \autoref{table:sero}, and \autoref{sub:popim}). Interestingly the regression results suggest risk of measles in the 5--17 year age category was greater for Europeans and Maori (\autoref{table:percap}, \autoref{table:regression_riskfactors}, \autoref{fig:percap_all}).
+There are some other age:ethnicity classes that are significantly less represented in the data compared to Europeans in those ages classes, particularly in the 5--17 age classes. In later measles outbreaks (since 2007) there has been a shift in the distribution of ages infected. The very young (<2 years old) are still most likely to be infected, but school aged children and older teenagers are more likely to be represented than the under tens (\autoref{fig:ageinyears} and \autoref{fig:ageandvac}). This pattern suggests that improving vaccination coverage in the young is reducing the burden of measles in those age categories (\autoref{table:percap}, \autoref{table:sero}, and \autoref{sub:popim}). Interestingly the regression results suggest risk of measles in the 5--17 year age category was greater for Europeans and Maori, as the estimate for Asian and Pacific people in this age group is negative and significant when compared to Europeans of this age class (\autoref{table:percap}, \autoref{table:regression_riskfactors}, \autoref{fig:percap_all}).
 
 \subsection{Vaccination history of measles infection and population immunity estimation methods}
 \label{sub:immunestat}
@@ -932,7 +932,7 @@ Age &  Proportion immune\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>5$ years) among different age classes used in these analyses, as provided by the Ministry of Health up to 1st January 2014. Note these values are from vaccination records and serosurveys. Vaccine efficacy for 0--4 year olds was 96\%, 5--13 year olds 99\%, and for $\geq$ 14 year olds equivocal serological results were considered non-immune. Note that 28\% of those $<1$ were considered immune due to passive immunity, following \citep{waaijenborg}}
+\caption{Vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>5$ years) among different age classes used in these analyses, as provided by the Ministry of Health up to 1st January 2014. Note these values are from vaccination records and serosurveys. Vaccine efficacy for 0--4 year olds was 96\%, 5--13 year olds 99\%, and for $\geq$ 14 year olds equivocal serological results were considered non-immune. Note that 28\% of those $<1$ were considered immune due to passive immunity, following \citep{waaijenborg}. Note that those aged zero are born in 2013.}
 \label{table:sero}
 \end{table}%
 
@@ -988,8 +988,43 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 \label{fig:naive}
 \end{figure}
 
+\begin{figure}
+\begin{center}
+     \includegraphics[width=0.9\textwidth]{naive_allPop_yob.pdf}
+\end{center}
+\caption{New Zealand population by year of birth and estimated numbers of na\"{\i}ve people in each age class using national immunity data (\autoref{table:sero})}
+\label{fig:naive_yob}
+\end{figure}
+
 \subsection{Population immunity and vaccination coverage results}
 \label{sub:popim}
+
+The majority of the na\"{\i}ve among the general New Zealand population are in their first years of life (\autoref{fig:naive}, \autoref{fig:naive_yob}). However, the distribution of na\"{\i}ve at a national level shows that the recent MMR vaccination schemes are reducing the proportions of na\"{\i}ve population in the 3--5 year old age group to greater levels than in older young people  (\autoref{fig:naive}). The distribution of the numbers of na\"{\i}ve and the total na\"{\i}ve populations per DHB, assuming national immunisation and immunity rates are representative, are given in the following figures in the appendix (\autoref{sec:app}): 
+\begin{itemize}[noitemsep,nolistsep]
+\item Northland: \autoref{fig:Northland}
+\item Waitemata: \autoref{fig:Waitemata}
+\item Auckland: \autoref{fig:Auckland}
+\item Counties Manukau: \autoref{fig:Counties_Manukau}
+\item Waikato: \autoref{fig:Waikato}
+\item Lakes: \autoref{fig:Lakes}
+\item Bay of Plenty: \autoref{fig:BayofPlenty}
+\item Tairawhiti: \autoref{fig:Tairawhiti}
+\item Taranaki: \autoref{fig:Taranaki}
+\item Hawke's Bay: \autoref{fig:HawkesBay}
+\item Whanganui: \autoref{fig:Whanganui}
+\item Mid-Central: \autoref{fig:Midcentral}
+\item Hutt: \autoref{fig:Hutt}
+\item Capital and Coast: \autoref{fig:CapitalandCoast}
+\item Wairarapa: \autoref{fig:Wairarapa}
+\item Nelson Marlborough: \autoref{fig:NelsonMarlborough}
+\item West Coast: \autoref{fig:WestCoast}
+\item Canterbury: \autoref{fig:Canterbury}
+\item South Canterbury: \autoref{fig:SouthCanterbury}
+\item Southern: \autoref{fig:Southern}
+\end{itemize}
+
+\subsection{Population vaccination coverage results}
+\label{sub:popvac}
 
  \vspace{5mm} %5mm vertical space
 \begin{table}
@@ -1148,31 +1183,11 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 % \label{fig:fig12014}
 % \end{sidewaysfigure}
 
-The majority of the na\"{\i}ve among the general New Zealand population are in their first years of life (\autoref{fig:naive}). However, the distribution of na\"{\i}ve at a national level shows that the recent MMR vaccination schemes are reducing the proportions of na\"{\i}ve population in the 3--5 year old age group to greater levels than in older young people  (\autoref{fig:naive}). The distribution of the numbers of na\"{\i}ve and the total na\"{\i}ve populations per DHB, assuming national immunisation and immunity rates are representative, are given in the following figures in the appendix (\autoref{sec:app}): 
-\begin{itemize}[noitemsep,nolistsep]
-\item Northland: \autoref{fig:Northland}
-\item Waitemata: \autoref{fig:Waitemata}
-\item Auckland: \autoref{fig:Auckland}
-\item Counties Manukau: \autoref{fig:Counties_Manukau}
-\item Waikato: \autoref{fig:Waikato}
-\item Lakes: \autoref{fig:Lakes}
-\item Bay of Plenty: \autoref{fig:BayofPlenty}
-\item Tairawhiti: \autoref{fig:Tairawhiti}
-\item Taranaki: \autoref{fig:Taranaki}
-\item Hawke's Bay: \autoref{fig:HawkesBay}
-\item Whanganui: \autoref{fig:Whanganui}
-\item Mid-Central: \autoref{fig:Midcentral}
-\item Hutt: \autoref{fig:Hutt}
-\item Capital and Coast: \autoref{fig:CapitalandCoast}
-\item Wairarapa: \autoref{fig:Wairarapa}
-\item Nelson Marlborough: \autoref{fig:NelsonMarlborough}
-\item West Coast: \autoref{fig:WestCoast}
-\item Canterbury: \autoref{fig:Canterbury}
-\item South Canterbury: \autoref{fig:SouthCanterbury}
-\item Southern: \autoref{fig:Southern}
-\end{itemize}
-
 Plotting the NIR data at the city level for the three major cities, Auckland (\autoref{fig:fig12006_a}, \autoref{fig:fig22006_a}, \autoref{fig:fig12007_a}, \autoref{fig:fig22007_a}, \autoref{fig:fig12008_a}, \autoref{fig:fig22008_a}, \autoref{fig:fig12009_a}, \autoref{fig:fig22009_a}, \autoref{fig:fig12010_a}, \autoref{fig:fig22010_a}, \autoref{fig:fig12011_a}, \autoref{fig:fig22011_a}, \autoref{fig:fig12012_a}, \autoref{fig:fig22012_a}, \autoref{fig:fig12013_a}, \autoref{fig:fig22013_a}, \autoref{fig:fig12014_a}, and \autoref{fig:fig22014_a}.), Wellington (\autoref{fig:fig12006_w}, \autoref{fig:fig22006_w}, \autoref{fig:fig12007_w}, \autoref{fig:fig22007_w}, \autoref{fig:fig12008_w}, \autoref{fig:fig22008_w}, \autoref{fig:fig12009_w}, \autoref{fig:fig22009_w}, \autoref{fig:fig12010_w}, \autoref{fig:fig22010_w}, \autoref{fig:fig12011_w}, \autoref{fig:fig22011_w}, \autoref{fig:fig12012_w}, \autoref{fig:fig22012_w}, \autoref{fig:fig12013_w}, \autoref{fig:fig22013_w}, \autoref{fig:fig12014_w}, and \autoref{fig:fig22014_w}) and Christchurch (\autoref{fig:fig12006_c}, \autoref{fig:fig22006_c}, \autoref{fig:fig12007_c}, \autoref{fig:fig22007_c}, \autoref{fig:fig12008_c}, \autoref{fig:fig22008_c}, \autoref{fig:fig12009_c}, \autoref{fig:fig22009_c}, \autoref{fig:fig12010_c}, \autoref{fig:fig22010_c}, \autoref{fig:fig12011_c}, \autoref{fig:fig22011_c}, \autoref{fig:fig12012_c}, \autoref{fig:fig22012_c}, \autoref{fig:fig12013_c}, \autoref{fig:fig22013_c}, \autoref{fig:fig12014_c}, and \autoref{fig:fig22014_c}) shows that there is heterogeneity among vaccination levels within the larger urban areas.
+
+
+Plotting the lower level data from the area unit data, available from the NIR database, shows that there is heterogeneity at the local level and a temporal lag obvious for MMR2, as the proportion vaccinated declines with birth cohort (\autoref{fig:mmr_nir}), though recent vaccination levels are consistently high for MMR1. For full details, see \autoref{fig:fig12006} (MMR1, 2006), \autoref{fig:fig22006} (MMR2, 2006), \autoref{fig:fig12007} (MMR1, 2007), \autoref{fig:fig22007} (MMR2, 2007), \autoref{fig:fig12008} (MMR1, 2008), \autoref{fig:fig22008} (MMR2, 2008), \autoref{fig:fig12009} (MMR1, 2009), \autoref{fig:fig22009} (MMR2, 2009), \autoref{fig:fig12010} (MMR1, 2010), \autoref{fig:fig22010} (MMR2, 2010), \autoref{fig:fig12011} (MMR1, 2011), \autoref{fig:fig22011} (MMR2, 2011), \autoref{fig:fig12012} (MMR1, 2012), \autoref{fig:fig22012} (MMR2, 2012), \autoref{fig:fig12013} (MMR1, 2013), \autoref{fig:fig22013} (MMR2, 2013), \autoref{fig:fig12014} (MMR1, 2014), \autoref{fig:fig22014} (MMR2, 2014), \autoref{table:tab_mmr_nir} and the supplementary files.
+
 
 %%% Auck
 % 
@@ -1180,7 +1195,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
    \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2006.pdf}
     \end{center}
-    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR1 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12006_a}
 \end{figure}
@@ -1189,7 +1204,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
 \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2006.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR2 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22006_a}
 \end{figure}
@@ -1199,7 +1214,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
 \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2007.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR1 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12007_a}
 \end{figure}
@@ -1209,7 +1224,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2007.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR2 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22007_a}
 \end{figure}
@@ -1219,7 +1234,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2008.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR1 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12008_a}
 \end{figure}
@@ -1229,7 +1244,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2008.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR2 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22008_a}
 \end{figure}
@@ -1239,7 +1254,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2009.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR1 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12009_a}
 \end{figure}
@@ -1249,7 +1264,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2009.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR2 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig22009_a}
 \end{figure}
@@ -1259,7 +1274,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2010.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR1 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12010_a}
 \end{figure}
@@ -1269,7 +1284,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2010.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR2 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig22010_a}
 \end{figure}
@@ -1279,7 +1294,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2011.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR1 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12011_a}
 \end{figure}
@@ -1289,7 +1304,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 % \begin{center}
 %     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2011.pdf}
 %  \end{center}
-%     \caption{Proportion of the population born in 2011 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%     \caption{Proportion of the population born in 2011 vaccinated against measles using MMR2 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % %\end{center}
 % \label{fig:fig22011_a}
 % \end{figure}
@@ -1299,7 +1314,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2012.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR1 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12012_a}
 \end{figure}
@@ -1309,7 +1324,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 % \begin{center}
 %     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2013.pdf}
 %  \end{center}
-%     \caption{Proportion of the population born in 2013 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%     \caption{Proportion of the population born in 2013 vaccinated against measles using MMR1 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % % \end{center}
 % \label{fig:fig12013_a}
 % \end{figure}
@@ -1320,7 +1335,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
    \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2006.pdf}
     \end{center}
-    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR1 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12006_w}
 \end{figure}
@@ -1329,7 +1344,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
 \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2006.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR2 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22006_w}
 \end{figure}
@@ -1339,7 +1354,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
 \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2007.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR1 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12007_w}
 \end{figure}
@@ -1349,7 +1364,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2007.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR2 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22007_w}
 \end{figure}
@@ -1359,7 +1374,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2008.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR1 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12008_w}
 \end{figure}
@@ -1369,7 +1384,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2008.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR2 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22008_w}
 \end{figure}
@@ -1379,7 +1394,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2009.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR1 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12009_w}
 \end{figure}
@@ -1389,7 +1404,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2009.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR2 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig22009_w}
 \end{figure}
@@ -1399,7 +1414,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2010.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR1 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12010_w}
 \end{figure}
@@ -1409,7 +1424,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2010.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR2 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig22010_w}
 \end{figure}
@@ -1419,7 +1434,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2011.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR1 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12011_w}
 \end{figure}
@@ -1429,7 +1444,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 % \begin{center}
 %     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2011.pdf}
 %  \end{center}
-%     \caption{Proportion of the population born in 2011 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%     \caption{Proportion of the population born in 2011 vaccinated against measles using MMR2 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % %\end{center}
 % \label{fig:fig22011_w}
 % \end{figure}
@@ -1439,7 +1454,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2012.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR1 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12012_w}
 \end{figure}
@@ -1449,7 +1464,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 % \begin{center}
 %     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2013.pdf}
 %  \end{center}
-%     \caption{Proportion of the population born in 2013 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+%     \caption{Proportion of the population born in 2013 vaccinated against measles using MMR1 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % % \end{center}
 % \label{fig:fig12013_w}
 % \end{figure}
@@ -1460,7 +1475,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
    \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2006.pdf}
     \end{center}
-    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR1 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12006_c}
 \end{figure}
@@ -1469,7 +1484,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
 \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2006.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2006 vaccinated against measles using MMR2 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22006_c}
 \end{figure}
@@ -1479,7 +1494,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
 \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2007.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR1 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12007_c}
 \end{figure}
@@ -1489,7 +1504,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2007.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2007 vaccinated against measles using MMR2 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22007_c}
 \end{figure}
@@ -1499,7 +1514,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2008.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR1 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig12008_c}
 \end{figure}
@@ -1509,7 +1524,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2008.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2008 vaccinated against measles using MMR2 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 % \end{center}
 \label{fig:fig22008_c}
 \end{figure}
@@ -1519,7 +1534,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2009.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR1 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12009_c}
 \end{figure}
@@ -1529,7 +1544,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2009.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2009 vaccinated against measles using MMR2 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig22009_c}
 \end{figure}
@@ -1539,7 +1554,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2010.pdf}
 \end{center}
-    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR1 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12010_c}
 \end{figure}
@@ -1549,7 +1564,7 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2010.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2010 vaccinated against measles using MMR2 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig22010_c}
 \end{figure}
@@ -1559,43 +1574,41 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2011.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR1 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12011_c}
 \end{figure}
 
-
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2011.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2011 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-%\end{center}
-\label{fig:fig22011_c}
-\end{figure}
+% 
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2011.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2011 vaccinated against measles using MMR2 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% %\end{center}
+% \label{fig:fig22011_c}
+% \end{figure}
 
 
 \begin{figure}
 \begin{center}
     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2012.pdf}
  \end{center}
-    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR1 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
 %\end{center}
 \label{fig:fig12012_c}
 \end{figure}
 
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2013.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2013 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig12013_c}
-\end{figure}
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2013.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2013 vaccinated against measles using MMR1 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig12013_c}
+% \end{figure}
 
 \clearpage
-
-Plotting the lower level data from the area unit data, available from the NIR database, shows that there is heterogeneity at the local level and an obvious temporal lag, as the proportion vaccinated declines with birth cohort (\autoref{fig:mmr_nir}), though recent vaccination levels are consistently high for MMR1. For full details, see \autoref{fig:fig12006} (MMR1, 2006), \autoref{fig:fig22006} (MMR2, 2006), \autoref{fig:fig12007} (MMR1, 2007), \autoref{fig:fig22007} (MMR2, 2007), \autoref{fig:fig12008} (MMR1, 2008), \autoref{fig:fig22008} (MMR2, 2008), \autoref{fig:fig12009} (MMR1, 2009), \autoref{fig:fig22009} (MMR2, 2009), \autoref{fig:fig12010} (MMR1, 2010), \autoref{fig:fig22010} (MMR2, 2010), \autoref{fig:fig12011} (MMR1, 2011), \autoref{fig:fig22011} (MMR2, 2011), \autoref{fig:fig12012} (MMR1, 2012), \autoref{fig:fig22012} (MMR2, 2012), \autoref{fig:fig12013} (MMR1, 2013), \autoref{fig:fig22013} (MMR2, 2013), \autoref{fig:fig12014} (MMR1, 2014), \autoref{fig:fig22014} (MMR2, 2014), \autoref{table:tab_mmr_nir} and the supplementary files.
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 MMR1<-c(0.9604,0.9621,0.971,0.9722,0.9667,0.9643,0.9667,0.6333,0)
@@ -1617,7 +1630,7 @@ abline(h=0.95,col="orange",lty=3,lwd=4)
 \label{fig:mmr_nir}
 \end{figure}
 
-The correlation between the percentage vaccinated against MMR1 and MMR2 across the area units is shown in figure \autoref{fig:cor_nir}.
+The correlation between the percentage vaccinated against MMR1 and MMR2 across the area units is shown in figure \autoref{fig:cor_nir}. The implication of the correlation plot is that the proportion of the area unit populations vaccinated against MMR1 is substantially higher than MMR2, that generally there is a correlation between MMR1 and MMR2 vaccination rates, but that there is also heterogeneity.
 
 \begin{figure}[H]
      \begin{center}
@@ -1627,13 +1640,13 @@ The correlation between the percentage vaccinated against MMR1 and MMR2 across t
      \label{fig:cor_nir}
 \end{figure}
 
-Vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>13$ years) among different age classes provided by the Ministry were also used to map the immunity among the area units for those ages not included on the NIR database. Vaccine efficacy for 0--4 year olds was not necessary for these analyses, for those $\leq$ 13 years 99\% vaccine efficacy was used (\autoref{table:sero}) and for $\geq$ 14 year olds equivocal serological results were considered non-immune (\autoref{table:sero}). Again there was heterogeneity at the local level (\autoref{fig:sero_imm_map}) with pockets of the nation and cities with lower coverage than other areas (\autoref{fig:sero_imm_a}, \autoref{fig:sero_imm_w}, and \autoref{fig:sero_imm_c}).
+Based on 2013 data vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>13$ years) among different age classes provided by the Ministry were also used to map the immunity among the area units for those ages not included on the NIR database. Vaccine efficacy for 0--4 year olds was not necessary for these analyses, for those $\leq$ 13 years 99\% vaccine efficacy was used (\autoref{table:sero}) and for $\geq$ 14 year olds equivocal serological results were considered non-immune (\autoref{table:sero}). Again there was heterogeneity at the local level (\autoref{fig:sero_imm_map}) with pockets of the nation and cities with lower coverage than other areas (\autoref{fig:sero_imm_a}, \autoref{fig:sero_imm_w}, and \autoref{fig:sero_imm_c}), though given immunity levels were based on national data this heterogeneity is due to population structure.
 
 \begin{sidewaysfigure}[H]
      \begin{center}
      \includegraphics[width=0.9\textwidth]{census_immunity_age.pdf}
      \end{center}
-     \caption{The estimated immunity levels at the 2013 area unit level using the vaccine efficacy and serosurvey data presented in \autoref{table:sero}. See \autoref{fig:sero_imm_hist}, \autoref{fig:sero_imm_a}\autoref{fig:sero_imm_w}, \autoref{fig:sero_imm_c} for city maps and the distribution of immunity levels}
+     \caption{The estimated immunity levels in 2013 at the area unit level using the immunity estimates presented in \autoref{table:sero}. See \autoref{fig:sero_imm_hist}, \autoref{fig:sero_imm_a}\autoref{fig:sero_imm_w}, \autoref{fig:sero_imm_c} for city maps and the distribution of immunity levels}
      \label{fig:sero_imm_map}
 \end{sidewaysfigure}
 
@@ -1641,7 +1654,7 @@ Vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>13$ y
      \begin{center}
      \includegraphics[width=0.9\textwidth]{census_immunity_age_Auk.pdf}
      \end{center}
-     \caption{The estimated immunity levels at the 2013 area unit level for the Auckland vicinity using the vaccine efficacy and serosurvey data presented in \autoref{table:sero}.}
+     \caption{The estimated immunity levels in 2013 at the area unit level for the Auckland vicinity using the immunity estimates presented in \autoref{table:sero}.}
      \label{fig:sero_imm_a}
 \end{figure}
 
@@ -1649,7 +1662,7 @@ Vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>13$ y
      \begin{center}
      \includegraphics[width=0.9\textwidth]{census_immunity_age_Well.pdf}
      \end{center}
-    \caption{The estimated immunity levels at the 2013 area unit level for the Wellington vicinity using the vaccine efficacy and serosurvey data presented in \autoref{table:sero}.}
+    \caption{The estimated immunity levels in 2013 at the area unit level for the Wellington vicinity using the immunity estimates presented in \autoref{table:sero}.}
      \label{fig:sero_imm_w}
 \end{figure}
 
@@ -1657,7 +1670,7 @@ Vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>13$ y
      \begin{center}
      \includegraphics[width=0.9\textwidth]{census_immunity_age_ChCh.pdf}
      \end{center}
-    \caption{The estimated immunity levels at the 2013 area unit level for the Christchurch vicinity using the vaccine efficacy and serosurvey data presented in \autoref{table:sero}.}
+    \caption{The estimated immunity levels in 2013 at the area unit level for the Christchurch vicinity using the immunity estimates presented in \autoref{table:sero}.}
      \label{fig:sero_imm_c}
 \end{figure}
 
@@ -1665,13 +1678,13 @@ Vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>13$ y
      \begin{center}
      \includegraphics[width=0.9\textwidth]{census_immunity_age_hist.pdf}
      \end{center}
-     \caption{The distribution of estimated immunity levels at the 2013 area unit level using the vaccine efficacy and serosurvey data presented in \autoref{table:sero}. See \autoref{fig:sero_imm_map} for the plotted data}
+     \caption{The distribution of estimated immunity levels in 2013 at the area unit level for the nation using the immunity estimates presented in \autoref{table:sero}. See \autoref{fig:sero_imm_map} for the plotted data}
      \label{fig:sero_imm_hist}
 \end{figure}
 
 \subsection{Measles importation risk methods}
 \label{sub:imp_risk}
-For our measles importation risk analyses, we use arrivals data from New Zealand immigration and New Zealander travel destination data by country and year (\href{http://www.immigration.govt.nz/}{www.immigration.govt.nz}), to measure human movement to and from New Zealand. We collated country population size, measles incidence and measles vaccination cover from the WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). WHO measles coverage is the percent of children that receive one dose of measles vaccine by their second birthday. Note the immigration figures use all immigration of foreign nationals, coming for whatever purpose, and includes non-New Zealanders resident in New Zealand, but not yet holders of New Zealand passports. We use the WHO data to determine per capita measles cases for each year and use these data and the number of immigrants to New Zealand to begin to understand where measles is likely to be imported from. We use simple per capita rates for measles and the number of travellers to each country to score and map the risk of measles importation. We use 0--19 year old data for the immigration figures, as no further details were available and it was determined this was more appropriate than using all age classes because > 19 year olds are believed to be immune to measles more or less globally. These age category data were not available for New Zealand travellers, so we use all data on all travellers. We present the data from 2013 because this year was the most recent with the relatively complete WHO measles data, and thus accounts for improved measles vaccination coverage following the United Nations Millenium Development Goals' improvements in measles vaccination coverage. Data for 2013 are less complete than 2012, but substantially better than 2014.
+For our measles importation risk analyses, we use arrivals data from New Zealand immigration and New Zealander travel destination data by country and year (\href{http://www.immigration.govt.nz/}{www.immigration.govt.nz}), to measure human movement to and from New Zealand. We collated country population size, measles incidence and measles vaccination cover from the WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). WHO measles coverage is the percent of children that receive one dose of measles vaccine by their second birthday. Note the immigration figures use all immigration of foreign nationals, coming for whatever purpose, and includes non-New Zealanders resident in New Zealand, but not yet holders of New Zealand passports. We use the WHO data to determine per capita measles cases for each year and use these data and the number of immigrants to New Zealand to begin to understand where measles is likely to be imported from. We use simple per capita rates for measles and the number of travellers to each country to score and map the risk of measles importation. We use 0--19 year old data for the immigration data rather than all age classes because > 19 year olds are believed to be immune to measles more or less globally. These age category data (0--19 year old travellers) were not available for New Zealand travellers, so we use all data on all travellers. Young adults have been increasingly affected in some outbreaks, but 0--19 year olds seem most at risk from WHO data. We present the data from 2013 because this year was the most recent with the relatively complete WHO measles data, and thus accounts for improved measles vaccination coverage following the United Nations Millenium Development Goals' improvements in measles vaccination coverage. Data for 2013 are less complete than 2012, but substantially better than 2014.
 
 \subsection{Measles importation risk results}
 
@@ -1747,13 +1760,13 @@ latex(toprisk2, file="", table.env=FALSE,rowname=NULL)
 \label{table:toprisk}
 \end{table}
 
-Globally, analyses of the most complete and recent year of data available, 2013, suggest measles incidence is highest  and vaccination coverage is lowest in less developed nations (\autoref{table:incidence12} and \autoref{table:cover12}, and \autoref{fig:incidence12} and \autoref{fig:cover12}). Immigration by 0--19 year old non-New Zealanders (whether for work, pleasure, etc.) is dominated by people from Australia (\autoref{table:imtravel12} and \autoref{fig:immigration12}). A number of other countries then follow, including United Kingdom, China, Japan and the United States. Travel by New Zealanders is also dominated by that to Australia (\autoref{table:nztravel12} and \autoref{fig:nztravel12}). Together, these mean that the greatest travel location for New Zealanders and immigration origin is from Australia (\autoref{table:immigration12} and \autoref{fig:immigration12}). However, many South Pacific nations also appear in the most visited country list by New Zealanders. Though the precise interactions between these different risk factors are unknown, the most simple, a product of measles incidence in 2013 and immigration numbers of 0--19 year olds in 2013, suggest that those countries with greatest international travel, Australia, UK, China and South East Asian countries, pose the greatest risk to New Zealand for measles importation. Though immigration from and travel to some Asian countries is lower, some Asian countries also pose a high risk of measles importation to New Zealand. Note that South Pacific islands do not appear to pose a greater risk, despite large numbers of travellers of New Zealand origin, perhaps because of low measles incidence in these nations. These data are shown in \autoref{table:risk12}. The breakdown of risk of measles importation by New Zealander and non-New Zealander travellers is in \autoref{table:nzrisk12}, \autoref{table:imrisk12}, \autoref{fig:nzrisk12} and \autoref{fig:imrisk12}. The measles incidence and vaccination coverage for those countries identified as posing the greatest risk for measles importation to New Zealand are in \autoref{table:toprisk}. 
+Globally, analyses of the most complete and recent year of data available, 2013, suggest measles incidence is highest  and vaccination coverage is lowest in less developed nations (\autoref{table:incidence12} and \autoref{table:cover12}, and \autoref{fig:incidence12} and \autoref{fig:cover12}). Immigration by 0--19 year old non-New Zealanders (whether for work, pleasure, etc.) is dominated by people from Australia (\autoref{table:imtravel12} and \autoref{fig:immigration12}). A number of other countries then follow, including United Kingdom, China, Japan and the United States. Travel by New Zealanders is also dominated by that to Australia (\autoref{table:nztravel12} and \autoref{fig:nztravel12}). Together, these mean that the greatest travel location for New Zealanders and immigration origin is from Australia (\autoref{table:immigration12} and \autoref{fig:immigration12}). However, many South Pacific nations also appear in the most visited country list by New Zealanders. Though the precise interactions between these different risk factors are unknown, the most simple, a product of measles incidence in 2013 and traveller numbers in 2013, suggest that those countries with greatest international travel, Australia, UK, China and South East Asian countries, pose the greatest risk to New Zealand for measles importation. Though immigration from and travel to some Asian countries is lower, some Asian countries also pose a high risk of measles importation to New Zealand. Note that South Pacific islands do not appear to pose a greater risk, despite large numbers of travellers of New Zealand origin, perhaps because of low measles incidence in these nations. These data are shown in \autoref{table:risk12}. The breakdown of risk of measles importation by New Zealander and non-New Zealander travellers is in \autoref{table:nzrisk12}, \autoref{table:imrisk12}, \autoref{fig:nzrisk12} and \autoref{fig:imrisk12}. The measles incidence and vaccination coverage for those countries identified as posing the greatest risk for measles importation to New Zealand are in \autoref{table:toprisk}. 
 
 \begin{sidewaysfigure}
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013totnp2.pdf}
 \end{center}
-\caption{Measles incidence per million, 2013. Data: WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Grey indicates not reported.}
+\caption{Measles incidence per million, 2013. Dark grey indicates no data were available. Light grey is sea. Data: WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Grey indicates not reported.}
 \label{fig:incidence12}
 \end{sidewaysfigure}
 
@@ -1761,7 +1774,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013totnp3.pdf}
 \end{center}
-\caption{Measles vaccination cover (\% coverage of children that receive one dose of measles vaccine by their second birthday.), 2013. Data: WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Grey indicates not reported.}
+\caption{Measles vaccination cover (\% coverage of children that receive one dose of measles vaccine by their second birthday.), 2013. Dark grey indicates no data were available. Light grey is sea. Data: WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Grey indicates not reported.}
 \label{fig:cover12}
 \end{sidewaysfigure}
 
@@ -1769,7 +1782,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013np1.pdf}
 \end{center}
-\caption{Non-New Zealander international travel and immigration by 0--19 year olds, 2013)}
+\caption{Non-New Zealander international travel and immigration by 0--19 year olds, 2013. Dark grey indicates no data were available. Light grey is sea.)}
 \label{fig:immigration12}
 \end{sidewaysfigure}
 
@@ -1777,7 +1790,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013nznp1.pdf}
 \end{center}
-\caption{New Zealander international travel, 2013}
+\caption{New Zealander international travel, 2013. Dark grey indicates no data were available. Light grey is sea.}
 \label{fig:nztravel12}
 \end{sidewaysfigure}
 
@@ -1785,7 +1798,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013totnp1.pdf}
 \end{center}
-\caption{Total international travel by 0--19 year old non New Zealanders and all ages of New Zealanders, 2013}
+\caption{Total international travel by 0--19 year old non New Zealanders and all ages of New Zealanders, 2013. Dark grey indicates no data were available. Light grey is sea.}
 \label{fig:travel12}
 \end{sidewaysfigure}
 
@@ -1793,7 +1806,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013totnp4.pdf}
 \end{center}
-\caption{Risk map for measles importation, based on measles incidence and non New Zealander 0--19 year old and all ages of New Zealander travel figures, 2013)}
+\caption{Risk map for measles importation, based on measles incidence and non-New Zealander 0--19 year old and all ages of New Zealander travel figures, 2013. Dark grey indicates no data were available. Light grey is sea.}
 \label{fig:risk12}
 \end{sidewaysfigure}
 
@@ -1801,7 +1814,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013nznp4.pdf}
 \end{center}
-\caption{Risk map for measles importation from New Zealander international travel, based on measles incidence and travel figures, 2013}
+\caption{Risk map for measles importation from New Zealander international travel, based on measles incidence and travel figures, 2013. Dark grey indicates no data were available. Light grey is sea.}
 \label{fig:nzrisk12}
 \end{sidewaysfigure}
 
@@ -1809,7 +1822,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013np4.pdf}
 \end{center}
-\caption{Risk map for measles importation from 0--19 year old non-New Zealander international travel and immigration and measles incidence, 2013}
+\caption{Risk map for measles importation from 0--19 year old non-New Zealander international travel and immigration and measles incidence, 2013. Dark grey indicates no data were available. Light grey is sea.}
 \label{fig:imrisk12}
 \end{sidewaysfigure}
 
@@ -1841,28 +1854,27 @@ Though the global incidence of measles is declining, in recent years that declin
 
 \subsection*{Risk analysis discussion}
 
-The regression analyses suggest that age is a particularly strong risk factor for measles. This comes as no surpise to epidemiologists or health care providers. However, our analyses also highlight other groups that are at greater risk of measles. In particular, Pacific people are at greater risk per capita, as are the less deprived (NZDep 1--3), and European and Maori 5--17 year old children compared to Asian and Pacific ethnicity children of the same age. Furthermore, Pacific origin people of all categories from 2--24 years old were less likely on a per capita basis to be cases than Europeans or Maori. Interpretation of these results must still be viewed with some caution, however, as there is very likely a spatial effect that might not be accounted for in these analyses. For example, increased numbers of more wealthy Europeans were measles cases, as was true for Maori. However, the alternative situation was clear for Pacific people, especially of the 0--1 year olds (\autoref{fig:percap_all} and \autoref{fig:cases_all}). Results such as this may simply be due to the spatial effects in the communities the outbreaks were occurring in, rather than an effect of wealth. The risk maps using the spatially explicit NIR vaccination data suggest that there is some heterogeneity in the vaccination cover at the area unit (a level above meshblock) for both MMR1 and MMR2 (see histograms within \autoref{fig:fig12006}, \autoref{fig:fig12007}, \autoref{fig:fig12008}, \autoref{fig:fig12009}, \autoref{fig:fig12010}, \autoref{fig:fig12011}, \autoref{fig:fig12012}, \autoref{fig:fig12013}, \autoref{fig:fig12014}, \autoref{fig:fig22006}, \autoref{fig:fig22007}, \autoref{fig:fig22008}, \autoref{fig:fig22009}, \autoref{fig:fig22010}, \autoref{fig:fig22011}, \autoref{fig:fig22012}, \autoref{fig:fig22013}, and \autoref{fig:fig22014}). This is also seen at the city level. The level of immunity within the population more broadly is also heterogeneous, however, it is noticable that the majority of area units have between 85 -- 96\% immunity, with few below this and few above this (\autoref{fig:sero_imm_hist}).
+The regression analyses suggest that age is a particularly strong risk factor for measles. This comes as no surpise to epidemiologists or health care providers. However, our analyses also highlight other groups that are at greater risk of measles. There are particular ages of younger people that appear more at risk, such as 12--17 year old (e.g. \autoref{fig:cases_all}), for which we were unable to test the risk through statistical methods because the appropriate denominator data. However, our analyses were able to determine that Pacific people are at greater risk per capita, as are the less deprived (NZDep 1--3), and European and Maori 5--17 year old children compared to Asian and Pacific ethnicity children of the same age. Furthermore, Pacific origin people of all categories from 2--24 years old were less likely on a per capita basis to be cases than Europeans or Maori. Interpretation of these results must still be viewed with some caution, however, as there is very likely a spatial effect that might not be accounted for in these analyses. For example, increased numbers of more wealthy Europeans were measles cases, as was true for Maori. However, the alternative situation was clear for Pacific people, especially of the 0--1 year olds (\autoref{fig:percap_all} and \autoref{fig:cases_all}). Results such as this may simply be due to the spatial effects in the communities the outbreaks were occurring in, rather than an effect of wealth. The risk maps using the spatially explicit NIR vaccination data suggest that there is some heterogeneity in the vaccination cover at the area unit (a level above meshblock) for both MMR1 and MMR2 (see histograms within \autoref{fig:fig12006}, \autoref{fig:fig12007}, \autoref{fig:fig12008}, \autoref{fig:fig12009}, \autoref{fig:fig12010}, \autoref{fig:fig12011}, \autoref{fig:fig12012}, \autoref{fig:fig12013}, \autoref{fig:fig12014}, \autoref{fig:fig22006}, \autoref{fig:fig22007}, \autoref{fig:fig22008}, \autoref{fig:fig22009}, \autoref{fig:fig22010}, \autoref{fig:fig22011}, \autoref{fig:fig22012}, \autoref{fig:fig22013}, and \autoref{fig:fig22014}). This is also seen at the city level. The level of immunity within the population more broadly is also heterogeneous, however, it is noticable that the majority of area units have between 85 -- 96\% immunity, with few below this and few above this (\autoref{fig:sero_imm_hist}).
 
-The distribution of the measles cases (\autoref{fig:ageandvac}) appears to reflect the distribution of na\"{\i}ve individuals in the population (\autoref{fig:naive}). The vaccination history of the cases suggests that lack of vaccination cover is the main contributor to the outbreak, though it is noticeable that a number ($>16\%$) of cases had been vaccinated at least once. However, the majority of these received only one vaccination, and were vaccinated when they were young (\autoref{fig:vaccstat} and \autoref{fig:vaccstat_close}).
+The distribution of the measles cases (\autoref{fig:ageandvac}) appears to reflect the distribution of na\"{\i}ve individuals in the population (\autoref{fig:naive}, \autoref{fig:naive_yob}). The vaccination history of the cases suggests that lack of vaccination cover is the main contributor to the outbreak, though it is noticeable that a number ($>16\%$) of cases had been vaccinated at least once. However, the majority of these received only one vaccination (82\%), and were vaccinated when they were young (44\% of those cases vaccinated once were 15 months or younger, see \autoref{fig:vaccstat} and \autoref{fig:vaccstat_close}).
 
-The additional data we received from the Ministry from the NIR database allows us to look at vaccination coverage as a finer scale. There is consistently high vaccination cover by MMR1 (often exceeding 95\%, see \autoref{fig:mmr_nir}), with lower rates for MMR2, approaching 90\% (\autoref{fig:mmr_nir}). The heterogeneity discussed above, however, does not appear to be the same for each area unit, as there is less correlation among the percent coverage for the two vaccines (\autoref{fig:cor_nir}) than might be expected, even at a yearly level (not shown).
+The additional data we received from the Ministry from the NIR database allows us to look at vaccination coverage as a finer scale by annual birth cohort. There is consistently high vaccination cover by MMR1 (often exceeding 95\%, see \autoref{fig:mmr_nir}), with lower rates for MMR2, approaching 90\% (\autoref{fig:mmr_nir}). The heterogeneity discussed above, however, does not appear to be the same for each area unit, as there is less correlation among the percent coverage for the two vaccines (\autoref{fig:cor_nir}) than might be expected, even at a yearly level (not shown).
 
-The distribution of na\"{\i}ve among the DHBs also varies, though the proportion of na\"{\i}ve overall across DHBs is relatively similar (\autoref{sub:popim}, \autoref{fig:Northland}, \autoref{fig:Waitemata}, \autoref{fig:Auckland}, \autoref{fig:Counties_Manukau}, \autoref{fig:Waikato}, \autoref{fig:Lakes}, \autoref{fig:BayofPlenty}, \autoref{fig:Tairawhiti}, \autoref{fig:Taranaki}, \autoref{fig:HawkesBay}, \autoref{fig:Whanganui}, \autoref{fig:Midcentral}, \autoref{fig:Hutt}, \autoref{fig:CapitalandCoast}, \autoref{fig:Wairarapa}, \autoref{fig:NelsonMarlborough}, \autoref{fig:WestCoast}, \autoref{fig:Canterbury}, \autoref{fig:SouthCanterbury}, \autoref{fig:Southern}).  We hope that the Ministry will find these informative, as they indicate which age classes may be the focus of vaccination efforts for each DHB. However, it is worth bearing in mind that the data here assume that the serosurvey results are appropriate for all DHBs.
+Using the national level estimated immunity levels (\autoref{table:sero}) to estimate the numbers of na\"{\i}ve in the DHBs, the distribution of na\"{\i}ve among the DHBs also varies, though the proportion of na\"{\i}ve overall across DHBs is relatively similar (\autoref{sub:popim}, \autoref{fig:Northland}, \autoref{fig:Waitemata}, \autoref{fig:Auckland}, \autoref{fig:Counties_Manukau}, \autoref{fig:Waikato}, \autoref{fig:Lakes}, \autoref{fig:BayofPlenty}, \autoref{fig:Tairawhiti}, \autoref{fig:Taranaki}, \autoref{fig:HawkesBay}, \autoref{fig:Whanganui}, \autoref{fig:Midcentral}, \autoref{fig:Hutt}, \autoref{fig:CapitalandCoast}, \autoref{fig:Wairarapa}, \autoref{fig:NelsonMarlborough}, \autoref{fig:WestCoast}, \autoref{fig:Canterbury}, \autoref{fig:SouthCanterbury}, \autoref{fig:Southern}).  We hope that the Ministry will find these informative, as they indicate which age classes may be the focus of vaccination efforts for each DHB. However, it is worth bearing in mind that the data here assume that the serosurvey results are appropriate for all DHBs.
 
-Further analyses are required to see if the seasonal patterns in travel match seasonality in measles incidence in the countries from which most individuals come from when travelling to, or back to, New Zealand. However, the strong seasonality in travel around the summer vacation in December suggests this may be a time where additional effort and vigilance is required for measles vaccination and control efforts. The area identified as greatest risk for measles importation, Australia, simply reflects the enormous amount of travel between Australia and New Zealand (\autoref{table:immigration12} and \autoref{fig:immigration12}). Recently Australia was declared free of endemic measles and so the 2013 data must reflect imported measles there. Other interaction terms beyond the product of travel and infection incidence may be more appropriate but this will require substantial further analyses. Other areas of high risk include the United Kingdom, where measles persists, and South, Southeast and East Asia, where measles is endemic (\autoref{table:risk12} and \autoref{fig:risk12}). The WHO 2012 data were more complete than the WHO 2013 data, which suffers from data deficiencies, but due to the dynamic nature of measles epidemiology and consultation with the Ministry we present the WHO 2013 data. Lastly, more refined data on the age of travellers may improve the risk assessment, but these are currently unavailable.
+Further analyses are required to see if the seasonal patterns in travel match periodic patterns in measles incidence in the countries from which most individuals come from when travelling to, or back to, New Zealand. However, the strong seasonality in travel around the summer vacation in December suggests this may be a time where additional effort and vigilance is required for measles vaccination and control efforts. The area identified as greatest risk for measles importation, Australia, simply reflects the enormous amount of travel between Australia and New Zealand (\autoref{table:immigration12} and \autoref{fig:immigration12}). Recently Australia was declared free of endemic measles and so the 2013 data must reflect imported measles there. Other interaction terms beyond the product of travel and infection incidence may be more appropriate but this will require substantial further analyses. Other areas of high risk include the United Kingdom, where measles persists, and South, Southeast and East Asia, where measles is endemic (\autoref{table:risk12} and \autoref{fig:risk12}). The WHO 2012 data were more complete than the WHO 2013 data, which suffers from data deficiencies, but due to the dynamic nature of measles epidemiology and consultation with the Ministry we present the WHO 2013 data. Lastly, more refined data on the age of travellers may improve the risk assessment, but these are currently unavailable.
 
 \subsection{Risk analysis summary}
 \begin{itemize}
-\item Risk of measles infection decreases significantly with age.
+\item Risk of measles infection decreases significantly with age, though a peak of cases appears again in the 12--17 age class.
 \item European ethnicity comprise the largest number of measles cases.
 \item Pacific people are statistically more at risk per capita of measles infection, primarily 0--2 year olds.
 \item There is some statistical support for those living in better socio-economic situations being at greater risk of measles.
 \item There is statistical support for 2--24 year old Pacific people being less at risk than European and Maori of the same age, as are 5--17 year old Asian children.
 \item The majority of cases are unvaccinated.
 \item The majority of vaccine failures occur in those people which received single vaccinations around 1 year old.
-\item Distribution of numbers of na\"{\i}ve among New Zealand is uneven, with the majority in DHBs with larger urban areas, though the \%  na\"{\i}ve is similar across DHBs.
 \item There is a continued, and perhaps increasing, risk of measles importation due to travel and endemic measles elsewhere in the world.
-\item There may be seasonal changes in risk of measles importation, with travel numbers peaking in December.
+\item There may be seasonal changes in risk of measles importation, with travel numbers peaking in December and lowest in May/June.
 \end{itemize}
 
 \section{Modelling measles epidemics}
@@ -1870,7 +1882,7 @@ Further analyses are required to see if the seasonal patterns in travel match se
 
 A previously-published model of the dynamics of measles infections in New Zealand has been used to evaluate the vaccination strategy in New Zealand of MMR1 at 15 months and MMR2 before 5 years \citep{roberts0,roberts4,tobias98}. The results show that achieving coverage of greater than 90\% at both vaccination opportunities is necessary if future epidemics of measles are to be prevented.
 
-The original mathematical model for the dynamics of measles in New Zealand prepared in 1996 \citep{tobias98} successfully predicted the 1997 epidemic, which was curtailed by a mass vaccination campaign \citep{mansoor98,roberts0}. Subsequent extension of this work in 1998 showed that the then current schedule of MMR1 at 15 months and MMR2 at 11 years was insufficient to prevent further epidemics \citep{roberts0}. The model supported the change in the immunisation schedule that took effect in January 2001, at which time MMR2 was changed from delivery at 11 years to delivery before the age of five. The schedule was changed in 2000 with MMR2 now being administered before 5 years \citep{anon2a}. Later analyses suggested high levels of vaccination coverage (but less than 95\%) could eliminate measles, but emphasised that it is necessary to maintain high coverage rates in order to prevent future epidemics \citep{roberts4}.
+The original mathematical model for the dynamics of measles in New Zealand prepared in 1996 \citep{tobias98} successfully predicted the 1997 epidemic, which was curtailed by a mass vaccination campaign \citep{mansoor98,roberts0}. Subsequent extension of this work in 1998 showed that the then current schedule of MMR1 at 15 months and MMR2 at 11 years was insufficient to prevent further epidemics \citep{roberts0}. Later analyses suggested high levels of vaccination coverage (but less than 95\%) could eliminate measles, but emphasised that it is necessary to maintain high coverage rates in order to prevent future epidemics \citep{roberts4}.
 
 These results were comparable to others, for example: a two-dose schedule for England and Wales, with the second vaccination given at age four \citep{babad95}; and a second vaccination at either 18 months or five years were recommended to complement the first vaccination at 12 months in Canada \citep{gay98}. In addition, vaccinating 85\% of susceptible children aged one to seven years at five-yearly intervals was found to predict the prevention of measles epidemics in Israel \citep{agur93}. All modelling studies agree that two vaccinations at no less than five years apart are necessary to prevent measles epidemics. Existing policies in eight European countries were analysed and researchers estimated the coverage rates required to reduce $R_v$ below one and eliminate endemic measles \citep{wallinga1}. They found that results depended on the age at delivery, but no strategy succeeded if coverage rates were below approximately 87\%.
 
@@ -1930,7 +1942,7 @@ Hence the relationship between the proportion initially susceptible and the prop
 x_0=\frac{\Pe}{1-e^{-\Ro\Pe}}.
 \end{equation}
 
-In order to prevent future epidemics, it is necessary that $\Rr_V<1$. Hence, the proportion of the population that must be vaccinated to prevent future outbreaks, $\Pv$ is
+In order to prevent future epidemics, it is necessary that $\Rr_V<1$. Hence, the proportion of the population that must be effectively vaccinated to prevent future outbreaks, $\Pv$ is
 \begin{equation} \label{eq:prop}
 \Pv = x_0-1/\Ro.
 \end{equation}
@@ -1947,46 +1959,53 @@ To use the results from our modelling exercise to help inform the appropriate me
 
 The results of these modelling exercises suggest vaccination levels are close to eliminating the possibility of endemic measles transmission, as estimates of $R_v$ typically include 1 (\autoref{fig:r0}). However, the na\"{\i}ve population (\autoref{fig:naive}) and the higher $R_v$ for some of the 2009--2014 outbreaks (\autoref{fig:r0}) suggests that catch up vaccination is necessary (\autoref{table:attack}). The results of these analyses support other studies that suggest very high rates of vaccination are required to eliminate measles and prevent epidemics. Vaccinating 85\% of susceptible children aged one to seven years at five-yearly intervals was suggested to be sufficient to prevent epidemics in Israel \citep{agur93}, but nearly all other studies in Europe suggest no strategies succeeded if coverage rates were below approximately 87\%, which the population level immunity in New Zealand has only just reached, with approximately 11\% currently na\"{\i}ve. Analysis of measles vaccination in various regions suggest that 85\% coverage at MMR1 and MMR2 could be sufficient to prevent future measles epidemics \citep{agur93, babad95, edmunds0, gay98, wallinga1}, whereas \citep{glass4} showed that high overall levels of measles vaccination can obscure pockets of poor coverage, resulting in localised regions with increased risk of infection making effective immunisation difficult.
 
-\begin{table}[htdp]\small
-\begin{center}
-\begin{tabular}{lrrrrr}
-\hline
-DHB  & Size  & Na\"{\i}ve    &   Attack	& Vacc	& Vacc (\%)	\\
-\hline
-
-Auckland  &	436350 & 51673 & 3628 & 17583 & 34 \\
-Bay of Plenty  &	206000 & 20511 & 811 & 4417 & 22 \\
-Canterbury  &	482180 & 50995 & 2549 & 13325 & 26 \\
-Capital and Coast  &	283700 & 32406 & 2063 & 10242 & 32 \\
-Counties Manukau  &	469300 & 55085 & 3778 & 18421 & 33 \\
-Hawke's Bay  &	151700 & 15471 & 676 & 3619 & 23 \\
-Hutt Valley  &	138380 & 15078 & 833 & 4267 & 28 \\
-Lakes  &	98196 & 10470 & 538 & 2798 & 27 \\
-MidCentral  &	162560 & 17196 & 860 & 4496 & 26 \\
-Nelson Marlborough  &	137000 & 12960 & 401 & 2257 & 17 \\
-Northland  &	151690 & 14793 & 533 & 2942 & 20 \\
-South Canterbury  &	55620 & 5199 & 150 & 854 & 16 \\
-Southern  &	297420 & 31389 & 1557 & 8153 & 26 \\
-Tairawhiti &  43650 & 4727 & 256 & 1317 & 28 \\
-Taranaki  &	109750 & 11378 & 529 & 2804 & 25 \\
-Waikato  &	359310 & 39087 & 2147 & 11016 & 28 \\
-Wairarapa  &	41112 & 3901 & 123 & 689 & 18 \\
-Waitemata  & 525550 & 57904 & 3312 & 16845 & 29 \\
-West Coast  &	32151 & 3172 & 121 & 660 & 21 \\
-Whanganui & 60120 & 6025 & 245 & 1328 & 22 \\
-
-\hline			
-TOTAL   & 		4241739   & 		459420   & 		24882   & 		128034 & 28\\
-\hline
-\end{tabular}
-\end{center}
-\caption{Epidemic size calculations. \textit{Size}: DHB Population, Statistics NZ 2013;		
+\begin{table}
+\small
+<<include=FALSE,echo=FALSE,results=tex>>=
+print(xtable(Z, digits=c(7,1,0,0,0,0,2)), include.rownames=F, floating=FALSE)
+@
+\caption{Epidemic size calculations. \textit{Size}: DHB Population, Statistics NZ 2013;  	
 \textit{Na\"{\i}ve}:		DHB na\"{\i}ve population $\left(x_0\times\text{Size}\right)$;		
 \textit{Attack}:		Number infected in DHB in an outbreak of measles in the absence of any further vaccination assuming homogeneous mixing across DHB $\left(\Pe\right)$;	
 \textit{Vacc}:		Number of the currently na\"{\i}ve to be vaccinated in DHB to reduce $\Rr_V$ below one  $\left(\left(x_0-1/\Ro\right)\times\text{Size}\right)$; \textit{Vacc (\%)}: Proportion of the currently na\"{\i}ve population to vaccinate. These simulations assume homogeneous mixing.			
 }
 \label{table:attack}
-\end{table}%
+\end{table}
+
+% \begin{table}[htdp]\small
+% \begin{center}
+% \begin{tabular}{lrrrrr}
+% \hline
+% DHB  & Size  & Na\"{\i}ve    &   Attack	& Vacc	& Vacc (\%)	\\
+% \hline
+% 
+% Auckland  &	436350 & 51673 & 3628 & 17583 & 34 \\
+% Bay of Plenty  &	206000 & 20511 & 811 & 4417 & 22 \\
+% Canterbury  &	482180 & 50995 & 2549 & 13325 & 26 \\
+% Capital and Coast  &	283700 & 32406 & 2063 & 10242 & 32 \\
+% Counties Manukau  &	469300 & 55085 & 3778 & 18421 & 33 \\
+% Hawke's Bay  &	151700 & 15471 & 676 & 3619 & 23 \\
+% Hutt Valley  &	138380 & 15078 & 833 & 4267 & 28 \\
+% Lakes  &	98196 & 10470 & 538 & 2798 & 27 \\
+% MidCentral  &	162560 & 17196 & 860 & 4496 & 26 \\
+% Nelson Marlborough  &	137000 & 12960 & 401 & 2257 & 17 \\
+% Northland  &	151690 & 14793 & 533 & 2942 & 20 \\
+% South Canterbury  &	55620 & 5199 & 150 & 854 & 16 \\
+% Southern  &	297420 & 31389 & 1557 & 8153 & 26 \\
+% Tairawhiti &  43650 & 4727 & 256 & 1317 & 28 \\
+% Taranaki  &	109750 & 11378 & 529 & 2804 & 25 \\
+% Waikato  &	359310 & 39087 & 2147 & 11016 & 28 \\
+% Wairarapa  &	41112 & 3901 & 123 & 689 & 18 \\
+% Waitemata  & 525550 & 57904 & 3312 & 16845 & 29 \\
+% West Coast  &	32151 & 3172 & 121 & 660 & 21 \\
+% Whanganui & 60120 & 6025 & 245 & 1328 & 22 \\
+% 
+% \hline			
+% TOTAL   & 		4241739   & 		459420   & 		24882   & 		128034 & 28\\
+% \hline
+% \end{tabular}
+% \end{center}
+% \end{table}%
 
 \subsection{Summary of modelling}
 \begin{itemize}
@@ -2556,156 +2575,156 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 \end{figure}
 % 
 
-\begin{sidewaysfigure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2012.pdf}
- \end{center}
-    \caption{Proportion of the New Zealand population born in 2012 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% \begin{sidewaysfigure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2012.pdf}
+%  \end{center}
+%     \caption{Proportion of the New Zealand population born in 2012 vaccinated against measles using MMR2 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig22012}
+% \end{sidewaysfigure}
+% 
+% \begin{sidewaysfigure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2013.pdf}
 % \end{center}
-\label{fig:fig22012}
-\end{sidewaysfigure}
+% \caption{Proportion of the New Zealand population born in 2013 vaccinated against measles using MMR2 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% %     \end{center}
+% \label{fig:fig22013}
+% \end{sidewaysfigure}
+% 
+% 
+% % \begin{sidewaysfigure}
+% % \begin{center}
+% %     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2014.pdf}
+% %  \end{center}
+% % \caption{Proportion of the New Zealand population born in 2014 vaccinated against measles using MMR2 in each area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % % \end{center}
+% % \label{fig:fig22014}
+% % \end{sidewaysfigure}
+% 
+% 
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2012.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2012 vaccinated against measles using MMR2 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig22012_a}
+% \end{figure}
+% 
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2013.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2013 vaccinated against measles using MMR2 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig22013_a}
+% \end{figure}
 
-\begin{sidewaysfigure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2013.pdf}
-\end{center}
-\caption{Proportion of the New Zealand population born in 2013 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-%     \end{center}
-\label{fig:fig22013}
-\end{sidewaysfigure}
+% 
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2014.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2014 vaccinated against measles using MMR1 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig12014_a}
+% \end{figure}
 
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2014.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2014 vaccinated against measles using MMR2 in each area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig22014_a}
+% \end{figure}
+% 
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2012.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2012 vaccinated against measles using MMR2 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig22012_w}
+% \end{figure}
+% 
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2013.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2013 vaccinated against measles using MMR2 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig22013_w}
+% \end{figure}
 
-\begin{sidewaysfigure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_2014.pdf}
- \end{center}
-\caption{Proportion of the New Zealand population born in 2014 vaccinated against measles using MMR2 in each 2013 area unit. Note no adjustment is made for vaccine efficacy. The histogram shows the frequency of the proportion vaccinated across the country's area units with 95\% shown in red and the median for the cohort shown in orange. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig22014}
-\end{sidewaysfigure}
+% 
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2014.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2014 vaccinated against measles using MMR1 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig12014_w}
+% \end{figure}
 
-
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2012.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig22012_a}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2013.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2013 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig22013_a}
-\end{figure}
-
-
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Auk_2014.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR1 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig12014_a}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Auk_2014.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR2 in each 2013 area unit in the Auckland vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig22014_a}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2012.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig22012_w}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2013.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2013 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig22013_w}
-\end{figure}
-
-
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2014.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig12014_w}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2014.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR1 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig12014_w}
-\end{figure}
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_Well_2014.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2014 vaccinated against measles using MMR1 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig12014_w}
+% \end{figure}
 
 
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2014.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR2 in each 2013 area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig22014_w}
-\end{figure}
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_Well_2014.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2014 vaccinated against measles using MMR2 in each area unit in the Wellington vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig22014_w}
+% \end{figure}
+% 
+% 
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2012.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2012 vaccinated against measles using MMR2 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig22012_c}
+% \end{figure}
+% 
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2013.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2013 vaccinated against measles using MMR2 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig22013_c}
+% \end{figure}
 
+% 
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2014.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2014 vaccinated against measles using MMR1 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig12014_c}
+% \end{figure}
 
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2012.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2012 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig22012_c}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2013.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2013 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig22013_c}
-\end{figure}
-
-
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR1_NIR_ChCh_2014.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR1 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig12014_c}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2014.pdf}
- \end{center}
-    \caption{Proportion of the population born in 2014 vaccinated against measles using MMR2 in each 2013 area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
-% \end{center}
-\label{fig:fig22014_c}
-\end{figure}
+% \begin{figure}
+% \begin{center}
+%     \includegraphics[width=0.9\textwidth]{nir_census_MMR2_NIR_ChCh_2014.pdf}
+%  \end{center}
+%     \caption{Proportion of the population born in 2014 vaccinated against measles using MMR2 in each area unit in the Christchurch vicinity. Note no adjustment is made for vaccine efficacy. See \autoref{table:tab_mmr_nir} and the supplementary data for details.}
+% % \end{center}
+% \label{fig:fig22014_c}
+% \end{figure}
 
 \begin{figure}[H]
      \begin{center}
