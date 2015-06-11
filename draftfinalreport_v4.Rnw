@@ -1645,7 +1645,7 @@ The correlation between the percentage vaccinated against MMR1 and MMR2 across t
 
 Based on 2013 data vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>13$ years) among different age classes provided by the Ministry were also used to map the immunity among the area units for those ages not included on the NIR database. Vaccine efficacy for 0--4 year olds was not necessary for these analyses, for those $\leq$ 13 years 99\% vaccine efficacy was used (\autoref{table:sero}) and for $\geq$ 14 year olds equivocal serological results were considered non-immune (\autoref{table:sero}). Again there was heterogeneity at the local level (\autoref{fig:sero_imm_map}) with pockets of the nation and cities with lower coverage than other areas (\autoref{fig:sero_imm_a}, \autoref{fig:sero_imm_w}, and \autoref{fig:sero_imm_c}), though given immunity levels were based on national data this heterogeneity is due to population structure.
 
-\begin{sidewaysfigure}[H]
+\begin{sidewaysfigure}
      \begin{center}
      \includegraphics[width=0.9\textwidth]{census_immunity_age.pdf}
      \end{center}
