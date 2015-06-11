@@ -850,10 +850,10 @@ latex(PerCap, file="", table.env=FALSE,rowname=NULL)
 
 For all our statistical analyses (including those above not shown) we used a Poisson error structure with rate adjusted for population size, but in all cases there was a need to account for overdispersion and thus we used and present the results of a quasipoission regression model. We used a model simplification approach, by beginning our analyses with all terms and all interactions, and then simplifying the models through removal of non-significant higher order interaction terms. Thus, the final model that remained with all significant interaction terms had the following linear predictor:
 
-\begin{align*} \label{eq:reg}
+\begin{align}\label{eq:reg}
  y &\sim \textsf{Poisson}(\lambda n)\\
  \log(\lambda) &= \alpha + \beta _a (x_a)+ \beta _e(x_e)+ \beta _s (x_s) + \beta _a{}_e(x_a \times x_e)
-  \end{align*}
+  \end{align}
 Where $y$ is the number of cases, $\lambda$ is cases per capita, $n$ is population size, $\alpha$ is the intercept, $\beta$ the regression coefficient, $x$ is the variable, $_a$ signifies age, $_e$ signifies Prioritized Ethnicity and $_s$ signifies NZDep.
 
 \subsection{Regression analyses results}
