@@ -186,7 +186,7 @@ With the 10 NZDep classes, Prioritized Ethnicities, and the age classes above, t
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 rm(list=ls())
-library(adehabitat)
+#library(adehabitat)
 library(classInt)
 library(ggplot2)   # plotting library
 library(grid)
