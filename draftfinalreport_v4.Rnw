@@ -886,20 +886,24 @@ The cases and per capita measles rates are in \autoref{fig:cases_all} and \autor
 
 \vspace{5mm} %5mm vertical space
 \begin{table}
+\begin{center}
 <<include=FALSE,echo=FALSE,results=tex>>=
 print(resan,floating = FALSE)
 @
 \caption{Significance of different predictor variables for measles risk factors from 2007-2014, estimated using \autoref{eq:reg} and a quasipoisson error structure. Pr($>$F) is p-value, the statistical significance of the result}
 \label{table:anova}
+\end{center}
 \end{table}
 
 \vspace{5mm} %5mm vertical space
 \begin{table}
+\begin{center}
 <<include=FALSE,echo=FALSE,results=tex>>=
   print(xtb,floating = FALSE)
 @
 \caption{Summary of the regression model results using \autoref{eq:reg} and a quasipoisson error structure, for measles risk factors for cases from 2007-12 June 2014. Estimate: negative values indicate rates are lower for this category compared to the base category, which does not appear (e.g. Age 5--17 has a lower measles rate per capita compared to the 0--1 age class that is not shown), and positive values indicate the rates are greater than the baseline rate; Std. error is the standard error, a measure of uncertainty in the estimates; and Pr(>|t|) is the p-value, the statistical significance of the result.}
 \label{table:regression_riskfactors}
+\end{center}
 \end{table}
 
 Apart from over-representation of some MELAA categories discussed above and not included here, the results of the regression model suggest that age is a strong predictor of being a measles case (\autoref{table:anova}). Indeed, all age categories are significantly less likely to be measles cases compared to 0--1 year olds, and the likelihood generally decreases with age (\autoref{table:regression_riskfactors}, \autoref{fig:percap_all}, see also \autoref{fig:ageinyears}).
