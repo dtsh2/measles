@@ -1772,7 +1772,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013totnp2.pdf}
 \end{center}
-\caption{Measles incidence per million, 2013. Dark grey indicates no data were available. Light grey is sea. Data: WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Grey indicates not reported.}
+\caption{Measles incidence per million, 2013. Dark grey indicates no data were available. Data: WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Grey indicates not reported.}
 \label{fig:incidence12}
 \end{sidewaysfigure}
 
@@ -1780,7 +1780,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013totnp3.pdf}
 \end{center}
-\caption{Measles vaccination cover (\% coverage of children that receive one dose of measles vaccine by their second birthday.), 2013. Dark grey indicates no data were available. Light grey is sea. Data: WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Grey indicates not reported.}
+\caption{Measles vaccination cover (\% coverage of children that receive one dose of measles vaccine by their second birthday.), 2013. Dark grey indicates no data were available. Data: WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Grey indicates not reported.}
 \label{fig:cover12}
 \end{sidewaysfigure}
 
@@ -1788,7 +1788,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013np1.pdf}
 \end{center}
-\caption{Non-New Zealander international travel and immigration by 0--19 year olds, 2013. Dark grey indicates no data were available. Light grey is sea.)}
+\caption{Non-New Zealander international travel and immigration by 0--19 year olds, 2013. Dark grey indicates no data were available.}
 \label{fig:immigration12}
 \end{sidewaysfigure}
 
@@ -1796,7 +1796,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013nznp1.pdf}
 \end{center}
-\caption{New Zealander international travel, 2013. Dark grey indicates no data were available. Light grey is sea.}
+\caption{New Zealander international travel, 2013. Dark grey indicates no data were available.}
 \label{fig:nztravel12}
 \end{sidewaysfigure}
 
@@ -1804,7 +1804,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013totnp1.pdf}
 \end{center}
-\caption{Total international travel by 0--19 year old non New Zealanders and all ages of New Zealanders, 2013. Dark grey indicates no data were available. Light grey is sea.}
+\caption{Total international travel by 0--19 year old non New Zealanders and all ages of New Zealanders, 2013. Dark grey indicates no data were available.}
 \label{fig:travel12}
 \end{sidewaysfigure}
 
@@ -1812,7 +1812,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013totnp4.pdf}
 \end{center}
-\caption{Risk map for measles importation, based on measles incidence and non-New Zealander 0--19 year old and all ages of New Zealander travel figures, 2013. Dark grey indicates no data were available. Light grey is sea.}
+\caption{Risk map for measles importation, based on measles incidence and non-New Zealander 0--19 year old and all ages of New Zealander travel figures, 2013. Dark grey indicates no data were available.}
 \label{fig:risk12}
 \end{sidewaysfigure}
 
@@ -1820,7 +1820,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013nznp4.pdf}
 \end{center}
-\caption{Risk map for measles importation from New Zealander international travel, based on measles incidence and travel figures, 2013. Dark grey indicates no data were available. Light grey is sea.}
+\caption{Risk map for measles importation from New Zealander international travel, based on measles incidence and travel figures, 2013. Dark grey indicates no data were available.}
 \label{fig:nzrisk12}
 \end{sidewaysfigure}
 
@@ -1828,7 +1828,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013np4.pdf}
 \end{center}
-\caption{Risk map for measles importation from 0--19 year old non-New Zealander international travel and immigration and measles incidence, 2013. Dark grey indicates no data were available. Light grey is sea.}
+\caption{Risk map for measles importation from 0--19 year old non-New Zealander international travel and immigration and measles incidence, 2013. Dark grey indicates no data were available.}
 \label{fig:imrisk12}
 \end{sidewaysfigure}
 
