@@ -2157,8 +2157,6 @@ A $B/C$ ratio > 1 means that the program benefits exceed their costs. A $B/C$ va
 
 \subsection{Benefit--cost analyses results}
 
-The estimated vaccinaton rates, with percentages are shown in \autoref{table:vacp}.
-
 \begin{sidewaystable}\small
 <<results=tex,echo=FALSE>>=
 latex(vacp, file="", table.env=FALSE,rowname=NULL)
