@@ -2065,13 +2065,13 @@ A regression analysis was performed to test for significant associations between
 \subsection{Cost analyses results}
 \label{sub:cost_res}
 
-Direct costs for measles management in New Zealand for the 10-week period, January 1 -- March 9, 2014 are shown in  \autoref{table:direct}. The reported direct medical costs do not include hospital medical costs, which are reported separately in \autoref{table:hosp}. 
+Direct costs for measles management in New Zealand for the 10-week period, 1 January -- 9 March 2014 are shown in  \autoref{table:direct}. The reported direct medical costs do not include hospital medical costs, which are reported separately in \autoref{table:hosp}. 
 
 \begin{table}
 <<results=tex,echo=FALSE>>=
 latex(costtable1, file="", table.env=FALSE,rowname=NULL)
 @
-\caption{Estimated costs (NZ\$) for measles public health management in New Zealand, January 1 -- March 9, 2014. PHN: public health nurse; PHA: public health assistant; IMT: incident management team; SSO: safety/security officer (SSO)}
+\caption{Estimated costs (NZ\$) for measles public health management in New Zealand, 1 January -- 9 March 2014. PHN: public health nurse; PHA: public health assistant; IMT: incident management team; SSO: safety/security officer (SSO)}
 \label{table:direct}
 \end{table}
 
@@ -2087,17 +2087,17 @@ latex(costtable2, file="", table.env=FALSE,rowname=NULL)
  \centering
  \begin{tablenotes}
       \small
-      \item As of 11 July, 2014. NC - not calculated.
+      \item As of 11 July 2014. NC - not calculated.
     \end{tablenotes}
 \end{table}
 
-From 16 December, 2013 through 19 June, 2014 there were 201 confirmed measles cases in New Zealand (note 14 of these occurred before 1 January 2014, so 187 occurred from January 2014 -- 19 June 2014). The number of cases by age group is shown in \autoref{table:freq}. Of these 201 cases, 34 (17\%) were admitted to hospital with the highest proportion occurring in the youngest (< 15 months) and oldest (> 19 years) age groups, 47\% and 33\%, respectively.
+From 16 December 2013 through 19 June 2014 there were 201 confirmed measles cases in New Zealand (note 14 of these occurred before 1 January 2014, so 187 occurred from January 2014 -- 19 June 2014). The number of cases by age group is shown in \autoref{table:freq}. Of these 201 cases, 34 (17\%) were admitted to hospital with the highest proportion occurring in the youngest (< 15 months) and oldest (> 19 years) age groups, 47\% and 33\%, respectively.
 
 \begin{table}
 <<results=tex,echo=FALSE>>=
 latex(costtable3, file="", table.env=FALSE,rowname=NULL)
 @
-\caption{Frequency of measles cases and number and proportion admitted to hospital by age group, 16 December, 2013 -- 19 June, 2014. Data from ESR.}
+\caption{Frequency of measles cases and number and proportion admitted to hospital by age group, 16 December 2013 -- 19 June 2014. Data from ESR.}
 \label{table:freq}
 \end{table}
 
