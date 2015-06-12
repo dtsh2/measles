@@ -102,7 +102,19 @@ for (year in years) {
 
 
 ######################################################################
-pdf(paste("nir_census_MMR1_NIR_2014_cor.pdf"), width=7, height=7)
+# correlation plot
+for_corr <- grouped %>% group_by(DOMICILE_CODE) %>% summarize(total=sum(total), vacc1=sum(vacc1, na.rm=T), vacc2=sum(vacc2, na.rm=T))
+any(for_corr$vacc1 > for_corr$total)
+
+for_corr <- for_corr %>% mutate(dom = DOMICILE_CODE)
+for_corr <- for_corr %>% left_join(data_dom)
+for_corr <- for_corr %>% mutate(AU2013 = area.unit, prop1 = vacc1/total, prop2= vacc2/total)
+
+data_au <- slot(au, "data") %>% mutate(AU2013 = as.numeric(as.character(AU2013)))
+data_au <- data_au %>% left_join(for_corr)
+
+map_file <- "nir_census_MMR1_NIR_cor.pdf"
+pdf(file.path(map_dir, map_file), width=7, height=7)
 plot(data_au$prop1,data_au$prop2,xlab="MMR1",ylab="MMR2")
 txt<-c(round(cor(data_au$prop1,data_au$prop2,use="complete.obs"),2))
 text(x=c(0,0.05),y=c(1.1,1.1),c(expression("R = "),txt))
