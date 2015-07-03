@@ -41,7 +41,7 @@ colnames(naivedhb)<-c("Northland","Waitemata","Auckland","Counties Manukau",
                       "Southern")
 for (i in 1:20){
   pdf(paste("dhb", i, ".pdf", sep = ""))
-  barplot(naivedhb[,i],ylim=c(0,8000),main=colnames(naivedhb)[i],xlab="Age",ylab="Numbers",
+  barplot(naivedhb[,i],ylim=c(0,5000),main=colnames(naivedhb)[i],xlab="Age",ylab="Numbers",
        #type="l",
        cex=1.1,cex.lab=1.1,cex.main=1.1,cex.axis=1.1)
   legend("topright",legend=c(c("Total naive", round(sum(naivedhb[,i]))),

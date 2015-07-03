@@ -97,8 +97,9 @@
 \DeclareMathOperator{\var}{var}
 \DeclareMathOperator{\cov}{cov}
 
+\usepackage{Sweave}
 \begin{document}
-\SweaveOpts{concordance=TRUE}
+\input{draftfinalreport_v4-concordance}
 
 \title{Final Report: Measles risk assessment, modelling, and benefit--cost analyses for New Zealand}
 \author[1]{David T S Hayman\thanks{D.T.S.Hayman@massey.ac.nz}}
@@ -185,670 +186,6 @@ The University of Otago denominator data provided were not to the same detail as
 
 With the 10 NZDep classes, Prioritized Ethnicities, and the age classes above, the numerous combinations of variables led us to have 250 categories. Because for measles cases the very young appear to be disproportionately affected (\autoref{fig:ageinyears}), we split the 0--5 age category into additional classes. Following discussion with the Ministry, these were 0--1, 2--4, and 5 years old for each of the University of Otago denominator data, assuming equal numbers of young were born into each age group over the last five years (which is supported by data from NZ statistics \citep{stats14}). The 5 year olds were added to the 6--17 year old category to make a 5--17 year old category. No breakdown of 5--17 year category was performed as constant birth rates for the period could not be assumed.
 
-<<echo=FALSE,include=FALSE,results=hide>>=
-rm(list=ls())
-#library(adehabitat)
-library(classInt)
-library(ggplot2)   # plotting library
-library(grid)
-library(gridExtra)
-library(ggmap)
-library(Hmisc)
-library(maps)       # Provides functions that let us plot the maps
-library(mapdata)    # Contains the hi-resolution points that mark out the countries.
-library(maptools)
-library(mapproj)
-library(plyr)
-library(pscl)
-library(RColorBrewer)
-library(rworldmap)
-library(reshape)
-library(reshape2)
-library(rgeos)
-library(rgdal)
-library(raster)
-library(sp)
-library(utils)
-library(xtable)
-## get data
-# set wd
-# setwd("~/Massey 2014/DHayman_20140627")
-# read data
-data<-read.csv("DHayman_20140627.csv",header=T)
-vac<-read.csv("DHayman_20140715_Vacc.csv",header=T)
-names(data)
-data$RptYear<-as.factor(data$RptYear)
-data$SurvWeek<-as.factor(data$SurvWeek)
-data$NZDep01<-as.factor(data$NZDep01)
-data$NZDep06<-as.factor(data$NZDep06)
-data$NZDep13<-as.factor(data$NZDep13)
-#data$AgeInYears<-as.factor(data$AgeInYears)
-data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
-
-
-time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,data = data , FUN=sum)
-
-test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
-head(test)
-dim(test)
-
-caseyr<-aggregate( DiseaseName ~ AgeInYears, 
-data = test , FUN=sum)
-
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
-#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5), rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-
-naive<-round(pop-(pop*impop))
-
-## match cases per age
-AgeInYears<-0:100
-naive<-cbind(AgeInYears,naive)
-colnames(naive)<-c("AgeInYears","Naive")
-naive<-merge(naive,caseyr,by="AgeInYears",all=T)
-colnames(naive)<-c("AgeInYears","Naive","Cases")
-
-dose1=as.factor(round(vac$Dose1Mths/12,0));
-dose1<-summary(dose1)
-dose1<-as.data.frame(dose1)
-dose1$AgeInYears<-rownames(dose1)
-dose2=as.factor(round(na.omit(vac$Dose2Mths/12,0)));
-dose2<-summary(dose2)
-dose2<-as.data.frame(dose2)
-dose2$AgeInYears<-rownames(dose2)
-
-## need to merge vaccination data with data
-## to get years the cases were from
-datav<-merge(vac,data,by="CaseCode",all=T)
-##
-datav$Dose1Mths[which(is.na(datav$Dose1Mths))] <- 9999
-datav$Dose2Mths[which(is.na(datav$Dose2Mths))] <- 9999
-#########################
-datav$RptYear<-as.factor(datav$RptYear)
-datav$SurvWeek<-as.factor(datav$SurvWeek)
-datav$NZDep01<-as.factor(datav$NZDep01)
-datav$NZDep06<-as.factor(datav$NZDep06)
-datav$NZDep13<-as.factor(datav$NZDep13)
-datav$Dose1Mths<-as.factor(datav$Dose1Mths)
-datav$Dose2Mths<-as.factor(datav$Dose2Mths)
-
-#data$AgeInYears<-as.factor(data$AgeInYears)
-datav$EthnicityPrioritised<-as.factor(datav$EthnicityPrioritised)
-
-timev<-aggregate( cbind( DiseaseName) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear+ Dose1Mths +Dose2Mths, data = datav , FUN=sum,na.rm=F,na.action=na.pass)
-
-testv<-subset(timev, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
-testv$Dose1Mths<-revalue(testv$Dose1Mths, c("9999"=NA));
-testv$Dose2Mths<-revalue(testv$Dose2Mths, c("9999"=NA));
-testv$Dose1Mths<-as.numeric(testv$Dose1Mths)
-testv$Dose2Mths<-as.numeric(testv$Dose2Mths)
-testv$D2vac<-ifelse(testv$Dose1Mths > -1 & testv$Dose2Mths >= testv$Dose1Mths,testv$Dose2Mths,NA)
-testv$D1vac<-ifelse(testv$Dose1Mths > -1 & is.na(testv$D2vac) == T,testv$Dose1Mths,NA)
-testv$Unvac<-ifelse(is.na(testv$Dose1Mths) == T & is.na(testv$Dose2Mths) == T,testv$AgeInYears,NA)
-
-testv$VC<-ifelse(is.na(testv$Dose1Mths) == T & is.na(testv$Dose2Mths) == T,0,
-ifelse(testv$Dose1Mths >= 0 & is.na(testv$Dose2Mths) == T,1,2))
-AgeVac<-table(testv$VC,testv$AgeInYears)
-
-row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
-AgeVac<-t(AgeVac)
-AgeInYears<-(as.numeric(rownames(AgeVac)))
-AgeVac<-cbind(AgeVac,AgeInYears)       
-AgeInYears<-(as.numeric(rownames(pop)))
-pop<-cbind(pop,AgeInYears)
-colnames(pop)<-c("Population","AgeInYears")
-AgeV<-merge(pop,AgeVac,by="AgeInYears",all=T)
-
-## regression analyses - measles
-# read data
-data<-read.csv("DHayman_20140627.csv",header=T)
-vac<-read.csv("DHayman_20140715_Vacc.csv",header=T)
-names(data)
-data$RptYear<-as.factor(data$RptYear)
-data$SurvWeek<-as.factor(data$SurvWeek)
-data$NZDep01<-as.factor(data$NZDep01)
-data$NZDep06<-as.factor(data$NZDep06)
-data$NZDep13<-as.factor(data$NZDep13)
-#data$AgeInYears<-as.factor(data$AgeInYears)
-data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
-
-time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear, data = data , FUN=sum)
-
-test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
-
-caseyr<-aggregate( DiseaseName ~ AgeInYears, 
-data = test , FUN=sum)
-
-test$AgeInYears<-findInterval(test$AgeInYears,c(2,5,18,25))
-test$AgeInYears<-as.factor(test$AgeInYears)
-tage<-revalue(test$AgeInYears, c("0"="0-1", "1"="2-4","2"="5-17","3"="18-24","4"="25+"));
-test$AgeInYears<-tage
-teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MELAA","Pacific Peoples"="Pacific","Response cannot be classified"="None","Unknown"="None"));
-
-test$EthnicityPrioritised<-teth
-test <- within(test, NZDep06[NZDep06 == "0"]<-NA)
-test <- within(test, NZDep13[NZDep13 == "0"]<-NA)
-
-# want to set NZ Deprivation to the appropriate year
-
-testt <- within(test, NZDep<- ifelse (test$RptYear == "2007",test$NZDep06,
-ifelse (test$RptYear == "2008",test$NZDep06,
-ifelse (test$RptYear == "2009",test$NZDep06,
-ifelse (test$RptYear == "2010",test$NZDep06,
-ifelse (test$RptYear == "2011",test$NZDep06,
-ifelse (test$RptYear == "2012",test$NZDep06,
-ifelse (test$RptYear == "2013",test$NZDep13,NZDep13))))))))
-
-testt$NZDep<-as.factor(testt$NZDep-1)
-
-testtable<-aggregate( cbind( DiseaseName) ~ NZDep+AgeInYears+EthnicityPrioritised + RptYear,  data = testt , FUN=sum)
-dim(testtable)
-colnames(testtable)<-c("NZDep","Age","Ethnicity","Year","Cases")
-head(testtable)
-
-tnzd<-revalue(testtable$NZDep, c("1"="1-3","2"="1-3","3"="1-3","4"="4-7",
-                                 "5"="4-7","6"="4-7","7"="4-7","8"="8-10",
-                                 "9"="8-10","10"="8-10"));
-
-
-testtable$NZDep<-tnzd
-# head(testtable)
-tt<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity + Year, 
-data = testtable , FUN=sum)
-
-ttyr<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity, 
-data = testtable , FUN=sum)
-ttyr <- ttyr[ttyr$Ethnicity=="None",]
-
-# latex(ttyr, file="",table.env=FALSE,rowname=NULL)
-
-### denominator data
-data<-read.csv("DHayman_20140627.csv",header=T)
-vac<-read.csv("DHayman_20140715_Vacc.csv",header=T)
-names(data)
-data$RptYear<-as.factor(data$RptYear)
-data$SurvWeek<-as.factor(data$SurvWeek)
-data$NZDep01<-as.factor(data$NZDep01)
-data$NZDep06<-as.factor(data$NZDep06)
-data$NZDep13<-as.factor(data$NZDep13)
-#data$AgeInYears<-as.factor(data$AgeInYears)
-data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
-
-time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,# + Dose1Mths + Dose2Mths, 
-data = data , FUN=sum)
-
-test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
-head(test)
-dim(test)
-caseyr<-aggregate( DiseaseName ~ AgeInYears, 
-data = test , FUN=sum)
-caseyr
-## for MoH desired ages
-test$AgeInYears<-findInterval(test$AgeInYears,c(2,5,18,25))
-test$AgeInYears<-as.factor(test$AgeInYears)
-tage<-revalue(test$AgeInYears, c("0"="0-1", "1"="2-4","2"="5-17","3"="18-24","4"="25+"));
-test$AgeInYears<-tage
-#summary(test$EthnicityPrioritised)
-teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MELAA",
-"Pacific Peoples"="Pacific","Response cannot be classified"="None","Unknown"="None"));
-
-test$EthnicityPrioritised<-teth
-head(test)
-test <- within(test, NZDep06[NZDep06 == "0"]<-NA)
-test <- within(test, NZDep13[NZDep13 == "0"]<-NA)
-
-# want to set NZ Deprivation to the appropriate year
-
-testt <- within(test, NZDep<- ifelse (test$RptYear == "2007",test$NZDep06,
-ifelse (test$RptYear == "2008",test$NZDep06,
-ifelse (test$RptYear == "2009",test$NZDep06,
-ifelse (test$RptYear == "2010",test$NZDep06,
-ifelse (test$RptYear == "2011",test$NZDep06,
-ifelse (test$RptYear == "2012",test$NZDep06,
-ifelse (test$RptYear == "2013",test$NZDep13,NZDep13))))))))
-head(testt)
-tail(testt)
-str(testt)
-testt$NZDep<-as.factor(testt$NZDep-1)
-
-testtable<-aggregate( cbind( DiseaseName) #+ as.numeric(SurvWeek))
-~ NZDep+AgeInYears+EthnicityPrioritised + RptYear, 
-data = testt , FUN=sum)
-dim(testtable)
-colnames(testtable)<-c("NZDep","Age","Ethnicity","Year","Cases")
-head(testtable)
-
-#tnzd<-revalue(testtable$NZDep, c("1"="1-5","2"="1-5","3"="1-5","4"="1-5",
-#"5"="1-5","6"="6-10","7"="6-10","8"="6-10",
-#"9"="6-10","10"="6-10"));
-
-tnzd<-revalue(testtable$NZDep, c("1"="1-3","2"="1-3","3"="1-3","4"="4-7",
-                                 "5"="4-7","6"="4-7","7"="4-7","8"="8-10",
-                                 "9"="8-10","10"="8-10"));
-
-testtable$NZDep<-tnzd
-# head(testtable)
-tt<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity + Year, 
-data = testtable , FUN=sum)
-
-ttyr<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity, 
-data = testtable , FUN=sum)
-denom<-read.csv("NZDep2006Denominators.csv",header=T)
-head(denom)
-denom<-denom[,-c(9)]
-summary(denom)
-dim(denom)
-denom<-denom[,1:18]
-row.has.na <- apply(denom, 1, function(x){any(is.na(x))})
-sum(row.has.na)
-denomt <- denom[!row.has.na,]
-head(denomt)
-denomt<-denomt[denomt$Sex_code==99,]
-denomt$Eth_Level<-as.factor(denomt$Eth_Level)
-denomt<-denomt[denomt$Eth_Level %in% c("24","21","66",'22','77'),]
-dm<-cbind(denomt[,c(3,6,9:18)])
-head(dm)
-dm<-dm[dm$Age_Label %in% c("A: 0- 5 yrs", "A: 6-17 yrs","A:18-24 yrs","A:25-64 yrs","A:65+ yrs"),]
-dage<-revalue(dm$Age_Label, c("A: 0- 5 yrs"="<6", "A: 6-17 yrs"="6-17","A:18-24 yrs"="18-24","A:25-64 yrs"="25+","A:65+ yrs"="25+"));
-dm$Age_Label<-dage
-colnames(dm)<-c('Age','Ethnicity',"Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
-head(dm)
-datadm<-dm[dm$Age=="<6",]
-dataA<-(rbind(datadm,datadm)/2)
-dataA<-round(dataA[,3:12])
-dataA<-cbind(c(rep("0-2",5),rep("3-5",5)),rep(datadm$Ethnicity[1:5],2),dataA)
-colnames(dataA)<-c('Age','Ethnicity',"Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
-ddm<-dm[!dm$Age=="<6",]
-dm<-rbind(dataA,ddm)
-dm$Ethnicity <- factor(dm$Ethnicity)
-deth<-revalue(dm$Ethnicity, c("Asian (Prioritised)"="Asian","European (NZ European and Other European)"="European",
-"Maori (Prioritised)"="Maori","MELAA"="MELAA","Pacific People (Prioritised)"="Pacific"));
-dm$Ethnicity<-deth
-head(dm)
-
-## here's the additional fudge the MoH asked for.
-## add 5 year olds to next class
-dm[11:15,3:12]<-dm[11:15,3:12]+round(dm[6:10,3:12]/3,0)
-dm[6:10,3:12]<-round(dm[6:10,3:12]*2/3,0)
-## add 2 year olds to next class
-dm[6:10,3:12]<-dm[6:10,3:12]+round(dm[1:5,3:12]/3,0)
-dm[1:5,3:12]<-round(dm[1:5,3:12]*2/3,0)
-## 
-# rename
-dm$Age<-revalue(dm$Age, c("0-2"="0-1", "3-5"="2-4","6-17"="5-17"));
-
-popn<-melt(dm,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
-colnames(popn)<-c("Age","Ethnicity","NZDep","Popn")
-popn
-#pnzd<-revalue(popn$NZDep, c("Dep1"="1-5","Dep2"="1-5","Dep3"="1-5","Dep4"="1-5",
-#"Dep5"="1-5","Dep6"="6-10","Dep7"="6-10","Dep8"="6-10",
-#"Dep9"="6-10","Dep10"="6-10"));
-
-pnzd<-revalue(popn$NZDep, c("Dep1"="1-3","Dep2"="1-3","Dep3"="1-3","Dep4"="4-7",
-                            "Dep5"="4-7","Dep6"="4-7","Dep7"="4-7","Dep8"="8-10",
-                            "Dep9"="8-10","Dep10"="8-10"));
-
-
-popn$NZDep<-pnzd
-head(popn)
-tp<-aggregate( cbind(Popn) ~ NZDep+Age+Ethnicity, 
-data = popn , FUN=sum)
-
-tp$merge <- paste(tp$NZDep, tp$Age, tp$Ethnicity)
-ttyr$merge <- paste(ttyr$NZDep, ttyr$Age, ttyr$Ethnicity)
-ttyr <- ttyr[ttyr$Ethnicity!="None",]
-
-tp$cases <- 0
-cases <- matrix(0, length(tp$merge),1)
-rownames(cases) <- tp$merge
-cases[ttyr$merge,] <- ttyr$Cases
-tp$cases <- cases
-PerCapita<-(tp$cases/tp$Popn)
-PerCap<-cbind(tp[,c(1:4,6)],round(PerCapita*10000,4))
-colnames(PerCap)<-c("NZDep","Age","Ethnicity","Population","Cases","Per capita")
-
-tp$perCap<-with(tp,tp$cases/tp$Popn*10000)
-tpsub<-tp[!(tp$Ethnicity=="MELAA"),]
-tpsub$ordert <- factor(tpsub$merge, as.character(tpsub$merge))
-
-tpsub1<-tpsub[ order(tpsub$Age), ]
-tpsub1$ordert <- factor(tpsub1$merge, as.character(tpsub1$merge))
-
-#hist(tp$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
-tp$Ethnicity<- relevel(tp$Ethnicity, "European")
-model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tp,family="quasipoisson")
-summary(model)
-
-model1<-update(model,~.-Age:Ethnicity:NZDep)
-summary(model1)
-anova(model1,test="F") # F test, not Chisq, because dispersion estimated by moments
-
-model2<-update(model1,~.-Age:NZDep)
-summary(model2)
-anova(model2,test="F")
-
-## use tpsub
-#hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col="darkgrey",breaks=20)
-tpsub$Ethnicity<- relevel(tpsub$Ethnicity, "European")
-
-model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tpsub,family="quasipoisson")
-summary(model)
-
-model1<-update(model,~.-Age:Ethnicity:NZDep)
-summary(model1)
-anova(model1,test="F")
-
-#model2<-update(model1,~.-Ethnicity:NZDep)
-#summary(model2)
-#anova(model2,test="F")
-model2<-update(model1,~.-Age:NZDep)
-summary(model2)
-anova(model2,test="F")
-
-model3<-update(model2,~.-Ethnicity:NZDep)
-summary(model3)
-anova(model3,test="F")
-anovap<-anova(model3,test="F")
-
-res<-predict(model3)
-#res<-predict(model2)
-
-cor(exp(res),tpsub$cases)
-cor.test(exp(res),tpsub$cases)
-
-resan<-xtable(anova(model3, test="F")[-1,6, drop=FALSE])
-xtb<-xtable(summary(model3)$coefficients[,-3])
-
-AgeVac<-table(testv$VC,testv$AgeInYears)
-row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
-AgeVac<-t(AgeVac)
-
-DOB<-as.numeric(levels(testv$RptYear))[testv$RptYear]-testv$AgeInYears
-#hist(DOB,breaks=100,col="grey",main="2007- 2014 measles cases",xlab="Date of Birth")
-
-DOBVac<-table(testv$VC,DOB)
-row.names(DOBVac)<-c("Unvaccinated","Dose1","Dose2")
-DOBVac<-t(DOBVac)
-
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
-#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-length(pop)
-naive<-round(pop-(pop*impop))
-## match cases per age
-AgeInYears<-0:100
-naive<-cbind(AgeInYears,naive)
-colnames(naive)<-c("AgeInYears","Naive")
-naive<-merge(naive,caseyr,by="AgeInYears",all=T)
-#naive[is.na(naive)] <- 0
-colnames(naive)<-c("AgeInYears","Naive","Cases")
-##
-###
-
-# proportions of the naive population the would be covered if vaccinated by age groups now
-propvCohort<-c(
-round((sum(naive$Naive[3:6])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:12])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:17])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:19])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:26])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:36])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:47])/sum(naive$Naive)),2),
-round((sum(naive$Naive[12:17])/sum(naive$Naive)),2),
-round((sum(naive$Naive[12:19])/sum(naive$Naive)),2),
-round((sum(naive$Naive[20:26])/sum(naive$Naive)),2),
-round((sum(naive$Naive[20:36])/sum(naive$Naive)),2),
-round((sum(naive$Naive[20:47])/sum(naive$Naive)),2),
-round((sum(naive$Naive[1:30])/sum(naive$Naive)),2),
-round((sum(naive$Naive[1:45])/sum(naive$Naive)),2),
-round((sum(naive$Naive[8:100])/sum(naive$Naive)),2))
-yr_range<-c("2-5","5-11","5-16","5-18","5-25","5-35","5-46","11-16","11-18","19-25","19-35","19-46","0-29","0-44",">8")
-propvCohort<-cbind(yr_range,propvCohort)
-propvCohort<-as.data.frame(propvCohort)
-write.table(propvCohort,"vaccine_proportions_Cohort.txt",sep=",",row.names=T,col.names=F)
-propsv = NULL
-for (i in 1:20 ) {
-  propsv[i] = round((sum(naive$Naive[i:13])/sum(naive$Naive)),2)
-}
-propsvAge = NULL
-for (i in 1:20 ) {
-  propsvAge[i]=paste(c(min(i:20)-1, max(i:20)-1),collapse="-")
-}
-
-table120<-as.data.frame(propsv,propsvAge)
-table120<-cbind(Age=rownames(table120),table120)
-rownames(table120)<-1:20
-colnames(table120)<-c("Age","Proportion")
-
-propsvrev = NULL
-for (i in 20:1 ) {
-  propsvrev[i] = round((sum(naive$Naive[i:1])/sum(naive$Naive)),2)
-}
-propsvrevAge = NULL
-for (i in 20:1 ) {
-  propsvrevAge[i]=paste(c(min(i:1)-1, max(i:1)-1),collapse="-")
-}
-
-table201<-as.data.frame(propsvrev,propsvrevAge)
-table201<-cbind(Age=rownames(table201),table201)
-rownames(table201)<-1:20
-colnames(table201)<-c("Age","Proportion")
-
-propsv11 = NULL
-for (i in 1:11 ) {
-  propsv11[i] = round((sum(naive$Naive[i:11])/sum(naive$Naive)),2)
-}
-propsv11Age = NULL
-for (i in 1:11 ) {
-  propsv11Age[i]=paste(c(min(i:11)-1, max(i:11)-1),collapse="-")
-}
-
-table11<-as.data.frame(propsv11,propsv11Age)
-table11<-cbind(Age=rownames(table11),table11)
-rownames(table11)<-1:11
-colnames(table11)<-c("Age","Proportion")
-
-# write.table(table11,"vaccine_proportions_11yrOlds.txt",sep=",",row.names=F)
-# write.table(table120,"vaccine_proportions_1_20yrOlds.txt",sep=",",row.names=F)
-# write.table(table201,"vaccine_proportions_20_1yrOlds.txt",sep=",",row.names=F)
-
-###
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
-#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-         rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-length(pop)
-naive<-round(pop-(pop*impop))
-
-totdpdf<-read.csv("2013mapdata_tot.csv",header=T)
-# output top countries
-colnames(totdpdf)[1]<-c("country")
-toptot <- totdpdf[order(-totdpdf$immigration),] 
-immigration<-toptot[1:30,c(1,4)]
-topincidence <- totdpdf[order(-totdpdf$incidence),] 
-incidence<-topincidence[1:30,c(1,2)]
-incidence[,2]<-round(incidence[,2],0)
-topvaccine <- totdpdf[order(totdpdf$cover),] 
-vaccinecover<-topvaccine[1:30,c(1,3)]
-toprisk <- totdpdf[order(-totdpdf$risk),] 
-risk<-(toprisk[1:30,c(1,5)])
-risk[,2]<-round(risk[,2],0)
-toprisk2<-(toprisk[1:10,c(1,2,3,4)])
-toprisk2[,2]<-round(toprisk2[,2],0)
-
-nzdpdf<-read.csv("2013mapdata_nzers.csv",header=T)
-# output top countries
-colnames(nzdpdf)[1]<-c("country")
-topnz <- nzdpdf[order(-nzdpdf$immigration),] 
-nz<-topnz[1:30,c(1,4)]
-topnzrisk <- nzdpdf[order(-nzdpdf$risk),] 
-nzrisk<-(topnzrisk[1:30,c(1,5)])
-nzrisk[,2]<-round(nzrisk[,2],0)
-
-imdpdf<-read.csv("2013mapdata_immigration.csv",header=T)
-# output top countries
-colnames(imdpdf)[1]<-c("country")
-topim <- imdpdf[order(-imdpdf$immigration),] 
-im<-topim[1:30,c(1,4)]
-topimrisk <- imdpdf[order(-imdpdf$risk),] 
-imrisk<-(topimrisk[1:30,c(1,5)])
-imrisk[,2]<-round(imrisk[,2],0)
-# haven't had time to sort out which packages I need
-
-change<-read.csv("change.csv",header=T)
-costtable1<-read.csv("costtable1.csv",header=T)
-costtable2<-read.csv("costtable2v2.csv",header=T)
-costtable3<-read.csv("costtable3.csv",header=T)
-costtable4<-read.csv("costtable4v2.csv",header=T)
-costtable5<-read.csv("costtable5v2.csv",header=T)
-costtable20<-read.csv("cost_benefit_20.csv",header=T)
-costtable50<-read.csv("cost_benefit_50.csv",header=T)
-
-vacp<-read.csv("vacc_predictions.csv",header=T)
-hosp<-read.csv("hospital.csv",header=T)
-
-t12006<-read.csv("MMR1summary2006.txt",header=T,sep="")
-t22006<-read.csv("MMR2summary2006.txt",header=T,sep="")
-t12007<-read.csv("MMR1summary2007.txt",header=T,sep="")
-t22007<-read.csv("MMR2summary2007.txt",header=T,sep="")
-t12008<-read.csv("MMR1summary2008.txt",header=T,sep="")
-t22008<-read.csv("MMR2summary2008.txt",header=T,sep="")
-t12009<-read.csv("MMR1summary2009.txt",header=T,sep="")
-t22009<-read.csv("MMR2summary2009.txt",header=T,sep="")
-t12010<-read.csv("MMR1summary2010.txt",header=T,sep="")
-t22010<-read.csv("MMR2summary2010.txt",header=T,sep="")
-t12011<-read.csv("MMR1summary2011.txt",header=T,sep="")
-t22011<-read.csv("MMR2summary2011.txt",header=T,sep="")
-t12012<-read.csv("MMR1summary2012.txt",header=T,sep="")
-t22012<-read.csv("MMR2summary2012.txt",header=T,sep="")
-t12013<-read.csv("MMR1summary2013.txt",header=T,sep="")
-t22013<-read.csv("MMR2summary2013.txt",header=T,sep="")
-t12014<-read.csv("MMR1summary2014.txt",header=T,sep="")
-t22014<-read.csv("MMR2summary2014.txt",header=T,sep="")
-
-table_nir_mmr<-rbind(
-t12006,
-t22006,
-t12007,
-t22007,
-t12008,
-t22008,
-t12009,
-t22009,
-t12010,
-t22010,
-t12011,
-t22011,
-t12012,
-t22012,
-t12013,
-t22013,
-t12014,
-t22014)
-colnames(table_nir_mmr)<-c("Min","1st Q","Median","Mean","3rd Q","Max","NA")
-yr_nir<-c('MMR1 2006',
-'MMR2 2006',
-'MMR1 2007',
-'MMR2 2007',
-'MMR1 2008',
-'MMR2 2008',
-'MMR1 2009',
-'MMR2 2009',
-'MMR1 2010',
-'MMR2 2010',
-'MMR1 2011',
-'MMR2 2011',
-"MMR1 2012",
-"MMR2 2012",
-"MMR1 2013",
-"MMR2 2013",
-"MMR1 2014",
-"MMR2 2014")
-table_nir_mmr$Year <-yr_nir
-table_nir_mmr<-table_nir_mmr[c(10,1:7)]
-table_nir_mmr[2:7]<-table_nir_mmr[2:7]*100
-latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
-
-R0 = 12.8;
-x0max = 0.3;
-Nx0 = 200;
-P = (1:Nx0)*x0max/(Nx0+1);
-x0 = P/(1-exp(-R0*P));
-Rv = R0*x0;
-Pop = c(436350, # auck # 3
-        206000, # bay of plenty # 7
-        482180, # canterbury # 18
-        283700, # capital and coast # 14
-        469300, # Counties Manukau # 4
-        151700, # hawkes bay # 10
-        138380, # hutt # 13
-        98196, # lakes # 6
-        162560, # midcentral # 12
-        137000, # nelson marlborough # 16
-        151690, # northland # 1
-        55620, # south canterbury # 19
-        297420, # southern # 20
-        43650, # Tairawhiti # 8
-        109750, # taranaki # 9
-        359310, # waikato # 5
-        41112, # wairarapa # 15
-        525550,  # Waitemata # 2
-        32151, # west coast # 17
-        60120, # whanganui # 11
-        4353189); # population
-Naive = c(74410, # 3
-          35150, # 7
-          82195, # 18
-          48368, # 14
-          80484, # 4
-          25934, # 10
-          23864, # 13
-          16854, # 6
-          27397, # 12
-          23502, # 16
-          25902, # 1
-          9444, # 19
-          50047, # 20
-          7473, # 8
-          18842, # 9
-          61138, # 5
-          7005, # 15
-          90522, # 2
-          5554, # 17
-          10218, # 11
-          742103); # yikes!
-RvDHB = R0*Naive/Pop;
-
-library(akima)
-PDHB = aspline(x=Rv,y=P,xout=RvDHB);
-
-# The number of cases per DHB
-FSDHB = PDHB$y*Naive;
-# The number of vaccinations short
-VDHB = Naive-Pop/R0;
-
-Z<-data.frame(nrows=21,ncols=5)
-for (i in 1:21){
-Z[i,1] = Pop[i];
-Z[i,2] = Naive[i];
-Z[i,3] = round(FSDHB[i]);
-Z[i,4] = round(VDHB[i]);
-Z[i,5] = round(round(VDHB[i])/Naive[i],2)}
-colnames(Z)<-c("Population","Naive","Outbreak","Vaccination","PC")
-Z$DHB <- c("Auckland", "Bay of Plenty", "Canterbury", "Capital and Coast", "Counties Manukau", "Hawke's Bay", "Hutt Valley", "Lakes", "MidCentral", "Nelson Marlborough", "Northland", "South Canterbury", "Southern", "Tairawhiti", "Taranaki", "Waikato", "Wairarapa", "Waitemata", "West Coast", "Whanganui", "TOTAL")
-Z <- Z[,c(6,1:5)]
-write.csv(Z,"dhb_vacc.csv",row.names=F)
-@
 
 \begin{figure}
      \begin{center}
@@ -882,11 +219,89 @@ The numbers of cases per category and population sizes for the complete data set
 
 \begin{table}[hbtp] \scriptsize
 \captionsetup{width=1\textwidth, font={footnotesize}}
-<<results=tex,echo=FALSE>>=
-colnames(PerCap)<-c("NZDep","Age","Ethnicity","Population","Cases","Per capita")
-latex(PerCap, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Measles cases (Cases), population sizes (Population) and per capita rates per 10,000 (Per capita) of measles in specific age (Age), ethnicity (Ethnicity) and socio-economic deprivation (NZDep) categories from 2007-2014. MELAA is Middle Eastern/Latin American/African}
+%latex.default(PerCap, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lllrrr}
+\hline\hline
+\multicolumn{1}{c}{NZDep}&\multicolumn{1}{c}{Age}&\multicolumn{1}{c}{Ethnicity}&\multicolumn{1}{c}{Population}&\multicolumn{1}{c}{Cases 1}&\multicolumn{1}{c}{Per capita}\tabularnewline
+\hline
+1-3&0-1&Asian&$  2269$&$  6$&$26.4434$\tabularnewline
+4-7&0-1&Asian&$  3748$&$ 10$&$26.6809$\tabularnewline
+8-10&0-1&Asian&$  2583$&$  3$&$11.6144$\tabularnewline
+1-3&2-4&Asian&$  3403$&$  1$&$ 2.9386$\tabularnewline
+4-7&2-4&Asian&$  5623$&$  0$&$ 0.0000$\tabularnewline
+8-10&2-4&Asian&$  3874$&$  0$&$ 0.0000$\tabularnewline
+1-3&5-17&Asian&$ 20625$&$  6$&$ 2.9091$\tabularnewline
+4-7&5-17&Asian&$ 29721$&$  8$&$ 2.6917$\tabularnewline
+8-10&5-17&Asian&$ 16777$&$  2$&$ 1.1921$\tabularnewline
+1-3&18-24&Asian&$ 12057$&$  2$&$ 1.6588$\tabularnewline
+4-7&18-24&Asian&$ 23904$&$  3$&$ 1.2550$\tabularnewline
+8-10&18-24&Asian&$ 21063$&$  3$&$ 1.4243$\tabularnewline
+1-3&25+&Asian&$ 54258$&$  4$&$ 0.7372$\tabularnewline
+4-7&25+&Asian&$ 86055$&$ 11$&$ 1.2783$\tabularnewline
+8-10&25+&Asian&$ 54759$&$  8$&$ 1.4609$\tabularnewline
+1-3&0-1&European&$ 23961$&$ 40$&$16.6938$\tabularnewline
+4-7&0-1&European&$ 28051$&$ 58$&$20.6766$\tabularnewline
+8-10&0-1&European&$ 16866$&$ 24$&$14.2298$\tabularnewline
+1-3&2-4&European&$ 35942$&$ 37$&$10.2944$\tabularnewline
+4-7&2-4&European&$ 42076$&$ 22$&$ 5.2286$\tabularnewline
+8-10&2-4&European&$ 25299$&$  6$&$ 2.3716$\tabularnewline
+1-3&5-17&European&$180875$&$160$&$ 8.8459$\tabularnewline
+4-7&5-17&European&$194100$&$118$&$ 6.0793$\tabularnewline
+8-10&5-17&European&$106731$&$ 40$&$ 3.7477$\tabularnewline
+1-3&18-24&European&$ 63051$&$ 24$&$ 3.8064$\tabularnewline
+4-7&18-24&European&$ 94422$&$ 26$&$ 2.7536$\tabularnewline
+8-10&18-24&European&$ 68016$&$ 20$&$ 2.9405$\tabularnewline
+1-3&25+&European&$619698$&$ 54$&$ 0.8714$\tabularnewline
+4-7&25+&European&$734550$&$ 46$&$ 0.6262$\tabularnewline
+8-10&25+&European&$371985$&$ 29$&$ 0.7796$\tabularnewline
+1-3&0-1&Maori&$  3265$&$  9$&$27.5651$\tabularnewline
+4-7&0-1&Maori&$  8378$&$ 13$&$15.5168$\tabularnewline
+8-10&0-1&Maori&$ 15094$&$ 32$&$21.2005$\tabularnewline
+1-3&2-4&Maori&$  4897$&$  4$&$ 8.1683$\tabularnewline
+4-7&2-4&Maori&$ 12568$&$ 12$&$ 9.5481$\tabularnewline
+8-10&2-4&Maori&$ 22642$&$ 10$&$ 4.4166$\tabularnewline
+1-3&5-17&Maori&$ 21750$&$  8$&$ 3.6782$\tabularnewline
+4-7&5-17&Maori&$ 53963$&$ 33$&$ 6.1153$\tabularnewline
+8-10&5-17&Maori&$ 94758$&$ 74$&$ 7.8094$\tabularnewline
+1-3&18-24&Maori&$  7329$&$  3$&$ 4.0933$\tabularnewline
+4-7&18-24&Maori&$ 20862$&$  2$&$ 0.9587$\tabularnewline
+8-10&18-24&Maori&$ 35664$&$  8$&$ 2.2432$\tabularnewline
+1-3&25+&Maori&$ 35934$&$  1$&$ 0.2783$\tabularnewline
+4-7&25+&Maori&$ 87192$&$  3$&$ 0.3441$\tabularnewline
+8-10&25+&Maori&$140820$&$  4$&$ 0.2841$\tabularnewline
+1-3&0-1&MELAA&$   273$&$  0$&$ 0.0000$\tabularnewline
+4-7&0-1&MELAA&$   519$&$  2$&$38.5356$\tabularnewline
+8-10&0-1&MELAA&$   553$&$  1$&$18.0832$\tabularnewline
+1-3&2-4&MELAA&$   410$&$  0$&$ 0.0000$\tabularnewline
+4-7&2-4&MELAA&$   778$&$  0$&$ 0.0000$\tabularnewline
+8-10&2-4&MELAA&$   830$&$  1$&$12.0482$\tabularnewline
+1-3&5-17&MELAA&$  1832$&$  0$&$ 0.0000$\tabularnewline
+4-7&5-17&MELAA&$  3121$&$  0$&$ 0.0000$\tabularnewline
+8-10&5-17&MELAA&$  3250$&$  1$&$ 3.0769$\tabularnewline
+1-3&18-24&MELAA&$   906$&$  0$&$ 0.0000$\tabularnewline
+4-7&18-24&MELAA&$  1806$&$  0$&$ 0.0000$\tabularnewline
+8-10&18-24&MELAA&$  2076$&$  2$&$ 9.6339$\tabularnewline
+1-3&25+&MELAA&$  4569$&$  0$&$ 0.0000$\tabularnewline
+4-7&25+&MELAA&$  7452$&$  5$&$ 6.7096$\tabularnewline
+8-10&25+&MELAA&$  6342$&$  1$&$ 1.5768$\tabularnewline
+1-3&0-1&Pacific&$   643$&$  1$&$15.5521$\tabularnewline
+4-7&0-1&Pacific&$  2113$&$  6$&$28.3956$\tabularnewline
+8-10&0-1&Pacific&$  7389$&$ 48$&$64.9614$\tabularnewline
+1-3&2-4&Pacific&$   964$&$  0$&$ 0.0000$\tabularnewline
+4-7&2-4&Pacific&$  3169$&$  1$&$ 3.1556$\tabularnewline
+8-10&2-4&Pacific&$ 11084$&$ 10$&$ 9.0220$\tabularnewline
+1-3&5-17&Pacific&$  4212$&$  2$&$ 4.7483$\tabularnewline
+4-7&5-17&Pacific&$ 13419$&$  4$&$ 2.9808$\tabularnewline
+8-10&5-17&Pacific&$ 47165$&$ 21$&$ 4.4525$\tabularnewline
+1-3&18-24&Pacific&$  1707$&$  0$&$ 0.0000$\tabularnewline
+4-7&18-24&Pacific&$  6174$&$  4$&$ 6.4788$\tabularnewline
+8-10&18-24&Pacific&$ 18189$&$  5$&$ 2.7489$\tabularnewline
+1-3&25+&Pacific&$  8580$&$  1$&$ 1.1655$\tabularnewline
+4-7&25+&Pacific&$ 26688$&$  3$&$ 1.1241$\tabularnewline
+8-10&25+&Pacific&$ 74757$&$  9$&$ 1.2039$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Measles cases (Cases), population sizes (Population) and per capita rates per 10,000 (Per capita) of measles in specific age (Age), ethnicity (Ethnicity) and socio-economic deprivation (NZDep) categories from 2007-2014. MELAA is Middle Eastern/Latin American/African}
 \label{table:percap}
 \end{table}
 
@@ -929,10 +344,18 @@ The cases and per capita measles rates are in \autoref{fig:cases_all} and \autor
 \vspace{5mm} %5mm vertical space
 \begin{table}
 \begin{center}
-<<include=FALSE,echo=FALSE,results=tex>>=
-print(resan,floating = FALSE)
-@
-\caption{Significance of different predictor variables for measles risk factors from 2007-2014, estimated using \autoref{eq:reg} and a quasipoisson error structure. Pr($>$F) is p-value, the statistical significance of the result}
+% latex table generated in R 3.2.1 by xtable 1.7-4 package
+% Fri Jul 03 12:59:00 2015
+\begin{tabular}{lr}
+  \hline
+ & Pr($>$F) \\ 
+  \hline
+Age & 0.0000 \\ 
+  Ethnicity & 0.0141 \\ 
+  NZDep & 0.0102 \\ 
+  Age:Ethnicity & 0.0004 \\ 
+   \hline
+\end{tabular}\caption{Significance of different predictor variables for measles risk factors from 2007-2014, estimated using \autoref{eq:reg} and a quasipoisson error structure. Pr($>$F) is p-value, the statistical significance of the result}
 \label{table:anova}
 \end{center}
 \end{table}
@@ -940,10 +363,36 @@ print(resan,floating = FALSE)
 \vspace{5mm} %5mm vertical space
 \begin{table}
 \begin{center}
-<<include=FALSE,echo=FALSE,results=tex>>=
-  print(xtb,floating = FALSE)
-@
-\caption{Summary of the regression model results using \autoref{eq:reg} and a quasipoisson error structure, for measles risk factors for cases from 2007-12 June 2014. Estimate: negative values indicate rates are lower for this category compared to the base category, which does not appear (e.g. Age 5--17 has a lower measles rate per capita compared to the 0--1 age class that is not shown), and positive values indicate the rates are greater than the baseline rate; Std. error is the standard error, a measure of uncertainty in the estimates; and Pr(>|t|) is the p-value, the statistical significance of the result.}
+% latex table generated in R 3.2.1 by xtable 1.7-4 package
+% Fri Jul 03 12:59:00 2015
+\begin{tabular}{rrrr}
+  \hline
+ & Estimate & Std. Error & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & -6.16 & 0.13 & 0.00 \\ 
+  Age2-4 & -1.04 & 0.20 & 0.00 \\ 
+  Age5-17 & -1.00 & 0.14 & 0.00 \\ 
+  Age18-24 & -1.72 & 0.19 & 0.00 \\ 
+  Age25+ & -3.17 & 0.16 & 0.00 \\ 
+  EthnicityAsian & 0.25 & 0.32 & 0.44 \\ 
+  EthnicityMaori & 0.21 & 0.21 & 0.33 \\ 
+  EthnicityPacific & 1.22 & 0.21 & 0.00 \\ 
+  NZDep4-7 & -0.26 & 0.09 & 0.01 \\ 
+  NZDep8-10 & -0.30 & 0.10 & 0.01 \\ 
+  Age2-4:EthnicityAsian & -2.31 & 1.33 & 0.09 \\ 
+  Age5-17:EthnicityAsian & -1.25 & 0.46 & 0.01 \\ 
+  Age18-24:EthnicityAsian & -1.02 & 0.57 & 0.08 \\ 
+  Age25+:EthnicityAsian & 0.23 & 0.43 & 0.59 \\ 
+  Age2-4:EthnicityMaori & -0.10 & 0.36 & 0.78 \\ 
+  Age5-17:EthnicityMaori & -0.10 & 0.25 & 0.68 \\ 
+  Age18-24:EthnicityMaori & -0.57 & 0.44 & 0.20 \\ 
+  Age25+:EthnicityMaori & -1.03 & 0.51 & 0.05 \\ 
+  Age2-4:EthnicityPacific & -0.98 & 0.47 & 0.04 \\ 
+  Age5-17:EthnicityPacific & -1.57 & 0.33 & 0.00 \\ 
+  Age18-24:EthnicityPacific & -1.04 & 0.50 & 0.05 \\ 
+  Age25+:EthnicityPacific & -0.66 & 0.43 & 0.13 \\ 
+   \hline
+\end{tabular}\caption{Summary of the regression model results using \autoref{eq:reg} and a quasipoisson error structure, for measles risk factors for cases from 2007-12 June 2014. Estimate: negative values indicate rates are lower for this category compared to the base category, which does not appear (e.g. Age 5--17 has a lower measles rate per capita compared to the 0--1 age class that is not shown), and positive values indicate the rates are greater than the baseline rate; Std. error is the standard error, a measure of uncertainty in the estimates; and Pr(>|t|) is the p-value, the statistical significance of the result.}
 \label{table:regression_riskfactors}
 \end{center}
 \end{table}
@@ -1070,10 +519,32 @@ The majority of the na\"{\i}ve among the general New Zealand population are in t
 
  \vspace{5mm} %5mm vertical space
 \begin{table}
-<<include=FALSE,echo=FALSE,results=tex>>=
-latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Summary of the proportion of 2006--2014 birth cohorts vaccinated against measles-mumps-rubella (MMR) dose 1 and MMR2 across area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12006}, \autoref{fig:fig22006}, \autoref{fig:fig12007}, \autoref{fig:fig22007}, \autoref{fig:fig12008}, \autoref{fig:fig22008}, \autoref{fig:fig12009}, \autoref{fig:fig22009}, \autoref{fig:fig12010}, \autoref{fig:fig22010}, \autoref{fig:fig12011} and \autoref{fig:fig12012}}
+%latex.default(table_nir_mmr, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrrrrrrr}
+\hline\hline
+\multicolumn{1}{c}{Year}&\multicolumn{1}{c}{Min}&\multicolumn{1}{c}{1st Q}&\multicolumn{1}{c}{Median}&\multicolumn{1}{c}{Mean}&\multicolumn{1}{c}{3rd Q}&\multicolumn{1}{c}{Max}&\multicolumn{1}{c}{NA}\tabularnewline
+\hline
+MMR1 2006&$0.00$&$92.31$&$96.04$&$94.57$&$100.00$&$100.0$&$318$\tabularnewline
+MMR2 2006&$0.00$&$86.11$&$91.67$&$90.29$&$ 97.14$&$114.3$&$318$\tabularnewline
+MMR1 2007&$0.00$&$92.86$&$96.21$&$94.99$&$100.00$&$100.0$&$324$\tabularnewline
+MMR2 2007&$0.00$&$85.92$&$90.99$&$89.90$&$ 96.43$&$100.0$&$324$\tabularnewline
+MMR1 2008&$0.00$&$93.65$&$97.10$&$95.69$&$100.00$&$100.0$&$315$\tabularnewline
+MMR2 2008&$0.00$&$84.51$&$90.48$&$89.08$&$ 95.83$&$100.0$&$315$\tabularnewline
+MMR1 2009&$0.00$&$93.90$&$97.22$&$95.75$&$100.00$&$100.0$&$324$\tabularnewline
+MMR2 2009&$0.00$&$83.02$&$88.89$&$87.73$&$ 94.44$&$100.0$&$324$\tabularnewline
+MMR1 2010&$7.14$&$93.26$&$96.67$&$95.57$&$100.00$&$100.0$&$321$\tabularnewline
+MMR2 2010&$0.00$&$62.50$&$70.59$&$69.74$&$ 77.91$&$100.0$&$321$\tabularnewline
+MMR1 2011&$0.00$&$92.86$&$96.43$&$94.92$&$100.00$&$100.0$&$326$\tabularnewline
+MMR2 2011&$0.00$&$ 0.00$&$ 3.45$&$ 6.06$&$  8.93$&$100.0$&$326$\tabularnewline
+MMR1 2012&$0.00$&$93.33$&$96.67$&$95.27$&$100.00$&$100.0$&$331$\tabularnewline
+MMR2 2012&$0.00$&$ 0.00$&$ 0.41$&$ 4.03$&$  4.76$&$100.0$&$331$\tabularnewline
+MMR1 2013&$0.00$&$55.56$&$63.33$&$62.76$&$ 70.00$&$100.0$&$331$\tabularnewline
+MMR2 2013&$0.00$&$ 0.00$&$ 0.00$&$ 2.17$&$  2.63$&$100.0$&$331$\tabularnewline
+MMR1 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.88$&$  0.00$&$100.0$&$334$\tabularnewline
+MMR2 2014&$0.00$&$ 0.00$&$ 0.00$&$ 0.67$&$  0.00$&$100.0$&$334$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Summary of the proportion of 2006--2014 birth cohorts vaccinated against measles-mumps-rubella (MMR) dose 1 and MMR2 across area units. Area units are aggregations of meshblock data. See \autoref{fig:fig12006}, \autoref{fig:fig22006}, \autoref{fig:fig12007}, \autoref{fig:fig22007}, \autoref{fig:fig12008}, \autoref{fig:fig22008}, \autoref{fig:fig12009}, \autoref{fig:fig22009}, \autoref{fig:fig12010}, \autoref{fig:fig22010}, \autoref{fig:fig12011} and \autoref{fig:fig12012}}
 \label{table:tab_mmr_nir}
 \end{table}
 
@@ -1569,21 +1040,10 @@ Plotting the lower level data from the area unit data, available from the NIR da
 
 \clearpage
 
-<<echo=FALSE,include=FALSE,results=hide>>=
-MMR1<-c(0.9604,0.9621,0.971,0.9722,0.9667,0.9643,0.9667,0.6333,0)
-MMR2<-c(0.9167,0.9099,0.9048,0.8889,0.7059,0.0345,0.0041,0,0)
-res_bar<-cbind(MMR1,MMR2)
-rownames(res_bar)<-c("2006","2007","2008","2009","2010","2011","2012","2013","2014")
-@
 
 \begin{figure}
 \begin{center}
-<<fig=TRUE,echo=FALSE>>=
-barplot(t(res_bar),beside=T,ylim=c(0,1),xlab="Birth year",ylab="Proportion vaccinated",legend=colnames(res_bar),
-        args.legend = list(x = "topright",bty="n",inset=c(0.1,0.1)))
-abline(h=0.90,col="red",lty=3,lwd=4)
-abline(h=0.95,col="orange",lty=3,lwd=4)
-@
+\includegraphics{draftfinalreport_v4-007}
 \end{center}
 \caption{Proportions vaccinated by birth cohort using the NIR database. 95\% and 90\% thresholds are shown by orange and red dotted lines respectively}
 \label{fig:mmr_nir}
@@ -1648,74 +1108,360 @@ For our measles importation risk analyses, we use arrivals data from New Zealand
 \subsection{Measles importation risk results}
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-latex(incidence, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Highest measles incidence per million (2013)}
+%latex.default(incidence, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{country}&\multicolumn{1}{c}{incidence}\tabularnewline
+\hline
+Georgia&$1806$\tabularnewline
+Namibia&$ 455$\tabularnewline
+Equatorial Guinea&$ 436$\tabularnewline
+Angola&$ 409$\tabularnewline
+Lebanon&$ 379$\tabularnewline
+Nigeria&$ 313$\tabularnewline
+Somalia&$ 311$\tabularnewline
+Sudan&$ 260$\tabularnewline
+Lesotho&$ 251$\tabularnewline
+Uganda&$ 217$\tabularnewline
+Netherlands&$ 159$\tabularnewline
+Central African Republic&$ 132$\tabularnewline
+Turkey&$ 100$\tabularnewline
+Sri Lanka&$ 100$\tabularnewline
+Togo&$  85$\tabularnewline
+Sudan&$  76$\tabularnewline
+Gabon&$  75$\tabularnewline
+Niger&$  71$\tabularnewline
+Nepal&$  68$\tabularnewline
+Benin&$  63$\tabularnewline
+Ethiopia&$  57$\tabularnewline
+Romania&$  51$\tabularnewline
+Pakistan&$  49$\tabularnewline
+Thailand&$  40$\tabularnewline
+Indonesia&$  39$\tabularnewline
+Qatar&$  36$\tabularnewline
+Cameroon&$  35$\tabularnewline
+Syrian Arab Republic&$  34$\tabularnewline
+Djibouti&$  33$\tabularnewline
+United Kingdom&$  31$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Highest measles incidence per million (2013)}
 \label{table:incidence12}
 \end{table}
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-latex(vaccinecover, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Lowest national measles vaccine cover (\%), 2013}
+%latex.default(vaccinecover, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{country}&\multicolumn{1}{c}{cover}\tabularnewline
+\hline
+Central African Republic&$29$\tabularnewline
+Somalia&$29$\tabularnewline
+Equatorial Guinea&$41$\tabularnewline
+South Sudan&$55$\tabularnewline
+Lesotho&$61$\tabularnewline
+Pakistan&$61$\tabularnewline
+Vanuatu&$65$\tabularnewline
+Gabon&$70$\tabularnewline
+Marshall Islands&$70$\tabularnewline
+Papua New Guinea&$70$\tabularnewline
+Timor-Leste&$70$\tabularnewline
+Mali&$72$\tabularnewline
+Togo&$72$\tabularnewline
+Nigeria&$73$\tabularnewline
+Liberia&$74$\tabularnewline
+San Marino&$74$\tabularnewline
+Eritrea&$75$\tabularnewline
+Paraguay&$75$\tabularnewline
+Solomon Islands&$76$\tabularnewline
+Iraq&$77$\tabularnewline
+Ethiopia&$78$\tabularnewline
+Haiti&$78$\tabularnewline
+Yemen&$78$\tabularnewline
+Chad&$79$\tabularnewline
+Kenya&$79$\tabularnewline
+Congo&$80$\tabularnewline
+Djibouti&$80$\tabularnewline
+Mauritania&$80$\tabularnewline
+Zambia&$80$\tabularnewline
+Afghanistan&$82$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Lowest national measles vaccine cover (\%), 2013}
 \label{table:cover12}
 \end{table}
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-latex(im, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Non-New Zealander travel and immigration numbers, 0--19 year olds, 2013}
+%latex.default(im, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{country}&\multicolumn{1}{c}{immigration}\tabularnewline
+\hline
+Australia&$130703$\tabularnewline
+China&$ 26380$\tabularnewline
+United Kingdom&$ 25155$\tabularnewline
+Japan&$ 20534$\tabularnewline
+United States&$ 20247$\tabularnewline
+Germany&$ 14793$\tabularnewline
+France&$ 12173$\tabularnewline
+Korea, Republic of&$ 10398$\tabularnewline
+India&$  7013$\tabularnewline
+Fiji&$  6040$\tabularnewline
+Malaysia&$  5981$\tabularnewline
+Thailand&$  5233$\tabularnewline
+Canada&$  5013$\tabularnewline
+Singapore&$  4887$\tabularnewline
+Samoa&$  4047$\tabularnewline
+South Africa&$  3763$\tabularnewline
+Tonga&$  3477$\tabularnewline
+Hong Kong&$  3281$\tabularnewline
+Philippines&$  3147$\tabularnewline
+Taiwan&$  2915$\tabularnewline
+Indonesia&$  2580$\tabularnewline
+Netherlands&$  2509$\tabularnewline
+Brazil&$  2265$\tabularnewline
+Sweden&$  1862$\tabularnewline
+Denmark&$  1605$\tabularnewline
+Switzerland&$  1376$\tabularnewline
+Ireland&$  1331$\tabularnewline
+Chile&$  1157$\tabularnewline
+Saudi Arabia&$  1141$\tabularnewline
+Russia&$  1068$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Non-New Zealander travel and immigration numbers, 0--19 year olds, 2013}
 \label{table:imtravel12}
 \end{table}
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-latex(nz, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{New Zealander travel numbers by destination, 2013}
+%latex.default(nz, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{country}&\multicolumn{1}{c}{immigration}\tabularnewline
+\hline
+Australia&$1017540$\tabularnewline
+United States&$ 142200$\tabularnewline
+Fiji&$ 112260$\tabularnewline
+United Kingdom&$  96680$\tabularnewline
+China&$  73340$\tabularnewline
+Cook Islands&$  72820$\tabularnewline
+Samoa&$  44060$\tabularnewline
+Thailand&$  42060$\tabularnewline
+India&$  40760$\tabularnewline
+Indonesia&$  25100$\tabularnewline
+Japan&$  21840$\tabularnewline
+Canada&$  21720$\tabularnewline
+Tonga&$  20120$\tabularnewline
+Singapore&$  18300$\tabularnewline
+Hong Kong&$  18000$\tabularnewline
+Malaysia&$  17480$\tabularnewline
+Philippines&$  17260$\tabularnewline
+France&$  15980$\tabularnewline
+Vanuatu&$  15580$\tabularnewline
+South Africa&$  14000$\tabularnewline
+Korea, Republic of&$  13980$\tabularnewline
+Italy&$  13620$\tabularnewline
+Germany&$  12800$\tabularnewline
+Viet Nam&$  12640$\tabularnewline
+Taiwan&$  10300$\tabularnewline
+New Caledonia&$   7620$\tabularnewline
+Spain&$   6560$\tabularnewline
+Netherlands&$   6260$\tabularnewline
+Papua New Guinea&$   6200$\tabularnewline
+Ireland&$   6160$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{New Zealander travel numbers by destination, 2013}
 \label{table:nztravel12}
 \end{table}
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-latex(immigration, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Total New Zealand traveller numbers by country (New Zealand nationals and 0--19 year old immigrants, 2013)}
+%latex.default(immigration, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{country}&\multicolumn{1}{c}{immigration}\tabularnewline
+\hline
+Australia&$1148243$\tabularnewline
+United States&$ 162447$\tabularnewline
+United Kingdom&$ 121835$\tabularnewline
+Fiji&$ 118300$\tabularnewline
+China&$  99720$\tabularnewline
+Samoa&$  48107$\tabularnewline
+India&$  47773$\tabularnewline
+Thailand&$  47293$\tabularnewline
+Japan&$  42374$\tabularnewline
+France&$  28153$\tabularnewline
+Indonesia&$  27680$\tabularnewline
+Germany&$  27593$\tabularnewline
+Canada&$  26733$\tabularnewline
+Korea, Republic of&$  24378$\tabularnewline
+Tonga&$  23597$\tabularnewline
+Malaysia&$  23461$\tabularnewline
+Singapore&$  23187$\tabularnewline
+Hong Kong&$  21281$\tabularnewline
+Philippines&$  20407$\tabularnewline
+South Africa&$  17763$\tabularnewline
+Vanuatu&$  15748$\tabularnewline
+Italy&$  14617$\tabularnewline
+Viet Nam&$  13680$\tabularnewline
+Taiwan&$  13215$\tabularnewline
+Netherlands&$   8769$\tabularnewline
+Ireland&$   7491$\tabularnewline
+Spain&$   7118$\tabularnewline
+Papua New Guinea&$   6457$\tabularnewline
+Sri Lanka&$   5764$\tabularnewline
+Brazil&$   5245$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Total New Zealand traveller numbers by country (New Zealand nationals and 0--19 year old immigrants, 2013)}
 \label{table:immigration12}
 \end{table}
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-latex(risk, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Risk of measles importation to New Zealand in 2013, estimated by 0--19 year old international and all New Zealander traveller numbers multiplied by measles incidence in the source or destination location, see also \autoref{table:nzrisk12} and \autoref{table:imrisk12}}
+%latex.default(risk, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{country}&\multicolumn{1}{c}{risk}\tabularnewline
+\hline
+Australia&$7870820$\tabularnewline
+United Kingdom&$3723960$\tabularnewline
+China&$1928613$\tabularnewline
+Thailand&$1870193$\tabularnewline
+Netherlands&$1391896$\tabularnewline
+Indonesia&$1071788$\tabularnewline
+Philippines&$ 616175$\tabularnewline
+Germany&$ 590184$\tabularnewline
+Sri Lanka&$ 575635$\tabularnewline
+India&$ 532515$\tabularnewline
+Turkey&$ 350451$\tabularnewline
+Viet Nam&$ 169200$\tabularnewline
+Malaysia&$ 156460$\tabularnewline
+Namibia&$ 151083$\tabularnewline
+Nepal&$ 134525$\tabularnewline
+France&$ 119768$\tabularnewline
+Switzerland&$ 109766$\tabularnewline
+Nigeria&$ 101638$\tabularnewline
+Angola&$  98652$\tabularnewline
+Japan&$  76407$\tabularnewline
+Pakistan&$  73853$\tabularnewline
+Uganda&$  70444$\tabularnewline
+Canada&$  62923$\tabularnewline
+Lebanon&$  57601$\tabularnewline
+Russia&$  55743$\tabularnewline
+Romania&$  34971$\tabularnewline
+Ethiopia&$  21876$\tabularnewline
+Sweden&$  21674$\tabularnewline
+Sudan&$  21024$\tabularnewline
+Spain&$  20552$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Risk of measles importation to New Zealand in 2013, estimated by 0--19 year old international and all New Zealander traveller numbers multiplied by measles incidence in the source or destination location, see also \autoref{table:nzrisk12} and \autoref{table:imrisk12}}
 \label{table:risk12}
 \end{table}
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-latex(nzrisk, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Risk of measles importation to New Zealand due to New Zealander travel in 2013, estimated by all traveller numbers multiplied by measles incidence in the source or destination location, see also \autoref{table:imrisk12} and \autoref{table:risk12}}
+%latex.default(nzrisk, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{country}&\multicolumn{1}{c}{risk}\tabularnewline
+\hline
+Australia&$6974895$\tabularnewline
+United Kingdom&$2955082$\tabularnewline
+Thailand&$1663255$\tabularnewline
+China&$1418417$\tabularnewline
+Netherlands&$ 993645$\tabularnewline
+Indonesia&$ 971888$\tabularnewline
+Philippines&$ 521154$\tabularnewline
+Sri Lanka&$ 499336$\tabularnewline
+India&$ 454343$\tabularnewline
+Turkey&$ 342245$\tabularnewline
+Germany&$ 273778$\tabularnewline
+Viet Nam&$ 156336$\tabularnewline
+Namibia&$ 145622$\tabularnewline
+Nepal&$ 125990$\tabularnewline
+Malaysia&$ 116573$\tabularnewline
+Angola&$  98243$\tabularnewline
+Nigeria&$  87565$\tabularnewline
+Switzerland&$  79655$\tabularnewline
+Uganda&$  69360$\tabularnewline
+France&$  67982$\tabularnewline
+Pakistan&$  53765$\tabularnewline
+Lebanon&$  53054$\tabularnewline
+Canada&$  51123$\tabularnewline
+Japan&$  39381$\tabularnewline
+Russia&$  38275$\tabularnewline
+Georgia&$  36127$\tabularnewline
+Romania&$  31378$\tabularnewline
+Ethiopia&$  19471$\tabularnewline
+Spain&$  18941$\tabularnewline
+Qatar&$  16373$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Risk of measles importation to New Zealand due to New Zealander travel in 2013, estimated by all traveller numbers multiplied by measles incidence in the source or destination location, see also \autoref{table:imrisk12} and \autoref{table:risk12}}
 \label{table:nzrisk12}
 \end{table}
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-latex(imrisk, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Risk of measles importation to New Zealand due to non-New Zealander 0--19 year old travel and immigration in 2013, estimated by traveller numbers multiplied by measles incidence in the source or destination location, see also \autoref{table:nzrisk12} and \autoref{table:risk12}}
+%latex.default(imrisk, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{country}&\multicolumn{1}{c}{risk}\tabularnewline
+\hline
+Australia&$895925$\tabularnewline
+United Kingdom&$768878$\tabularnewline
+China&$510197$\tabularnewline
+Netherlands&$398252$\tabularnewline
+Germany&$316406$\tabularnewline
+Thailand&$206938$\tabularnewline
+Indonesia&$ 99899$\tabularnewline
+Philippines&$ 95021$\tabularnewline
+India&$ 78172$\tabularnewline
+Sri Lanka&$ 76299$\tabularnewline
+France&$ 51786$\tabularnewline
+Malaysia&$ 39887$\tabularnewline
+Japan&$ 37026$\tabularnewline
+Switzerland&$ 30111$\tabularnewline
+Pakistan&$ 20088$\tabularnewline
+Russia&$ 17469$\tabularnewline
+Nigeria&$ 14073$\tabularnewline
+Viet Nam&$ 12863$\tabularnewline
+Canada&$ 11799$\tabularnewline
+Sweden&$  9984$\tabularnewline
+Nepal&$  8535$\tabularnewline
+Turkey&$  8206$\tabularnewline
+Namibia&$  5461$\tabularnewline
+Sudan&$  5451$\tabularnewline
+Denmark&$  4874$\tabularnewline
+Lebanon&$  4547$\tabularnewline
+Somalia&$  4046$\tabularnewline
+Romania&$  3593$\tabularnewline
+Afghanistan&$  2437$\tabularnewline
+Ethiopia&$  2405$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Risk of measles importation to New Zealand due to non-New Zealander 0--19 year old travel and immigration in 2013, estimated by traveller numbers multiplied by measles incidence in the source or destination location, see also \autoref{table:nzrisk12} and \autoref{table:risk12}}
 \label{table:imrisk12}
 \end{table}
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-latex(toprisk2, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Measles and travel data from 2013 for the top 10 countries identified as high risk for measles importation. incidence: measles incidence per million; cover: percent vaccination cover (\% children that receive one dose of measles vaccine by their second birthday.); immigration: the number of New Zealander and 0--19 year old foreign national travellers entering New Zealand from the country}
+%latex.default(toprisk2, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrrr}
+\hline\hline
+\multicolumn{1}{c}{country}&\multicolumn{1}{c}{incidence}&\multicolumn{1}{c}{cover}&\multicolumn{1}{c}{immigration}\tabularnewline
+\hline
+Australia&$  7$&$94$&$1148243$\tabularnewline
+United Kingdom&$ 31$&$95$&$ 121835$\tabularnewline
+China&$ 19$&$99$&$  99720$\tabularnewline
+Thailand&$ 40$&$99$&$  47293$\tabularnewline
+Netherlands&$159$&$96$&$   8769$\tabularnewline
+Indonesia&$ 39$&$89$&$  27680$\tabularnewline
+Philippines&$ 30$&$90$&$  20407$\tabularnewline
+Germany&$ 21$&$97$&$  27593$\tabularnewline
+Sri Lanka&$100$&$99$&$   5764$\tabularnewline
+India&$ 11$&$88$&$  47773$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Measles and travel data from 2013 for the top 10 countries identified as high risk for measles importation. incidence: measles incidence per million; cover: percent vaccination cover (\% children that receive one dose of measles vaccine by their second birthday.); immigration: the number of New Zealander and 0--19 year old foreign national travellers entering New Zealand from the country}
 \label{table:toprisk}
 \end{table}
 
@@ -1787,15 +1533,7 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 
 \begin{figure}
 \begin{center}
-<<fig=TRUE,echo=FALSE>>=
-plot(change[18:25,1],change[18:25,4],type="l",xlab="Year",ylab="",ylim=c(0,max(change[,4])),
-     bty="n")
-ylim <- range(c(0,max(change[,4])))
-xlim <- range(change[,1])
-par(fig = c(.6, 1, 0.6, 1), mar=c(0,0,0,0), new=TRUE)
-plot(change[,1],change[,4],type="l",xlab="Year",ylab="",
-     ylim=c(0,max(change[,4])),bg="grey",add=T,bty="n")
-@
+\includegraphics{draftfinalreport_v4-017}
 \end{center}
 \caption{Trend in global per capita measles incidence}
 \label{fig:trendincidence}
@@ -1920,10 +1658,35 @@ The results of these modelling exercises suggest vaccination levels are close to
 
 \begin{table}
 \small
-<<include=FALSE,echo=FALSE,results=tex>>=
-print(xtable(Z, digits=c(7,1,0,0,0,0,2)), include.rownames=F, floating=FALSE)
-@
-\caption{Epidemic size calculations. \textit{Population}: DHB Population, Statistics NZ 2013;  	
+% latex table generated in R 3.2.1 by xtable 1.7-4 package
+% Fri Jul 03 12:59:00 2015
+\begin{tabular}{lrrrrr}
+  \hline
+DHB & Population & Naive & Outbreak & Vaccination & PC \\ 
+  \hline
+Auckland & 436350 & 74410 & 10662 & 40320 & 0.54 \\ 
+  Bay of Plenty & 206000 & 35150 & 5041 & 19056 & 0.54 \\ 
+  Canterbury & 482180 & 82195 & 11770 & 44525 & 0.54 \\ 
+  Capital and Coast & 283700 & 48368 & 6928 & 26204 & 0.54 \\ 
+  Counties Manukau & 469300 & 80484 & 11633 & 43820 & 0.54 \\ 
+  Hawke's Bay & 151700 & 25934 & 3730 & 14082 & 0.54 \\ 
+  Hutt Valley & 138380 & 23864 & 3478 & 13053 & 0.55 \\ 
+  Lakes & 98196 & 16854 & 2439 & 9182 & 0.54 \\ 
+  MidCentral & 162560 & 27397 & 3855 & 14697 & 0.54 \\ 
+  Nelson Marlborough & 137000 & 23502 & 3398 & 12799 & 0.54 \\ 
+  Northland & 151690 & 25902 & 3719 & 14051 & 0.54 \\ 
+  South Canterbury & 55620 & 9444 & 1344 & 5099 & 0.54 \\ 
+  Southern & 297420 & 50047 & 7025 & 26811 & 0.54 \\ 
+  Tairawhiti & 43650 & 7473 & 1077 & 4063 & 0.54 \\ 
+  Taranaki & 109750 & 18842 & 2728 & 10268 & 0.54 \\ 
+  Waikato & 359310 & 61138 & 8730 & 33067 & 0.54 \\ 
+  Wairarapa & 41112 & 7005 & 1002 & 3793 & 0.54 \\ 
+  Waitemata & 525550 & 90522 & 13170 & 49463 & 0.55 \\ 
+  West Coast & 32151 & 5554 & 812 & 3042 & 0.55 \\ 
+  Whanganui & 60120 & 10218 & 1457 & 5521 & 0.54 \\ 
+  TOTAL & 4353189 & 742103 & 106278 & 402010 & 0.54 \\ 
+   \hline
+\end{tabular}\caption{Epidemic size calculations. \textit{Population}: DHB Population, Statistics NZ 2013;  	
 \textit{Na\"{\i}ve}: DHB na\"{\i}ve population $\left(x_0\times\text{Size}\right)$ (see \autoref{table:sero} for immunity estimates);
 \textit{Outbreak}: Number infected in DHB in an outbreak of measles in the absence of any further vaccination assuming homogeneous mixing across DHB $\left(\Pe\right)$. Note outbreaks of these size lead to immunity rates that leave $\Rr_V$ below one until enough susceptibles are accumulated;	
 \textit{Vaccination}:	Number of the currently na\"{\i}ve to be immunised in DHB to reduce $\Rr_V$ below one  $\left(\left(x_0-1/\Ro\right)\times\text{Size}\right)$; \textit{PC}: The proportion of the currently na\"{\i}ve population to vaccinate. These simulations assume homogeneous mixing. See \autoref{sub:mod_meth} for equations and further details on calculations.
@@ -1986,21 +1749,54 @@ A regression analysis was performed to test for significant associations between
 Direct costs for measles management in New Zealand for the 10-week period, 1 January -- 9 March 2014 are shown in  \autoref{table:direct}. The reported direct medical costs do not include hospital medical costs, which are reported separately in \autoref{table:hosp}. 
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-latex(costtable1, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Estimated costs (NZ\$) for measles public health management in New Zealand, 1 January -- 9 March 2014. PHN: public health nurse; PHA: public health assistant; IMT: incident management team; SSO: safety/security officer (SSO)}
+%latex.default(costtable1, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lllll}
+\hline\hline
+\multicolumn{1}{c}{Category}&\multicolumn{1}{c}{January}&\multicolumn{1}{c}{February}&\multicolumn{1}{c}{March}&\multicolumn{1}{c}{Total}\tabularnewline
+\hline
+PHN&55,296&71,175&24,087&150,558\tabularnewline
+PHA&0&0&2,656&2,656\tabularnewline
+Data support&0&7,752&4,552&12,304\tabularnewline
+Supervisors&10,656&10,464&3,232&24,352\tabularnewline
+IMT&32,918&28,624&7,156&68,698\tabularnewline
+SSO&0&2,746&1,186&3,932\tabularnewline
+Measles operations&1,800&10,326&6,678&18,804\tabularnewline
+Operations partner&2,187&14,580&7,290&24,057\tabularnewline
+IMT controller partner&2,916&14,580&7,290&24,786\tabularnewline
+Total&105,773&160,247&64,127&330,147\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Estimated costs (NZ\$) for measles public health management in New Zealand, 1 January -- 9 March 2014. PHN: public health nurse; PHA: public health assistant; IMT: incident management team; SSO: safety/security officer (SSO)}
 \label{table:direct}
 \end{table}
 
 The total cost for the 293 publicly funded hospital discharges with a measles primary diagnosis that spent 470 nights in hospital from 2000--2014 (part year) was \$550,024 (\autoref{table:hosp}). The mean cost per hospitalised case was \$1,877. The mean cost per day of stay in the hospital was \$1,170.
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-colnames(costtable2) <- c("Year", "Cases", "Days", "Cost","Cost per case","Cost per day")
-latex(costtable2, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Reported direct hospitalisation costs in NZ\$, with the number of cases (Cases), length of hospital stay (Days), total cost (Cost, NZ\$), cost per case (NZ\$) and cost per day (NZ\$) for patients with measles as the primary diagnosis, 2000--2014}
+%latex.default(costtable2, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrrlll}
+\hline\hline
+\multicolumn{1}{c}{Year}&\multicolumn{1}{c}{Cases}&\multicolumn{1}{c}{Days}&\multicolumn{1}{c}{Cost}&\multicolumn{1}{c}{Cost per case}&\multicolumn{1}{c}{Cost per day}\tabularnewline
+\hline
+2000&$  6$&$ 13$&8,850&1,475&681\tabularnewline
+2001&$ 13$&$ 18$&11,267&867&626\tabularnewline
+2002&$  5$&$  2$&3,869&774&1,934\tabularnewline
+2003&$  9$&$ 12$&10,241&1,138&853\tabularnewline
+2004&$  4$&$  5$&4,765&1,191&953\tabularnewline
+2005&$  3$&$ 11$&5,111&1,704&465\tabularnewline
+2006&$  1$&$  0$&602&602&NC\tabularnewline
+2007&$  5$&$ 25$&82,977&16,595&3,319\tabularnewline
+2008&$  3$&$  1$&3,038&1,013&3,038\tabularnewline
+2009&$ 29$&$ 38$&40,782&1,406&1,073\tabularnewline
+2010&$  5$&$  5$&6,701&1,340&1,340\tabularnewline
+2011&$132$&$189$&205,303&1,555&1,086\tabularnewline
+2012&$ 19$&$ 12$&28,540&1,502&2,378\tabularnewline
+2013&$  4$&$  6$&5,330&1,333&888\tabularnewline
+2014&$ 55$&$133$&132,648&2,412&997\tabularnewline
+TOTAL&$293$&$470$&550,024&1,877&1,170\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Reported direct hospitalisation costs in NZ\$, with the number of cases (Cases), length of hospital stay (Days), total cost (Cost, NZ\$), cost per case (NZ\$) and cost per day (NZ\$) for patients with measles as the primary diagnosis, 2000--2014}
 \label{table:hosp}
  \centering
  \begin{tablenotes}
@@ -2012,10 +1808,20 @@ latex(costtable2, file="", table.env=FALSE,rowname=NULL)
 From 16 December 2013 through 19 June 2014 there were 201 confirmed measles cases in New Zealand (note 14 of these occurred before 1 January 2014, so 187 occurred from January 2014 -- 19 June 2014). The number of cases by age group is shown in \autoref{table:freq}. Of these 201 cases, 34 (17\%) were admitted to hospital with the highest proportion occurring in the youngest (< 15 months) and oldest (> 19 years) age groups, 47\% and 33\%, respectively.
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-latex(costtable3, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Frequency of measles cases and number and proportion admitted to hospital by age group, 16 December 2013 -- 19 June 2014. Data from ESR.}
+%latex.default(costtable3, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrrr}
+\hline\hline
+\multicolumn{1}{c}{Age}&\multicolumn{1}{c}{Cases}&\multicolumn{1}{c}{Admitted}&\multicolumn{1}{c}{Proportion}\tabularnewline
+\hline
+\textless 15 months&$ 21$&$10$&$0.47$\tabularnewline
+15 months â€“ 3 years&$  7$&$ 1$&$0.14$\tabularnewline
+4 â€“ 9 years&$  8$&$ 0$&$0.00$\tabularnewline
+10 â€“ 19 years&$132$&$12$&$0.09$\tabularnewline
+\textgreater 19 years&$ 33$&$11$&$0.33$\tabularnewline
+Total&$201$&$34$&$0.17$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Frequency of measles cases and number and proportion admitted to hospital by age group, 16 December 2013 -- 19 June 2014. Data from ESR.}
 \label{table:freq}
 \end{table}
 
@@ -2032,11 +1838,62 @@ The length of hospital stay for the 293 cases reported between 2000 and 2014 ran
 Nearly 40\% (114/293) of the cases did not spend a night in the hospital, while approximately one-quarter (69/293) spent 1 night and more than three-quarters (222/293) spent less than three nights in the hospital. Only eight cases spent a week or more in the hospital. These eight cases were comprised of three females of 1, 15, and 31 years of age at discharge, and 5 males aged 0, 1, 13, 26 and 57 years of age at discharge. Due to the small number of cases spending a week or more in the hospital, the regression analysis to determine the association between cost of hospitalisation was limited to the 285 cases hospitalised for seven or fewer days. The number of cases, length of hospital stay, cost, cost per case and cost per day for patients with measles as the primary diagnosis, by year and gender for 2000--2014 appear in \autoref{table:cases}.
 
 \begin{table}\footnotesize
-<<results=tex,echo=FALSE>>=
-colnames(costtable4) <- c("Year", "Gender", "Cost","Cases","Length of stay","Cost per case")
-latex(costtable4, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Number of cases, length of hospital stay, cost (NZ\$), cost per case (NZ\$) and cost per day (NZ\$) for patients with measles as the primary diagnosis, by year and gender, 2000--2014. Note \textit{Length of stay} is number of complete days spent in hospital, thus 0 is no nights spent in hospital}
+%latex.default(costtable4, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lllrrl}
+\hline\hline
+\multicolumn{1}{c}{Year}&\multicolumn{1}{c}{Gender}&\multicolumn{1}{c}{Cost}&\multicolumn{1}{c}{Cases}&\multicolumn{1}{c}{Length of stay}&\multicolumn{1}{c}{Cost per case}\tabularnewline
+\hline
+2000&F&4,296&$  2$&$  4$&2,148\tabularnewline
+&M&4,554&$  4$&$  9$&1,139\tabularnewline
+&Total&8,850&$  6$&$ 13$&1,475\tabularnewline
+2001&F&3,740&$  5$&$  5$&748\tabularnewline
+&M&7,527&$  8$&$ 13$&941\tabularnewline
+&Total&11,267&$ 13$&$ 18$&867\tabularnewline
+2002&F&924&$  2$&$  0$&462\tabularnewline
+&M&2,945&$  3$&$  2$&982\tabularnewline
+&Total&3,869&$  5$&$  2$&774\tabularnewline
+2003&F&9,766&$  8$&$ 12$&1,221\tabularnewline
+&M&475&$  1$&$  0$&475\tabularnewline
+&Total&10,241&$  9$&$ 12$&1,138\tabularnewline
+2004&F&1,437&$  1$&$  2$&1,437\tabularnewline
+&M&3,328&$  3$&$  3$&1,109\tabularnewline
+&Total&4,765&$  4$&$  5$&1,191\tabularnewline
+2005&F&0&$  0$&$  0$&0\tabularnewline
+&M&5,111&$  3$&$ 11$&1,704\tabularnewline
+&Total&5,111&$  3$&$ 11$&1,704\tabularnewline
+2006&F&0&$  0$&$  0$&0\tabularnewline
+&M&602&$  1$&$  0$&602\tabularnewline
+&Total&602&$  1$&$  0$&602\tabularnewline
+2007&F&1,930&$  1$&$  3$&1,930\tabularnewline
+&M&81,046&$  4$&$ 22$&20,262\tabularnewline
+&Total&82,977&$  5$&$ 25$&16,595\tabularnewline
+2008&F&714&$  1$&$  0$&714\tabularnewline
+&M&2,324&$  2$&$  1$&1,162\tabularnewline
+                    &Total&3,038&$  3$&$  1$&1,013\tabularnewline
+2009&F&11,953&$  7$&$ 15$&1,708\tabularnewline
+&M&28,830&$ 22$&$ 23$&1,310\tabularnewline
+                    &Total&40,782&$ 29$&$ 38$&1,406\tabularnewline
+2010&F&5,884&$  4$&$  5$&1,471\tabularnewline
+&M&817&$  1$&$  0$&817\tabularnewline
+                    &Total&6,701&$  5$&$  5$&1,340\tabularnewline
+2011&F&103,460&$ 66$&$ 86$&1,568\tabularnewline
+&M&101,842&$ 66$&$103$&1,543\tabularnewline
+                    &Total&205,303&$132$&$189$&1,555\tabularnewline
+2012&F&13,054&$  8$&$  6$&1,632\tabularnewline
+&M&15,486&$ 11$&$  6$&1,408\tabularnewline
+                    &Total&28,540&$ 19$&$ 12$&1,502\tabularnewline
+2013&F&1,800&$  1$&$  2$&1,800\tabularnewline
+&M&3,530&$  3$&$  4$&1,177\tabularnewline
+                    &Total&5,330&$  4$&$  6$&1,333\tabularnewline
+2014&F&55,633&$ 21$&$ 46$&2,649\tabularnewline
+&M&77,014&$ 34$&$ 87$&2,265\tabularnewline
+&Total&132,647&$ 55$&$133$&2,412\tabularnewline
+2000-2014&      F&335,431&$166$&$284$&2,021\tabularnewline
+&     M&214,591&$127$&$186$&1,690\tabularnewline
+&TOTAL&550,022&$293$&$470$&1,877\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Number of cases, length of hospital stay, cost (NZ\$), cost per case (NZ\$) and cost per day (NZ\$) for patients with measles as the primary diagnosis, by year and gender, 2000--2014. Note \textit{Length of stay} is number of complete days spent in hospital, thus 0 is no nights spent in hospital}
 \label{table:cases}
  \centering
  \begin{tablenotes}
@@ -2048,10 +1905,19 @@ latex(costtable4, file="", table.env=FALSE,rowname=NULL)
 Regression analyses showed statistically significant associations between cost of hospitalisation and three variables: length of hospitalisation and year of case, and a less strong association with case age and case gender (\autoref{table:regression_costs}). Results showed the expected hospitalisation costs in 2000 of a female measles patient who did not stay overnight in the hospital was \$582.  The cost was \$256 less if the case was a male. It increased approximately \$406 per night of hospitalisation and \$64 per year over the time period of 2000--2014. The cost of a case decreased with the age of the patient by approximately \$8 per year of case age.
 
 \begin{table}
-<<results=tex,echo=FALSE>>=
-latex(costtable5, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Regression results ($R^{2}_\textsf{adj} = 0.43$, p-value $<0.001$) for measles hospitalisation cost based on length of stay (days), gender, case age and year of case ($n=288$) in New Zealand, 2000 -- 2014}
+%latex.default(costtable5, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrl}
+\hline\hline
+\multicolumn{1}{c}{Variable}&\multicolumn{1}{c}{Coefficient}&\multicolumn{1}{c}{P.value}\tabularnewline
+\hline
+Intercept&$ 581.39$&\textless 0.001\tabularnewline
+Length of stay (nights)&$ 406.07$&\textless 0.001\tabularnewline
+Gender (0 = F, 1 = M)&$-255.98$&0.006\tabularnewline
+Case age (years)&$  -8.23$&0.007\tabularnewline
+Year of case (vs. 2000)&$  64.35$&\textless 0.001\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Regression results ($R^{2}_\textsf{adj} = 0.43$, p-value $<0.001$) for measles hospitalisation cost based on length of stay (days), gender, case age and year of case ($n=288$) in New Zealand, 2000 -- 2014}
 \label{table:regression_costs}
 \end{table}
 
@@ -2076,10 +1942,35 @@ A $B/C$ ratio > 1 means that the program benefits exceed their costs. A $B/C$ va
 \subsection{Benefit--cost analyses results}
 
 \begin{sidewaystable}\small
-<<results=tex,echo=FALSE>>=
-latex(vacp, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{DHB and national level catch up immunisation rates and estimated outbreak sizes post catch-up immunisation. \textit{Size}: DHB Population, Statistics NZ 2013;    
+%latex.default(vacp, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrrrrrrrr}
+\hline\hline
+\multicolumn{1}{c}{DHB}&\multicolumn{1}{c}{Size}&\multicolumn{1}{c}{Naïve}&\multicolumn{1}{c}{Attack}&\multicolumn{1}{c}{Vacc}&\multicolumn{1}{c}{Proportion}&\multicolumn{1}{c}{Naive.post.vaccination}&\multicolumn{1}{c}{Median.outbreak}&\multicolumn{1}{c}{Mean.outbreak}\tabularnewline
+\hline
+Auckland&$ 436350$&$ 74410$&$ 10662$&$ 40320$&$0.54$&$ 34090$&$2$&$ 82$\tabularnewline
+Bay of Plenty&$ 206000$&$ 35150$&$  5041$&$ 19056$&$0.54$&$ 16094$&$2$&$ 71$\tabularnewline
+Canterbury&$ 482180$&$ 82195$&$ 11770$&$ 44525$&$0.54$&$ 37670$&$2$&$ 62$\tabularnewline
+Capital and Coast&$ 283700$&$ 48368$&$  6928$&$ 26204$&$0.54$&$ 22164$&$3$&$ 96$\tabularnewline
+Counties Manukau&$ 469300$&$ 80484$&$ 11633$&$ 43820$&$0.54$&$ 36664$&$3$&$ 50$\tabularnewline
+Hawke's Bay&$ 151700$&$ 25934$&$  3730$&$ 14082$&$0.54$&$ 11852$&$2$&$ 56$\tabularnewline
+Hutt Valley&$ 138380$&$ 23864$&$  3478$&$ 13053$&$0.55$&$ 10811$&$2$&$ 86$\tabularnewline
+Lakes&$  98196$&$ 16854$&$  2439$&$  9182$&$0.54$&$  7672$&$2$&$ 62$\tabularnewline
+MidCentral&$ 162560$&$ 27397$&$  3855$&$ 14697$&$0.54$&$ 12700$&$2$&$ 75$\tabularnewline
+Nelson Marlborough&$ 137000$&$ 23502$&$  3398$&$ 12799$&$0.54$&$ 10703$&$3$&$ 90$\tabularnewline
+Northland&$ 151690$&$ 25902$&$  3719$&$ 14051$&$0.54$&$ 11851$&$3$&$ 70$\tabularnewline
+South Canterbury&$  55620$&$  9444$&$  1344$&$  5099$&$0.54$&$  4345$&$3$&$ 72$\tabularnewline
+Southern&$ 297420$&$ 50047$&$  7025$&$ 26811$&$0.54$&$ 23236$&$2$&$102$\tabularnewline
+Tairawhiti&$  43650$&$  7473$&$  1077$&$  4063$&$0.54$&$  3410$&$2$&$ 47$\tabularnewline
+Taranaki&$ 109750$&$ 18842$&$  2728$&$ 10268$&$0.54$&$  8574$&$3$&$ 68$\tabularnewline
+Waikato&$ 359310$&$ 61138$&$  8730$&$ 33067$&$0.54$&$ 28071$&$2$&$ 95$\tabularnewline
+Wairarapa&$  41112$&$  7005$&$  1002$&$  3793$&$0.54$&$  3212$&$3$&$ 59$\tabularnewline
+Waitemata&$ 525550$&$ 90522$&$ 13170$&$ 49463$&$0.55$&$ 41059$&$2$&$ 70$\tabularnewline
+West Coast&$  32151$&$  5554$&$   812$&$  3042$&$0.55$&$  2512$&$2$&$ 50$\tabularnewline
+Whanganui&$  60120$&$ 10218$&$  1457$&$  5521$&$0.54$&$  4697$&$2$&$ 58$\tabularnewline
+Total&$4353189$&$742103$&$106278$&$402010$&$0.54$&$340093$&$2$&$106$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{DHB and national level catch up immunisation rates and estimated outbreak sizes post catch-up immunisation. \textit{Size}: DHB Population, Statistics NZ 2013;    
 \textit{Na\"{\i}ve}:	DHB na\"{\i}ve population $\left(x_0\times\text{Size}\right)$;		
 \textit{Attack}: Number infected in DHB in an outbreak of measles in the absence of any catch up immunisation $\left(\Pe\right)$;
 \textit{Vacc}: Number to be immunised in DHB to reduce $\Rr_V$ below one  $\left(\left(x_0-1/\Ro\right)\times\text{Size}\right)$; \textit{Proportion}: the proportion of the currently na\"{i}ve population requiring immunisation; \textit{Na\"{i}ve.post.vaccination}: the na\"{i}ve population following catch up immunisation; with \textit{Median.outbreak} and \textit{Mean.outbreak}: the expected median and mean outbreak size post--immunisation catch up from 1000 simulations of a stochastic model}
@@ -2107,20 +1998,66 @@ The expected number of cases in New Zealand, assuming homogenous mixing, in a na
 \end{figure}
 
 \begin{sidewaystable}\small
-<<results=tex,echo=FALSE>>=
-colnames(costtable20)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C")
-latex(costtable20, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Benefit--cost analyses with 20 dollars per immunised person. \textit{Vacc} is numbers to immunise (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up immunisation programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Contacts} is costs saved through contact exclusion (\$2,624.57 per case); \textit{Manage saved} is management costs saved (\$1,765 per case), plus \$20 GP costs; \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}  is the discounted costs saved; \textit{Outbreak}	is the predicted mean outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations\footnote{Note the mean takes into account rare, but large outbreaks, see \autoref{fig:sim} and \autoref{fig:sim1}. Median values are all 2, thus the expected number of cases will be small. The mean is used as a conservative estimate regarding the benefits of immunisation, because it allows for rare but large outbreaks}; \textit{OB costs}	is costs expected due to continued measles importations based on 10 introductions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio.}
+%latex.default(costtable20, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrrrrrrrrrr}
+\hline\hline
+\multicolumn{1}{c}{DHB}&\multicolumn{1}{c}{Vacc}&\multicolumn{1}{c}{Vacc costs}&\multicolumn{1}{c}{Wages saved}&\multicolumn{1}{c}{Manage saved}&\multicolumn{1}{c}{Hosp saved}&\multicolumn{1}{c}{Contacts}&\multicolumn{1}{c}{Costs saved}&\multicolumn{1}{c}{Outbreak}&\multicolumn{1}{c}{OB costs}&\multicolumn{1}{c}{B/C}\tabularnewline
+\hline
+Auckland&$40320$&$806400$&$ 8942051$&$19036915$&$3402138$&$27983181$&$52158107$&$ 82$&$4011409$&$10.83$\tabularnewline
+Bay of Plenty&$19056$&$381120$&$ 4227807$&$ 9000665$&$1608533$&$13230465$&$24660384$&$ 71$&$3473294$&$ 6.40$\tabularnewline
+Canterbury&$44525$&$890500$&$ 9871313$&$21015241$&$3755689$&$30891206$&$57578402$&$ 62$&$3033017$&$14.68$\tabularnewline
+Capital and Coast&$26204$&$524080$&$ 5810404$&$12369888$&$2210656$&$18183031$&$33891518$&$ 96$&$4696284$&$ 6.49$\tabularnewline
+Counties Manukau&$43820$&$876400$&$ 9756413$&$20770628$&$3711974$&$30531639$&$56908203$&$ 50$&$2445981$&$17.13$\tabularnewline
+Hawke's Bay&$14082$&$281640$&$ 3128292$&$ 6659885$&$1190206$&$ 9789651$&$18247021$&$ 56$&$2739499$&$ 6.04$\tabularnewline
+Hutt Valley&$13053$&$261060$&$ 2916944$&$ 6209941$&$1109795$&$ 9128259$&$17014247$&$ 86$&$4207088$&$ 3.81$\tabularnewline
+Lakes&$ 9182$&$183640$&$ 2045551$&$ 4354815$&$ 778261$&$ 6401330$&$11931497$&$ 62$&$3033017$&$ 3.71$\tabularnewline
+MidCentral&$14697$&$293940$&$ 3233128$&$ 6883072$&$1230092$&$10117723$&$18858516$&$ 75$&$3668972$&$ 4.76$\tabularnewline
+Nelson Marlborough&$12799$&$255980$&$ 2849849$&$ 6067102$&$1084268$&$ 8918294$&$16622890$&$ 90$&$4402766$&$ 3.57$\tabularnewline
+Northland&$14051$&$281020$&$ 3119067$&$ 6640245$&$1186696$&$ 9760781$&$18193210$&$ 70$&$3424374$&$ 4.91$\tabularnewline
+South Canterbury&$ 5099$&$101980$&$ 1127192$&$ 2399701$&$ 428857$&$ 3527424$&$ 6574798$&$ 72$&$3522213$&$ 1.81$\tabularnewline
+Southern&$26811$&$536220$&$ 5891757$&$12543081$&$2241607$&$18437614$&$34366038$&$102$&$4989802$&$ 6.22$\tabularnewline
+Tairawhiti&$ 4063$&$ 81260$&$  903263$&$ 1922975$&$ 343660$&$ 2826663$&$ 5268644$&$ 47$&$2299223$&$ 2.21$\tabularnewline
+Taranaki&$10268$&$205360$&$ 2287931$&$ 4870822$&$ 870478$&$ 7159831$&$13345274$&$ 68$&$3326535$&$ 3.78$\tabularnewline
+Waikato&$33067$&$661340$&$ 7321713$&$15587345$&$2785656$&$22912509$&$42706835$&$ 95$&$4647365$&$ 8.04$\tabularnewline
+Wairarapa&$ 3793$&$ 75860$&$  840362$&$ 1789063$&$ 319728$&$ 2629821$&$ 4901747$&$ 59$&$2886258$&$ 1.65$\tabularnewline
+Waitemata&$49463$&$989260$&$11045471$&$23514929$&$4202415$&$34565606$&$64427150$&$ 70$&$3424374$&$14.60$\tabularnewline
+West Coast&$ 3042$&$ 60840$&$  681012$&$ 1449819$&$ 259101$&$ 2131152$&$ 3972274$&$ 50$&$2445981$&$ 1.58$\tabularnewline
+Whanganui&$ 5521$&$110420$&$ 1221963$&$ 2601462$&$ 464914$&$ 3824001$&$ 7127590$&$ 58$&$2837338$&$ 2.42$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Benefit--cost analyses with 20 dollars per immunised person. \textit{Vacc} is numbers to immunise (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up immunisation programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Contacts} is costs saved through contact exclusion (\$2,624.57 per case); \textit{Manage saved} is management costs saved (\$1,765 per case), plus \$20 GP costs; \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}  is the discounted costs saved; \textit{Outbreak}	is the predicted mean outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations\footnote{Note the mean takes into account rare, but large outbreaks, see \autoref{fig:sim} and \autoref{fig:sim1}. Median values are all 2, thus the expected number of cases will be small. The mean is used as a conservative estimate regarding the benefits of immunisation, because it allows for rare but large outbreaks}; \textit{OB costs}	is costs expected due to continued measles importations based on 10 introductions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio.}
 \label{table:cost20}
 \end{sidewaystable}
 
 \begin{sidewaystable}\small
-<<results=tex,echo=FALSE>>=
-colnames(costtable50)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C")
-latex(costtable50, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Benefit--cost analyses with 50 dollars per immunised person. \textit{Vacc} is numbers to immunise (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up immunisation programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Contacts} is costs saved through contact exclusion (\$2,624.57 per case); \textit{Manage saved} is management costs saved (\$1,765 per case), plus \$20 GP costs; \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}  is the discounted costs saved; \textit{Outbreak}  is the predicted mean outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations\footnote{Note the mean takes into account rare, but large outbreaks, see \autoref{fig:sim} and \autoref{fig:sim1}. Median values are all 2, thus the expected number of cases will be small. The mean is used as a conservative estimate regarding the benefits of immunisation, because it allows for rare but large outbreaks}; \textit{OB costs}	is costs expected due to continued measles importations based on 10 introductions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio.}
+%latex.default(costtable50, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrrrrrrrrrr}
+\hline\hline
+\multicolumn{1}{c}{DHB}&\multicolumn{1}{c}{Vacc}&\multicolumn{1}{c}{Vacc costs}&\multicolumn{1}{c}{Wages saved}&\multicolumn{1}{c}{Manage saved}&\multicolumn{1}{c}{Hosp saved}&\multicolumn{1}{c}{Contacts}&\multicolumn{1}{c}{Costs saved}&\multicolumn{1}{c}{Outbreak}&\multicolumn{1}{c}{OB costs}&\multicolumn{1}{c}{B/C}\tabularnewline
+\hline
+Auckland&$40320$&$2016000$&$ 8942051$&$19036915$&$3402138$&$27983181$&$52158107$&$ 82$&$4011409$&$ 8.65$\tabularnewline
+Bay of Plenty&$19056$&$ 952800$&$ 4227807$&$ 9000665$&$1608533$&$13230465$&$24660384$&$ 71$&$3473294$&$ 5.57$\tabularnewline
+Canterbury&$44525$&$2226250$&$ 9871313$&$21015241$&$3755689$&$30891206$&$57578402$&$ 62$&$3033017$&$10.95$\tabularnewline
+Capital and Coast&$26204$&$1310200$&$ 5810404$&$12369888$&$2210656$&$18183031$&$33891518$&$ 96$&$4696284$&$ 5.64$\tabularnewline
+Counties Manukau&$43820$&$2191000$&$ 9756413$&$20770628$&$3711974$&$30531639$&$56908203$&$ 50$&$2445981$&$12.27$\tabularnewline
+Hawke's Bay&$14082$&$ 704100$&$ 3128292$&$ 6659885$&$1190206$&$ 9789651$&$18247021$&$ 56$&$2739499$&$ 5.30$\tabularnewline
+Hutt Valley&$13053$&$ 652650$&$ 2916944$&$ 6209941$&$1109795$&$ 9128259$&$17014247$&$ 86$&$4207088$&$ 3.50$\tabularnewline
+Lakes&$ 9182$&$ 459100$&$ 2045551$&$ 4354815$&$ 778261$&$ 6401330$&$11931497$&$ 62$&$3033017$&$ 3.42$\tabularnewline
+MidCentral&$14697$&$ 734850$&$ 3233128$&$ 6883072$&$1230092$&$10117723$&$18858516$&$ 75$&$3668972$&$ 4.28$\tabularnewline
+Nelson Marlborough&$12799$&$ 639950$&$ 2849849$&$ 6067102$&$1084268$&$ 8918294$&$16622890$&$ 90$&$4402766$&$ 3.30$\tabularnewline
+Northland&$14051$&$ 702550$&$ 3119067$&$ 6640245$&$1186696$&$ 9760781$&$18193210$&$ 70$&$3424374$&$ 4.41$\tabularnewline
+South Canterbury&$ 5099$&$ 254950$&$ 1127192$&$ 2399701$&$ 428857$&$ 3527424$&$ 6574798$&$ 72$&$3522213$&$ 1.74$\tabularnewline
+Southern&$26811$&$1340550$&$ 5891757$&$12543081$&$2241607$&$18437614$&$34366038$&$102$&$4989802$&$ 5.43$\tabularnewline
+Tairawhiti&$ 4063$&$ 203150$&$  903263$&$ 1922975$&$ 343660$&$ 2826663$&$ 5268644$&$ 47$&$2299223$&$ 2.11$\tabularnewline
+Taranaki&$10268$&$ 513400$&$ 2287931$&$ 4870822$&$ 870478$&$ 7159831$&$13345274$&$ 68$&$3326535$&$ 3.48$\tabularnewline
+Waikato&$33067$&$1653350$&$ 7321713$&$15587345$&$2785656$&$22912509$&$42706835$&$ 95$&$4647365$&$ 6.78$\tabularnewline
+Wairarapa&$ 3793$&$ 189650$&$  840362$&$ 1789063$&$ 319728$&$ 2629821$&$ 4901747$&$ 59$&$2886258$&$ 1.59$\tabularnewline
+Waitemata&$49463$&$2473150$&$11045471$&$23514929$&$4202415$&$34565606$&$64427150$&$ 70$&$3424374$&$10.92$\tabularnewline
+West Coast&$ 3042$&$ 152100$&$  681012$&$ 1449819$&$ 259101$&$ 2131152$&$ 3972274$&$ 50$&$2445981$&$ 1.53$\tabularnewline
+Whanganui&$ 5521$&$ 276050$&$ 1221963$&$ 2601462$&$ 464914$&$ 3824001$&$ 7127590$&$ 58$&$2837338$&$ 2.29$\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Benefit--cost analyses with 50 dollars per immunised person. \textit{Vacc} is numbers to immunise (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up immunisation programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Contacts} is costs saved through contact exclusion (\$2,624.57 per case); \textit{Manage saved} is management costs saved (\$1,765 per case), plus \$20 GP costs; \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}  is the discounted costs saved; \textit{Outbreak}  is the predicted mean outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations\footnote{Note the mean takes into account rare, but large outbreaks, see \autoref{fig:sim} and \autoref{fig:sim1}. Median values are all 2, thus the expected number of cases will be small. The mean is used as a conservative estimate regarding the benefits of immunisation, because it allows for rare but large outbreaks}; \textit{OB costs}	is costs expected due to continued measles importations based on 10 introductions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio.}
 \label{table:cost50}
 \end{sidewaystable}
 
@@ -2132,11 +2069,29 @@ In concordance with current measles knowledge, strategies that target the very y
 
 \begin{table}[hbtp] \scriptsize
 \captionsetup{width=1\textwidth}
-<<results=tex,echo=FALSE>>=
-colnames(propvCohort)<-c("Age range (yrs)","Proportion naive")
-latex(propvCohort, file="", table.env=FALSE,rowname=NULL)
-@
-\caption{Proportion of the currently na\"{\i}ve New Zealand population that would be immunised if all na\"{\i}ve people in each age range were immunised. The estimated additional proportion of the population requiring immunisation is 54\%}
+%latex.default(propvCohort, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{ll}
+\hline\hline
+\multicolumn{1}{c}{Age range (yrs)}&\multicolumn{1}{c}{Proportion naive}\tabularnewline
+\hline
+2-5&0.03\tabularnewline
+5-11&0.04\tabularnewline
+5-16&0.07\tabularnewline
+5-18&0.09\tabularnewline
+5-25&0.19\tabularnewline
+5-35&0.32\tabularnewline
+5-46&0.53\tabularnewline
+11-16&0.04\tabularnewline
+11-18&0.05\tabularnewline
+19-25&0.1\tabularnewline
+19-35&0.24\tabularnewline
+19-46&0.44\tabularnewline
+0-29&0.34\tabularnewline
+0-44&0.59\tabularnewline
+\textgreater8&0.88\tabularnewline
+\hline
+\end{tabular}\end{center}\caption{Proportion of the currently na\"{\i}ve New Zealand population that would be immunised if all na\"{\i}ve people in each age range were immunised. The estimated additional proportion of the population requiring immunisation is 54\%}
 \label{table:coh_vac}
 \end{table}
 
