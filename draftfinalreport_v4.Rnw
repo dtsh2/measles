@@ -887,26 +887,16 @@ In this section we describe the vaccination history of the measles cases from 20
 
 \begin{table}[htdp]
 \begin{center}
-\begin{tabular}{lrrrr}
-\hline
-Age &  Proportion immune\\
-\hline
-0  & 0.28\\
-1  & 0.67\\
-2  & 0.92\\
-3	& 0.93\\
-4	& 0.93\\
-5	& 0.92\\
-6-13	& 0.8\\
-14-18	& 0.83\\
-19-23	& 0.77\\
-24-32	& 0.85\\
-33-52	& 0.92\\
->52	& 0.99\\
-\hline
-\end{tabular}
+<<include=FALSE,echo=FALSE,results=tex>>=
+  library(dplyr)
+  PopnImmunityAll <- read.csv("data/PopnImmunityAll.csv") %>%
+                       mutate(YS=2013-AgeEnd, YE=2013-AgeStart) %>%
+                       mutate(YOB=ifelse(YS==YE,YS,ifelse(is.finite(YS), paste(YS,YE,sep="--"), paste0("<", YE)))) %>%
+                       select("Year of Birth"=YOB, "Proportion Immune"=Immunity)
+  print(xtable(PopnImmunityAll, align=rep("c",3)), include.rownames=F, floating=FALSE)
+@
 \end{center}
-\caption{Vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>5$ years) among different age classes used in these analyses, as provided by the Ministry of Health up to 1st January 2014. Note these values are from vaccination records and serosurveys. Vaccine efficacy for 0--4 year olds was 96\%, 5--13 year olds 99\%, and for $\geq$ 14 year olds equivocal serological results were considered non-immune. Note that 28\% of those $<1$ were considered immune due to passive immunity, following \citep{waaijenborg}. Note that those aged zero are born in 2013.}
+\caption{Vaccination coverage (2006--2013 years) and serosurvey estimates of immunity ($>2006$ years) among different age classes used in these analyses, as provided by the Ministry of Health up to 1st January 2014. Note these values are from vaccination records and serosurveys. Vaccine efficacy for 0--4 year olds was 96\%, 5--13 year olds 99\%, and for $\geq$ 14 year olds equivocal serological results were considered non-immune. Note that 28\% of those $<1$ were considered immune due to passive immunity, following \citep{waaijenborg}.}
 \label{table:sero}
 \end{table}%
 
@@ -1531,7 +1521,7 @@ The correlation between the percentage vaccinated against MMR1 and MMR2 across t
      \label{fig:cor_nir}
 \end{figure}
 
-Based on 2013 data vaccination coverage (0--13 years) and serosurvey estimates of immunity ($>13$ years) among different age classes provided by the Ministry, maps for the immunity among the area units for those ages not included on the NIR database were created. Vaccine efficacy for 0--4 year olds was not necessary for these analyses, for those $\leq$ 13 years 99\% vaccine efficacy was used (\autoref{table:sero}) and for $\geq$ 14 year olds equivocal serological results were considered non-immune (\autoref{table:sero}). Again there was heterogeneity at the local level (\autoref{fig:sero_imm_map}) with pockets of the nation and cities with lower coverage than other areas (\autoref{fig:sero_imm_a}, \autoref{fig:sero_imm_w}, and \autoref{fig:sero_imm_c}), though given immunity levels were based on national data this heterogeneity is due to population structure.
+Based on 2013 data vaccination coverage for those born in 2001--2013 (assuming immunisation coverage at 24 months for those born in 2001--2005, Tomasz Kiedrzynski, personal comm.) and serosurvey estimates of immunity (born in 2000 or earlier) among different age classes provided by the Ministry, maps for the immunity among the area units for those ages not included on the NIR database were created. Vaccine efficacy for 0--4 year olds was not necessary for these analyses, for those $\leq$ 13 years 99\% vaccine efficacy was used (\autoref{table:sero}) and for $\geq$ 14 year olds equivocal serological results were considered non-immune (\autoref{table:sero}). Again there was heterogeneity at the local level (\autoref{fig:sero_imm_map}) with pockets of the nation and cities with lower coverage than other areas (\autoref{fig:sero_imm_a}, \autoref{fig:sero_imm_w}, and \autoref{fig:sero_imm_c}), though given immunity levels were based on national data this heterogeneity is due to population structure.
 
 \begin{sidewaysfigure}
      \begin{center}
