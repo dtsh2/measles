@@ -1014,7 +1014,7 @@ require(R0)
 genTime <- generation.time(type="lognormal", val=c(12, 3.5))
 
 jm.epid <- function (epid.nb, GT, R0, epid.length, family, negbin.size = NULL, 
-                     peak.value = 300000, popn = 300000) 
+                     peak.value = 740000, popn = 740000) 
 {
   if (class(GT) != "R0.GT") {
     stop("GT object must be of class R0.GT.")
@@ -1073,8 +1073,8 @@ jm.epid <- function (epid.nb, GT, R0, epid.length, family, negbin.size = NULL,
 
 ## if R 0 == 2
 set.seed(1) # all infected
-res<-jm.epid(epid.nb=1000,GT=genTime,R0=0.99,epid.length=365*5,popn=331385
-             ,family="poisson",peak.value=331385)
+res<-jm.epid(epid.nb=1000,GT=genTime,R0=0.99,epid.length=365*5,popn=742103
+             ,family="poisson",peak.value=742103)
 sizes<-colSums(res)
 #sizes
 legMd<-as.factor(paste("median =",c(median(sizes))))
