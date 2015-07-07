@@ -1999,33 +1999,17 @@ For the cost analyses we used the values from the above cost section (\autoref{s
 
 The model estimates for each DHB, with the immunisation percentages and the expected outbreak size following additional immunisation is shown in \autoref{table:vacp}. The benefit--cost results are in \autoref{table:cost20} and \autoref{table:cost50}, for two different vaccine costs. The results in the two tables show the benefits of immunisation are always substantially greater than the costs of the increased supplementary immunisation (\autoref{table:cost20} and \autoref{table:cost50}).
 
-In concordance with current measles knowledge, strategies that target the very young (<1 year old) are not effective, and our analyses of the vaccinated cases suggests a substantial proportion of vaccinated cases (\autoref{fig:ageandvac}) were vaccinated with a single vaccine around 1 year of age (\autoref{fig:vaccstat} and \autoref{fig:vaccstat_close}). Furthermore, it appears possible to reach the appropriate figure (28\% of currently na\"{\i}ve) by vaccinating all the currently na\"{\i}ve older population groups with lower coverage, in particular school age children and young adults. However, there are a number of different vaccination schemes that will lead to sufficient coverage and these are given in \autoref{table:coh_vac}. The appropriate cover could be reached by catch up vaccination of all school aged children.
+In concordance with current measles knowledge, strategies that target the very young (<1 year old) are not effective, and our analyses of the vaccinated cases suggests a substantial proportion of vaccinated cases (\autoref{fig:ageandvac}) were vaccinated with a single vaccine around 1 year of age (\autoref{fig:vaccstat} and \autoref{fig:vaccstat_close}). To reach the appropriate figure (54\% of currently na\"{\i}ve) by vaccination, there are a number of scenarios that approach this value, but targetting all the currently na\"{\i}ve older population groups with lower coverage or all school age children and young adults may be insufficient. However, there are a number of different vaccination schemes that will lead to sufficient coverage and these are given in \autoref{table:coh_vac}. These proportions will be lower if the proportion of equivocal serological results in adults are classified as immune, rather than na\"{\i}ve.
 
-\begin{table}[htdp]\small % saved as vaccine_proportions_Cohort
-\begin{center}
-\begin{tabular}{lrrrr}
-\hline
-Age range (yrs) & Proportion of na\"{\i}ve population\\
-\hline
-2--5 & 0.04\\
-5--11 & 0.15\\
-5--16 & 0.27\\
-5--18 & 0.31\\
-11--16 & 0.14\\
-11--18 & 0.18\\
-19--25 & 0.19\\
-19--30 & 0.34\\
-19--46 & 0.46\\
-0--29 & 0.72\\
-0--44 & 0.89\\
->8 & 0.8 \\ 
-\hline
-\end{tabular}
-\end{center}
-\caption{Proportion of the currently na\"{\i}ve New Zealand population that would be immunised if all na\"{\i}ve people in each age range were immunised. The estimated additional proportion of the population requiring immunisation is 28\%}
+\begin{table}[hbtp] \scriptsize
+\captionsetup{width=1\textwidth}
+<<results=tex,echo=FALSE>>=
+colnames(propvCohort)<-c("Age range (yrs)","Proportion naive")
+latex(propvCohort, file="", table.env=FALSE,rowname=NULL)
+@
+\caption{Proportion of the currently na\"{\i}ve New Zealand population that would be immunised if all na\"{\i}ve people in each age range were immunised. The estimated additional proportion of the population requiring immunisation is 54\%}
 \label{table:coh_vac}
-\end{table}%
-
+\end{table}
 
 \subsection{Benefit--cost analyses discussion}
 
