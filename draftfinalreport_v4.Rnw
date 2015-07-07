@@ -1553,7 +1553,7 @@ abline(h=0.95,col="orange",lty=3,lwd=4)
 \label{fig:mmr_nir}
 \end{figure}
 
-The correlation between the percentage vaccinated against MMR1 and MMR2 across the area units is shown in figure \autoref{fig:cor_nir}. The implication of the correlation plot is that the proportion of the area unit populations vaccinated against MMR1 is substantially higher than MMR2, that generally there is a correlation between MMR1 and MMR2 vaccination rates, but that there is also heterogeneity.
+The correlation between the percentage vaccinated against MMR1 and MMR2 across the area units is shown in \autoref{fig:cor_nir}. The implication of the correlation plot is that the proportion of the area unit populations vaccinated against MMR1 is substantially higher than MMR2, that generally there is a correlation between MMR1 and MMR2 vaccination rates, but that there is also heterogeneity.
 
 \begin{figure}[H]
      \begin{center}
