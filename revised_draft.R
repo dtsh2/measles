@@ -59,7 +59,7 @@ caseyr<-aggregate( DiseaseName ~ AgeInYears,
 data = test , FUN=sum)
 
 popimmune<-read.csv("PopnImmunityAll.csv",header=T)
-popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
+#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
 pop<-read.csv("popnsize.csv",header=T)
 colnames(pop)<-0:100
 pop<-t(pop)
@@ -602,7 +602,7 @@ legend("topleft",c("Unvaccinated"),col="grey",pch=15,bty="n",cex=1)
 dev.off()
 
 popimmune<-read.csv("PopnImmunityAll.csv",header=T)
-popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
+#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
 pop<-read.csv("popnsize.csv",header=T)
 colnames(pop)<-0:100
 pop<-t(pop)
@@ -637,7 +637,7 @@ dev.off()
 
 
 popimmune<-read.csv("PopnImmunityAll.csv",header=T)
-popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
+#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
 pop<-read.csv("popnsize.csv",header=T)
 colnames(pop)<-0:100
 pop<-t(pop)
@@ -796,7 +796,7 @@ cols <- findColours(breaks, pal)
 
 ###
 popimmune<-read.csv("PopnImmunityAll.csv",header=T)
-popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
+#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
 pop<-read.csv("popnsize.csv",header=T)
 colnames(pop)<-0:100
 pop<-t(pop)
