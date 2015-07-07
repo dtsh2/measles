@@ -597,6 +597,9 @@ round((sum(naive$Naive[3:6])/sum(naive$Naive)),2),
 round((sum(naive$Naive[6:12])/sum(naive$Naive)),2),
 round((sum(naive$Naive[6:17])/sum(naive$Naive)),2),
 round((sum(naive$Naive[6:19])/sum(naive$Naive)),2),
+round((sum(naive$Naive[6:26])/sum(naive$Naive)),2),
+round((sum(naive$Naive[6:36])/sum(naive$Naive)),2),
+round((sum(naive$Naive[6:47])/sum(naive$Naive)),2),
 round((sum(naive$Naive[12:17])/sum(naive$Naive)),2),
 round((sum(naive$Naive[12:19])/sum(naive$Naive)),2),
 round((sum(naive$Naive[20:26])/sum(naive$Naive)),2),
@@ -605,7 +608,7 @@ round((sum(naive$Naive[20:47])/sum(naive$Naive)),2),
 round((sum(naive$Naive[1:30])/sum(naive$Naive)),2),
 round((sum(naive$Naive[1:45])/sum(naive$Naive)),2),
 round((sum(naive$Naive[8:100])/sum(naive$Naive)),2))
-yr_range<-c("2-5","5-11","5-16","5-18","11-16","11-18","19-25","19-30","19-46","0-29","0-44",">8")
+yr_range<-c("2-5","5-11","5-16","5-18","5-25","5-35","5-46","11-16","11-18","19-25","19-35","19-46","0-29","0-44",">8")
 propvCohort<-cbind(yr_range,propvCohort)
 propvCohort<-as.data.frame(propvCohort)
 write.table(propvCohort,"vaccine_proportions_Cohort.txt",sep=",",row.names=T,col.names=F)
