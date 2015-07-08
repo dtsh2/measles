@@ -106,10 +106,12 @@ for (center in 1:nrow(main_centers)) {
 }
 
 ##############
-res_age<- testgp[,c(2:17,19:33)]
-colnames(res_age) <-c("Area_unit","AGE_0_4","AGE_5_9","AGE_10_14","AGE_15_19","AGE_20_24","AGE_25_29",
-                      "AGE_30_34","AGE_35_39","AGE_40_44","AGE_45_49","AGE_50_54","AGE_55_59","AGE_60_64",
-                      "AGE_65_OVER","AGE_TOTAL","AGE_10_14_im","AGE_15_19_im","AGE_20_24_im","AGE_25_29_im",
-                      "AGE_30_34_im","AGE_35_39_im","AGE_40_44_im","AGE_45_49_im","AGE_50_54_im","AGE_55_59_im",
-                      "AGE_60_64_im", "AGE_65_OVER_im","AGE_TOTAL_im","AGE_TOTAL_hayman","Percent_Immune")
-write.csv(res_age,"area_sero_immunity.csv",row.names=F)
+## TODO: IS THIS NEEDED?
+#################
+#res_age<- testgp[,c(2:17,19:33)]
+#colnames(res_age) <-c("Area_unit","AGE_0_4","AGE_5_9","AGE_10_14","AGE_15_19","AGE_20_24","AGE_25_29",
+#                      "AGE_30_34","AGE_35_39","AGE_40_44","AGE_45_49","AGE_50_54","AGE_55_59","AGE_60_64",
+#                      "AGE_65_OVER","AGE_TOTAL","AGE_10_14_im","AGE_15_19_im","AGE_20_24_im","AGE_25_29_im",
+#                      "AGE_30_34_im","AGE_35_39_im","AGE_40_44_im","AGE_45_49_im","AGE_50_54_im","AGE_55_59_im",
+#                      "AGE_60_64_im", "AGE_65_OVER_im","AGE_TOTAL_im","AGE_TOTAL_hayman","Percent_Immune")
+#write.csv(res_age,"area_sero_immunity.csv",row.names=F)
