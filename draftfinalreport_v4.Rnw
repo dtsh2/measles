@@ -774,38 +774,6 @@ table_nir_mmr$Year <-yr_nir
 table_nir_mmr<-table_nir_mmr[c(10,1:7)]
 table_nir_mmr[2:7]<-table_nir_mmr[2:7]*100
 latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
-
-R0 = 12.8;
-x0max = 0.3;
-Nx0 = 200;
-P = (1:Nx0)*x0max/(Nx0+1);
-x0 = P/(1-exp(-R0*P));
-Rv = R0*x0;
-Pop = c(436350,206000,482180,283700,469300,151700,138380,98196,162560,137000,151690,
-        55620,297420,43650,109750,359310,41112,525550,32151,60120,4353189);
-Naive = c(50088,19701,46169,31313,52938,14854,14531,10066,16526,12468,14194,
-          4996,30189,4536,10962,37600,3745,55816,3061,5788,456318);
-RvDHB = R0*Naive/Pop;
-
-library(akima)
-PDHB = aspline(x=Rv,y=P,xout=RvDHB);
-
-# The number of cases per DHB
-FSDHB = PDHB$y*Naive;
-# The number of vaccinations short
-VDHB = Naive-Pop/R0;
-
-Z<-data.frame(nrows=21,ncols=5)
-for (i in 1:21){
-Z[i,1] = Pop[i];
-Z[i,2] = Naive[i];
-Z[i,3] = round(FSDHB[i]);
-Z[i,4] = round(VDHB[i]);
-Z[i,5] = round(round(VDHB[i])/Naive[i],2)}
-colnames(Z)<-c("Population","Naive","Outbreak","Vaccination","PC")
-Z$DHB <- c("Auckland", "Bay of Plenty", "Canterbury", "Capital and Coast", "Counties Manukau", "Hawke's Bay", "Hutt Valley", "Lakes", "MidCentral", "Nelson Marlborough", "Northland", "South Canterbury", "Southern", "Tairawhiti", "Taranaki", "Waikato", "Wairarapa", "Waitemata", "West Coast", "Whanganui", "TOTAL")
-Z <- Z[,c(6,1:5)]
-write.csv(Z,"dhb_vacc.csv",row.names=F)
 @
 
 \begin{figure}
@@ -1885,7 +1853,8 @@ The results of these modelling exercises suggest vaccination levels are close to
 \begin{table}
 \small
 <<include=FALSE,echo=FALSE,results=tex>>=
-print(xtable(Z, digits=c(7,1,0,0,0,0,2)), include.rownames=F, floating=FALSE)
+dhb_vacc <- read.csv("dhb_vacc.csv")
+print(xtable(dhb_vacc, digits=c(7,1,0,0,0,0,2)), include.rownames=F, floating=FALSE)
 @
 \caption{Epidemic size calculations. \textit{Population}: DHB Population, Statistics NZ 2013;  	
 \textit{Na\"{\i}ve}: DHB na\"{\i}ve population $\left(x_0\times\text{Size}\right)$ (see \autoref{table:sero} for immunity estimates);
