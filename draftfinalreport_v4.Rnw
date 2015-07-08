@@ -2419,7 +2419,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb1.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb1.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Northland District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Northland}
@@ -2428,7 +2428,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb2.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb2.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Waitemata District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Waitemata}
@@ -2436,7 +2436,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb3.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb3.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Auckland District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Auckland}
@@ -2444,7 +2444,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb4.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb4.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Counties Manukau District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Counties_Manukau}
@@ -2452,7 +2452,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb5.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb5.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Waikato District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Waikato}
@@ -2460,7 +2460,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb6.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb6.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Lakes District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Lakes}
@@ -2468,7 +2468,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb7.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb7.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Bay of Plenty District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:BayofPlenty}
@@ -2476,7 +2476,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb8.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb8.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Tairawhiti District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Tairawhiti}
@@ -2484,7 +2484,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{dhb9.pdf}
+    \includegraphics[width=0.9\textwidth]{figures/dhb9.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Taranaki District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Taranaki}
@@ -2492,7 +2492,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb10.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb10.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Hawke's Bay District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:HawkesBay}
@@ -2500,7 +2500,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb11.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb11.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Whanganui District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Whanganui}
@@ -2508,7 +2508,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb12.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb12.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Midcentral District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Midcentral}
@@ -2516,7 +2516,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb13.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb13.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Hutt District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Hutt}
@@ -2524,7 +2524,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb14.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb14.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Capital and Coast District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:CapitalandCoast}
@@ -2532,7 +2532,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb15.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb15.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Wairarapa District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Wairarapa}
@@ -2540,7 +2540,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb16.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb16.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Nelson Marlborough District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:NelsonMarlborough}
@@ -2548,7 +2548,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb17.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb17.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, West Coast District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:WestCoast}
@@ -2556,7 +2556,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
    \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb18.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb18.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Canterbury District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Canterbury}
@@ -2564,7 +2564,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb19.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb19.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, South Canterbury District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:SouthCanterbury}
@@ -2572,7 +2572,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{dhb20.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dhb20.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per age class, Southern District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:Southern}
