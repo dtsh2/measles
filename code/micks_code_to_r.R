@@ -65,4 +65,4 @@ Z[i,4] = round(VDHB[i]);
 Z[i,5] = round(round(VDHB[i])/Naive[i],2)}
 colnames(Z)<-c("Population","Naive","Outbreak","Vaccination","PC")
 
-write.csv(Z,"dhb_vacc.csv",row.names=F)
+write.csv(Z,"tables/dhb_vacc.csv",row.names=F)

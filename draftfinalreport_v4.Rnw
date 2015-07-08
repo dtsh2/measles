@@ -710,10 +710,10 @@ costtable2<-read.csv("costtable2v2.csv",header=T)
 costtable3<-read.csv("costtable3.csv",header=T)
 costtable4<-read.csv("costtable4v2.csv",header=T)
 costtable5<-read.csv("costtable5v2.csv",header=T)
-costtable20<-read.csv("cost_benefit_20.csv",header=T)
-costtable50<-read.csv("cost_benefit_50.csv",header=T)
+costtable20<-read.csv("tables/cost_benefit_20.csv",header=T)
+costtable50<-read.csv("tables/cost_benefit_50.csv",header=T)
 
-vacp<-read.csv("vacc_predictions.csv",header=T)
+vacp<-read.csv("tables/vacc_predictions.csv",header=T)
 hosp<-read.csv("hospital.csv",header=T)
 
 t12006<-read.csv("MMR1summary2006.txt",header=T,sep="")
@@ -1838,7 +1838,7 @@ The results of these modelling exercises suggest vaccination levels are close to
 \begin{table}
 \small
 <<include=FALSE,echo=FALSE,results=tex>>=
-dhb_vacc <- read.csv("dhb_vacc.csv")
+dhb_vacc <- read.csv("tables/dhb_vacc.csv")
 print(xtable(dhb_vacc, digits=c(7,1,0,0,0,0,2)), include.rownames=F, floating=FALSE)
 @
 \caption{Epidemic size calculations. \textit{Population}: DHB Population, Statistics NZ 2013;  	
