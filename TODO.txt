@@ -1,0 +1,5 @@
+* area_sero_immunity.csv is no longer generated. Is this important? See all_pop_map.R
+* The cost_benefit_(20|50).csv files need to be generated from dhb_vacc.csv. Ideally in dhbcensus.R. Currently they're generated from the .xlsx
+* It seems MMR[1-2]summary2006.txt etc. aren't optimal. Find where these are written maybe?
+* All figures need to be checked for changes. Move all auto-gen'd figures to figures/ to assist!
+* All text needs checking.
