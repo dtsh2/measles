@@ -60,7 +60,7 @@ data = test , FUN=sum)
 
 popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
 #popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("popnsize.csv",header=T)
+pop<-read.csv("data/popnsize.csv",header=T)
 colnames(pop)<-0:100
 pop<-t(pop)
 impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
@@ -603,7 +603,7 @@ dev.off()
 
 popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
 #popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("popnsize.csv",header=T)
+pop<-read.csv("data/popnsize.csv",header=T)
 colnames(pop)<-0:100
 pop<-t(pop)
 impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
@@ -638,7 +638,7 @@ dev.off()
 
 popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
 #popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("popnsize.csv",header=T)
+pop<-read.csv("data/popnsize.csv",header=T)
 colnames(pop)<-0:100
 pop<-t(pop)
 impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
@@ -797,7 +797,7 @@ cols <- findColours(breaks, pal)
 ###
 popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
 #popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("popnsize.csv",header=T)
+pop<-read.csv("data/popnsize.csv",header=T)
 colnames(pop)<-0:100
 pop<-t(pop)
 impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
