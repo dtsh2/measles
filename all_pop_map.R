@@ -3,7 +3,7 @@ library(classInt)
 
 data_denom<-read.csv("2013-mb-dataset-Total-New-Zealand-individual-part-1_AU.csv",header=T)
 
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
+popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
 #popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
 
 data_denom$AGE_10_14_im <- 4/5 * data_denom$AGE_10_14 * popimmune[7,3] + 1/5  * data_denom$AGE_10_14 * popimmune[8,3]

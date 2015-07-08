@@ -58,7 +58,7 @@ dev.off()
 caseyr<-aggregate( DiseaseName ~ AgeInYears, 
 data = test , FUN=sum)
 
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
+popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
 #popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
 pop<-read.csv("popnsize.csv",header=T)
 colnames(pop)<-0:100
@@ -601,7 +601,7 @@ barplot(DOBVac[,1],col="grey",xlab="Year of Birth",main="",cex.lab=1,ylab="Frequ
 legend("topleft",c("Unvaccinated"),col="grey",pch=15,bty="n",cex=1)
 dev.off()
 
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
+popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
 #popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
 pop<-read.csv("popnsize.csv",header=T)
 colnames(pop)<-0:100
@@ -636,7 +636,7 @@ axis(side=1, at=plotting_age, labels=2013-rev(plotting_age))
 dev.off()
 
 
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
+popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
 #popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
 pop<-read.csv("popnsize.csv",header=T)
 colnames(pop)<-0:100
@@ -795,7 +795,7 @@ pal<-c("red","orange","grey","blue","green","yellow")
 cols <- findColours(breaks, pal)
 
 ###
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
+popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
 #popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
 pop<-read.csv("popnsize.csv",header=T)
 colnames(pop)<-0:100

@@ -8,7 +8,7 @@ library(pscl)
 require(reshape2)  # this is the library that lets one flatten out data
 require(ggplot2)   # plotting library
 require(lattice)
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
+popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
 #popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
 #qplot(Age, Naïve.Population,data=popimmune,size=I(2))
 popimmune$Immunity
