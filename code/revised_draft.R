@@ -359,7 +359,7 @@ ggplot(tp, aes(Age, perCap, fill=Ethnicity)) +
   ylab("Per capita per 10000")
 dev.off()
 
-tpsub<-tp[!(tp$Ethnicity=="MLA"),]
+tpsub<-tp[!(tp$Ethnicity=="MELAA"),]
 tpsub$ordert <- factor(tpsub$merge, as.character(tpsub$merge))
 
 tpsub1<-tpsub[ order(tpsub$Age), ]
