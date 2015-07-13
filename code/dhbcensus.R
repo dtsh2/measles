@@ -21,7 +21,7 @@ naivedhb<-df*(1-NaiveByYear$Immunity[1:nrow(df)])
 
 colnames(naivedhb)<-c("Northland","Waitemata","Auckland","Counties Manukau",
                       "Waikato","Lakes","Bay of Plenty","Tairawhiti","Taranaki",
-                      "Hawke's Bay","Whanganui","Midcentral","Hutt","Capital and Coast",
+                      "Hawke's Bay","Whanganui","MidCentral","Hutt Valley","Capital and Coast",
                       "Wairarapa","Nelson Marlborough","West Coast","Canterbury","South Canterbury",
                       "Southern")
 
@@ -73,3 +73,10 @@ Z$DHB <- c(names(naivedhb)[dhb_order], "TOTAL")
 Z$PC = round(Z$Vaccination / Z$Naïve, 2)
 Z <- Z[,c(5,1:4,6)]
 write.csv(Z,"tables/dhb_vacc.csv",row.names=F)
+
+# Generate vacc_predictions.csv
+ob_sizes <- read.csv("data/outbreak_size_from_simulations.csv", check.names=FALSE, stringsAsFactors = FALSE)
+vacc_pred <- Z %>% mutate("Naïve post vaccination" = Naïve - Vaccination) %>%
+                   left_join(ob_sizes) %>% rename(Attack = Outbreak, Proportion=PC, Vacc=Vaccination, Size=Population)
+
+write.csv(vacc_pred, "tables/vacc_predictions.csv", row.names=F)
