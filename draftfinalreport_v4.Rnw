@@ -209,6 +209,7 @@ library(raster)
 library(sp)
 library(utils)
 library(xtable)
+library(dplyr)
 ## get data
 # set wd
 # setwd("~/Massey 2014/DHayman_20140627")
@@ -231,24 +232,9 @@ test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","20
 head(test)
 dim(test)
 
-caseyr<-aggregate( DiseaseName ~ AgeInYears, 
-data = test , FUN=sum)
-
-popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
-#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("data/popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5), rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-
-naive<-round(pop-(pop*impop))
-
-## match cases per age
-AgeInYears<-0:100
-naive<-cbind(AgeInYears,naive)
-colnames(naive)<-c("AgeInYears","Naive")
-naive<-merge(naive,caseyr,by="AgeInYears",all=T)
-colnames(naive)<-c("AgeInYears","Naive","Cases")
+caseyr<-aggregate( DiseaseName ~ AgeInYears, data = test , FUN=sum)
+NaiveByYear <- read.csv("tables/NaiveByYear.csv")
+NaiveByYear <- NaiveByYear %>% left_join(caseyr, by=c("Age"="AgeInYears")) %>% rename(Cases=DiseaseName)
 
 dose1=as.factor(round(vac$Dose1Mths/12,0));
 dose1<-summary(dose1)
@@ -296,10 +282,7 @@ row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
 AgeVac<-t(AgeVac)
 AgeInYears<-(as.numeric(rownames(AgeVac)))
 AgeVac<-cbind(AgeVac,AgeInYears)       
-AgeInYears<-(as.numeric(rownames(pop)))
-pop<-cbind(pop,AgeInYears)
-colnames(pop)<-c("Population","AgeInYears")
-AgeV<-merge(pop,AgeVac,by="AgeInYears",all=T)
+AgeV <- NaiveByYear %>% left_join(as.data.frame(AgeVac), by=c("Age"="AgeInYears"))
 
 ## regression analyses - measles
 # read data
@@ -572,52 +555,33 @@ DOBVac<-table(testv$VC,DOB)
 row.names(DOBVac)<-c("Unvaccinated","Dose1","Dose2")
 DOBVac<-t(DOBVac)
 
-popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
-#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("data/popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-length(pop)
-naive<-round(pop-(pop*impop))
-## match cases per age
-AgeInYears<-0:100
-naive<-cbind(AgeInYears,naive)
-colnames(naive)<-c("AgeInYears","Naive")
-naive<-merge(naive,caseyr,by="AgeInYears",all=T)
-#naive[is.na(naive)] <- 0
-colnames(naive)<-c("AgeInYears","Naive","Cases")
-##
-###
+
 
 # proportions of the naive population the would be covered if vaccinated by age groups now
 propvCohort<-c(
-round((sum(naive$Naive[3:6])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:12])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:17])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:19])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:26])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:36])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:47])/sum(naive$Naive)),2),
-round((sum(naive$Naive[12:17])/sum(naive$Naive)),2),
-round((sum(naive$Naive[12:19])/sum(naive$Naive)),2),
-round((sum(naive$Naive[20:26])/sum(naive$Naive)),2),
-round((sum(naive$Naive[20:36])/sum(naive$Naive)),2),
-round((sum(naive$Naive[20:47])/sum(naive$Naive)),2),
-round((sum(naive$Naive[1:30])/sum(naive$Naive)),2),
-round((sum(naive$Naive[1:45])/sum(naive$Naive)),2),
-round((sum(naive$Naive[8:100])/sum(naive$Naive)),2))
+round((sum(NaiveByYear$Naive[3:6])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[6:12])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[6:17])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[6:19])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[6:26])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[6:36])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[6:47])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[12:17])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[12:19])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[20:26])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[20:36])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[20:47])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[1:30])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[1:45])/sum(NaiveByYear$Naive)),2),
+round((sum(NaiveByYear$Naive[8:100])/sum(NaiveByYear$Naive)),2))
 yr_range<-c("2-5","5-11","5-16","5-18","5-25","5-35","5-46","11-16","11-18","19-25","19-35","19-46","0-29","0-44",">8")
 propvCohort<-cbind(yr_range,propvCohort)
 propvCohort<-as.data.frame(propvCohort)
 write.table(propvCohort,"vaccine_proportions_Cohort.txt",sep=",",row.names=T,col.names=F)
 propsv = NULL
-for (i in 1:20 ) {
-  propsv[i] = round((sum(naive$Naive[i:13])/sum(naive$Naive)),2)
-}
 propsvAge = NULL
 for (i in 1:20 ) {
+  propsv[i] = round((sum(NaiveByYear$Naive[i:13])/sum(NaiveByYear$Naive)),2)
   propsvAge[i]=paste(c(min(i:20)-1, max(i:20)-1),collapse="-")
 }
 
@@ -627,11 +591,9 @@ rownames(table120)<-1:20
 colnames(table120)<-c("Age","Proportion")
 
 propsvrev = NULL
-for (i in 20:1 ) {
-  propsvrev[i] = round((sum(naive$Naive[i:1])/sum(naive$Naive)),2)
-}
 propsvrevAge = NULL
 for (i in 20:1 ) {
+  propsvrev[i] = round((sum(NaiveByYear$Naive[i:1])/sum(NaiveByYear$Naive)),2)
   propsvrevAge[i]=paste(c(min(i:1)-1, max(i:1)-1),collapse="-")
 }
 
@@ -641,14 +603,11 @@ rownames(table201)<-1:20
 colnames(table201)<-c("Age","Proportion")
 
 propsv11 = NULL
-for (i in 1:11 ) {
-  propsv11[i] = round((sum(naive$Naive[i:11])/sum(naive$Naive)),2)
-}
 propsv11Age = NULL
 for (i in 1:11 ) {
+  propsv11[i] = round((sum(NaiveByYear$Naive[i:11])/sum(NaiveByYear$Naive)),2)
   propsv11Age[i]=paste(c(min(i:11)-1, max(i:11)-1),collapse="-")
 }
-
 table11<-as.data.frame(propsv11,propsv11Age)
 table11<-cbind(Age=rownames(table11),table11)
 rownames(table11)<-1:11
@@ -657,17 +616,6 @@ colnames(table11)<-c("Age","Proportion")
 # write.table(table11,"vaccine_proportions_11yrOlds.txt",sep=",",row.names=F)
 # write.table(table120,"vaccine_proportions_1_20yrOlds.txt",sep=",",row.names=F)
 # write.table(table201,"vaccine_proportions_20_1yrOlds.txt",sep=",",row.names=F)
-
-###
-popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
-#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("data/popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-         rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-length(pop)
-naive<-round(pop-(pop*impop))
 
 totdpdf<-read.csv("2013mapdata_tot.csv",header=T)
 # output top countries
