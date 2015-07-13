@@ -581,7 +581,7 @@ write.table(propvCohort,"vaccine_proportions_Cohort.txt",sep=",",row.names=T,col
 propsv = NULL
 propsvAge = NULL
 for (i in 1:20 ) {
-  propsv[i] = round((sum(NaiveByYear$Naive[i:13])/sum(NaiveByYear$Naive)),2)
+  propsv[i] = round((sum(NaiveByYear$Naive[i:20])/sum(NaiveByYear$Naive)),2)
   propsvAge[i]=paste(c(min(i:20)-1, max(i:20)-1),collapse="-")
 }
 
