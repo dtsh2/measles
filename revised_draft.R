@@ -1,5 +1,5 @@
 rm(list=ls())
-library(adehabitat)
+#library(adehabitat)
 library(classInt)
 library(ggplot2)   # plotting library
 library(grid)
@@ -39,8 +39,7 @@ data$NZDep13<-as.factor(data$NZDep13)
 data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
 
 
-time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,# + Dose1Mths + Dose2Mths, 
-data = data , FUN=sum)
+time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear, data = data , FUN=sum)
 
 test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
 head(test)
@@ -54,26 +53,10 @@ hist(time$AgeInYears,col="grey",xlab="Age in years",main="",breaks=90,include.lo
 hist(test$AgeInYears,col="black",breaks=90,include.lowest=TRUE,right=F,add=T)
 legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n",cex=1)
 dev.off()
-## plot cases / age class
-caseyr<-aggregate( DiseaseName ~ AgeInYears, 
-data = test , FUN=sum)
 
-popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
-#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("data/popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-length(pop)
-naive<-round(pop-(pop*impop))
-
-## match cases per age
-AgeInYears<-0:100
-naive<-cbind(AgeInYears,naive)
-colnames(naive)<-c("AgeInYears","Naive")
-naive<-merge(naive,caseyr,by="AgeInYears",all=T)
-colnames(naive)<-c("AgeInYears","Naive","Cases")
+caseyr<-aggregate( DiseaseName ~ AgeInYears, data = test , FUN=sum)
+NaiveByYear <- read.csv("tables/NaiveByYear.csv")
+NaiveByYear <- NaiveByYear %>% left_join(caseyr, by=c("Age"="AgeInYears")) %>% rename(Cases=DiseaseName)
 
 dose1=as.factor(round(vac$Dose1Mths/12,0));
 dose1<-summary(dose1)
@@ -102,8 +85,7 @@ datav$Dose2Mths<-as.factor(datav$Dose2Mths)
 #data$AgeInYears<-as.factor(data$AgeInYears)
 datav$EthnicityPrioritised<-as.factor(datav$EthnicityPrioritised)
 
-timev<-aggregate( cbind( DiseaseName) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear+ Dose1Mths +Dose2Mths, 
-data = datav , FUN=sum,na.rm=F,na.action=na.pass)
+timev<-aggregate( cbind( DiseaseName) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear+ Dose1Mths +Dose2Mths, data = datav , FUN=sum,na.rm=F,na.action=na.pass)
 
 testv<-subset(timev, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
 testv$Dose1Mths<-revalue(testv$Dose1Mths, c("9999"=NA));
@@ -115,20 +97,16 @@ testv$D1vac<-ifelse(testv$Dose1Mths > -1 & is.na(testv$D2vac) == T,testv$Dose1Mt
 testv$Unvac<-ifelse(is.na(testv$Dose1Mths) == T & is.na(testv$Dose2Mths) == T,testv$AgeInYears,NA)
 
 testv$VC<-ifelse(is.na(testv$Dose1Mths) == T & is.na(testv$Dose2Mths) == T,0,
-ifelse(testv$Dose1Mths >= 0 & is.na(testv$Dose2Mths) == T,1,2))
+                 ifelse(testv$Dose1Mths >= 0 & is.na(testv$Dose2Mths) == T,1,2))
 AgeVac<-table(testv$VC,testv$AgeInYears)
 
 row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
 AgeVac<-t(AgeVac)
 AgeInYears<-(as.numeric(rownames(AgeVac)))
 AgeVac<-cbind(AgeVac,AgeInYears)       
-AgeInYears<-(as.numeric(rownames(pop)))
-pop<-cbind(pop,AgeInYears)
-colnames(pop)<-c("Population","AgeInYears")
-AgeV<-merge(pop,AgeVac,by="AgeInYears",all=T)
+AgeV <- NaiveByYear %>% left_join(as.data.frame(AgeVac), by=c("Age"="AgeInYears"))
 
 ## regression analyses - measles
-# setwd("~/Massey 2014/DHayman_20140627")
 # read data
 data<-read.csv("DHayman_20140627.csv",header=T)
 vac<-read.csv("DHayman_20140715_Vacc.csv",header=T)
@@ -141,54 +119,39 @@ data$NZDep13<-as.factor(data$NZDep13)
 #data$AgeInYears<-as.factor(data$AgeInYears)
 data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
 
-time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,# + Dose1Mths + Dose2Mths, 
-data = data , FUN=sum)
+time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear, data = data , FUN=sum)
 
 test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
-head(test)
-dim(test)
+
 caseyr<-aggregate( DiseaseName ~ AgeInYears, 
-data = test , FUN=sum)
-caseyr
-# test$AgeInYears<-findInterval(test$AgeInYears,c(3,6,18,25))
+                   data = test , FUN=sum)
+
 test$AgeInYears<-findInterval(test$AgeInYears,c(2,5,18,25))
 test$AgeInYears<-as.factor(test$AgeInYears)
-#tage<-revalue(test$AgeInYears, c("0"="0-2", "1"="3-5","2"="6-17","3"="18-24","4"="25+"));
 tage<-revalue(test$AgeInYears, c("0"="0-1", "1"="2-4","2"="5-17","3"="18-24","4"="25+"));
 test$AgeInYears<-tage
-#summary(test$EthnicityPrioritised)
-teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MLA",
-"Pacific Peoples"="Pacific","Response cannot be classified"="None","Unknown"="None"));
+teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MELAA","Pacific Peoples"="Pacific","Response cannot be classified"="None","Unknown"="None"));
 
 test$EthnicityPrioritised<-teth
-head(test)
 test <- within(test, NZDep06[NZDep06 == "0"]<-NA)
 test <- within(test, NZDep13[NZDep13 == "0"]<-NA)
 
 # want to set NZ Deprivation to the appropriate year
 
 testt <- within(test, NZDep<- ifelse (test$RptYear == "2007",test$NZDep06,
-ifelse (test$RptYear == "2008",test$NZDep06,
-ifelse (test$RptYear == "2009",test$NZDep06,
-ifelse (test$RptYear == "2010",test$NZDep06,
-ifelse (test$RptYear == "2011",test$NZDep06,
-ifelse (test$RptYear == "2012",test$NZDep06,
-ifelse (test$RptYear == "2013",test$NZDep13,NZDep13))))))))
-head(testt)
-tail(testt)
-str(testt)
+                                      ifelse (test$RptYear == "2008",test$NZDep06,
+                                              ifelse (test$RptYear == "2009",test$NZDep06,
+                                                      ifelse (test$RptYear == "2010",test$NZDep06,
+                                                              ifelse (test$RptYear == "2011",test$NZDep06,
+                                                                      ifelse (test$RptYear == "2012",test$NZDep06,
+                                                                              ifelse (test$RptYear == "2013",test$NZDep13,NZDep13))))))))
+
 testt$NZDep<-as.factor(testt$NZDep-1)
 
-testtable<-aggregate( cbind( DiseaseName) #+ as.numeric(SurvWeek))
-~ NZDep+AgeInYears+EthnicityPrioritised + RptYear, 
-data = testt , FUN=sum)
+testtable<-aggregate( cbind( DiseaseName) ~ NZDep+AgeInYears+EthnicityPrioritised + RptYear,  data = testt , FUN=sum)
 dim(testtable)
 colnames(testtable)<-c("NZDep","Age","Ethnicity","Year","Cases")
 head(testtable)
-
-#tnzd<-revalue(testtable$NZDep, c("1"="1-5","2"="1-5","3"="1-5","4"="1-5",
-#"5"="1-5","6"="6-10","7"="6-10","8"="6-10",
-#"9"="6-10","10"="6-10"));
 
 tnzd<-revalue(testtable$NZDep, c("1"="1-3","2"="1-3","3"="1-3","4"="4-7",
                                  "5"="4-7","6"="4-7","7"="4-7","8"="8-10",
@@ -198,16 +161,15 @@ tnzd<-revalue(testtable$NZDep, c("1"="1-3","2"="1-3","3"="1-3","4"="4-7",
 testtable$NZDep<-tnzd
 # head(testtable)
 tt<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity + Year, 
-data = testtable , FUN=sum)
+               data = testtable , FUN=sum)
 
 ttyr<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity, 
-data = testtable , FUN=sum)
+                 data = testtable , FUN=sum)
 ttyr <- ttyr[ttyr$Ethnicity=="None",]
 
-latex(ttyr, file="",table.env=FALSE,rowname=NULL)
+# latex(ttyr, file="",table.env=FALSE,rowname=NULL)
 
 ### denominator data
-# setwd("~/Massey_2014/measles/data")
 data<-read.csv("DHayman_20140627.csv",header=T)
 vac<-read.csv("DHayman_20140715_Vacc.csv",header=T)
 names(data)
@@ -220,13 +182,13 @@ data$NZDep13<-as.factor(data$NZDep13)
 data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
 
 time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,# + Dose1Mths + Dose2Mths, 
-data = data , FUN=sum)
+                 data = data , FUN=sum)
 
 test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
 head(test)
 dim(test)
 caseyr<-aggregate( DiseaseName ~ AgeInYears, 
-data = test , FUN=sum)
+                   data = test , FUN=sum)
 caseyr
 ## for MoH desired ages
 test$AgeInYears<-findInterval(test$AgeInYears,c(2,5,18,25))
@@ -234,8 +196,8 @@ test$AgeInYears<-as.factor(test$AgeInYears)
 tage<-revalue(test$AgeInYears, c("0"="0-1", "1"="2-4","2"="5-17","3"="18-24","4"="25+"));
 test$AgeInYears<-tage
 #summary(test$EthnicityPrioritised)
-teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MLA",
-"Pacific Peoples"="Pacific","Response cannot be classified"="None","Unknown"="None"));
+teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MELAA",
+                                           "Pacific Peoples"="Pacific","Response cannot be classified"="None","Unknown"="None"));
 
 test$EthnicityPrioritised<-teth
 head(test)
@@ -245,20 +207,20 @@ test <- within(test, NZDep13[NZDep13 == "0"]<-NA)
 # want to set NZ Deprivation to the appropriate year
 
 testt <- within(test, NZDep<- ifelse (test$RptYear == "2007",test$NZDep06,
-ifelse (test$RptYear == "2008",test$NZDep06,
-ifelse (test$RptYear == "2009",test$NZDep06,
-ifelse (test$RptYear == "2010",test$NZDep06,
-ifelse (test$RptYear == "2011",test$NZDep06,
-ifelse (test$RptYear == "2012",test$NZDep06,
-ifelse (test$RptYear == "2013",test$NZDep13,NZDep13))))))))
+                                      ifelse (test$RptYear == "2008",test$NZDep06,
+                                              ifelse (test$RptYear == "2009",test$NZDep06,
+                                                      ifelse (test$RptYear == "2010",test$NZDep06,
+                                                              ifelse (test$RptYear == "2011",test$NZDep06,
+                                                                      ifelse (test$RptYear == "2012",test$NZDep06,
+                                                                              ifelse (test$RptYear == "2013",test$NZDep13,NZDep13))))))))
 head(testt)
 tail(testt)
 str(testt)
 testt$NZDep<-as.factor(testt$NZDep-1)
 
 testtable<-aggregate( cbind( DiseaseName) #+ as.numeric(SurvWeek))
-~ NZDep+AgeInYears+EthnicityPrioritised + RptYear, 
-data = testt , FUN=sum)
+                      ~ NZDep+AgeInYears+EthnicityPrioritised + RptYear, 
+                      data = testt , FUN=sum)
 dim(testtable)
 colnames(testtable)<-c("NZDep","Age","Ethnicity","Year","Cases")
 head(testtable)
@@ -274,10 +236,10 @@ tnzd<-revalue(testtable$NZDep, c("1"="1-3","2"="1-3","3"="1-3","4"="4-7",
 testtable$NZDep<-tnzd
 # head(testtable)
 tt<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity + Year, 
-data = testtable , FUN=sum)
+               data = testtable , FUN=sum)
 
 ttyr<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity, 
-data = testtable , FUN=sum)
+                 data = testtable , FUN=sum)
 denom<-read.csv("NZDep2006Denominators.csv",header=T)
 head(denom)
 denom<-denom[,-c(9)]
@@ -307,7 +269,7 @@ ddm<-dm[!dm$Age=="<6",]
 dm<-rbind(dataA,ddm)
 dm$Ethnicity <- factor(dm$Ethnicity)
 deth<-revalue(dm$Ethnicity, c("Asian (Prioritised)"="Asian","European (NZ European and Other European)"="European",
-"Maori (Prioritised)"="Maori","MELAA"="MLA","Pacific People (Prioritised)"="Pacific"));
+                              "Maori (Prioritised)"="Maori","MELAA"="MELAA","Pacific People (Prioritised)"="Pacific"));
 dm$Ethnicity<-deth
 head(dm)
 
@@ -337,7 +299,7 @@ pnzd<-revalue(popn$NZDep, c("Dep1"="1-3","Dep2"="1-3","Dep3"="1-3","Dep4"="4-7",
 popn$NZDep<-pnzd
 head(popn)
 tp<-aggregate( cbind(Popn) ~ NZDep+Age+Ethnicity, 
-data = popn , FUN=sum)
+               data = popn , FUN=sum)
 
 tp$merge <- paste(tp$NZDep, tp$Age, tp$Ethnicity)
 ttyr$merge <- paste(ttyr$NZDep, ttyr$Age, ttyr$Ethnicity)
@@ -601,21 +563,11 @@ barplot(DOBVac[,1],col="grey",xlab="Year of Birth",main="",cex.lab=1,ylab="Frequ
 legend("topleft",c("Unvaccinated"),col="grey",pch=15,bty="n",cex=1)
 dev.off()
 
-popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
-#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("data/popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-length(pop)
-naive<-round(pop-(pop*impop))
-
 pdf(paste("naive_allPop.pdf"), width=7, height=5)
 par(cex.axis=1)
 par(mar=c(5,6,4,2)+0.1)
-plot(pop,xlab="Age",ylab="Population",cex.lab=1)
-points(naive,pch=16)
+plot(NaiveByYear$Population,xlab="Age",ylab="Population",cex.lab=1)
+points(NaiveByYear$Naive,pch=16)
 legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1)
 dev.off()
 
@@ -623,8 +575,8 @@ pdf(paste("naive_allPop_yob.pdf"), width=7, height=5)
 par(mfrow=c(2,1))
 par(cex.axis=1)
 par(mar=c(4,5,1,2)+0.1)
-plot(rev(pop),xlab="Year of birth",ylab="Population",cex.lab=1,xaxt="n")
-points(rev(naive),pch=16)
+plot(rev(NaiveByYear$Population),xlab="Year of birth",ylab="Population",cex.lab=1,xaxt="n")
+points(rev(NaiveByYear$Naive),pch=16)
 legend("topleft",c("Population","Naive"),pch=c(1,16),bty="n",cex=1)
 plotting_age <- seq(0,100,by=10)
 axis(side=1, at=plotting_age, labels=2013-rev(plotting_age))
@@ -636,56 +588,47 @@ axis(side=1, at=plotting_age, labels=2013-rev(plotting_age))
 dev.off()
 
 
-popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
-#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("data/popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-length(pop)
-naive<-round(pop-(pop*impop))
-## match cases per age
-AgeInYears<-0:100
-naive<-cbind(AgeInYears,naive)
-colnames(naive)<-c("AgeInYears","Naive")
-naive<-merge(naive,caseyr,by="AgeInYears",all=T)
-#naive[is.na(naive)] <- 0
-colnames(naive)<-c("AgeInYears","Naive","Cases")
-##
-###
+#################### JM NOTE #############################
+## This block (seems unused) uses the magic number 0.28 ##
+##########################################################
 pdf(paste("numvac.pdf"), width=7, height=5)
 par(mfrow=c(1,1))
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
-plot(naive$Naive ,col="black",bg="black",pch=1,ylab="Number to vaccinate",xlab="Age in Years",
+plot(NaiveByYear$Naive ,col="black",bg="black",pch=1,ylab="Number to vaccinate",xlab="Age in Years",
      main="",cex.lab=1,cex=1)
-points(round(0.28*naive$Naive),col="grey",bg="red",pch=21,cex=1)
-points(x=3:18,y=naive$Naive[3:18],col="grey",bg="orange",pch=23,cex=1) # 
+points(round(0.28*NaiveByYear$Naive),col="grey",bg="red",pch=21,cex=1)
+points(x=3:18,y=NaiveByYear$Naive[3:18],col="grey",bg="orange",pch=23,cex=1) # 
 legend("topright",c("Naive","28% naive, all ages","28% naive, all 2-17 yr olds"),
        bty="n",pch=c(1,21,23),col=c("black","grey","grey"),pt.bg=c("black","red","orange"),cex=1)
 dev.off()
 
-# proportions of the naive population the wuld be covered if vaccinated by age groups now
+# proportions of the naive population the would be covered if vaccinated by age groups now
 propvCohort<-c(
-round((sum(naive$Naive[3:6])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:12])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:17])/sum(naive$Naive)),2),
-round((sum(naive$Naive[6:19])/sum(naive$Naive)),2),
-round((sum(naive$Naive[12:17])/sum(naive$Naive)),2),
-round((sum(naive$Naive[12:19])/sum(naive$Naive)),2),
-round((sum(naive$Naive[1:30])/sum(naive$Naive)),2),
-round((sum(naive$Naive[1:45])/sum(naive$Naive)),2),
-round((sum(naive$Naive[8:100])/sum(naive$Naive)),2))
-names(propvCohort)<-c("2-5","5-11","5-16","5-18","11-16","11-18","0-29","0-44",">8")
-write.table(propvCohort,"vaccine_proportions_Cohort.txt",sep=",",row.names=T,col.names=F)
+  round((sum(NaiveByYear$Naive[3:6])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[6:12])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[6:17])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[6:19])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[6:26])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[6:36])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[6:47])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[12:17])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[12:19])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[20:26])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[20:36])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[20:47])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[1:30])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[1:45])/sum(NaiveByYear$Naive)),2),
+  round((sum(NaiveByYear$Naive[8:100])/sum(NaiveByYear$Naive)),2))
+yr_range<-c("2-5","5-11","5-16","5-18","5-25","5-35","5-46","11-16","11-18","19-25","19-35","19-46","0-29","0-44",">8")
+propvCohort<-cbind(yr_range,propvCohort)
+propvCohort<-as.data.frame(propvCohort)
+write.table(propvCohort,"tables/vaccine_proportions_Cohort.txt",sep=",",row.names=T,col.names=F)
 
 propsv = NULL
-for (i in 1:20 ) {
-  propsv[i] = round((sum(naive$Naive[i:13])/sum(naive$Naive)),2)
-}
 propsvAge = NULL
 for (i in 1:20 ) {
+  propsv[i] = round((sum(NaiveByYear$Naive[i:20])/sum(NaiveByYear$Naive)),2)
   propsvAge[i]=paste(c(min(i:20)-1, max(i:20)-1),collapse="-")
 }
 
@@ -695,11 +638,9 @@ rownames(table120)<-1:20
 colnames(table120)<-c("Age","Proportion")
 
 propsvrev = NULL
-for (i in 20:1 ) {
-  propsvrev[i] = round((sum(naive$Naive[i:1])/sum(naive$Naive)),2)
-}
 propsvrevAge = NULL
 for (i in 20:1 ) {
+  propsvrev[i] = round((sum(NaiveByYear$Naive[i:1])/sum(NaiveByYear$Naive)),2)
   propsvrevAge[i]=paste(c(min(i:1)-1, max(i:1)-1),collapse="-")
 }
 
@@ -709,14 +650,11 @@ rownames(table201)<-1:20
 colnames(table201)<-c("Age","Proportion")
 
 propsv11 = NULL
-for (i in 1:11 ) {
-  propsv11[i] = round((sum(naive$Naive[i:11])/sum(naive$Naive)),2)
-}
 propsv11Age = NULL
 for (i in 1:11 ) {
+  propsv11[i] = round((sum(NaiveByYear$Naive[i:11])/sum(NaiveByYear$Naive)),2)
   propsv11Age[i]=paste(c(min(i:11)-1, max(i:11)-1),collapse="-")
 }
-
 table11<-as.data.frame(propsv11,propsv11Age)
 table11<-cbind(Age=rownames(table11),table11)
 rownames(table11)<-1:11
@@ -795,16 +733,6 @@ pal<-c("red","orange","grey","blue","green","yellow")
 cols <- findColours(breaks, pal)
 
 ###
-popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
-#popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("data/popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-         rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-length(pop)
-naive<-round(pop-(pop*impop))
-
 totdpdf<-read.csv("mapdata_tot.csv",header=T)
 # output top countries
 colnames(totdpdf)[1]<-c("country")
@@ -1014,7 +942,7 @@ require(R0)
 genTime <- generation.time(type="lognormal", val=c(12, 3.5))
 
 jm.epid <- function (epid.nb, GT, R0, epid.length, family, negbin.size = NULL, 
-                     peak.value = 740000, popn = 740000) 
+                     peak.value, popn) 
 {
   if (class(GT) != "R0.GT") {
     stop("GT object must be of class R0.GT.")
@@ -1073,8 +1001,8 @@ jm.epid <- function (epid.nb, GT, R0, epid.length, family, negbin.size = NULL,
 
 ## if R 0 == 2
 set.seed(1) # all infected
-res<-jm.epid(epid.nb=1000,GT=genTime,R0=0.99,epid.length=365*5,popn=742103
-             ,family="poisson",peak.value=742103)
+res<-jm.epid(epid.nb=1000,GT=genTime,R0=0.99,epid.length=365*5,popn=sum(NaiveByYear$Naive)
+             ,family="poisson",peak.value=sum(NaiveByYear$Naive))
 sizes<-colSums(res)
 #sizes
 legMd<-as.factor(paste("median =",c(median(sizes))))
