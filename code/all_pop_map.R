@@ -1,5 +1,6 @@
 library(RColorBrewer)
 library(classInt)
+library(dplyr)
 
 data_denom<-read.csv("2013-mb-dataset-Total-New-Zealand-individual-part-1_AU.csv",header=T)
 
@@ -12,17 +13,7 @@ au_ages <- cbind(au_ages, data_denom[,"AGE_65_OVER"])
 names(au_ages) <- 10:65
 
 # multiply up by population immunity levels
-# TODO: THIS IS REPEATED CODE - ELIMINATE IT!!!
-popimmune<-read.csv("data/PopnImmunityAll.csv",header=T)
-pop<-read.csv("data/popnsize.csv",header=T)
-colnames(pop)<-0:100
-# expand popimmune out to years 0..100
-NaiveByYear <- data.frame(Age=0:100, Population=t(pop), Immunity=NA)
-for (i in 1:nrow(popimmune)) {
-  start <- popimmune$AgeStart[i]+1
-  end   <- ifelse(is.finite(popimmune$AgeEnd[i]), popimmune$AgeEnd[i]+1, nrow(NaiveByYear))
-  NaiveByYear$Immunity[start:end] <- popimmune$Immunity[i]
-}
+NaiveByYear <- read.csv("tables/NaiveByYear.csv")
 
 immunity <- (NaiveByYear %>% filter(Age >= 10 & Age <= 65) %>% select(Immunity))[,1]
 au_imm <- sweep(au_ages, 2, immunity, "*")
