@@ -97,6 +97,28 @@
 \DeclareMathOperator{\var}{var}
 \DeclareMathOperator{\cov}{cov}
 
+<<echo=FALSE,include=FALSE,results=hide>>=
+rm(list=ls())
+
+### NOTE: DON'T CHANGE THE ORDER OF THESE INCLUDES
+library(MASS)
+library(plyr)
+library(reshape)
+library(raster)
+library(dplyr)
+###
+
+vacc_dhb <- read.csv("tables/dhb_vacc.csv")
+totals   <- vacc_dhb[nrow(vacc_dhb), ,drop=FALSE]
+vacc_reqd_percent    <- totals$PC * 100
+vacc_reqd_dhb_min    <- min(vacc_dhb$PC) * 100
+vacc_reqd_dhb_max    <- max(vacc_dhb$PC) * 100
+vacc_reqd_auckland   <- min(floor((vacc_dhb %>% filter(DHB == "Auckland" | DHB == "CountiesManakau" | DHB == "Waitemata") %>% select(Vaccination)) / 1000)) * 1000
+vacc_reqd_count      <- totals$Vaccination
+naive_percent        <- round(totals$Naïve / totals$Population * 100)
+break_even_vacc_cost <- 259 # vaccine costs such that benefits == cost (from .xlsx)
+@
+
 \begin{document}
 \SweaveOpts{concordance=TRUE}
 
@@ -185,7 +207,6 @@ The University of Otago denominator data provided were not to the same detail as
 With the 10 NZDep classes, Prioritized Ethnicities, and the age classes above, the numerous combinations of variables led us to have 250 categories. Because for measles cases the very young appear to be disproportionately affected (\autoref{fig:ageinyears}), we split the 0--5 age category into additional classes. Following discussion with the Ministry, these were 0--1, 2--4, and 5 years old for each of the University of Otago denominator data, assuming equal numbers of young were born into each age group over the last five years (which is supported by data from NZ statistics \citep{stats14}). The 5 year olds were added to the 6--17 year old category to make a 5--17 year old category. No breakdown of 5--17 year category was performed as constant birth rates for the period could not be assumed.
 
 <<echo=FALSE,include=FALSE,results=hide>>=
-rm(list=ls())
 #library(adehabitat)
 library(classInt)
 library(ggplot2)   # plotting library
@@ -197,15 +218,12 @@ library(maps)       # Provides functions that let us plot the maps
 library(mapdata)    # Contains the hi-resolution points that mark out the countries.
 library(maptools)
 library(mapproj)
-library(plyr)
 library(pscl)
 library(RColorBrewer)
 library(rworldmap)
-library(reshape)
 library(reshape2)
 library(rgeos)
 library(rgdal)
-library(raster)
 library(sp)
 library(utils)
 library(xtable)
@@ -839,7 +857,6 @@ In this section we describe the vaccination history of the measles cases from 20
 \begin{table}[htdp]
 \begin{center}
 <<include=FALSE,echo=FALSE,results=tex>>=
-  library(dplyr)
   PopnImmunityAll <- read.csv("data/PopnImmunityAll.csv") %>%
                        mutate(YS=2013-AgeEnd, YE=2013-AgeStart) %>%
                        mutate(YOB=ifelse(YS==YE,YS,ifelse(is.finite(YS), paste(YS,YE,sep="--"), paste0("<", YE)))) %>%
