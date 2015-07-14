@@ -729,7 +729,7 @@ latex(table_nir_mmr, file="", table.env=FALSE,rowname=NULL)
 
 \begin{figure}
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{case_age_dist.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/case_age_dist.pdf}
      \end{center}
 \caption{Numbers and age of measles cases in years in New Zealand for two periods, 1997--2014 and 2007--2014}
 \label{fig:ageinyears}
@@ -741,7 +741,7 @@ The Prioritized Ethnicities for cases are:  Maori; Pacific Peoples; Asian; Middl
 
 \begin{sidewaysfigure}
 \begin{center}
-     \includegraphics[width=0.8\textwidth]{case_ordert.pdf}
+     \includegraphics[width=0.8\textwidth]{figures/case_ordert.pdf}
 \end{center}
 \caption{Measles cases from 2007--2014 (\autoref{table:percap}). The x-axis shows NZDep:Age Range:Prioritized ethnicity. Per capita values are in \autoref{fig:percap_all}}
 \label{fig:cases_all}
@@ -749,7 +749,7 @@ The Prioritized Ethnicities for cases are:  Maori; Pacific Peoples; Asian; Middl
 
 \begin{sidewaysfigure}
 \begin{center}
-     \includegraphics[width=0.8\textwidth]{percap_ordert.pdf}
+     \includegraphics[width=0.8\textwidth]{figures/percap_ordert.pdf}
 \end{center}
 \caption{Per capita measles values from 2007--2014 (\autoref{table:percap}). The x-axis shows NZDep:Age Range:Prioritized ethnicity. Numbers of cases are in \autoref{fig:cases_all}}
 \label{fig:percap_all}
@@ -781,7 +781,7 @@ The cases and per capita measles rates are in \autoref{fig:cases_all} and \autor
 
 \begin{figure}
 \begin{center}
-     \includegraphics[width=0.9\textwidth]{Cases_regmodel.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/Cases_regmodel.pdf}
 \end{center}
 \caption{Distribution of measles cases per category (\autoref{table:percap}) used in the final regression model (\autoref{eq:reg})}
 \label{fig:histcasecat}
@@ -789,7 +789,7 @@ The cases and per capita measles rates are in \autoref{fig:cases_all} and \autor
 
 \begin{figure}
 \begin{center}
-     \includegraphics[width=0.9\textwidth]{Cases_regmodel_prediction.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/Cases_regmodel_prediction.pdf}
 \end{center}
 \caption{Regression model predictions plotted against the case data (\autoref{table:percap}), estimated using \autoref{eq:reg} and a quasipoisson error structure}
 \label{fig:predict}
@@ -797,7 +797,7 @@ The cases and per capita measles rates are in \autoref{fig:cases_all} and \autor
 
 \begin{figure}
 \begin{center}
-     \includegraphics[width=0.9\textwidth]{Cases_regmodel_resid.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/Cases_regmodel_resid.pdf}
 \end{center}
 \caption{Histogram of residuals from the regression model (\autoref{eq:reg}) and a quasipoisson error structure. Y-axis is the frequency}
 \label{fig:resid}
@@ -857,7 +857,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 
 \begin{figure}
 \begin{center}
-     \includegraphics[width=0.9\textwidth]{vacc_status.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/vacc_status.pdf}
 \end{center}
 \caption{Age and vaccination status of measles cases, 2007--2014}
 \label{fig:ageandvac}
@@ -865,7 +865,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 
 \begin{figure}
 \begin{center}
-     \includegraphics[width=0.9\textwidth]{vacc_age.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/vacc_age.pdf}
 \end{center}
 \caption{Age of vaccination of vaccinated measles cases, 2007--12~June~2014. Recommended vaccination age in months is shown for the measles, mumps, rubella (MMR) dose 1 (15 months) and MMR dose 2 (4 years). See \autoref{fig:vaccstat_close} for details}
 \label{fig:vaccstat}
@@ -873,7 +873,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 
 \begin{figure}
 \begin{center}
-     \includegraphics[width=0.9\textwidth]{vacc_age_close.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/vacc_age_close.pdf}
 \end{center}
 \caption{Age of vaccination of vaccinated measles cases, 2007--12~June~2014 in details. Recommended vaccination age in months is shown for the measles, mumps, rubella (MMR) dose 1 (15 months) and MMR dose 2 (4 years)}
 \label{fig:vaccstat_close}
@@ -881,7 +881,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 
 \begin{figure}
 \begin{center}
-     \includegraphics[width=0.9\textwidth]{dob_vacc_unvac.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dob_vacc_unvac.pdf}
 \end{center}
 \caption{Year of birth of unvaccinated of measles cases, 2007--12~June~2014}
 \label{fig:yearandvac}
@@ -889,7 +889,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 
 \begin{figure}
 \begin{center}
-     \includegraphics[width=0.9\textwidth]{dob_vacc_dose.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/dob_vacc_dose.pdf}
 \end{center}
 \caption{The year of birth for those vaccinated with measles, mumps, and rubella (MMR) dose 1 is shown in the upper panel, MMR dose 2 the lower panel.}
 \label{fig:yearandvacf}
@@ -897,7 +897,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 
 \begin{figure}
 \begin{center}
-     \includegraphics[width=0.9\textwidth]{naive_allPop_yob.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/naive_allPop_yob.pdf}
 \end{center}
 \caption{New Zealand population by year of birth and estimated numbers of na\"{\i}ve people in each age class using national immunity data (\autoref{table:sero}) (top) and the number of cases by year of birth (bottom).}
 \label{fig:naive_yob}
@@ -1889,7 +1889,7 @@ The length of hospital stay for the 293 cases reported between 2000 and 2014 ran
 
 \begin{figure}
 \begin{center}
-     \includegraphics[width=0.8\textwidth]{p.pdf}
+     \includegraphics[width=0.8\textwidth]{figures/p.pdf}
 \end{center}
 \caption{Number of measles cases attending hospital and stay duration from 2000--2014 ($n=288$) in New Zealand}
 \label{fig:hosp}
@@ -1959,14 +1959,14 @@ The expected number of cases in New Zealand, assuming homogenous mixing, in a na
 
 \begin{figure}
      \centering
-     \includegraphics[width=0.9\textwidth]{sim.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/sim.pdf}
      \caption{A subset of the expected number of measles cases from 1000 simulations of a model (\autoref{section:epidemic_modelling}) in a homogeneously mixed population in New Zealand with 28\% of the currently 11\% susceptible to measles infection immunised, using an $R_v$ <1. The full distribution of rare results can be seen in \autoref{fig:sim1}.}
      \label{fig:sim}
 \end{figure}
 
 \begin{figure}
      \centering
-     \includegraphics[width=0.9\textwidth]{sim1.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/sim1.pdf}
   \caption{The distribution of the expected number of measles cases from 1000 simulations of a model (\autoref{section:epidemic_modelling}) in a homogeneously mixed population in New Zealand with 28\% of the currently 11\% susceptible to measles infection immunised, using an $R_v$ <1, showing the rare but possible large epidemic sizes possible. 
   Note this figure does not show the frequency of common events as the y-axis was limited to 20 to show rare events. The full distribution of common results can be seen in \autoref{fig:sim}.}
      \label{fig:sim1}
@@ -2322,7 +2322,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{case_age_nzdep.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/case_age_nzdep.pdf}
      \end{center}
      \caption{Measles cases by age and NZDep from 2007--2014. Full details are given in (\autoref{fig:cases_all})}
      \label{fig:CaseAgeNzdep}
@@ -2330,7 +2330,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{case_eth_nzdep.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/case_eth_nzdep.pdf}
      \end{center}
      \caption{Measles cases by prioritized ethnicity and NZDep from 2007--2014. Full details are given in (\autoref{fig:cases_all})}
      \label{fig:CaseNzdepEth}
@@ -2338,7 +2338,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{case_age_eth.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/case_age_eth.pdf}
      \end{center}
      \caption{Measles cases by age and prioritized ethnicity from 2007--2014. Full details are given in (\autoref{fig:cases_all})}
      \label{fig:CaseAgeEth}
@@ -2346,7 +2346,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{percap_nzdep_age.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/percap_nzdep_age.pdf}
      \end{center}
      \caption{Per capita measles case rates by age and NZDep from 2007--2014. Full details are given in (\autoref{fig:percap_all})}
      \label{fig:PerCapAgeNzdep}
@@ -2354,7 +2354,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{percap_eth_nzdep.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/percap_eth_nzdep.pdf}
      \end{center}
      \caption{Per capita measles case rates by prioritized ethnicity and NZDep from 2007--2014. Full details are given in (\autoref{fig:percap_all})}
      \label{fig:PerCapNzdepEth}
@@ -2362,7 +2362,7 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=0.9\textwidth]{percap_eth_age.pdf}
+     \includegraphics[width=0.9\textwidth]{figures/percap_eth_age.pdf}
      \end{center}
      \caption{Per capita measles case rates by prioritized ethnicity and age from 2007--2014. Full details are given in (\autoref{fig:percap_all})}
      \label{fig:PerCapAgeEth}

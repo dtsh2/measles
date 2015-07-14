@@ -23,6 +23,8 @@ library(sp)
 library(utils)
 library(xtable)
 
+fig_dir <- "figures"
+
 ## get data
 # set wd
 # setwd("~/Massey 2014/DHayman_20140627")
@@ -45,7 +47,7 @@ test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","20
 head(test)
 dim(test)
 
-pdf(paste("case_age_dist.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"case_age_dist.pdf"), width=7, height=5)
 par(mfrow=c(1,1))
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
@@ -317,42 +319,42 @@ colnames(PerCap)<-c("NZDep","Age","Ethnicity","Population","Cases","Per capita")
 tp$perCap<-with(tp,tp$cases/tp$Popn*10000)
 
 
-pdf(paste("case_age_nzdep.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"case_age_nzdep.pdf"), width=7, height=5)
 ggplot(tp, aes(NZDep, cases, fill=Age)) + 
   geom_bar(stat="identity", position="dodge")+
  # theme(text=element_text(size=45))+
   ylab("cases")
 dev.off()
 
-pdf(paste("case_eth_nzdep.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"case_eth_nzdep.pdf"), width=7, height=5)
 ggplot(tp, aes(NZDep, cases, fill=Ethnicity)) + 
   geom_bar(stat="identity", position="dodge")+
 #  theme(text=element_text(size=45))+
   ylab("cases")
 dev.off()
 
-pdf(paste("case_age_eth.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"case_age_eth.pdf"), width=7, height=5)
 ggplot(tp, aes(Age, cases, fill=Ethnicity)) + 
   geom_bar(stat="identity", position="dodge")+
 #  theme(text=element_text(size=45))+
   ylab("cases")
 dev.off()
 
-pdf(paste("percap_age_nzdep.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"percap_age_nzdep.pdf"), width=7, height=5)
 ggplot(tp, aes(NZDep, perCap, fill=Age)) + 
   geom_bar(stat="identity", position="dodge")+
  # theme(text=element_text(size=45))+
   ylab("Per capita per 10000")
 dev.off()
 
-pdf(paste("percap_eth_nzdep.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"percap_eth_nzdep.pdf"), width=7, height=5)
 ggplot(tp, aes(NZDep, perCap, fill=Ethnicity)) + 
   geom_bar(stat="identity", position="dodge")+
   #theme(text=element_text(size=45))+
   ylab("Per capita per 10000")
 dev.off()
 
-pdf(paste("percap_eth_age.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"percap_eth_age.pdf"), width=7, height=5)
 ggplot(tp, aes(Age, perCap, fill=Ethnicity)) + 
   geom_bar(stat="identity", position="dodge")+
   #theme(text=element_text(size=45))+
@@ -365,56 +367,56 @@ tpsub$ordert <- factor(tpsub$merge, as.character(tpsub$merge))
 tpsub1<-tpsub[ order(tpsub$Age), ]
 tpsub1$ordert <- factor(tpsub1$merge, as.character(tpsub1$merge))
 
-pdf(paste("percap_nzdep_age.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"percap_nzdep_age.pdf"), width=7, height=5)
 ggplot(tpsub, aes(NZDep, perCap, fill=Age)) + 
   geom_bar(stat="identity", position="dodge")+
   #theme(text=element_text(size=45))+
   ylab("Per capita per 10000")
 dev.off()
 
-pdf(paste("percap_eth_nzdep.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"percap_eth_nzdep.pdf"), width=7, height=5)
 ggplot(tpsub, aes(NZDep, perCap, fill=Ethnicity)) + 
   geom_bar(stat="identity", position="dodge")+
   #theme(text=element_text(size=45))+
   ylab("Per capita per 10000")
 dev.off()
 
-pdf(paste("percap_eth_age.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"percap_eth_age.pdf"), width=7, height=5)
 ggplot(tpsub, aes(Age, perCap, fill=Ethnicity)) + 
   geom_bar(stat="identity", position="dodge")+
   #theme(text=element_text(size=45))+
   ylab("Per capita per 10000")
 dev.off()
 ##
-pdf(paste("case_merge.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"case_merge.pdf"), width=10, height=5)
 ggplot(tp, aes(x=merge, y=cases, fill=Ethnicity)) + 
   geom_bar(stat="identity", position="dodge")+
   # theme(text=element_text(size=45))+
   ylab("cases")+xlab("")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
 dev.off()
 #
-pdf(paste("case_ordert.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"case_ordert.pdf"), width=10, height=5)
 ggplot(tpsub, aes(x=ordert, y=cases, fill=Ethnicity)) +
   geom_bar(stat="identity", position="dodge")+
   # theme(text=element_text(size=45))+
   ylab("cases")+xlab("")+theme(axis.text.x = element_text(angle = 90, vjust=0,hjust = 0))
 dev.off()
 
-pdf(paste("case_ordert2.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"case_ordert2.pdf"), width=10, height=5)
 ggplot(tpsub1, aes(x=ordert,y= cases, fill=Ethnicity)) +
   geom_bar(stat="identity", position="dodge")+
   # theme(text=element_text(size=45))+
   ylab("cases")+xlab("")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
 dev.off()
 ##
-pdf(paste("percap_merge.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"percap_merge.pdf"), width=10, height=5)
 ggplot(tp, aes(x=merge, y=perCap, fill=Ethnicity)) + 
   geom_bar(stat="identity", position="dodge")+
   # theme(text=element_text(size=45))+
   ylab("Per capita per 10000")+xlab("")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
 dev.off()
 #
-pdf(paste("percap_ordert.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"percap_ordert.pdf"), width=10, height=5)
 ggplot(tpsub, aes(x=ordert, y=perCap, fill=Ethnicity)) +
   geom_bar(stat="identity", position="dodge")+
   # theme(text=element_text(size=45))+
@@ -463,7 +465,7 @@ anova(model3,test="F")
 anovap<-anova(model3,test="F")
 write.csv(anovap,"unused_output/anovap.csv")
 
-pdf(paste("Cases_regmodel.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"Cases_regmodel.pdf"), width=7, height=5)
 par(cex.axis=1)
 par(mar=c(5,6,4,2)+0.1)
 hist(tpsub$cases,xlab="Number of cases",main='',col='grey',breaks=20,ylab="Number of categories",cex.lab=1)
@@ -471,7 +473,7 @@ dev.off()
 res<-predict(model3)
 #res<-predict(model2)
 
-pdf(paste("Cases_regmodel_prediction.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"Cases_regmodel_prediction.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
 plot(exp(res),tpsub$cases,xlab="cases",ylab='predictions',main="",pch=16,col="darkgrey",cex.lab=1,cex=1)
@@ -480,7 +482,7 @@ dev.off()
 cor(exp(res),tpsub$cases)
 cor.test(exp(res),tpsub$cases)
 
-pdf(paste("Cases_regmodel_resid.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"Cases_regmodel_resid.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
 #hist(model3$residuals,main="",xlab="residuals",col="grey",cex.lab=1,ylab="")
@@ -499,14 +501,14 @@ AgeVac<-table(testv$VC,testv$AgeInYears)
 row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
 AgeVac<-t(AgeVac)
 
-pdf(paste("vacc_status.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"vacc_status.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
 barplot(t(AgeVac),xlab="Age",col=c("darkgrey","red","orange"),main="",ylab="Frequency",cex.lab=1)
 legend("topright",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"),cex=1,bty="n")
 dev.off()
 
-pdf(paste("vacc_age.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"vacc_age.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
 hist(vac$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",main="",cex.lab=1,ylab="Frequency")
@@ -517,7 +519,7 @@ legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=
 legend("top",c("15 months","48 months"),col=c("blue","red"),lty=1,bty="n",cex=1)
 dev.off()
 
-pdf(paste("vacc_age_close.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"vacc_age_close.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
 hist(vac$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",main="",cex.lab=1,ylab="Frequency",xlim=c(0,100))
@@ -536,14 +538,14 @@ DOBVac<-table(testv$VC,DOB)
 row.names(DOBVac)<-c("Unvaccinated","Dose1","Dose2")
 DOBVac<-t(DOBVac)
 
-pdf(paste("dob_vacc_status.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"dob_vacc_status.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
 barplot(t(DOBVac),xlab="Age",col=c("darkgrey","red","orange"),main="",ylab="Frequency",cex.lab=1)
 legend("topleft",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"),cex=1,bty="n")
 dev.off()
 
-pdf(paste("dob_vacc_dose.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"dob_vacc_dose.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
 par(mfrow=c(2,1))
@@ -555,7 +557,7 @@ barplot(DOBVac[,3],col=rgb(1,0,0,1/4),xlab="Year of Birth",main="",cex.lab=1,yla
 legend("topleft",c("Dose 2"),col=rgb(1,0,0,1/4),pch=15,bty="n",cex=1)
 dev.off()
 
-pdf(paste("dob_vacc_unvac.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"dob_vacc_unvac.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
 par(mfrow=c(1,1))
@@ -563,7 +565,7 @@ barplot(DOBVac[,1],col="grey",xlab="Year of Birth",main="",cex.lab=1,ylab="Frequ
 legend("topleft",c("Unvaccinated"),col="grey",pch=15,bty="n",cex=1)
 dev.off()
 
-pdf(paste("naive_allPop.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"naive_allPop.pdf"), width=7, height=5)
 par(cex.axis=1)
 par(mar=c(5,6,4,2)+0.1)
 plot(NaiveByYear$Population,xlab="Age",ylab="Population",cex.lab=1)
@@ -571,7 +573,7 @@ points(NaiveByYear$Naive,pch=16)
 legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1)
 dev.off()
 
-pdf(paste("naive_allPop_yob.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"naive_allPop_yob.pdf"), width=7, height=5)
 par(mfrow=c(2,1))
 par(cex.axis=1)
 par(mar=c(4,5,1,2)+0.1)
@@ -591,7 +593,7 @@ dev.off()
 #################### JM NOTE #############################
 ## This block (seems unused) uses the magic number 0.28 ##
 ##########################################################
-pdf(paste("numvac.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"numvac.pdf"), width=7, height=5)
 par(mfrow=c(1,1))
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
@@ -858,7 +860,7 @@ hosp<-read.csv("hospital.csv",header=T)
 p<-ggplot(data=hosp, aes(x=Days, y=Number)) + geom_bar(stat="identity")+theme(axis.title.x = element_text(size=20),axis.title.y = element_text(size=16),axis.text.x  = element_text(size=14),axis.text.y  = element_text(size=14))
 
 ###
-# pdf(paste("ageinyears.pdf"), width=7, height=5)
+# pdf(file.path(fig_dir,"ageinyears.pdf"), width=7, height=5)
 # par(mfrow=c(1,1))
 # par(mar=c(5,6,4,2)+0.1)
 # par(cex.axis=1)
@@ -868,7 +870,7 @@ p<-ggplot(data=hosp, aes(x=Days, y=Number)) + geom_bar(stat="identity")+theme(ax
 # dev.off()
 
 ###
-pdf(paste("naive_au.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"naive_au.pdf"), width=7, height=5)
 par(mfrow=c(1,1))
 plot(au, col=cols)
 legend("topright",c("0-60%","61-80%","81-100%","101-120%","121-140%",">141%","NA")
@@ -881,47 +883,47 @@ hist(au_new$prop[au_new$prop < 2], breaks=50,col="grey",
 abline(v=1,col="red",lwd=3)
 dev.off()
 ###
-pdf(paste("naive_au_prop.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"naive_au_prop.pdf"), width=7, height=5)
 par(mfrow=c(1,1))
 par(cex.axis=1)
 hist(au_new$prop, breaks=100,col="grey",xlab="Proportion vaccination",main="")
 abline(v=1,col="red")
 dev.off()
 ###
-pdf(paste("incidence12.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"incidence12.pdf"), width=10, height=5)
 print(np2)
 dev.off()
 ###
-pdf(paste("cover12.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"cover12.pdf"), width=10, height=5)
 print(np3)
 dev.off()
 ###
-pdf(paste("immigration12.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"immigration12.pdf"), width=10, height=5)
 print(imnp1)
 dev.off()
 ###
-pdf(paste("nztravel12.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"nztravel12.pdf"), width=10, height=5)
 print(nznp1)
 dev.off()
 ###
-pdf(paste("travel12.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"travel12.pdf"), width=10, height=5)
 print(np1)
 dev.off()
 ###
-pdf(paste("risk12.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"risk12.pdf"), width=10, height=5)
 print(np4)
 dev.off()
 ###
-pdf(paste("nzrisk12.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"nzrisk12.pdf"), width=10, height=5)
 print(nznp4)
 dev.off()
 ###
-pdf(paste("imrisk12.pdf"), width=10, height=5)
+pdf(file.path(fig_dir,"imrisk12.pdf"), width=10, height=5)
 print(imnp4)
 dev.off()
 ###
 
-pdf(paste("p.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"p.pdf"), width=7, height=5)
 print(p)
 dev.off()
 
@@ -1009,7 +1011,7 @@ legMd<-as.factor(paste("median =",c(median(sizes))))
 legMn<-as.factor(paste("mean =",c(round(mean(sizes)))))
 
 ###
-pdf(paste("sim.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"sim.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
 hist(sizes,xlim=c(0,200),col="grey",breaks=1000,xlab="Outbreak size",main="",cex.lab=1)
@@ -1021,7 +1023,7 @@ legend('topright',c(levels(legMd),levels(legMn)),lty=rep(3,2),col=c("orange","re
 dev.off()
 
 ###
-pdf(paste("sim1.pdf"), width=7, height=5)
+pdf(file.path(fig_dir,"sim1.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
 hist(sizes,breaks=1000,xlab="Outbreak size",main="",cex.lab=1,ylim=c(0,20))
