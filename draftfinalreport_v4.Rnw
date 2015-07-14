@@ -917,7 +917,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 \begin{center}
      \includegraphics[width=0.9\textwidth]{figures/naive_allPop_yob.pdf}
 \end{center}
-\caption{New Zealand population by year of birth and estimated numbers of na\"{\i}ve people in each age class using national immunity data (\autoref{table:sero}) (top) and the number of cases by year of birth (bottom).}
+\caption{New Zealand population by year of birth and estimated numbers of na\"{\i}ve people in each age class using national immunity data (\autoref{table:sero}) (top) and the number of measles cases by year of birth from 2007--2014 (see \autoref{fig:ageandvac}) (bottom).}
 \label{fig:naive_yob}
 \end{figure}
 
