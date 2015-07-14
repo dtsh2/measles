@@ -924,7 +924,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 \subsection{Population immunity and vaccination coverage results}
 \label{sub:popim}
 
-The majority of the na\"{\i}ve among the general New Zealand population are in their first years of life (\autoref{fig:naive_yob}). However, the distribution of na\"{\i}ve at a national level shows that the recent MMR vaccination schemes are reducing the proportions of na\"{\i}ve population in the 3--5 year old age group to greater levels than in older young people  (\autoref{fig:naive_yob}). The distribution of the numbers of na\"{\i}ve and the total na\"{\i}ve populations per DHB, assuming national immunisation and immunity rates are representative, are given in the following figures in the appendix (\autoref{sec:app}): 
+The majority of the na\"{\i}ve among the general New Zealand population are in their first years of life (\autoref{fig:naive_yob}). However, the distribution of na\"{\i}ve at a national level shows that the recent MMR vaccination schemes are reducing the proportions of na\"{\i}ve population in the younger age groups ($\geq$ 2006 year of birth) than in older young people  (\autoref{fig:naive_yob}). The distribution of the numbers of na\"{\i}ve and the total na\"{\i}ve populations per DHB, assuming national immunisation and immunity rates are representative, are given in the following figures in the appendix (\autoref{sec:app}): 
 \begin{itemize}[noitemsep,nolistsep]
 \item Northland: \autoref{fig:Northland}
 \item Waitemata: \autoref{fig:Waitemata}
