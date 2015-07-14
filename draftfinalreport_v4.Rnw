@@ -1977,14 +1977,14 @@ The expected number of cases in New Zealand, assuming homogenous mixing, in a na
 \begin{figure}
      \centering
      \includegraphics[width=0.9\textwidth]{figures/sim.pdf}
-     \caption{A subset of the expected number of measles cases from 1000 simulations of a model (\autoref{section:epidemic_modelling}) in a homogeneously mixed population in New Zealand with 28\% of the currently 11\% susceptible to measles infection immunised, using an $R_v$ <1. The full distribution of rare results can be seen in \autoref{fig:sim1}.}
+     \caption{A subset of the expected number of measles cases from 1000 simulations of a model (\autoref{section:epidemic_modelling}) in a homogeneously mixed population in New Zealand using an $R_v$ <1. The full distribution of rare results can be seen in \autoref{fig:sim1}.}
      \label{fig:sim}
 \end{figure}
 
 \begin{figure}
      \centering
      \includegraphics[width=0.9\textwidth]{figures/sim1.pdf}
-  \caption{The distribution of the expected number of measles cases from 1000 simulations of a model (\autoref{section:epidemic_modelling}) in a homogeneously mixed population in New Zealand with 28\% of the currently 11\% susceptible to measles infection immunised, using an $R_v$ <1, showing the rare but possible large epidemic sizes possible. 
+  \caption{The distribution of the expected number of measles cases from 1000 simulations of a model (\autoref{section:epidemic_modelling}) in a homogeneously mixed population in New Zealand using an $R_v$ <1, showing the rare but possible large epidemic sizes possible. 
   Note this figure does not show the frequency of common events as the y-axis was limited to 20 to show rare events. The full distribution of common results can be seen in \autoref{fig:sim}.}
      \label{fig:sim1}
 \end{figure}
