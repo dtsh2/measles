@@ -1,5 +1,6 @@
 
 \documentclass{article}
+\PassOptionsToPackage{draft}{graphicx} % draft without figures
 \usepackage{longtable}
 \usepackage{times}
 \usepackage{hyperref}
