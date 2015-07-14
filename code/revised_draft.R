@@ -425,7 +425,7 @@ dev.off()
 # This chunk uses "results=tex"
 
 latex(PerCap, file="", table.env=FALSE,rowname=NULL)
-write.csv(PerCap,"percap.csv")
+write.csv(PerCap,"unused_output/percap.csv")
 ## plot this figure?
 #hist(tp$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
 tp$Ethnicity<- relevel(tp$Ethnicity, "European")
