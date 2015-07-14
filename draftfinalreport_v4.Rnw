@@ -1975,6 +1975,8 @@ The expected number of cases in New Zealand, assuming homogenous mixing, in a na
 \begin{sidewaystable}\small
 <<results=tex,echo=FALSE>>=
 colnames(costtable20)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C")
+costtable20[,2:10] <- round(costtable20[,2:10])
+costtable20[,11] <- round(costtable20[,11],2)
 latex(costtable20, file="", table.env=FALSE,rowname=NULL)
 @
 \caption{Benefit--cost analyses with 20 dollars per immunised person. \textit{Vacc} is numbers to immunise (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up immunisation programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Contacts} is costs saved through contact exclusion (\$2,624.57 per case); \textit{Manage saved} is management costs saved (\$1,765 per case), plus \$20 GP costs; \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}  is the discounted costs saved; \textit{Outbreak}	is the predicted mean outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations\footnote{Note the mean takes into account rare, but large outbreaks, see \autoref{fig:sim} and \autoref{fig:sim1}. Median values are all 2, thus the expected number of cases will be small. The mean is used as a conservative estimate regarding the benefits of immunisation, because it allows for rare but large outbreaks}; \textit{OB costs}	is costs expected due to continued measles importations based on 10 introductions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio.}
@@ -1984,6 +1986,8 @@ latex(costtable20, file="", table.env=FALSE,rowname=NULL)
 \begin{sidewaystable}\small
 <<results=tex,echo=FALSE>>=
 colnames(costtable50)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C")
+costtable50[,2:10] <- round(costtable50[,2:10])
+costtable50[,11] <- round(costtable50[,11],2)
 latex(costtable50, file="", table.env=FALSE,rowname=NULL)
 @
 \caption{Benefit--cost analyses with 50 dollars per immunised person. \textit{Vacc} is numbers to immunise (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up immunisation programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Contacts} is costs saved through contact exclusion (\$2,624.57 per case); \textit{Manage saved} is management costs saved (\$1,765 per case), plus \$20 GP costs; \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}  is the discounted costs saved; \textit{Outbreak}  is the predicted mean outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations\footnote{Note the mean takes into account rare, but large outbreaks, see \autoref{fig:sim} and \autoref{fig:sim1}. Median values are all 2, thus the expected number of cases will be small. The mean is used as a conservative estimate regarding the benefits of immunisation, because it allows for rare but large outbreaks}; \textit{OB costs}	is costs expected due to continued measles importations based on 10 introductions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio.}
