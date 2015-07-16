@@ -1,4 +1,5 @@
 rm(list=ls())
+library(dplyr)
 
 # output path for figures
 dhb_fig_path <- "figures"
@@ -80,3 +81,36 @@ vacc_pred <- Z %>% mutate("Naïve post vaccination" = Naïve - Vaccination) %>%
                    left_join(ob_sizes) %>% rename(Attack = Outbreak, Proportion=PC, Vacc=Vaccination, Size=Population)
 
 write.csv(vacc_pred, "tables/vacc_predictions.csv", row.names=F)
+
+# Shit for costtables*.csv. Ideally these constants would be read in from a file
+benefit_cost <- function(vacc_pred, vacc_cost = 50) {
+  lost_wages           <- 207155/247
+  case_management      <- 330147/187
+  gp_costs             <- 20
+  lab_costs            <- 0
+  contacts_quarantined <- 2.11
+  quarantine_length    <- 7.3
+  contact_wage         <- 210436/247/5
+  prop_hospitalised    <- 0.17
+  hosp_costs           <- 1877
+  disc_rate            <- 0.03
+  disc_years           <- 10
+  disc_multiplier      <- 1/disc_years*(1-1/(1+disc_rate)^disc_years)/(1-1/(1+disc_rate))
+  
+  bc <- vacc_pred %>% mutate(case_wage_loss = lost_wages * Attack,
+                             manage_cost = (case_management + gp_costs + lab_costs) * Attack,
+                             hosp_cost = prop_hospitalised * hosp_costs * Attack, 
+                             contacts_wage_loss = contacts_quarantined * quarantine_length * contact_wage * Attack)
+  bc <- bc %>% mutate(total_discounted_costs = (case_wage_loss+manage_cost+hosp_cost+contacts_wage_loss) * disc_multiplier,
+                      vaccine_cost = vacc_cost * Vacc,
+                      future_ob_costs = (lost_wages + case_management + gp_costs + lab_costs + prop_hospitalised*hosp_costs +
+                                           contacts_quarantined*quarantine_length*contact_wage) * `Median outbreak` * disc_multiplier * disc_years)
+  bc <- bc %>% mutate(benefit_cost = total_discounted_costs / (vaccine_cost + future_ob_costs)) %>%
+    select(DHB, Vacc, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
+           total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost)
+  
+  bc[-nrow(bc),]
+}
+
+write.csv(benefit_cost(vacc_pred, 20), "tables/cost_benefit_20.csv", row.names=FALSE)
+write.csv(benefit_cost(vacc_pred, 50), "tables/cost_benefit_50.csv", row.names=FALSE)
