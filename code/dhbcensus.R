@@ -59,7 +59,7 @@ library(akima)
 PDHB = aspline(x=Rv,y=P,xout=RvDHB);
 
 # The number of cases per DHB
-FSDHB = round(PDHB$y*Naive);
+FSDHB = round(PDHB$y*Pop);
 
 # The number of vaccinations short
 VDHB = round(Naive-Pop/R0);
