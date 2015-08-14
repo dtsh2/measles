@@ -681,6 +681,8 @@ costtable5<-read.csv("costtable5v2.csv",header=T)
 costtable20<-read.csv("tables/cost_benefit_20.csv",header=T)
 costtable50<-read.csv("tables/cost_benefit_50.csv",header=T)
 
+vacp_rv<-read.csv("tables/rv.csv",header=T)
+
 vacp<-read.csv("tables/vacc_predictions.csv",header=T)
 hosp<-read.csv("hospital.csv",header=T)
 

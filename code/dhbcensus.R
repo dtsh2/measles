@@ -75,10 +75,25 @@ Z$PC = round(Z$Vaccination / Z$Naïve, 2)
 Z <- Z[,c(5,1:4,6)]
 write.csv(Z,"tables/dhb_vacc.csv",row.names=F)
 
+# Code to compute "more realistic" outbreak sizes
+cases<-read.csv("DHayman_20140627.csv")
+#dat<-table(cases$RptYear,cases$DiseaseName)
+#length(dat)
+#mean(dat[13:18])
+#dat<-table(cases$RptYear,cases$DiseaseName)
+tab_cases<-table(cases$RptYear,cases$DiseaseName,cases$DHB)
+mean_cases<-round(colSums(tab_cases[13:18,,])/5.58,0)
+mean_cases["TOTAL"] = sum(mean_cases)
+mean_cases=data.frame(DHB=names(mean_cases), Attack=mean_cases, stringsAsFactors = FALSE)
+
 # Generate vacc_predictions.csv
 ob_sizes <- read.csv("data/outbreak_size_from_simulations.csv", check.names=FALSE, stringsAsFactors = FALSE)
+ob_sizes[ob_sizes$DHB=="TOTAL",2:3] <- colSums(ob_sizes[ob_sizes$DHB != "TOTAL",2:3])
 vacc_pred <- Z %>% mutate("Naïve post vaccination" = Naïve - Vaccination) %>%
-                   left_join(ob_sizes) %>% rename(Attack = Outbreak, Proportion=PC, Vacc=Vaccination, Size=Population)
+                   left_join(ob_sizes) %>% left_join(mean_cases) %>%
+                   rename(Proportion=PC, Vacc=Vaccination, Size=Population)
+# vacc_pred<-rename(vacc_pred, c(PC="Proportion", Vaccination = "Vacc", Population = "Size"))
+vacc_pred <- vacc_pred[,c(1:3,10,5:8)]
 
 write.csv(vacc_pred, "tables/vacc_predictions.csv", row.names=F)
 
@@ -95,7 +110,7 @@ benefit_cost <- function(vacc_pred, vacc_cost = 50) {
   hosp_costs           <- 1877
   disc_rate            <- 0.03
   disc_years           <- 10
-  disc_multiplier      <- 1/disc_years*(1-1/(1+disc_rate)^disc_years)/(1-1/(1+disc_rate))
+  disc_multiplier      <- 1*(1-1/(1+disc_rate)^disc_years)/(1-1/(1+disc_rate))
   
   bc <- vacc_pred %>% mutate(case_wage_loss = lost_wages * Attack,
                              manage_cost = (case_management + gp_costs + lab_costs) * Attack,
@@ -104,13 +119,14 @@ benefit_cost <- function(vacc_pred, vacc_cost = 50) {
   bc <- bc %>% mutate(total_discounted_costs = (case_wage_loss+manage_cost+hosp_cost+contacts_wage_loss) * disc_multiplier,
                       vaccine_cost = vacc_cost * Vacc,
                       future_ob_costs = (lost_wages + case_management + gp_costs + lab_costs + prop_hospitalised*hosp_costs +
-                                           contacts_quarantined*quarantine_length*contact_wage) * `Median outbreak` * disc_multiplier * disc_years)
+                                           contacts_quarantined*quarantine_length*contact_wage) * `Median outbreak` * disc_multiplier)
   bc <- bc %>% mutate(benefit_cost = total_discounted_costs / (vaccine_cost + future_ob_costs)) %>%
     select(DHB, Vacc, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
            total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost)
   
-  bc[-nrow(bc),]
+  #bc[-nrow(bc),]
 }
 
 write.csv(benefit_cost(vacc_pred, 20), "tables/cost_benefit_20.csv", row.names=FALSE)
 write.csv(benefit_cost(vacc_pred, 50), "tables/cost_benefit_50.csv", row.names=FALSE)
+write.csv(benefit_cost(vacc_pred, 74.53), "tables/cost_benefit_74.csv", row.names=FALSE)
