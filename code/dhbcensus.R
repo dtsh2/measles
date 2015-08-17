@@ -90,8 +90,9 @@ mean_cases=data.frame(DHB=names(mean_cases), Attack=mean_cases, stringsAsFactors
 ob_sizes <- read.csv("data/outbreak_size_from_simulations.csv", check.names=FALSE, stringsAsFactors = FALSE)
 ob_sizes[ob_sizes$DHB=="TOTAL",2:3] <- colSums(ob_sizes[ob_sizes$DHB != "TOTAL",2:3])
 vacc_pred <- Z %>% mutate("Naïve post vaccination" = Naïve - Vaccination) %>%
-                   left_join(ob_sizes) %>% left_join(mean_cases) %>%
-                   rename(Proportion=PC, Vacc=Vaccination, Size=Population)
+                   left_join(ob_sizes) %>% left_join(mean_cases) 
+# %>%
+#                   rename_vars(Proportion=PC, Vacc=Vaccination, Size=Population)
 # vacc_pred<-rename(vacc_pred, c(PC="Proportion", Vaccination = "Vacc", Population = "Size"))
 vacc_pred <- vacc_pred[,c(1:3,10,5:8)]
 
@@ -117,11 +118,11 @@ benefit_cost <- function(vacc_pred, vacc_cost = 50) {
                              hosp_cost = prop_hospitalised * hosp_costs * Attack, 
                              contacts_wage_loss = contacts_quarantined * quarantine_length * contact_wage * Attack)
   bc <- bc %>% mutate(total_discounted_costs = (case_wage_loss+manage_cost+hosp_cost+contacts_wage_loss) * disc_multiplier,
-                      vaccine_cost = vacc_cost * Vacc,
+                      vaccine_cost = vacc_cost * Vaccination,
                       future_ob_costs = (lost_wages + case_management + gp_costs + lab_costs + prop_hospitalised*hosp_costs +
                                            contacts_quarantined*quarantine_length*contact_wage) * `Median outbreak` * disc_multiplier)
   bc <- bc %>% mutate(benefit_cost = total_discounted_costs / (vaccine_cost + future_ob_costs)) %>%
-    select(DHB, Vacc, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
+    select(DHB, Vaccination, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
            total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost)
   
   #bc[-nrow(bc),]
@@ -130,3 +131,25 @@ benefit_cost <- function(vacc_pred, vacc_cost = 50) {
 write.csv(benefit_cost(vacc_pred, 20), "tables/cost_benefit_20.csv", row.names=FALSE)
 write.csv(benefit_cost(vacc_pred, 50), "tables/cost_benefit_50.csv", row.names=FALSE)
 write.csv(benefit_cost(vacc_pred, 74.53), "tables/cost_benefit_74.csv", row.names=FALSE)
+
+
+res_sm<-matrix(nrow=length(seq(from=10, to=200, by=10)),ncol=2)
+
+for (i in seq(from=10, to=200, by=10)){
+  x<-i
+  y<-benefit_cost(vacc_pred, i)[21,11]
+  res_sm[i/10,1]<-x
+  res_sm[i/10,2]<-y
+}  
+
+x<-res_sm[,1]; y<-res_sm[,2]
+res_sm_lo <- loess(y~x)
+points(x,y)
+
+pdf(file.path(dhb_fig_path, paste("bc.pdf")))
+plot(y=predict(res_sm_lo),x=x, col='red', lwd=2,type="l",
+     ylab="benefit/cost ratio",xlab="Cost",xaxt="n")#,ylim=c(0,max(y)))
+axis(1, at=axTicks(1), labels=sprintf("$%s", axTicks(1)))
+# segments(x0=79, y0=1, x1 = 0, y1 = 1)
+# segments(x0=79, y0=0, x1 = 79, y1 = 1)
+dev.off()
