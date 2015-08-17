@@ -121,9 +121,19 @@ benefit_cost <- function(vacc_pred, vacc_cost = 50) {
                       vaccine_cost = vacc_cost * Vaccination,
                       future_ob_costs = (lost_wages + case_management + gp_costs + lab_costs + prop_hospitalised*hosp_costs +
                                            contacts_quarantined*quarantine_length*contact_wage) * `Median outbreak` * disc_multiplier)
-  bc <- bc %>% mutate(benefit_cost = total_discounted_costs / (vaccine_cost + future_ob_costs)) %>%
-    select(DHB, Vaccination, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
-           total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost)
+#   bc <- bc %>% mutate(benefit_cost = total_discounted_costs / (vaccine_cost + future_ob_costs)) %>%
+#     select(DHB, Vaccination, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
+#            total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost)
+#   
+  bc <- bc %>% mutate(benefit_cost
+                      = (ifelse (total_discounted_costs - future_ob_costs 
+                                 < 0,0,(total_discounted_costs - future_ob_costs)/ vaccine_cost)),
+                      net_present_value = (ifelse (total_discounted_costs - future_ob_costs 
+                                                   < 0,0,(total_discounted_costs - future_ob_costs) -vaccine_cost))) %>%
+  select(DHB, Vaccination, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
+           total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost,
+         net_present_value)
+  
   
   #bc[-nrow(bc),]
 }
@@ -150,6 +160,6 @@ pdf(file.path(dhb_fig_path, paste("bc.pdf")))
 plot(y=predict(res_sm_lo),x=x, col='red', lwd=2,type="l",
      ylab="benefit/cost ratio",xlab="Cost",xaxt="n")#,ylim=c(0,max(y)))
 axis(1, at=axTicks(1), labels=sprintf("$%s", axTicks(1)))
-# segments(x0=79, y0=1, x1 = 0, y1 = 1)
-# segments(x0=79, y0=0, x1 = 79, y1 = 1)
+ segments(x0=74.53, y0=1, x1 = 0, y1 = 1)
+ segments(x0=74.53, y0=0, x1 = 74.53, y1 = 1)
 dev.off()
