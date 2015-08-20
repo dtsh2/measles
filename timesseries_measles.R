@@ -174,7 +174,7 @@ xlim <- range(change[,1])
 par(fig = c(.6, 1, 0.6, 1), mar=c(0,0,0,0), new=TRUE)
 plot(change[,1],change[,4],type="l",xlab="Year",ylab="",
      ylim=c(0,max(change[,4])),bg="grey",add=T,bty="n")
-
+dev.off()
 ## set wd to get data
 nzers<-read.csv("monthtravel.csv",header=T)
 head(nzers)
@@ -208,7 +208,8 @@ sum<-colSums(newd)
 newd<-rbind(sum,newd)
 rownames(newd)<-c("total","nz","im")
 
-pdf(paste("nzers.pdf"), width=7, height=5)
+pdf(paste("nzers.pdf"), width=7, height=7)
+par(mai=c(2,1,0.5,0.5))
 plot(as.numeric(newd[1,]),type="l",xaxt="n",xlab="",ylab="Numbers",
      ,ylim=c(min(newd),max(newd)))
 points(as.numeric(newd[2,]),type="l",col="red")
@@ -220,6 +221,7 @@ axis(side=1, at=seq(from=1,to=71,by=2), labels=labels[seq(from=1,to=71,by=2)],la
 abline(v=seq(from=6,to=71,by=12),lty=3,col="grey")
 legend("topleft",bg="white",c("Total","New Zealanders","Non-New Zealanders"),
        col=c("black","red","black"),lty=c(1,1,2),box.col=rgb(0,0,0,alpha=0.5) )
+mtext("Month and year",side=1,line=5)
 dev.off()
 
 plot(as.numeric(newd[1,]),type="l",xaxt="n",xlab="",ylab="Numbers",
