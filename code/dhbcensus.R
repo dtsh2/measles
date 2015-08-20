@@ -65,13 +65,13 @@ FSDHB = round(PDHB$y*Pop);
 VDHB = round(Naive-Pop/R0);
 
 Z<-data.frame(Population=Pop,
-              Naïve=Naive,
+              Naive=Naive,
               Outbreak=FSDHB,
               Vaccination=VDHB, stringsAsFactors = FALSE)
 # add TOTAL row...
 Z <- rbind(Z, colSums(Z))
 Z$DHB <- c(names(naivedhb)[dhb_order], "TOTAL")
-Z$PC = round(Z$Vaccination / Z$Naïve, 2)
+Z$PC = round(Z$Vaccination / Z$Naive, 2)
 Z <- Z[,c(5,1:4,6)]
 write.csv(Z,"tables/dhb_vacc.csv",row.names=F)
 
@@ -89,7 +89,7 @@ mean_cases=data.frame(DHB=names(mean_cases), Attack=mean_cases, stringsAsFactors
 # Generate vacc_predictions.csv
 ob_sizes <- read.csv("data/outbreak_size_from_simulations.csv", check.names=FALSE, stringsAsFactors = FALSE)
 ob_sizes[ob_sizes$DHB=="TOTAL",2:3] <- colSums(ob_sizes[ob_sizes$DHB != "TOTAL",2:3])
-vacc_pred <- Z %>% mutate("Naïve post vaccination" = Naïve - Vaccination) %>%
+vacc_pred <- Z %>% mutate("Naive post vaccination" = Naive - Vaccination) %>%
                    left_join(ob_sizes) %>% left_join(mean_cases) 
 # %>%
 #                   rename_vars(Proportion=PC, Vacc=Vaccination, Size=Population)

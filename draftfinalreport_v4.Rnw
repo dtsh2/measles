@@ -680,6 +680,10 @@ costtable4<-read.csv("costtable4v2.csv",header=T)
 costtable5<-read.csv("costtable5v2.csv",header=T)
 costtable20<-read.csv("tables/cost_benefit_20.csv",header=T)
 costtable50<-read.csv("tables/cost_benefit_50.csv",header=T)
+costtable74<-read.csv("tables/cost_benefit_74.csv",header=T)
+costtable20_no<-read.csv("tables/cost_benefit_no_20.csv",header=T)
+costtable50_no<-read.csv("tables/cost_benefit_no_50.csv",header=T)
+
 
 vacp_rv<-read.csv("tables/rv.csv",header=T)
 
@@ -1995,8 +1999,8 @@ The expected number of cases in New Zealand, assuming homogenous mixing, in a na
 
 \begin{sidewaystable}\small
 <<results=tex,echo=FALSE>>=
-colnames(costtable20)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C")
-costtable20[,2:10] <- round(costtable20[,2:10])
+colnames(costtable20)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV","NPV")
+costtable20[,c(2:10,12)] <- round(costtable20[,c(2:10,12)])
 costtable20[,11] <- round(costtable20[,11],2)
 latex(costtable20, file="", table.env=FALSE,rowname=NULL)
 @
@@ -2006,8 +2010,8 @@ latex(costtable20, file="", table.env=FALSE,rowname=NULL)
 
 \begin{sidewaystable}\small
 <<results=tex,echo=FALSE>>=
-colnames(costtable50)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C")
-costtable50[,2:10] <- round(costtable50[,2:10])
+colnames(costtable50)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV")
+costtable50[,c(2:10,12)] <- round(costtable50[,c(2:10,12)])
 costtable50[,11] <- round(costtable50[,11],2)
 latex(costtable50, file="", table.env=FALSE,rowname=NULL)
 @
@@ -2017,8 +2021,8 @@ latex(costtable50, file="", table.env=FALSE,rowname=NULL)
 
 \begin{sidewaystable}\small
 <<results=tex,echo=FALSE>>=
-colnames(costtable74)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C")
-costtable74[,2:10] <- round(costtable74[,2:10])
+colnames(costtable74)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV","NPV")
+costtable74[,c(2:10,12)] <- round(costtable74[,c(2:10,12)])
 costtable74[,11] <- round(costtable74[,11],2)
 latex(costtable74, file="", table.env=FALSE,rowname=NULL)
 @
@@ -2032,6 +2036,29 @@ latex(costtable74, file="", table.env=FALSE,rowname=NULL)
      \caption{The relationship between the benefit--cost ratio and the cost of immunising individuals in the New Zealand population. The mean number of measles cases per years since 2009 was used the expected number of cases prevented from the additional vaccination (\autoref{table:cost20},\autoref{table:cost50},\autoref{table:cost74}).}
      \label{fig:bc}
 \end{figure}
+
+\begin{sidewaystable}\small
+<<results=tex,echo=FALSE>>=
+colnames(costtable20_no)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV","NPV")
+costtable20_no[,c(2:10,12)] <- round(costtable20_no[,c(2:10,12)])
+costtable20_no[,11] <- round(costtable20_no[,11],2)
+latex(costtable20_no, file="", table.env=FALSE,rowname=NULL)
+@
+\caption{Benefit--cost analyses with 20 dollars per immunised person. \textit{Vacc} is numbers to immunise (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up immunisation programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Contacts} is costs saved through contact exclusion (\$2,624.57 per case); \textit{Manage saved} is management costs saved (\$1,765 per case), plus \$20 GP costs; \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}  is the discounted costs saved; \textit{Outbreak}  is the predicted median outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations\footnote{Note the median outbreak sizes are what is expected, while the mean takes into account rare, but large outbreaks, see \autoref{fig:sim} and \autoref{fig:sim1}.}; \textit{OB costs}	is costs expected due to continued measles importations based on 10 introductions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio.}
+\label{table:cost20_no}
+\end{sidewaystable}
+
+\begin{sidewaystable}\small
+<<results=tex,echo=FALSE>>=
+colnames(costtable50_no)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV")
+costtable50_no[,c(2:10,12)] <- round(costtable50_no[,c(2:10,12)])
+costtable50_no[,11] <- round(costtable50_no[,11],2)
+latex(costtable50_no, file="", table.env=FALSE,rowname=NULL)
+@
+\caption{Benefit--cost analyses with 50 dollars per immunised person. \textit{Vacc} is numbers to immunise (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up immunisation programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Contacts} is costs saved through contact exclusion (\$2,624.57 per case); \textit{Manage saved} is management costs saved (\$1,765 per case), plus \$20 GP costs; \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}  is the discounted costs saved; \textit{Outbreak}	is the predicted median outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations\footnote{Note the median outbreak sizes are what is expected, while the mean takes into account rare, but large outbreaks, see \autoref{fig:sim} and \autoref{fig:sim1}.}; \textit{OB costs}	is costs expected due to continued measles importations based on 10 introductions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio.}
+\label{table:cost50_no}
+\end{sidewaystable}
+
 
 For the cost analyses we used the values from the above cost section (\autoref{sub:cost_benefit}). Specifically, we used the average cost of a case for the analyses to be \$839 lost in wages, \$1,765.49 public health management costs, and \$1,877 in hospitalisation costs for those attending hospital, with 17\% of cases predicted to be hospitalised (\autoref{table:hosp}). We estimated there would be approximately one introduction of measles per year per DHB (\autoref{sub:risk_analyses}). We are aware introductions may not be equally likely across all DHBs and this leads to 20 introductions per year, above what has been reported (average 6.7 introductions per year since 1997, Tomasz Kiedrzynski personal communication). However, because our analyses are at the DHB level, the benefit--cost analyses should be insensitive to this. We provide two costs for measles immunisations for our cost analyses, \$20 and \$50, based on US literature. We add GP consultation costs of \$20 and the cost of contact exclusions at \$2,624.57 (see \autoref{sub:cost_res}). Note immunisation and GP costs can be altered by the Ministry of Health in the spreadsheet provided. In addition, laboratory costs which were not included above may also be altered in the spreadsheet.
 
