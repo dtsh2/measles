@@ -794,6 +794,12 @@ latex(PerCap, file="", table.env=FALSE,rowname=NULL)
 \label{table:percap}
 \end{table}
 
+%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% ABOVE TABLE %%%%%%%%%%%%%%%%%%%%%%
+%%%% find out why 'Cases' col name appears as 'Cases 1' %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% check if \tiny means the page # is outside the table %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 For all our statistical analyses (including those above not shown) we used a Poisson error structure with rate adjusted for population size, but in all cases there was a need to account for overdispersion and thus we used and present the results of a quasipoission regression model. We used a model simplification approach, by beginning our analyses with all terms and all interactions, and then simplifying the models through removal of non-significant higher order interaction terms. Thus, the final model that remained with all significant interaction terms had the following linear predictor:
 \begin{align}\label{eq:reg}
  y &\sim \textsf{Poisson}(\lambda n)\\
@@ -852,6 +858,10 @@ print(resan,floating = FALSE)
 \end{center}
 \end{table}
 
+%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% ABOVE TABLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% double check what the intercept is (age0-2:euro:nzdep1-3?) w JM %%%%%%%%%%%%%
+%%%%%%%%%%%%%% add to the caption text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Apart from over-representation of some MELAA categories in the notified measles cases discussed above and not included here, the results of the regression model suggest that age is a strong predictor of being a measles case (\autoref{table:anova}). Indeed, all age categories are significantly less likely to be measles cases compared to 0--1 year olds, and the likelihood generally decreases with age (\autoref{table:regression_riskfactors}, \autoref{fig:percap_all}, see also \autoref{fig:ageinyears}).
 
 The majority of measles cases are among people of European ancestry (\autoref{table:percap} and \autoref{fig:cases_all}). Indeed, the majority of cases were in more wealthy European 5--17 year olds (\autoref{fig:cases_all}). However, per capita rates for this large age class were lower than in the very young (0--1 year olds, \autoref{fig:percap_all}). People of Pacific origin are over-represented as measles cases on a per capita basis ($\beta$ = 1.22, standard error (SE) = 0.21, p--value < 0.0001; \autoref{table:regression_riskfactors}), and in particular the 0--1 year old less wealthy (NZDep 8--10) (\autoref{fig:percap_all}). Note however that generally those people in NZDep levels 4--10 are under represented on a per capita basis (NZDep 4--7 $\beta$ = -0.26, SE = 0.09, p--value 0.009; NZDep 8--10 $\beta$ = -0.3, SE = 0.1, p--value = 0.006; \autoref{table:regression_riskfactors}), and in European and Maori ethnicities there is a trend opposite to that in than Pacific people, with the more wealthy more likely to be cases on a per capita basis (\autoref{fig:percap_all} and \autoref{fig:cases_all}).
@@ -873,7 +883,7 @@ In this section we describe the vaccination history of the measles cases from 20
   print(xtable(PopnImmunityAll, align=rep("c",3)), include.rownames=F, floating=FALSE)
 @
 \end{center}
-\caption{Vaccination coverage (2006--2013 years) and serosurvey estimates of immunity ($<2006$ birth cohorts) among different age classes used in these analyses, as provided by the Ministry of Health up to 1st January 2014. Note these values are from vaccination records and serosurveys. Vaccine efficacy for 0--4 year olds was 96\%, 5--13 year olds 99\%, and for $\geq$ 14 year olds equivocal serological results were considered non-immune. Note that 28\% of those $<1$ were considered immune due to passive immunity, following \citep{waaijenborg}.}
+\caption{Vaccination coverage (2006--2013 years) and serosurvey estimates of immunity ($<2006$ birth cohorts) among different age classes used in these analyses, as provided by the Ministry of Health up to 1st January 2014. Note these values are from vaccination records and serosurveys. Vaccine efficacy for 0--4 year olds was 96\%, 5--13 year olds 99\%, and for $\geq$ 14 year olds equivocal serological results were considered non-immune. Note that 28\% of those $<1$ were considered immune due to passive immunity, following \citep{waaijenborg}.\Sexpr{naive_percent}\% of the overall population of New Zealand are thereforecurrently considered to be immunologically na\"{\i}ve to measles.}
 \label{table:sero}
 \end{table}%
 
@@ -917,7 +927,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 \begin{center}
      \includegraphics[width=0.9\textwidth]{figures/dob_vacc_dose.pdf}
 \end{center}
-\caption{The year of birth for those vaccinated with measles, mumps, and rubella (MMR) dose 1 is shown in the upper panel, MMR dose 2 the lower panel.}
+\caption{The year of birth for those measles cases vaccinated with measles, mumps, and rubella (MMR) dose 1 is shown in the upper panel, MMR dose 2 the lower panel.}
 \label{fig:yearandvacf}
 \end{sidewaysfigure}
 
@@ -1094,6 +1104,9 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 
 Plotting the lower level data from the area unit data, available from the NIR database, shows that there is heterogeneity at the local level and an obvious temporal lag for MMR2, as the proportion vaccinated declines with birth cohort (\autoref{fig:mmr_nir}), though recent vaccination levels are consistently high for MMR1. For full details, see \autoref{fig:fig12006} (MMR1, 2006), \autoref{fig:fig22006} (MMR2, 2006), \autoref{fig:fig12007} (MMR1, 2007), \autoref{fig:fig22007} (MMR2, 2007), \autoref{fig:fig12008} (MMR1, 2008), \autoref{fig:fig22008} (MMR2, 2008), \autoref{fig:fig12009} (MMR1, 2009), \autoref{fig:fig22009} (MMR2, 2009), \autoref{fig:fig12010} (MMR1, 2010), \autoref{fig:fig22010} (MMR2, 2010), \autoref{fig:fig12011} (MMR1, 2011), \autoref{fig:fig12012} (MMR1, 2012), \autoref{table:tab_mmr_nir} and the supplementary files.
 
+%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% ABOVE TEXT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% NIGEL DISLIKES ALL THE HYPERLINKS - CHANGE TO 'Figures 26--37' ? %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Auck
 % 
@@ -1539,6 +1552,13 @@ Maps for the immunity among the area units for those ages not included on the NI
 For our measles importation risk analyses, we use arrivals data from New Zealand immigration and New Zealander travel destination data by country and year (\href{http://www.immigration.govt.nz/}{www.immigration.govt.nz}), to measure human movement to and from New Zealand. We collated country population size, measles incidence and measles vaccination cover from the WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). WHO measles coverage is the percent of children that receive one dose of measles vaccine by their second birthday. Note the immigration figures use all immigration of foreign nationals, coming for whatever purpose, and includes non-New Zealanders resident in New Zealand, but not yet holders of New Zealand passports. We use the WHO data to determine per capita measles cases for each year and use these data and the number of immigrants to New Zealand to begin to understand where measles is likely to be imported from. We use simple per capita rates for measles and the number of travellers to and from each country to score and map the risk of measles importation. We use 0--19 year old data for the immigration data rather than all age classes because > 19 year olds are believed to be immune to measles more or less globally. These age category data (0--19 year old travellers) were not available for New Zealand travellers, so we use all data on all travellers. Young adults have been increasingly affected in some outbreaks, but 0--19 year olds seem most at risk from WHO data. We present the data from 2013 because this year was the most recent with the relatively complete WHO measles data, and thus accounts for improved measles vaccination coverage following the United Nations Millenium Development Goals' improvements in measles vaccination coverage. Data for 2013 are less complete than 2012, but substantially better than 2014.
 
 \subsection{Measles importation risk results}
+%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% BELOW 'RISK' TABLES and FIGURES %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% CHECK UNITS FOR RISK ARE 'CASES PER MILLION TRAVELLERS PER YEAR' %%%%%%%%
+%%% was annual incidence per million * # travellers per year %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% BELOW 'RISK' TABLES and FIGURES %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% ADD UNITS FOR RISK TO CAPTIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{table}
 <<results=tex,echo=FALSE>>=
@@ -1941,6 +1961,12 @@ latex(costtable4, file="", table.env=FALSE,rowname=NULL)
 
 Regression analyses showed statistically significant associations between cost of hospitalisation and three variables: length of hospitalisation and year of case, and a less strong association with case age and case gender (\autoref{table:regression_costs}). Results showed the expected hospitalisation costs in 2000 of a female measles patient who did not stay overnight in the hospital was \$582.  The cost was \$256 less if the case was a male. It increased approximately \$406 per night of hospitalisation and \$64 per year over the time period of 2000--2014. The cost of a case decreased with the age of the patient by approximately \$8 per year of case age.
 
+%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% ABOVE/BELOW RE REGRESSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% NF COMMENT - WHAT'S THE AIM OF THE REGRESSION - PARSIMONIOUS MODEL? %%%%%
+%%%%%%%%%%%%%%% good point! NOT SURE TC DID AND I LEFT IN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% but %%%%%%%%%%%%% MAYBE IGNORE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{table}
 <<results=tex,echo=FALSE>>=
 latex(costtable5, file="", table.env=FALSE,rowname=NULL)
@@ -1948,6 +1974,11 @@ latex(costtable5, file="", table.env=FALSE,rowname=NULL)
 \caption{Regression results ($R^{2}_\textsf{adj} = 0.43$, p-value $<0.001$) for measles hospitalisation cost based on length of stay (days), gender, case age and year of case ($n=288$) in New Zealand, 2000 -- 2014.}
 \label{table:regression_costs}
 \end{table}
+
+%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% ABOVE RE REGRESSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% NF COMMENT - COSTS CALCULATED FROM DATA, SO NOT INDEPENDENT %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% good point! NOT SURE TC DID AND I LEFT IN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% but %%%%%%%%%%%%% MAYBE IGNORE AGAIN %%%%%%%%%%%%%%%%%%%%%%%%
 
 Wages lost for the period January~2008--August~2014 for the 247 cases and care givers was estimated to be \$207,155. This consisted of \$104,539 for the cases and \$102,616 for the care giver, but did not include wage losses for cases under 15 years of age. Overall, the cost per case from 2008--2014 was estimated to be \$2,923.27 (\$839 in forgone wages, \$1,765 public health management costs, and \$1,877 in hospital costs for the 17\% of cases hospitalised). This figure brings an approximate estimate of \$546,650.78 for 187 cases for the current outbreak in 2014 alone, which is comprised of earnings lost, case management and hospitalisation costs.
 
