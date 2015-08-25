@@ -142,7 +142,6 @@ write.csv(benefit_cost(vacc_pred, 20), "tables/cost_benefit_20.csv", row.names=F
 write.csv(benefit_cost(vacc_pred, 50), "tables/cost_benefit_50.csv", row.names=FALSE)
 write.csv(benefit_cost(vacc_pred, 74.53), "tables/cost_benefit_74.csv", row.names=FALSE)
 
-
 res_sm<-matrix(nrow=length(seq(from=10, to=200, by=10)),ncol=2)
 
 for (i in seq(from=10, to=200, by=10)){
@@ -152,9 +151,10 @@ for (i in seq(from=10, to=200, by=10)){
   res_sm[i/10,2]<-y
 }  
 
+# plot the b/c ratio v costs per vacc
 x<-res_sm[,1]; y<-res_sm[,2]
 res_sm_lo <- loess(y~x)
-points(x,y)
+#points(x,y)
 
 pdf(file.path(dhb_fig_path, paste("bc.pdf")))
 plot(y=predict(res_sm_lo),x=x, col='red', lwd=2,type="l",
@@ -163,3 +163,52 @@ axis(1, at=axTicks(1), labels=sprintf("$%s", axTicks(1)))
  segments(x0=74.53, y0=1, x1 = 0, y1 = 1)
  segments(x0=74.53, y0=0, x1 = 74.53, y1 = 1)
 dev.off()
+
+####  VERSION #2 
+
+vacc_pred_no <- vacc_pred
+vacc_pred_no$Attack <- Z$Outbreak
+## could make this a function were we add all the variables in, but too lazy for now..
+# Shit for costtables*.csv. Ideally these constants would be read in from a file
+benefit_cost_no <- function(vacc_pred_no, vacc_cost = 50) {
+  lost_wages           <- 207155/247
+  case_management      <- 0
+  gp_costs             <- 20
+  lab_costs            <- 0
+  contacts_quarantined <- 0
+  quarantine_length    <- 7.3
+  contact_wage         <- 0
+  prop_hospitalised    <- 0.17
+  hosp_costs           <- 1877
+  disc_rate            <- 0.03
+  disc_years           <- 10
+  disc_multiplier      <- 1*(1-1/(1+disc_rate)^disc_years)/(1-1/(1+disc_rate))
+  
+  bc <- vacc_pred_no %>% mutate(case_wage_loss = lost_wages * Attack,
+                             manage_cost = (case_management + gp_costs + lab_costs) * Attack,
+                             hosp_cost = prop_hospitalised * hosp_costs * Attack, 
+                             contacts_wage_loss = contacts_quarantined * quarantine_length * contact_wage * Attack)
+  bc <- bc %>% mutate(total_discounted_costs = (case_wage_loss+manage_cost+hosp_cost+contacts_wage_loss) * disc_multiplier,
+                      vaccine_cost = vacc_cost * Vaccination,
+                      future_ob_costs = (lost_wages + case_management + gp_costs + lab_costs + prop_hospitalised*hosp_costs +
+                                           contacts_quarantined*quarantine_length*contact_wage) * `Median outbreak` * disc_multiplier)
+  #   bc <- bc %>% mutate(benefit_cost = total_discounted_costs / (vaccine_cost + future_ob_costs)) %>%
+  #     select(DHB, Vaccination, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
+  #            total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost)
+  #   
+  bc <- bc %>% mutate(benefit_cost
+                      = (ifelse (total_discounted_costs - future_ob_costs 
+                                 < 0,0,(total_discounted_costs - future_ob_costs)/ vaccine_cost)),
+                      net_present_value = (ifelse (total_discounted_costs - future_ob_costs 
+                                                   < 0,0,(total_discounted_costs - future_ob_costs) -vaccine_cost))) %>%
+    select(DHB, Vaccination, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
+           total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost,
+           net_present_value)
+  
+  
+  #bc[-nrow(bc),]
+}
+
+write.csv(benefit_cost_no(vacc_pred_no, 20), "tables/cost_benefit_no_20.csv", row.names=FALSE)
+write.csv(benefit_cost_no(vacc_pred_no, 50), "tables/cost_benefit_no_50.csv", row.names=FALSE)
+

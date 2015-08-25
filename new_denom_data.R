@@ -72,9 +72,11 @@ for (year in years) {
     legend(2120000,5274000,c("0-40%","41-50%","51-60%","61-70%","71-80%","81-90%","91-95%","96-98%", "99-100%",">100%","NA")
          ,fill=c(pal,"white"),
          bty="n",inset=0.1,title="Percent vaccinated", cex=text.cex, xjust=1)
-  
+
     par(fig = c(0, 0.65, 0.35, 0.95), mar=c(5,5,2,2), new=TRUE)
-    hist(data_au$prop2, breaks=50,col="grey", border=NA, xlab="Proportion vaccinated",main="", cex.axis=text.cex)
+    ifelse(vaccine==1,
+           hist(data_au$prop1, breaks=50,col="grey", border=NA, xlab="Proportion vaccinated",main="", cex.axis=text.cex),
+           hist(data_au$prop2, breaks=50,col="grey", border=NA, xlab="Proportion vaccinated",main="", cex.axis=text.cex))
     abline(v=.95,col="red",lty=3,lwd=3)
     abline(v=median(data_au$prop2,na.rm=T),col="orange",lty=3,lwd=3)
     dev.off()
