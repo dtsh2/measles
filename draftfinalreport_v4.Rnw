@@ -854,10 +854,6 @@ print(resan,floating = FALSE)
 \end{center}
 \end{table}
 
-%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% ABOVE TABLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% double check what the intercept is (age0-2:euro:nzdep1-3?) w JM %%%%%%%%%%%%%
-%%%%%%%%%%%%%% add to the caption text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 Apart from over-representation of some MELAA categories in the notified measles cases discussed above and not included here, the results of the regression model suggest that age is a strong predictor of being a measles case (\autoref{table:anova}). Indeed, all age categories are significantly less likely to be measles cases compared to 0--1 year olds, and the likelihood generally decreases with age (\autoref{table:regression_riskfactors}, \autoref{fig:percap_all}, see also \autoref{fig:ageinyears}).
 
 The majority of measles cases are among people of European ancestry (\autoref{table:percap} and \autoref{fig:cases_all}). Indeed, the majority of cases were in more wealthy European 5--17 year olds (\autoref{fig:cases_all}). However, per capita rates for this large age class were lower than in the very young (0--1 year olds, \autoref{fig:percap_all}). People of Pacific origin are over-represented as measles cases on a per capita basis ($\beta$ = 1.22, standard error (SE) = 0.21, p--value < 0.0001; \autoref{table:regression_riskfactors}), and in particular the 0--1 year old less wealthy (NZDep 8--10) (\autoref{fig:percap_all}). Note however that generally those people in NZDep levels 4--10 are under represented on a per capita basis (NZDep 4--7 $\beta$ = -0.26, SE = 0.09, p--value 0.009; NZDep 8--10 $\beta$ = -0.3, SE = 0.1, p--value = 0.006; \autoref{table:regression_riskfactors}), and in European and Maori ethnicities there is a trend opposite to that in than Pacific people, with the more wealthy more likely to be cases on a per capita basis (\autoref{fig:percap_all} and \autoref{fig:cases_all}).
@@ -1099,10 +1095,6 @@ Plotting the NIR data at the city level for the three major cities, Auckland (\a
 
 
 Plotting the lower level data from the area unit data, available from the NIR database, shows that there is heterogeneity at the local level and an obvious temporal lag for MMR2, as the proportion vaccinated declines with birth cohort (\autoref{fig:mmr_nir}), though recent vaccination levels are consistently high for MMR1. For full details, see \autoref{fig:fig12006} (MMR1, 2006), \autoref{fig:fig22006} (MMR2, 2006), \autoref{fig:fig12007} (MMR1, 2007), \autoref{fig:fig22007} (MMR2, 2007), \autoref{fig:fig12008} (MMR1, 2008), \autoref{fig:fig22008} (MMR2, 2008), \autoref{fig:fig12009} (MMR1, 2009), \autoref{fig:fig22009} (MMR2, 2009), \autoref{fig:fig12010} (MMR1, 2010), \autoref{fig:fig22010} (MMR2, 2010), \autoref{fig:fig12011} (MMR1, 2011), \autoref{fig:fig12012} (MMR1, 2012), \autoref{table:tab_mmr_nir} and the supplementary files.
-
-%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% ABOVE TEXT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%% NIGEL DISLIKES ALL THE HYPERLINKS - CHANGE TO 'Figures 26--37' ? %%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Auck
 % 
@@ -1957,12 +1949,6 @@ latex(costtable4, file="", table.env=FALSE,rowname=NULL)
 
 Regression analyses showed statistically significant associations between cost of hospitalisation and three variables: length of hospitalisation and year of case, and a less strong association with case age and case gender (\autoref{table:regression_costs}). Results showed the expected hospitalisation costs in 2000 of a female measles patient who did not stay overnight in the hospital was \$582.  The cost was \$256 less if the case was a male. It increased approximately \$406 per night of hospitalisation and \$64 per year over the time period of 2000--2014. The cost of a case decreased with the age of the patient by approximately \$8 per year of case age.
 
-%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% ABOVE/BELOW RE REGRESSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%% NF COMMENT - WHAT'S THE AIM OF THE REGRESSION - PARSIMONIOUS MODEL? %%%%%
-%%%%%%%%%%%%%%% good point! NOT SURE TC DID AND I LEFT IN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% but %%%%%%%%%%%%% MAYBE IGNORE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{table}
 <<results=tex,echo=FALSE>>=
 latex(costtable5, file="", table.env=FALSE,rowname=NULL)
@@ -1970,11 +1956,6 @@ latex(costtable5, file="", table.env=FALSE,rowname=NULL)
 \caption{Regression results ($R^{2}_\textsf{adj} = 0.43$, p-value $<0.001$) for measles hospitalisation cost based on length of stay (days), gender, case age and year of case ($n=288$) in New Zealand, 2000 -- 2014.}
 \label{table:regression_costs}
 \end{table}
-
-%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% ABOVE RE REGRESSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%% NF COMMENT - COSTS CALCULATED FROM DATA, SO NOT INDEPENDENT %%%%%%%%%%%%%%
-%%%%%%%%%%%%%%% good point! NOT SURE TC DID AND I LEFT IN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% but %%%%%%%%%%%%% MAYBE IGNORE AGAIN %%%%%%%%%%%%%%%%%%%%%%%%
 
 Wages lost for the period January~2008--August~2014 for the 247 cases and care givers was estimated to be \$207,155. This consisted of \$104,539 for the cases and \$102,616 for the care giver, but did not include wage losses for cases under 15 years of age. Overall, the cost per case from 2008--2014 was estimated to be \$2,923.27 (\$839 in forgone wages, \$1,765 public health management costs, and \$1,877 in hospital costs for the 17\% of cases hospitalised). This figure brings an approximate estimate of \$546,650.78 for 187 cases for the current outbreak in 2014 alone, which is comprised of earnings lost, case management and hospitalisation costs.
 
