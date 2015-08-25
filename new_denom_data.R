@@ -123,12 +123,12 @@ text(x=c(0,0.05),y=c(1.1,1.1),c(expression("R = "),txt))
 dev.off()
 
 ########################################################################
-sink(file="MMR1summary2014.txt") 
-summary(data_au$prop1)
+#sink(file="MMR1summary2014.txt") 
+#summary(data_au$prop1)
 # sink(file="MMR2summary2014.txt") 
 # summary(data_au$prop2)
 
-sink(NULL)
+#sink(NULL)
 
 ####
 
