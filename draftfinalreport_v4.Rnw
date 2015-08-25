@@ -117,7 +117,7 @@ vacc_reqd_dhb_max    <- max(vacc_dhb$PC) * 100
 vacc_reqd_auckland   <- format(min(floor((vacc_dhb %>% filter(DHB == "Auckland" | DHB == "CountiesManakau" | DHB == "Waitemata") %>% select(Vaccination)) / 1000)) * 1000, big.mark=",")
 vacc_reqd_count      <- format(totals$Vaccination, big.mark=",")
 naive_percent        <- round(totals$Naïve / totals$Population * 100)
-break_even_vacc_cost <- format(903, big.mark=",") # vaccine costs such that benefits == cost (from .xlsx)
+break_even_vacc_cost <- format(75, big.mark=",") # vaccine costs such that benefits == cost (from .xlsx)
 @
 
 \begin{document}
