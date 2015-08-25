@@ -230,6 +230,7 @@ library(rgdal)
 library(sp)
 library(utils)
 library(xtable)
+library(plyr)
 library(dplyr)
 ## get data
 # set wd
