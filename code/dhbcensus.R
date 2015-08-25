@@ -121,21 +121,11 @@ benefit_cost <- function(vacc_pred, vacc_cost = 50) {
                       vaccine_cost = vacc_cost * Vaccination,
                       future_ob_costs = (lost_wages + case_management + gp_costs + lab_costs + prop_hospitalised*hosp_costs +
                                            contacts_quarantined*quarantine_length*contact_wage) * `Median outbreak` * disc_multiplier)
-#   bc <- bc %>% mutate(benefit_cost = total_discounted_costs / (vaccine_cost + future_ob_costs)) %>%
-#     select(DHB, Vaccination, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
-#            total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost)
-#   
-  bc <- bc %>% mutate(benefit_cost
-                      = (ifelse (total_discounted_costs - future_ob_costs 
-                                 < 0,0,(total_discounted_costs - future_ob_costs)/ vaccine_cost)),
-                      net_present_value = (ifelse (total_discounted_costs - future_ob_costs 
-                                                   < 0,0,(total_discounted_costs - future_ob_costs) -vaccine_cost))) %>%
+  bc <- bc %>% mutate(benefit_cost = total_discounted_costs / (vaccine_cost + future_ob_costs),
+                      net_present_value = total_discounted_costs - (future_ob_costs + vaccine_cost)) %>%
   select(DHB, Vaccination, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
-           total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost,
+            total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost,
          net_present_value)
-  
-  
-  #bc[-nrow(bc),]
 }
 
 write.csv(benefit_cost(vacc_pred, 20), "tables/cost_benefit_20.csv", row.names=FALSE)
@@ -192,20 +182,12 @@ benefit_cost_no <- function(vacc_pred_no, vacc_cost = 50) {
                       vaccine_cost = vacc_cost * Vaccination,
                       future_ob_costs = (lost_wages + case_management + gp_costs + lab_costs + prop_hospitalised*hosp_costs +
                                            contacts_quarantined*quarantine_length*contact_wage) * `Median outbreak` * disc_multiplier)
-  #   bc <- bc %>% mutate(benefit_cost = total_discounted_costs / (vaccine_cost + future_ob_costs)) %>%
-  #     select(DHB, Vaccination, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
-  #            total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost)
-  #   
-  bc <- bc %>% mutate(benefit_cost
-                      = (ifelse (total_discounted_costs - future_ob_costs 
-                                 < 0,0,(total_discounted_costs - future_ob_costs)/ vaccine_cost)),
-                      net_present_value = (ifelse (total_discounted_costs - future_ob_costs 
-                                                   < 0,0,(total_discounted_costs - future_ob_costs) -vaccine_cost))) %>%
+  bc <- bc %>% mutate(benefit_cost = total_discounted_costs / (vaccine_cost + future_ob_costs),
+                      net_present_value = total_discounted_costs - (future_ob_costs + vaccine_cost)) %>%
     select(DHB, Vaccination, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
            total_discounted_costs, outbreak_size_post_vacc = `Median outbreak`, future_ob_costs, benefit_cost,
            net_present_value)
-  
-  
+
   #bc[-nrow(bc),]
 }
 
