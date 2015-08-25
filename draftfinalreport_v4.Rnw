@@ -786,20 +786,15 @@ The Prioritized Ethnicities for cases are:  Maori; Pacific Peoples; Asian; Middl
 The numbers of cases per category and population sizes for the complete data set from 2007--2014 can be seen in \autoref{table:percap}. Subsequent regression analyses (not shown) also suggested that the MELAA category was over-- or underrepresented in per capita rates given the very small population sizes for this classification (\autoref{table:percap}), leading to very large standard errors in regression analyses. However, there are also issues with the data for MELAA ethnicity category above and beyond the small population sizes, creating issues for estimating the denominator data for this group (University of Otago, personal communication). Thus, we removed this grouping for our subsequent analyses and are left with Maori, Pacific, Asian and European as Prioritized Ethnicities. This left us with 1102/1115 (99\%) of the measles cases with Prioritized Ethnicity recorded from 2007, and 1102/1137 (97\%) of all measles cases recorded since 2007 (\autoref{table:percap}). The breakdown of cases and per capita measles values can be see in \autoref{fig:cases_all} and \autoref{fig:percap_all}. Two way interactions are shown in the Appendix (\autoref{sec:app}, \autoref{fig:CaseAgeNzdep}, \autoref{fig:CaseNzdepEth}, \autoref{fig:CaseAgeEth}, \autoref{fig:PerCapAgeNzdep}, \autoref{fig:PerCapNzdepEth}, \autoref{fig:PerCapAgeEth}).
 
 \begin{table}[hbtp] \tiny
+\centering
 \captionsetup{width=1\textwidth, font={footnotesize}}
 <<results=tex,echo=FALSE>>=
 colnames(PerCap)<-c("NZDep","Age","Ethnicity","Population","Cases","Per capita")
-latex(PerCap, file="", table.env=FALSE,rowname=NULL)
+print(xtable(PerCap), include.rownames=FALSE, floating=FALSE)
 @
 \caption{Measles cases (Cases), population sizes (Population) and per capita rates per 10,000 (Per capita) of measles in specific age (Age), ethnicity (Ethnicity) and socio-economic deprivation (NZDep) categories from 2007-2014. MELAA is Middle Eastern/Latin American/African.}
 \label{table:percap}
 \end{table}
-
-%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% ABOVE TABLE %%%%%%%%%%%%%%%%%%%%%%
-%%%% find out why 'Cases' col name appears as 'Cases 1' %%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% check if \tiny means the page # is outside the table %%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 For all our statistical analyses (including those above not shown) we used a Poisson error structure with rate adjusted for population size, but in all cases there was a need to account for overdispersion and thus we used and present the results of a quasipoission regression model. We used a model simplification approach, by beginning our analyses with all terms and all interactions, and then simplifying the models through removal of non-significant higher order interaction terms. Thus, the final model that remained with all significant interaction terms had the following linear predictor:
 \begin{align}\label{eq:reg}
