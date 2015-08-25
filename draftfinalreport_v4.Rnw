@@ -1,6 +1,6 @@
 
 \documentclass{article}
-\PassOptionsToPackage{draft}{graphicx} % draft without figures
+%\PassOptionsToPackage{draft}{graphicx} % draft without figures
 \usepackage{longtable}
 \usepackage{times}
 \usepackage{hyperref}
@@ -1540,13 +1540,6 @@ Maps for the immunity among the area units for those ages not included on the NI
 For our measles importation risk analyses, we use arrivals data from New Zealand immigration and New Zealander travel destination data by country and year (\href{http://www.immigration.govt.nz/}{www.immigration.govt.nz}), to measure human movement to and from New Zealand. We collated country population size, measles incidence and measles vaccination cover from the WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). WHO measles coverage is the percent of children that receive one dose of measles vaccine by their second birthday. Note the immigration figures use all immigration of foreign nationals, coming for whatever purpose, and includes non-New Zealanders resident in New Zealand, but not yet holders of New Zealand passports. We use the WHO data to determine per capita measles cases for each year and use these data and the number of immigrants to New Zealand to begin to understand where measles is likely to be imported from. We use simple per capita rates for measles and the number of travellers to and from each country to score and map the risk of measles importation. We use 0--19 year old data for the immigration data rather than all age classes because > 19 year olds are believed to be immune to measles more or less globally. These age category data (0--19 year old travellers) were not available for New Zealand travellers, so we use all data on all travellers. Young adults have been increasingly affected in some outbreaks, but 0--19 year olds seem most at risk from WHO data. We present the data from 2013 because this year was the most recent with the relatively complete WHO measles data, and thus accounts for improved measles vaccination coverage following the United Nations Millenium Development Goals' improvements in measles vaccination coverage. Data for 2013 are less complete than 2012, but substantially better than 2014.
 
 \subsection{Measles importation risk results}
-%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% BELOW 'RISK' TABLES and FIGURES %%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%% CHECK UNITS FOR RISK ARE 'CASES PER MILLION TRAVELLERS PER YEAR' %%%%%%%%
-%%% was annual incidence per million * # travellers per year %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%% TODO %%%%%%%%%%%%%%%%%%% BELOW 'RISK' TABLES and FIGURES %%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%% ADD UNITS FOR RISK TO CAPTIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{table}
 <<results=tex,echo=FALSE>>=
@@ -1592,7 +1585,7 @@ latex(immigration, file="", table.env=FALSE,rowname=NULL)
 <<results=tex,echo=FALSE>>=
 latex(risk, file="", table.env=FALSE,rowname=NULL)
 @
-\caption{Risk of measles importation to New Zealand in 2013, estimated by 0--19 year old international and all New Zealander traveller numbers multiplied by measles incidence in the source or destination location, see also \autoref{table:nzrisk12} and \autoref{table:imrisk12}.}
+\caption{Risk of measles importation in cases per million travellers per year to New Zealand in 2013, estimated by 0--19 year old international and all New Zealander traveller numbers multiplied by measles incidence in the source or destination location, see also \autoref{table:nzrisk12} and \autoref{table:imrisk12}.}
 \label{table:risk12}
 \end{table}
 
@@ -1600,7 +1593,7 @@ latex(risk, file="", table.env=FALSE,rowname=NULL)
 <<results=tex,echo=FALSE>>=
 latex(nzrisk, file="", table.env=FALSE,rowname=NULL)
 @
-\caption{Indicator of risk of measles importation to New Zealand due to New Zealander travel in 2013, estimated by all traveller numbers multiplied by measles incidence in the source or destination location, see also \autoref{table:imrisk12} and \autoref{table:risk12}.}
+\caption{Indicator of risk of measles importation in cases per million travellers per year to New Zealand due to New Zealander travel in 2013, estimated by all traveller numbers multiplied by measles incidence in the source or destination location, see also \autoref{table:imrisk12} and \autoref{table:risk12}.}
 \label{table:nzrisk12}
 \end{table}
 
@@ -1608,7 +1601,7 @@ latex(nzrisk, file="", table.env=FALSE,rowname=NULL)
 <<results=tex,echo=FALSE>>=
 latex(imrisk, file="", table.env=FALSE,rowname=NULL)
 @
-\caption{Indicator of risk of measles importation to New Zealand due to non-New Zealander 0--19 year old travel and immigration in 2013, estimated by traveller numbers multiplied by measles incidence in the source or destination location, see also \autoref{table:nzrisk12} and \autoref{table:risk12}.}
+\caption{Indicator of risk of measles importation in cases per million travellers per year to New Zealand due to non-New Zealander 0--19 year old travel and immigration in 2013, estimated by traveller numbers multiplied by measles incidence in the source or destination location, see also \autoref{table:nzrisk12} and \autoref{table:risk12}.}
 \label{table:imrisk12}
 \end{table}
 
@@ -1666,7 +1659,7 @@ Globally, analyses of 2013 data, the most complete and recent year of data avail
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013totnp4.pdf}
 \end{center}
-\caption{Risk map for measles importation, based on measles incidence and non-New Zealander 0--19 year old and all ages of New Zealander travel figures, 2013. Dark grey indicates no data were available.}
+\caption{Risk map for measles importation in cases per million travellers per year, based on measles incidence and non-New Zealander 0--19 year old and all ages of New Zealander travel figures, 2013. Dark grey indicates no data were available.}
 \label{fig:risk12}
 \end{sidewaysfigure}
 
@@ -1674,7 +1667,7 @@ Globally, analyses of 2013 data, the most complete and recent year of data avail
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013nznp4.pdf}
 \end{center}
-\caption{Risk map for measles importation from New Zealander international travel, based on measles incidence and travel figures, 2013. Dark grey indicates no data were available.}
+\caption{Risk map for measles importation in cases per million travellers per year from New Zealander international travel, based on measles incidence and travel figures, 2013. Dark grey indicates no data were available.}
 \label{fig:nzrisk12}
 \end{sidewaysfigure}
 
@@ -1682,7 +1675,7 @@ Globally, analyses of 2013 data, the most complete and recent year of data avail
 \begin{center}
      \includegraphics[width=0.9\textwidth]{2013np4.pdf}
 \end{center}
-\caption{Risk map for measles importation from 0--19 year old non-New Zealander international travel and immigration and measles incidence, 2013. Dark grey indicates no data were available.}
+\caption{Risk map for measles importation in cases per million travellers per year from 0--19 year old non-New Zealander international travel and immigration and measles incidence, 2013. Dark grey indicates no data were available.}
 \label{fig:imrisk12}
 \end{sidewaysfigure}
 
