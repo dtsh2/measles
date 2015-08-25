@@ -2010,9 +2010,9 @@ The expected number of cases in New Zealand, assuming homogenous mixing, in a na
      \label{fig:sim1}
 \end{figure}
 
-\begin{sidewaystable}\small
+\begin{sidewaystable}\footnotesize
 <<results=tex,echo=FALSE>>=
-colnames(costtable20)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV","NPV")
+colnames(costtable20)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV")
 costtable20[,c(2:10,12)] <- round(costtable20[,c(2:10,12)])
 costtable20[,11] <- round(costtable20[,11],2)
 latex(costtable20, file="", table.env=FALSE,rowname=NULL)
@@ -2021,7 +2021,7 @@ latex(costtable20, file="", table.env=FALSE,rowname=NULL)
 \label{table:cost20}
 \end{sidewaystable}
 
-\begin{sidewaystable}\small
+\begin{sidewaystable}\footnotesize
 <<results=tex,echo=FALSE>>=
 colnames(costtable50)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV")
 costtable50[,c(2:10,12)] <- round(costtable50[,c(2:10,12)])
@@ -2032,9 +2032,9 @@ latex(costtable50, file="", table.env=FALSE,rowname=NULL)
 \label{table:cost50}
 \end{sidewaystable}
 
-\begin{sidewaystable}\small
+\begin{sidewaystable}\footnotesize
 <<results=tex,echo=FALSE>>=
-colnames(costtable74)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV","NPV")
+colnames(costtable74)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV")
 costtable74[,c(2:10,12)] <- round(costtable74[,c(2:10,12)])
 costtable74[,11] <- round(costtable74[,11],2)
 latex(costtable74, file="", table.env=FALSE,rowname=NULL)
@@ -2050,9 +2050,9 @@ latex(costtable74, file="", table.env=FALSE,rowname=NULL)
      \label{fig:bc}
 \end{figure}
 
-\begin{sidewaystable}\small
+\begin{sidewaystable}\footnotesize
 <<results=tex,echo=FALSE>>=
-colnames(costtable20_no)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV","NPV")
+colnames(costtable20_no)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV")
 costtable20_no[,c(2:10,12)] <- round(costtable20_no[,c(2:10,12)])
 costtable20_no[,11] <- round(costtable20_no[,11],2)
 latex(costtable20_no, file="", table.env=FALSE,rowname=NULL)
@@ -2061,7 +2061,7 @@ latex(costtable20_no, file="", table.env=FALSE,rowname=NULL)
 \label{table:cost20_no}
 \end{sidewaystable}
 
-\begin{sidewaystable}\small
+\begin{sidewaystable}\footnotesize
 <<results=tex,echo=FALSE>>=
 colnames(costtable50_no)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV")
 costtable50_no[,c(2:10,12)] <- round(costtable50_no[,c(2:10,12)])
