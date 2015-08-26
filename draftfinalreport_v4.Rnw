@@ -1,6 +1,6 @@
 
 \documentclass{article}
-%\PassOptionsToPackage{draft}{graphicx} % draft without figures
+\PassOptionsToPackage{draft}{graphicx} % draft without figures
 \usepackage{longtable}
 \usepackage{times}
 \usepackage{hyperref}
@@ -116,7 +116,7 @@ vacc_reqd_dhb_min    <- min(vacc_dhb$PC) * 100
 vacc_reqd_dhb_max    <- max(vacc_dhb$PC) * 100
 vacc_reqd_auckland   <- format(min(floor((vacc_dhb %>% filter(DHB == "Auckland" | DHB == "CountiesManakau" | DHB == "Waitemata") %>% select(Vaccination)) / 1000)) * 1000, big.mark=",")
 vacc_reqd_count      <- format(totals$Vaccination, big.mark=",")
-naive_percent        <- round(totals$Naïve / totals$Population * 100)
+naive_percent        <- round(totals$Naive / totals$Population * 100)
 break_even_vacc_cost <- format(75, big.mark=",") # vaccine costs such that benefits == cost (from .xlsx)
 @
 
@@ -875,7 +875,7 @@ In this section we describe the vaccination history of the measles cases from 20
   print(xtable(PopnImmunityAll, align=rep("c",3)), include.rownames=F, floating=FALSE)
 @
 \end{center}
-\caption{Vaccination coverage (2006--2013 years) and serosurvey estimates of immunity ($<2006$ birth cohorts) among different age classes used in these analyses, as provided by the Ministry of Health up to 1st January 2014. Note these values are from vaccination records and serosurveys. Vaccine efficacy for 0--4 year olds was 96\%, 5--13 year olds 99\%, and for $\geq$ 14 year olds equivocal serological results were considered non-immune. Note that 28\% of those $<1$ were considered immune due to passive immunity, following \citep{waaijenborg}.\Sexpr{naive_percent}\% of the overall population of New Zealand are thereforecurrently considered to be immunologically na\"{\i}ve to measles.}
+\caption{Vaccination coverage (2006--2013 years) and serosurvey estimates of immunity ($<2006$ birth cohorts) among different age classes used in these analyses, as provided by the Ministry of Health up to 1st January 2014. Note these values are from vaccination records and serosurveys. Vaccine efficacy for 0--4 year olds was 96\%, 5--13 year olds 99\%, and for $\geq$ 14 year olds equivocal serological results were considered non-immune. Note that 28\% of those $<1$ were considered immune due to passive immunity, following \citep{waaijenborg}.\Sexpr{naive_percent}\% of the overall population of New Zealand are therefore currently considered to be immunologically na\"{\i}ve to measles.}
 \label{table:sero}
 \end{table}%
 
