@@ -59,7 +59,7 @@ dev.off()
 
 caseyr<-aggregate( DiseaseName ~ AgeInYears, data = test , FUN=sum)
 NaiveByYear <- read.csv("tables/NaiveByYear.csv")
-NaiveByYear <- NaiveByYear %>% left_join(caseyr, by=c("Age"="AgeInYears")) %>% rename(Cases=DiseaseName)
+NaiveByYear <- NaiveByYear %>% left_join(caseyr, by=c("Age"="AgeInYears")) %>% dplyr::rename(Cases=DiseaseName)
 
 dose1=as.factor(round(vac$Dose1Mths/12,0));
 dose1<-summary(dose1)
