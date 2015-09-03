@@ -51,7 +51,8 @@ for (year in years) {
   fixedBreaks <- c(0,0.4,0.5,0.6,0.7,0.8,0.9,0.95,0.98,1,Inf)
 
   for (vaccine in 1:2) {
-    breaks <- cut(data_au[, paste0("prop",vaccine)], fixedBreaks)
+    vacc_dat = data_au[, paste0("prop",vaccine)]
+    breaks <- cut(vacc_dat, fixedBreaks)
 
     pal<-c(heat.colors(8),"green","blue")
     cols <- pal[breaks]
@@ -74,11 +75,9 @@ for (year in years) {
          bty="n",inset=0.1,title="Percent vaccinated", cex=text.cex, xjust=1)
 
     par(fig = c(0, 0.65, 0.35, 0.95), mar=c(5,5,2,2), new=TRUE)
-    ifelse(vaccine==1,
-           hist(data_au$prop1, breaks=50,col="grey", border=NA, xlab="Proportion vaccinated",main="", cex.axis=text.cex),
-           hist(data_au$prop2, breaks=50,col="grey", border=NA, xlab="Proportion vaccinated",main="", cex.axis=text.cex))
+    hist(vacc_dat, breaks=50,col="grey", border=NA, xlab="Proportion vaccinated",main="", cex.axis=text.cex)
+    abline(v=median(vacc_dat,na.rm=T),col="orange",lty=3,lwd=3)
     abline(v=.95,col="red",lty=3,lwd=3)
-    abline(v=median(data_au$prop2,na.rm=T),col="orange",lty=3,lwd=3)
     dev.off()
 
     main_centers <- read.table(header=TRUE, text = "
