@@ -881,7 +881,7 @@ In this section we describe the vaccination history of the measles cases from 20
 
 \subsection{Vaccination history and measles infection results}
 
-The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unvaccinated people (\autoref{fig:ageandvac}). However, 12.6\% (154/1154) cases had received their first dose of vaccine and 4.7\% had received their second. A further breakdown of those data suggest that majority of those `vaccine failures' were vaccinated around the first year of age and less than the 15 month age recommended (\autoref{fig:vaccstat} and \autoref{fig:vaccstat_close}). The unvaccinated cases and vaccine failures by year of birth are shown in \autoref{fig:yearandvac} and \autoref{fig:yearandvacf}.
+The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unvaccinated people (\autoref{fig:ageandvac}). However, 12.6\% (145/1154) cases had received their first dose of vaccine and 4.7\% had received their second. A further breakdown of those data suggest that majority of those `vaccine failures' were vaccinated around the first year of age and less than the 15 month age recommended (\autoref{fig:vaccstat} and \autoref{fig:vaccstat_close}). The unvaccinated cases and vaccine failures by year of birth are shown in \autoref{fig:yearandvac} and \autoref{fig:yearandvacf}.
 
 \begin{figure}
 \begin{center}
