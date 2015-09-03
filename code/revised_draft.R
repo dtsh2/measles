@@ -521,6 +521,18 @@ legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=
 legend("top",c("15 months","48 months"),col=c("blue","red"),lty=1,bty="n",cex=1)
 dev.off()
 
+pdf(file.path(fig_dir,"vacc_age_2007_2014.pdf"), width=7, height=5)
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=1)
+hist(testv$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",
+     main="",cex.lab=1,ylab="Number of cases")
+abline(v=15,col="blue")
+hist(testv$Dose2Mths,breaks=50,add=T,col=rgb(1,0,0,1/4))
+abline(v=48,col="red")
+legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=15,bty="n",cex=1)
+legend("top",c("15 months","48 months"),col=c("blue","red"),lty=1,bty="n",cex=1)
+dev.off()
+
 pdf(file.path(fig_dir,"vacc_age_close.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1)
