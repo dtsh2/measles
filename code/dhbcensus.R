@@ -131,6 +131,7 @@ benefit_cost <- function(vacc_pred, vacc_cost = 50) {
 write.csv(benefit_cost(vacc_pred, 20), "tables/cost_benefit_20.csv", row.names=FALSE)
 write.csv(benefit_cost(vacc_pred, 50), "tables/cost_benefit_50.csv", row.names=FALSE)
 write.csv(benefit_cost(vacc_pred, 74.53), "tables/cost_benefit_74.csv", row.names=FALSE)
+write.csv(benefit_cost(vacc_pred %>% mutate(Vaccination = round(Naive / 2)), 35.70), "tables/cost_benefit_50_percent_vacc_35.csv", row.names=FALSE)
 
 res_sm<-matrix(nrow=length(seq(from=10, to=200, by=10)),ncol=2)
 
