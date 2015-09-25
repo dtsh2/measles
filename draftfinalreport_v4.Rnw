@@ -118,6 +118,7 @@ vacc_reqd_auckland   <- format(min(floor((vacc_dhb %>% filter(DHB == "Auckland" 
 vacc_reqd_count      <- format(totals$Vaccination, big.mark=",")
 naive_percent        <- round(totals$Naive / totals$Population * 100)
 break_even_vacc_cost <- format(74, big.mark=",") # vaccine costs such that benefits == cost (from .xlsx)
+break_even_vacc_cost50 <- format(35.70, big.mark=",") # vaccine costs such that benefits == cost (from .xlsx)
 @
 
 \begin{document}
