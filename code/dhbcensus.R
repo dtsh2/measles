@@ -158,7 +158,7 @@ dev.off()
 ####  VERSION #2 
 
 vacc_pred_no <- vacc_pred
-vacc_pred_no$Attack <- Z$Outbreak
+vacc_pred_no$Attack <- Z$Outbreak / 10
 ## could make this a function were we add all the variables in, but too lazy for now..
 # Shit for costtables*.csv. Ideally these constants would be read in from a file
 benefit_cost_no <- function(vacc_pred_no, vacc_cost = 50) {
