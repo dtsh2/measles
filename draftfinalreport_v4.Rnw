@@ -868,7 +868,7 @@ There are some other age:ethnicity classes that were significantly less likely t
 \subsection{Vaccination history of measles infection and population immunity estimation methods}
 \label{sub:immunestat}
 
-In this section we describe the vaccination history of the measles cases from 2007--2014 outbreaks using the data provided by ESR. We describe the population immunity levels at both a national level and for each DHB in New Zealand. To do this we use the census data from NZ statistics (Statistics New Zealand, 2013) and the vaccination and serosurvey data provided by the Ministry of Health at the commencement of this work. Specifically, we use the data in \autoref{table:sero}, derived from the serosurvey results and the National Immunisation Register (NIR) for under 6 year olds.
+In this section we describe the vaccination history of the measles cases from 2007--2014 outbreaks using the data provided by ESR. We describe the population immunity levels at both a national level and for each DHB in New Zealand. To do this we use the census data from NZ statistics (Statistics New Zealand, 2013) and the vaccination and serosurvey data provided by the Ministry of Health at the commencement of this work. Specifically, we use the data in \autoref{table:sero}, derived from the serosurvey results and the National Immunisation Register (NIR) for under 6 year olds. The period covered by the NIR data is 01 January 2006 to 31 July 2014.
 
 \begin{table}[htdp]
 \begin{center}
