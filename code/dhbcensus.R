@@ -194,4 +194,4 @@ benefit_cost_no <- function(vacc_pred_no, vacc_cost = 50) {
 
 write.csv(benefit_cost_no(vacc_pred_no, 20), "tables/cost_benefit_no_20.csv", row.names=FALSE)
 write.csv(benefit_cost_no(vacc_pred_no, 50), "tables/cost_benefit_no_50.csv", row.names=FALSE)
-
+write.csv(benefit_cost_no(vacc_pred_no, 1877), "tables/cost_benefit_no_1877.csv", row.names=FALSE)

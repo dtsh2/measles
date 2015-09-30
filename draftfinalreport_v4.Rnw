@@ -119,6 +119,7 @@ vacc_reqd_count      <- format(totals$Vaccination, big.mark=",")
 naive_percent        <- round(totals$Naive / totals$Population * 100)
 break_even_vacc_cost <- format(74, big.mark=",") # vaccine costs such that benefits == cost (from .xlsx)
 break_even_vacc_cost50 <- sprintf("%0.2f", 35.70) # vaccine costs such that benefits == cost (from .xlsx)
+break_even_vacc_cost_no <- format(1877, big.mark=",")  # vaccine costs such that benefits == cost (from .xlsx)
 @
 
 \begin{document}
@@ -158,7 +159,7 @@ New Zealand has been working towards the elimination of endemic (domestic) measl
 \item The mean cost of those measles cases that attend hospital is estimated to be \$1,877 per attending case. Approximately 17\% of measles cases attend hospital.
 \item The mean public health service cost per case (not including hospitalisation costs) is \$1,765.
 \item The average number of contacts requiring quarantine was 2.11, requiring 7.3 days of quarantine on average, at a cost of \$170 per day.
-\item The benefit--cost (B/C) ratio analyses suggest additional vaccination is beneficial financially (B/C $>$1), with vaccination-related costs required to exceed approximately \$\Sexpr{break_even_vacc_cost} per person currently na\"{\i}ve immunized through vaccination before the costs exceed the benefits for all DHBs together.
+\item The benefit--cost (B/C) ratio analyses suggest additional vaccination is beneficial financially (B/C $>$1). Vaccination-related costs are required to exceed approximately \$\Sexpr{break_even_vacc_cost} to \$\Sexpr{break_even_vacc_cost_no} per person currently na\"{\i}ve immunized through vaccination before the costs exceed the benefits for all DHBs together, depending on the scenario modelled. In the former case, control measures, their costs and measles outbreak sizes are assumed to remain the same as 2009 onward, whereas in the latter example no control measures are implemented and the outbreak size is based on epidemiological theory in the absence of these control measures.
 \item The B/C ratio differed across DHBs with those with large populations and more na\"{\i}ve in absolute numbers most likely to benefit from immunisation campaigns. 
 \item Measles introductions to New Zealand with a median outbreak size of 2 cases were predicted by simulation models, despite additional vaccination to ensure $R_v$ is < 1. Thus, typically individual cases would be expected on average to infect a single secondary cases. However, the mean outbreak size of 61 cases was predicted, because outbreak sizes of tens, hundreds, and very rarely up to many thousands of cases are predicted among the 1000 simulations following importation, despite $R_v$ being one and the outbreak predicted to die out. Thus, increased vaccination beyond the \Sexpr{vacc_reqd_percent}\% of the currently \Sexpr{naive_percent}\% na\"{\i}ve population required may be useful to prevent these rare but costly events.
 \end{itemize}
@@ -689,6 +690,7 @@ costtable50<-read.csv("tables/cost_benefit_50.csv",header=T)
 costtable74<-read.csv("tables/cost_benefit_74.csv",header=T)
 costtable20_no<-read.csv("tables/cost_benefit_no_20.csv",header=T)
 costtable50_no<-read.csv("tables/cost_benefit_no_50.csv",header=T)
+costtable1877_no<-read.csv("tables/cost_benefit_no_1877.csv",header=T)
 costtable_50pc<-read.csv("tables/cost_benefit_50_percent_vacc_35.csv",header=T)
 
 
@@ -1973,8 +1975,6 @@ The cost figures above are used to estimate the savings for immunising additiona
 where $B$ is the benefit in saved funds from cases prevented and $C$ is the cost of immunisation, discounted over time, where $n$ is the year and $r$ the annual discount rate of 0.03 (3\%).
 A $B/C$ ratio > 1 means that the program benefits exceed their costs. A $B/C$ value less than one suggests the costs are higher than the economic benefits.
 
-
-
 \subsection{Benefit--cost analyses results}
 
 \begin{sidewaystable}\small
@@ -2072,6 +2072,18 @@ latex(costtable50_no, file="", table.env=FALSE,rowname=NULL)
 
 \begin{sidewaystable}\footnotesize
 <<results=tex,echo=FALSE>>=
+colnames(costtable1877_no)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV")
+costtable1877_no[,c(2:10,12)] <- round(costtable1877_no[,c(2:10,12)])
+costtable1877_no[,11] <- round(costtable1877_no[,11],2)
+latex(costtable1877_no, file="", table.env=FALSE,rowname=NULL)
+@
+\caption{Benefit--cost analyses with \$\Sexpr{break_even_vacc_cost_no} dollars per immunised person assuming the cases prevented through additional vaccination each year are equal those based on epidemiological theory with no measles management costs (see \autoref{table:attack}). \textit{Vacc} is numbers to immunise (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up immunisation programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Contacts} is costs saved through contact exclusion (\$0 per case)\footnote{Here we assume no exclusions}; \textit{Manage saved} is management costs saved (\$0 per case), plus \$20 GP costs\footnote{Here we assume no public health management costs per measles case except GP visits}; \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}  is the discounted costs saved; \textit{Outbreak}  is the predicted median outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations\footnote{Note the median outbreak sizes are what is expected, while the mean takes into account rare, but large outbreaks, see \autoref{fig:sim} and \autoref{fig:sim1}.}; \textit{OB costs}  is costs expected due to continued measles importations based on 10 introductions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio; \textit{NPV} is the net present value, defined as the sum of the present values of costs and benefits of the vaccination programme.}
+\label{table:cost1877_no}
+\end{sidewaystable}
+
+
+\begin{sidewaystable}\footnotesize
+<<results=tex,echo=FALSE>>=
 colnames(costtable_50pc)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C","NPV")
 costtable_50pc[,c(2:10,12)] <- round(costtable_50pc[,c(2:10,12)])
 costtable_50pc[,11] <- round(costtable_50pc[,11],2)
@@ -2087,7 +2099,7 @@ The model estimates for each DHB for measles outbreaks assuming no public health
 
 The benefit--cost results for the scenario where the annual mean number of measles cases since 2009 are expected to be prevented due to increased vaccination are in \autoref{table:cost20} and \autoref{table:cost50}, for two different vaccine costs. The results in the two tables show the benefits of immunisation are always substantially greater than the costs of the increased supplementary immunisation (\autoref{table:cost20} and \autoref{table:cost50}). The expected threshold value when the immunisation costs per immunised person break even in the B/C analysis (B/C is 1) are in \autoref{table:cost74}. At this point (national B/C = 1), the additional vaccination becomes costly to some DHBs. The cost we estimated was \$\Sexpr{break_even_vacc_cost} per immunised person before vaccination was not cost effective over the 10 year period modelled. The relationship between the B/C ratio and the cost per immunised person at the national level is in \autoref{fig:bc}.
 
-The benefit--cost results for the scenario where the predicted number of measles cases based on epidemiological theory are expected to be prevented due to increased vaccination, in the absence of additional public measures, such as contact exclusion, are in \autoref{table:cost20_no} and \autoref{table:cost50_no}, for two different vaccine costs. The results in the two tables show the benefits of immunisation are always substantially greater than the costs of the increased supplementary immunisation (\autoref{table:cost20} and \autoref{table:cost50}).
+The benefit--cost results for the scenario where the predicted number of measles cases based on epidemiological theory are expected to be prevented due to increased vaccination, in the absence of additional public measures, such as contact exclusion, are in \autoref{table:cost20_no} and \autoref{table:cost50_no}, for two different vaccine costs. The results in the two tables show the benefits of immunisation are always substantially greater than the costs of the increased supplementary immunisation (\autoref{table:cost20} and \autoref{table:cost50}). The cost of immunisation per person under this scenario, without public health measures and assuming homogeneous population mixing, was required to reach \$\Sexpr{break_even_vacc_cost_no} before the costs of additional immunisation exceeded the benefits (\autoref{table:cost1877_no}).
 
 The last benefit--cost analysis scenario performed was one in which more than the minimum proportion of na\"{\i}ve were immunised. In this scenario we did not use the \Sexpr{vacc_reqd_percent}\% of currently na\"{\i}ve population necessary to reach adequate national immunity levels (\autoref{table:coh_vac}), but included additional vaccination so that 50$\%$ of the currently na\"{\i}ve population was immunised, \autoref{table:cost50pc}. In this scenario the additional vaccination reduces the B/C ratio, and the additional vaccines for the extra immunisation mean that the cost per immunised person before the programme becomes costly reduces to \$\Sexpr{break_even_vacc_cost50}  per immunised person \autoref{table:cost50pc}.
 
@@ -2105,7 +2117,7 @@ latex(propvCohort, file="", table.env=FALSE,rowname=NULL)
 
 \subsection{Benefit--cost analyses discussion}
 
-Our estimates of the costs of the measles outbreaks in New Zealand suggest that measles management costs per case in New Zealand is high. We used the mean values per case in the absence of alternative data and used all available data. The exact costs will vary, however, our benefit--cost analyses suggest that in all cases catch up immunisation schemes will be financially beneficial for New Zealand (see \autoref{table:cost20} and \autoref{table:cost50}). Additional vaccination beyond the \Sexpr{vacc_reqd_percent}\% of currently na\"{\i}ve population we estimate are required to be vaccinated for $R_0 < 1$ decrease the cost effectiveness of an immunisation program. This is because large outbreaks are avoided once $R_0 < 1$. In the scenario we modelled with 50\% of the currently na\"{\i}ve population immunised, costs exceed benefits at \$\Sexpr{break_even_vacc_cost50} per immunised person \autoref{table:cost50pc}. There may be other benefits we have not accounted for in our analyses for additional vaccination. These additional benefits may include reducing the possibility of spatial heterogeneity and future benefits beyond the ten year period we modelled.
+Our estimates of the costs of the measles outbreaks in New Zealand suggest that measles management costs per case in New Zealand is high. We used the mean values per case in the absence of alternative data and used all available data. The exact costs will vary, however, our benefit--cost analyses suggest that in all cases catch up immunisation schemes will be financially beneficial for New Zealand (see \autoref{table:cost20} and \autoref{table:cost50}). Additional vaccination beyond the \Sexpr{vacc_reqd_percent}\% of currently na\"{\i}ve population we estimate are required to be vaccinated for $R_0 < 1$ decrease the cost effectiveness of an immunisation program. This is because large outbreaks are avoided once $R_0 < 1$. In the scenario we modelled with 50\% of the currently na\"{\i}ve population immunised, costs exceed benefits at \$\Sexpr{break_even_vacc_cost50} per immunised person \autoref{table:cost50pc}. There may be other benefits we have not accounted for in our analyses for additional vaccination. These additional benefits may include reducing the possibility of spatial heterogeneity and future benefits beyond the ten year period we modelled. Our analyses do suggest that in the absence of control measures the benefits of vaccination are substantial if measles were to spread through the na\"{\i}ve population as predicted by epidemiological theory (\autoref{table:cost20_no}, \autoref{table:cost50_no}, and \autoref{table:cost1877_no}).
 
 The results presented here are based on available data. While some of the data are complete and detailed, this is not true of all the data. More complete data would be better. For instance, age, gender, ethnicity, year of discharge, length of stay and estimated cost data are available for cases reported by publicly funded hospitals. Similar data would be needed for cases occurring outside the period 2011--2013 at publicly funded hospitals, non-publicly funded hospitals, and private clinics. Other factors that would be useful to investigate in the future include the relationship between the costs over time. For these analyses we use the mean cost per case. However, as stated previously, it is uncertain as to whether that is a valid measure and whether there may be other relationships. Furthermore, a linear term for case age may not be appropriate, and we have not accounted for alternative interactions between age and length of stay in hospital.
 
