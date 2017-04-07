@@ -396,19 +396,61 @@ ggplot(tp, aes(x=merge, y=cases, fill=Ethnicity)) +
   ylab("cases")+xlab("")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
 dev.off()
 #
-pdf(file.path(fig_dir,"case_ordert.pdf"), width=10, height=5)
+# reorder
+get_first_age <- function(x) {
+  as.numeric(sub("([0-9]+).*", "\\1", as.character(x)))
+}
+tpsub = mutate(tpsub, age1 = get_first_age(Age))
+tpsub = arrange(tpsub, Ethnicity, age1, NZDep)
+levels(tpsub$Ethnicity)[levels(tpsub$Ethnicity) == "Maori"] <- "Māori"
+tpsub = mutate(tpsub, ordert = paste(NZDep, Age, Ethnicity))
+tpsub$ordert = factor(as.character(tpsub$ordert), as.character(tpsub$ordert))
+
+levels(tpsub1$Ethnicity)[levels(tpsub1$Ethnicity) == "Maori"] <- "Māori"
+
+cairo_pdf(file.path(fig_dir,"case_ordert.pdf"), width=10, height=5)
 ggplot(tpsub, aes(x=ordert, y=cases, fill=Ethnicity)) +
   geom_bar(stat="identity", position="dodge")+
   # theme(text=element_text(size=45))+
   ylab("cases")+xlab("")+theme(axis.text.x = element_text(angle = 90, vjust=0,hjust = 0))
 dev.off()
 
-pdf(file.path(fig_dir,"case_ordert2.pdf"), width=10, height=5)
+png(file.path(fig_dir,"case_ordert.png"), width=1000, height=500)
+ggplot(tpsub, aes(x=ordert, y=cases, fill=Ethnicity)) +
+  geom_bar(stat="identity", position="dodge")+
+  # theme(text=element_text(size=45))+
+  ylab("cases")+xlab("")+theme(axis.text.x = element_text(angle = 90, vjust=0,hjust = 0))
+dev.off()
+
+png(file.path(fig_dir,"case_percap.png"), width=1000, height=500)
+ggplot(tpsub, aes(x=ordert, y=perCap, fill=Ethnicity)) +
+  geom_bar(stat="identity", position="dodge")+
+  # theme(text=element_text(size=45))+
+  ylab("Per capita per 10000")+xlab("")+theme(axis.text.x = element_text(angle = 90, vjust=0,hjust = 0))
+dev.off()
+
+cairo_pdf(file.path(fig_dir,"case_percap.pdf"), width=10, height=5)
+ggplot(tpsub, aes(x=ordert, y=perCap, fill=Ethnicity)) +
+  geom_bar(stat="identity", position="dodge")+
+  # theme(text=element_text(size=45))+
+  ylab("Per capita per 10000")+xlab("")+theme(axis.text.x = element_text(angle = 90, vjust=0,hjust = 0))
+dev.off()
+
+cairo_pdf(file.path(fig_dir,"case_ordert2.pdf"), width=10, height=5)
 ggplot(tpsub1, aes(x=ordert,y= cases, fill=Ethnicity)) +
   geom_bar(stat="identity", position="dodge")+
   # theme(text=element_text(size=45))+
   ylab("cases")+xlab("")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
 dev.off()
+
+cairo_pdf(file.path(fig_dir,"percap_ordert2.pdf"), width=10, height=5)
+ggplot(tpsub1, aes(x=ordert,y= perCap, fill=Ethnicity)) +
+  geom_bar(stat="identity", position="dodge")+
+  # theme(text=element_text(size=45))+
+  ylab("Per capita per 10000")+xlab("")+theme(axis.text.x = element_text(angle = 90, vjust=0,hjust = 0))
+dev.off()
+
+
 ##
 pdf(file.path(fig_dir,"percap_merge.pdf"), width=10, height=5)
 ggplot(tp, aes(x=merge, y=perCap, fill=Ethnicity)) + 
