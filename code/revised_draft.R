@@ -508,6 +508,12 @@ anova(model3,test="F")
 anovap<-anova(model3,test="F")
 write.csv(anovap,"unused_output/anovap.csv")
 
+# some visreg stuff
+library(visreg)
+cairo_pdf(file.path("figures", "visualising_model.pdf"), width=10, height=5)
+visreg(model3, "Age", by="Ethnicity", ylab="Log expected cases")
+dev.off()
+
 pdf(file.path(fig_dir,"Cases_regmodel.pdf"), width=7, height=5)
 par(cex.axis=1)
 par(mar=c(5,6,4,2)+0.1)
