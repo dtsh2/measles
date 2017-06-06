@@ -109,7 +109,7 @@ benefit_cost <- function(vacc_pred, vacc_cost = 50) {
   contact_wage         <- 210436/247/5
   prop_hospitalised    <- 0.17
   hosp_costs           <- 1877
-  disc_rate            <- 0.03
+  disc_rate            <- 0.06
   disc_years           <- 10
   disc_multiplier      <- 1*(1-1/(1+disc_rate)^disc_years)/(1-1/(1+disc_rate))
   dollar_conv          <- 0.83
@@ -131,7 +131,7 @@ benefit_cost <- function(vacc_pred, vacc_cost = 50) {
 
 write.csv(benefit_cost(vacc_pred, 20), "tables/cost_benefit_20.csv", row.names=FALSE)
 write.csv(benefit_cost(vacc_pred, 50), "tables/cost_benefit_50.csv", row.names=FALSE)
-write.csv(benefit_cost(vacc_pred, 74), "tables/cost_benefit_66.csv", row.names=FALSE)
+write.csv(benefit_cost(vacc_pred, 66), "tables/cost_benefit_66.csv", row.names=FALSE)
 write.csv(benefit_cost(vacc_pred %>% mutate(Vaccination = round(Naive / 2)), 35.70), "tables/cost_benefit_50_percent_vacc_35.csv", row.names=FALSE)
 
 res_sm<-matrix(nrow=length(seq(from=10, to=200, by=10)),ncol=2)
@@ -152,8 +152,8 @@ pdf(file.path(dhb_fig_path, paste("bc.pdf")))
 plot(y=predict(res_sm_lo),x=x, col='red', lwd=2,type="l",
      ylab="benefit/cost ratio",xlab="Cost",xaxt="n")#,ylim=c(0,max(y)))
 axis(1, at=axTicks(1), labels=sprintf("$%s", axTicks(1)))
- segments(x0=74, y0=1, x1 = 0, y1 = 1)
- segments(x0=74, y0=0, x1 = 74, y1 = 1)
+ segments(x0=66, y0=1, x1 = 0, y1 = 1)
+ segments(x0=66, y0=0, x1 = 66, y1 = 1)
 dev.off()
 
 ####  VERSION #2 
@@ -172,7 +172,7 @@ benefit_cost_no <- function(vacc_pred_no, vacc_cost = 50) {
   contact_wage         <- 0
   prop_hospitalised    <- 0.17
   hosp_costs           <- 1877
-  disc_rate            <- 0.03
+  disc_rate            <- 0.06
   disc_years           <- 10
   disc_multiplier      <- 1*(1-1/(1+disc_rate)^disc_years)/(1-1/(1+disc_rate))
   dollar_conv          <- 0.83
@@ -196,4 +196,4 @@ benefit_cost_no <- function(vacc_pred_no, vacc_cost = 50) {
 
 write.csv(benefit_cost_no(vacc_pred_no, 20), "tables/cost_benefit_no_20.csv", row.names=FALSE)
 write.csv(benefit_cost_no(vacc_pred_no, 50), "tables/cost_benefit_no_50.csv", row.names=FALSE)
-write.csv(benefit_cost_no(vacc_pred_no, 1877), "tables/cost_benefit_no_1877.csv", row.names=FALSE)
+write.csv(benefit_cost_no(vacc_pred_no, 1667), "tables/cost_benefit_no_1667.csv", row.names=FALSE)
