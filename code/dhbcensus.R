@@ -112,15 +112,16 @@ benefit_cost <- function(vacc_pred, vacc_cost = 50) {
   disc_rate            <- 0.03
   disc_years           <- 10
   disc_multiplier      <- 1*(1-1/(1+disc_rate)^disc_years)/(1-1/(1+disc_rate))
+  dollar_conv          <- 0.83
   
-  bc <- vacc_pred %>% mutate(case_wage_loss = lost_wages * Attack,
-                             manage_cost = (case_management + gp_costs + lab_costs) * Attack,
-                             hosp_cost = prop_hospitalised * hosp_costs * Attack, 
-                             contacts_wage_loss = contacts_quarantined * quarantine_length * contact_wage * Attack)
+  bc <- vacc_pred %>% mutate(case_wage_loss = lost_wages * Attack * dollar_conv,
+                             manage_cost = (case_management + gp_costs + lab_costs) * Attack * dollar_conv,
+                             hosp_cost = prop_hospitalised * hosp_costs * Attack * dollar_conv, 
+                             contacts_wage_loss = contacts_quarantined * quarantine_length * contact_wage * Attack * dollar_conv)
   bc <- bc %>% mutate(total_discounted_costs = (case_wage_loss+manage_cost+hosp_cost+contacts_wage_loss) * disc_multiplier,
-                      vaccine_cost = vacc_cost * Vaccination,
+                      vaccine_cost = vacc_cost * Vaccination * dollar_conv,
                       future_ob_costs = (lost_wages + case_management + gp_costs + lab_costs + prop_hospitalised*hosp_costs +
-                                           contacts_quarantined*quarantine_length*contact_wage) * `Median outbreak` * disc_multiplier)
+                                           contacts_quarantined*quarantine_length*contact_wage) * dollar_conv * `Median outbreak` * disc_multiplier)
   bc <- bc %>% mutate(benefit_cost = total_discounted_costs / (vaccine_cost + future_ob_costs),
                       net_present_value = total_discounted_costs - (future_ob_costs + vaccine_cost)) %>%
   select(DHB, Vaccination, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
@@ -130,7 +131,7 @@ benefit_cost <- function(vacc_pred, vacc_cost = 50) {
 
 write.csv(benefit_cost(vacc_pred, 20), "tables/cost_benefit_20.csv", row.names=FALSE)
 write.csv(benefit_cost(vacc_pred, 50), "tables/cost_benefit_50.csv", row.names=FALSE)
-write.csv(benefit_cost(vacc_pred, 74.53), "tables/cost_benefit_74.csv", row.names=FALSE)
+write.csv(benefit_cost(vacc_pred, 74), "tables/cost_benefit_66.csv", row.names=FALSE)
 write.csv(benefit_cost(vacc_pred %>% mutate(Vaccination = round(Naive / 2)), 35.70), "tables/cost_benefit_50_percent_vacc_35.csv", row.names=FALSE)
 
 res_sm<-matrix(nrow=length(seq(from=10, to=200, by=10)),ncol=2)
@@ -151,8 +152,8 @@ pdf(file.path(dhb_fig_path, paste("bc.pdf")))
 plot(y=predict(res_sm_lo),x=x, col='red', lwd=2,type="l",
      ylab="benefit/cost ratio",xlab="Cost",xaxt="n")#,ylim=c(0,max(y)))
 axis(1, at=axTicks(1), labels=sprintf("$%s", axTicks(1)))
- segments(x0=74.53, y0=1, x1 = 0, y1 = 1)
- segments(x0=74.53, y0=0, x1 = 74.53, y1 = 1)
+ segments(x0=74, y0=1, x1 = 0, y1 = 1)
+ segments(x0=74, y0=0, x1 = 74, y1 = 1)
 dev.off()
 
 ####  VERSION #2 
@@ -174,15 +175,16 @@ benefit_cost_no <- function(vacc_pred_no, vacc_cost = 50) {
   disc_rate            <- 0.03
   disc_years           <- 10
   disc_multiplier      <- 1*(1-1/(1+disc_rate)^disc_years)/(1-1/(1+disc_rate))
+  dollar_conv          <- 0.83
   
-  bc <- vacc_pred_no %>% mutate(case_wage_loss = lost_wages * Attack,
-                             manage_cost = (case_management + gp_costs + lab_costs) * Attack,
-                             hosp_cost = prop_hospitalised * hosp_costs * Attack, 
-                             contacts_wage_loss = contacts_quarantined * quarantine_length * contact_wage * Attack)
+  bc <- vacc_pred_no %>% mutate(case_wage_loss = lost_wages * Attack * dollar_conv,
+                             manage_cost = (case_management + gp_costs + lab_costs) * Attack * dollar_conv,
+                             hosp_cost = prop_hospitalised * hosp_costs * Attack * dollar_conv, 
+                             contacts_wage_loss = contacts_quarantined * quarantine_length * contact_wage * Attack * dollar_conv)
   bc <- bc %>% mutate(total_discounted_costs = (case_wage_loss+manage_cost+hosp_cost+contacts_wage_loss) * disc_multiplier,
-                      vaccine_cost = vacc_cost * Vaccination,
+                      vaccine_cost = vacc_cost * Vaccination * dollar_conv,
                       future_ob_costs = (lost_wages + case_management + gp_costs + lab_costs + prop_hospitalised*hosp_costs +
-                                           contacts_quarantined*quarantine_length*contact_wage) * `Median outbreak` * disc_multiplier)
+                                           contacts_quarantined*quarantine_length*contact_wage) * dollar_conv * `Median outbreak` * disc_multiplier)
   bc <- bc %>% mutate(benefit_cost = total_discounted_costs / (vaccine_cost + future_ob_costs),
                       net_present_value = total_discounted_costs - (future_ob_costs + vaccine_cost)) %>%
     select(DHB, Vaccination, vaccine_cost, case_wage_loss, manage_cost, hosp_cost, contacts_wage_loss,
